@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2017.1.17)  4 MAR 2017 14:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2017.1.17)  4 MAR 2017 16:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -399,16 +399,16 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 
  [1
 
-]
+] [2]
 Chapter 1.
-[2
+[3
 
-]
+] [4]
 \openout2 = `Chapters/Background.aux'.
 
  (./Chapters/Background.tex
 Chapter 2.
-) [3
+) [5
 
 
 ]
@@ -416,7 +416,7 @@ Chapter 2.
 
  (./Chapters/Body.tex
 Chapter 3.
-) [4
+) [6
 
 
 
@@ -425,7 +425,7 @@ Chapter 3.
 
  (./Chapters/DesignSpecification.tex
 Chapter 4.
-) [5
+) [7
 
 
 
@@ -434,7 +434,7 @@ Chapter 4.
 
  (./Chapters/Implementation.tex
 Chapter 5.
-) [6
+) [8
 
 
 
@@ -443,7 +443,7 @@ Chapter 5.
 
  (./Chapters/ProfessionalIssues.tex
 Chapter 6.
-) [7
+) [9
 
 
 
@@ -452,7 +452,7 @@ Chapter 6.
 
  (./Chapters/Evaluation.tex
 Chapter 7.
-) [8
+) [10
 
 
 
@@ -461,7 +461,7 @@ Chapter 7.
 
  (./Chapters/Conclusion.tex
 Chapter 8.
-) [9
+) [11
 
 
 
@@ -471,7 +471,7 @@ No file report.bbl.
 
 (./Appendices/appendix.tex
 Appendix A.
-) [10
+) [12
 
 
 
@@ -480,7 +480,7 @@ Appendix A.
 
  (./Appendices/UserGuide.tex
 Appendix B.
-) [11
+) [13
 
 
 
@@ -489,7 +489,7 @@ Appendix B.
 
  (./Appendices/SourceCode.tex
 Appendix C.
-) [12
+) [14
 
 
 
@@ -501,7 +501,7 @@ Appendix C.
 Here is how much of TeX's memory you used:
  3945 strings out of 493013
  57586 string characters out of 6136993
- 131224 words of memory out of 5000000
+ 132225 words of memory out of 5000000
  7350 multiletter control sequences out of 15000+600000
  41202 words of font info for 33 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -513,10 +513,10 @@ fb><d:/texlive/2016/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><d:/texlive/201
 6/texmf-dist/fonts/type1/public/lm/lmmi10.pfb><d:/texlive/2016/texmf-dist/fonts
 /type1/public/lm/lmr10.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/lm/lm
 r12.pfb>
-Output written on report.pdf (16 pages, 148193 bytes).
+Output written on report.pdf (18 pages, 153719 bytes).
 PDF statistics:
- 79 PDF objects out of 1000 (max. 8388607)
- 54 compressed objects within 1 object stream
+ 85 PDF objects out of 1000 (max. 8388607)
+ 58 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
