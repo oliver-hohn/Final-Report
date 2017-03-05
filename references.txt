@@ -1,6 +1,0 @@
-References up to now:
-Daumé III and Marcu, 2002
-Rush, Chopra, and Weston, 2015
-Chopra, Auli, and Rush, 2016
-Knight and Marcu, 2000
-Grammar.ccc

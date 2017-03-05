@@ -1,0 +1,45 @@
+\begin{thebibliography}{1}
+
+\bibitem{grammar}
+Sentence subjects.
+\newblock \url{http://grammar.ccc.commnet.edu/GRAMMAr/subjects.htm}.
+\newblock Accessed 4 Dec. 2016.
+
+\bibitem{chopraaulirush2016}
+S.~Chopra, M.~Auli, and A.~Rush.
+\newblock Abstractive sentence summarization with attentive recurrent neural
+  networks.
+\newblock In {\em Proceedings of NAACL}, 2016.
+
+\bibitem{daumemarcu2002}
+H.~Daum\'e~III and D.~Marcu.
+\newblock Noisy-channel model for document compression.
+\newblock In {\em Proceedings of the 40th Annual Meeting of the Association for
+  Computational Linguistics (ACL)}, pages 449--456, 2002.
+
+\bibitem{dorrzajicschwartz2003}
+B.~Dorr, D.~Zajic, and R.~Schwartz.
+\newblock Hedge trimmer: A parse-and-trim approach to headline generation.
+\newblock In {\em Proceedings of the HLT-NAACL 03 on Text summarization
+  Workshop-Volume 5 (ACL)}, pages 1--8, 2003.
+
+\bibitem{knightmarcu2000}
+K.~Knight and D.~Marcu.
+\newblock Statistics-based summarization – step one: Sentence compression.
+\newblock In {\em Proceedings of the Seventeenth National Conference on
+  Artificial Intelligence and Twelfth Conference on Innovative Applications of
+  Artificial Intelligence}, pages 703--710, 2000.
+
+\bibitem{ritter2011}
+A.~Ritter, S.~Clark, Mausam, and Etzioni.
+\newblock Named entity recognition in tweets: An experimental study.
+\newblock In {\em Proceedings of the 2011 Conference on Empirical Methods in
+  Natural Language Processing}, pages 1524--1534, 2011.
+
+\bibitem{rushchopraweston2015}
+A.~Rush, S.~Chopra, and J.~Weston.
+\newblock A neural attention model for sentence summarization.
+\newblock In {\em Proceedings of the 2015 Conference on Empirical Methods in
+  Natural Language Processing}, pages 379--389, 2015.
+
+\end{thebibliography}

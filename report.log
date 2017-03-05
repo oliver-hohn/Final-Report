@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2017.1.17)  4 MAR 2017 17:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2017.1.17)  5 MAR 2017 18:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -205,8 +205,64 @@ Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibsep=\skip44
 LaTeX Info: Redefining \cite on input line 694.
 \c@NAT@ctr=\count131
-) (./report.aux
-(./Chapters/Background.aux) (./Chapters/Body.aux)
+)
+(d:/texlive/2016/texmf-dist/tex/latex/algorithm2e/algorithm2e.sty
+Package: algorithm2e 2013/01/06 v5.00 algorithms environments
+\c@AlgoLine=\count132
+
+(d:/texlive/2016/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\algocf@hangindent=\skip45
+
+(d:/texlive/2016/texmf-dist/tex/latex/tools/xspace.sty
+Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
+)
+(d:/texlive/2016/texmf-dist/tex/latex/relsize/relsize.sty
+Package: relsize 2013/03/29 ver 4.1
+)
+********************************************************
+Package `algorithm2e' Release 5.1 -- october 19 2015 --
+- algorithm2e-announce@lirmm.fr mailing list for announcement about releases
+- algorithm2e-discussion@lirmm.fr mailing list for discussion about package
+subscribe by emailing sympa@lirmm.fr with 'subscribe <list> <firstname name>'
+- Author: Christophe Fiorio (christophe.fiorio@umontpellier.fr)
+********************************************************
+\skiptotal=\skip46
+\skiplinenumber=\skip47
+\skiprule=\skip48
+\skiphlne=\skip49
+\skiptext=\skip50
+\skiplength=\skip51
+\algomargin=\skip52
+\skipalgocfslide=\skip53
+\algowidth=\dimen117
+\inoutsize=\dimen118
+\inoutindent=\dimen119
+\interspacetitleruled=\dimen120
+\interspacealgoruled=\dimen121
+\interspacetitleboxruled=\dimen122
+\algocf@ruledwidth=\skip54
+\algocf@inoutbox=\box28
+\algocf@inputbox=\box29
+\AlCapSkip=\skip55
+\AlCapHSkip=\skip56
+\algoskipindent=\skip57
+\algocf@nlbox=\box30
+\algocf@hangingbox=\box31
+\algocf@untilbox=\box32
+\algocf@skipuntil=\skip58
+\algocf@capbox=\box33
+\algoheightruledefault=\skip59
+\algoheightrule=\skip60
+\algotitleheightruledefault=\skip61
+\algotitleheightrule=\skip62
+\c@algocfline=\count133
+\c@algocfproc=\count134
+\c@algocf=\count135
+\algocf@algoframe=\box34
+\algocf@algobox=\box35
+) (./report.aux (./Chapters/Background.aux) (./Chapters/Body.aux)
 (./Chapters/DesignSpecification.aux) (./Chapters/Implementation.aux)
 (./Chapters/ProfessionalIssues.aux) (./Chapters/Evaluation.aux)
 (./Chapters/Conclusion.aux) (./Appendices/appendix.aux)
@@ -232,16 +288,16 @@ File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 (d:/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count132
-\scratchdimen=\dimen117
-\scratchbox=\box28
-\nofMPsegments=\count133
-\nofMParguments=\count134
+\scratchcounter=\count136
+\scratchdimen=\dimen123
+\scratchbox=\box36
+\nofMPsegments=\count137
+\nofMParguments=\count138
 \everyMPshowfont=\toks19
-\MPscratchCnt=\count135
-\MPscratchDim=\dimen118
-\MPnumerator=\count136
-\makeMPintoPDFobject=\count137
+\MPscratchCnt=\count139
+\MPscratchDim=\dimen124
+\MPnumerator=\count140
+\makeMPintoPDFobject=\count141
 \everyMPtoPDFconversion=\toks20
 ) (d:/texlive/2016/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2016/05/21 v0.22 Utility functions of pdfTeX for LuaTeX (HO
@@ -323,7 +379,7 @@ e
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\c@lstlisting=\count138
+\c@lstlisting=\count142
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: pdftex
 * paper: <default>
@@ -411,12 +467,26 @@ Chapter 2.
 [4
 
 
-] [5]) [6]
+] [5]
+! Argument of \algocf@algocf@eIfthenelsestrip has an extra }.
+<inserted text> 
+                \par 
+l.37 	}
+       
+? 
+Runaway argument?
+! Paragraph ended before \algocf@algocf@eIfthenelsestrip was complete.
+<to be read again> 
+                   \par 
+l.37 	}
+       
+? 
+[6]) [7]
 \openout2 = `Chapters/Body.aux'.
 
  (./Chapters/Body.tex
 Chapter 3.
-) [7
+) [8
 
 
 
@@ -425,7 +495,7 @@ Chapter 3.
 
  (./Chapters/DesignSpecification.tex
 Chapter 4.
-) [8
+) [9
 
 
 
@@ -434,7 +504,7 @@ Chapter 4.
 
  (./Chapters/Implementation.tex
 Chapter 5.
-) [9
+) [10
 
 
 
@@ -443,7 +513,7 @@ Chapter 5.
 
  (./Chapters/ProfessionalIssues.tex
 Chapter 6.
-) [10
+) [11
 
 
 
@@ -452,7 +522,7 @@ Chapter 6.
 
  (./Chapters/Evaluation.tex
 Chapter 7.
-) [11
+) [12
 
 
 
@@ -461,18 +531,24 @@ Chapter 7.
 
  (./Chapters/Conclusion.tex
 Chapter 8.
-) [12
+) [13
 
+
+
+] (./report.bbl
+LaTeX Font Info:    Try loading font information for OT1+lmtt on input line 5.
+ (d:/texlive/2016/texmf-dist/tex/latex/lm/ot1lmtt.fd
+File: ot1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+))
+[14
 
 
 ]
-No file report.bbl.
 \openout2 = `Appendices/appendix.aux'.
 
-(./Appendices/appendix.tex
+ (./Appendices/appendix.tex
 Appendix A.
-) [13
-
+) [15
 
 
 ]
@@ -480,7 +556,7 @@ Appendix A.
 
  (./Appendices/UserGuide.tex
 Appendix B.
-) [14
+) [16
 
 
 
@@ -489,7 +565,7 @@ Appendix B.
 
  (./Appendices/SourceCode.tex
 Appendix C.
-) [15
+) [17
 
 
 
@@ -497,26 +573,32 @@ Appendix C.
 (./Chapters/DesignSpecification.aux) (./Chapters/Implementation.aux)
 (./Chapters/ProfessionalIssues.aux) (./Chapters/Evaluation.aux)
 (./Chapters/Conclusion.aux) (./Appendices/appendix.aux)
-(./Appendices/UserGuide.aux) (./Appendices/SourceCode.aux)) ) 
+(./Appendices/UserGuide.aux) (./Appendices/SourceCode.aux)) )
+(\end occurred inside a group at level 1)
+
+### simple group (level 1) entered at line 1061 ({)
+### bottom level 
 Here is how much of TeX's memory you used:
- 3946 strings out of 493013
- 57594 string characters out of 6136993
- 131227 words of memory out of 5000000
- 7351 multiletter control sequences out of 15000+600000
- 41202 words of font info for 33 fonts, out of 8000000 for 9000
+ 4973 strings out of 493013
+ 74036 string characters out of 6136993
+ 161563 words of memory out of 5000000
+ 8357 multiletter control sequences out of 15000+600000
+ 48673 words of font info for 36 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 40i,5n,34p,1105b,243s stack positions out of 5000i,500n,10000p,200000b,80000s
-{d:/texlive/2016/t
-exmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{d:/texlive/2016/texmf-dist/fonts/en
-c/dvips/lm/lm-rm.enc}<d:/texlive/2016/texmf-dist/fonts/type1/public/lm/lmbx10.p
-fb><d:/texlive/2016/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><d:/texlive/201
-6/texmf-dist/fonts/type1/public/lm/lmmi10.pfb><d:/texlive/2016/texmf-dist/fonts
-/type1/public/lm/lmr10.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/lm/lm
-r12.pfb>
-Output written on report.pdf (19 pages, 158211 bytes).
+ 40i,16n,34p,1130b,2171s stack positions out of 5000i,500n,10000p,200000b,80000s
+{d:/texlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-rmtt.enc}{d:/
+texlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{d:/texlive/2016/texmf-dis
+t/fonts/enc/dvips/lm/lm-mathit.enc}<d:/texlive/2016/texmf-dist/fonts/type1/publ
+ic/lm/lmbx10.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><
+d:/texlive/2016/texmf-dist/fonts/type1/public/lm/lmbx7.pfb><d:/texlive/2016/tex
+mf-dist/fonts/type1/public/lm/lmmi10.pfb><d:/texlive/2016/texmf-dist/fonts/type
+1/public/lm/lmr10.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/lm/lmr12.p
+fb><d:/texlive/2016/texmf-dist/fonts/type1/public/lm/lmri10.pfb><d:/texlive/201
+6/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
+Output written on report.pdf (21 pages, 231173 bytes).
 PDF statistics:
- 89 PDF objects out of 1000 (max. 8388607)
- 61 compressed objects within 1 object stream
+ 108 PDF objects out of 1000 (max. 8388607)
+ 75 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
