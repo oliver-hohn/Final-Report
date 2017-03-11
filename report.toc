@@ -4,24 +4,24 @@
 \contentsline {section}{\numberline {1.3}Report Structure}{3}
 \contentsline {chapter}{\numberline {2}Background}{4}
 \contentsline {section}{\numberline {2.1}Natural Language Processing}{4}
-\contentsline {section}{\numberline {2.2}Data Processing and Representation}{8}
-\contentsline {chapter}{\numberline {3}Report Body}{11}
-\contentsline {section}{\numberline {3.1}Section Heading}{11}
-\contentsline {subsection}{\numberline {3.1.1}Subsection Heading}{11}
-\contentsline {chapter}{\numberline {4}Design \& Specification}{12}
-\contentsline {section}{\numberline {4.1}Section Heading}{12}
-\contentsline {chapter}{\numberline {5}Implementation}{13}
-\contentsline {section}{\numberline {5.1}Section Heading}{13}
-\contentsline {chapter}{\numberline {6}Professional and Ethical Issues}{14}
-\contentsline {section}{\numberline {6.1}Section Heading}{14}
-\contentsline {chapter}{\numberline {7}Results/Evaluation}{15}
-\contentsline {section}{\numberline {7.1}Software Testing}{15}
-\contentsline {section}{\numberline {7.2}Section Heading}{15}
-\contentsline {chapter}{\numberline {8}Conclusion and Future Work}{16}
-\contentsline {section}{Bibliography}{17}
-\contentsline {chapter}{\numberline {A}Extra Information}{18}
-\contentsline {section}{\numberline {A.1}Tables, proofs, graphs, test cases, ...}{18}
-\contentsline {chapter}{\numberline {B}User Guide}{19}
-\contentsline {section}{\numberline {B.1}Instructions}{19}
-\contentsline {chapter}{\numberline {C}Source Code}{20}
-\contentsline {section}{\numberline {C.1}Instructions}{20}
+\contentsline {section}{\numberline {2.2}Data Processing and Representation}{11}
+\contentsline {chapter}{\numberline {3}Report Body}{12}
+\contentsline {section}{\numberline {3.1}Section Heading}{12}
+\contentsline {subsection}{\numberline {3.1.1}Subsection Heading}{12}
+\contentsline {chapter}{\numberline {4}Design \& Specification}{13}
+\contentsline {section}{\numberline {4.1}Section Heading}{13}
+\contentsline {chapter}{\numberline {5}Implementation}{14}
+\contentsline {section}{\numberline {5.1}Section Heading}{14}
+\contentsline {chapter}{\numberline {6}Professional and Ethical Issues}{15}
+\contentsline {section}{\numberline {6.1}Section Heading}{15}
+\contentsline {chapter}{\numberline {7}Results/Evaluation}{16}
+\contentsline {section}{\numberline {7.1}Software Testing}{16}
+\contentsline {section}{\numberline {7.2}Section Heading}{16}
+\contentsline {chapter}{\numberline {8}Conclusion and Future Work}{17}
+\contentsline {section}{Bibliography}{18}
+\contentsline {chapter}{\numberline {A}Extra Information}{19}
+\contentsline {section}{\numberline {A.1}Tables, proofs, graphs, test cases, ...}{19}
+\contentsline {chapter}{\numberline {B}User Guide}{20}
+\contentsline {section}{\numberline {B.1}Instructions}{20}
+\contentsline {chapter}{\numberline {C}Source Code}{21}
+\contentsline {section}{\numberline {C.1}Instructions}{21}
