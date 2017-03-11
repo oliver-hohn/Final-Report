@@ -1,45 +1,64 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{8}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
-\bibitem{grammar}
+\bibitem[gra()]{grammar}
 Sentence subjects.
 \newblock \url{http://grammar.ccc.commnet.edu/GRAMMAr/subjects.htm}.
+\newblock URL \url{http://grammar.ccc.commnet.edu/GRAMMAr/subjects.htm}.
 \newblock Accessed 4 Dec. 2016.
 
-\bibitem{chopraaulirush2016}
+\bibitem[Chopra et~al.(2016)Chopra, Auli, and Rush]{chopraaulirush2016}
 S.~Chopra, M.~Auli, and A.~Rush.
 \newblock Abstractive sentence summarization with attentive recurrent neural
   networks.
-\newblock In {\em Proceedings of NAACL}, 2016.
+\newblock In \emph{Proceedings of NAACL}, 2016.
+\newblock URL \url{http://nlp.seas.harvard.edu/papers/naacl16_summary.pdf}.
 
-\bibitem{daumemarcu2002}
+\bibitem[Daum\'e~III and Marcu(2002)]{daumemarcu2002}
 H.~Daum\'e~III and D.~Marcu.
 \newblock Noisy-channel model for document compression.
-\newblock In {\em Proceedings of the 40th Annual Meeting of the Association for
-  Computational Linguistics (ACL)}, pages 449--456, 2002.
+\newblock In \emph{Proceedings of the 40th Annual Meeting of the Association
+  for Computational Linguistics (ACL)}, pages 449--456, 2002.
+\newblock URL \url{http://www.aclweb.org/anthology/P02-1057}.
 
-\bibitem{dorrzajicschwartz2003}
+\bibitem[Dorr et~al.(2003)Dorr, Zajic, and Schwartz]{dorrzajicschwartz2003}
 B.~Dorr, D.~Zajic, and R.~Schwartz.
 \newblock Hedge trimmer: A parse-and-trim approach to headline generation.
-\newblock In {\em Proceedings of the HLT-NAACL 03 on Text summarization
+\newblock In \emph{Proceedings of the HLT-NAACL 03 on Text summarization
   Workshop-Volume 5 (ACL)}, pages 1--8, 2003.
 
-\bibitem{knightmarcu2000}
+\bibitem[Knight and Marcu(2000)]{knightmarcu2000}
 K.~Knight and D.~Marcu.
 \newblock Statistics-based summarization – step one: Sentence compression.
-\newblock In {\em Proceedings of the Seventeenth National Conference on
+\newblock In \emph{Proceedings of the Seventeenth National Conference on
   Artificial Intelligence and Twelfth Conference on Innovative Applications of
   Artificial Intelligence}, pages 703--710, 2000.
+\newblock URL \url{http://www.aaai.org/Papers/AAAI/2000/AAAI00-108.pdf}.
 
-\bibitem{ritter2011}
+\bibitem[McClosky and Manning(2012)]{mccloskymanning2012}
+D.~McClosky and C.~Manning.
+\newblock Learning constraints for consistent timeline extraction.
+\newblock In \emph{Proceedings of the 2012 Joint Conference on Empirical
+  Methods in Natural Language Processing and Computational Natural Language
+  Learning}, pages 873--883, 2012.
+\newblock URL \url{http://nlp.stanford.edu/pubs/dmcc-emnlp-2012.pdf}.
+
+\bibitem[Ritter et~al.(2011)Ritter, Clark, Mausam, and Etzioni]{ritter2011}
 A.~Ritter, S.~Clark, Mausam, and Etzioni.
 \newblock Named entity recognition in tweets: An experimental study.
-\newblock In {\em Proceedings of the 2011 Conference on Empirical Methods in
+\newblock In \emph{Proceedings of the 2011 Conference on Empirical Methods in
   Natural Language Processing}, pages 1524--1534, 2011.
+\newblock URL \url{https://aclweb.org/anthology/D/D11/D11-1141.pdf}.
 
-\bibitem{rushchopraweston2015}
+\bibitem[Rush et~al.(2015)Rush, Chopra, and Weston]{rushchopraweston2015}
 A.~Rush, S.~Chopra, and J.~Weston.
 \newblock A neural attention model for sentence summarization.
-\newblock In {\em Proceedings of the 2015 Conference on Empirical Methods in
+\newblock In \emph{Proceedings of the 2015 Conference on Empirical Methods in
   Natural Language Processing}, pages 379--389, 2015.
+\newblock URL \url{http://www.aclweb.org/anthology/D15-1044}.
 
 \end{thebibliography}

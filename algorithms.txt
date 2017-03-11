@@ -235,6 +235,9 @@ POS TREE OF INPUT TEXT
 \caption{P.O.S/Grammatical Tree of: "On Friday the Washington Post came out with the latest from its long-running investigation into Trump's charitable donations."}
 \label{tree:origString}
 \end{figure}
+
+
+POS TREE Remove Time Expressions
 \begin{figure}
 \resizebox{\linewidth}{!}{
 \Tree
