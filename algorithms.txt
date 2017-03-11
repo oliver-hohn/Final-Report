@@ -1,0 +1,431 @@
+Algorithms
+
+SET DATE & Subjects:
+\begin{algorithm}
+\SetKwInOut{Input}{Input}
+\SetKwInOut{Output}{Output}
+	\Input{A text with events to be found}
+	\Output{A list of Events (Results)}
+	\For{every sentence in the input text}
+		create an event\;
+		use NER annotator to add subjects (LOCATION, PERSON, ORGANIZATION, MONEY, MISC) and parse the DATEs\;
+		\If{found a date(s)}{
+			produce a summary of the sentence and set it for the event \ref{alg:trim}\;
+			add the event to the list of Events\;
+		}
+		return the list of Events\;	
+\label{alg:getEvent}
+\caption{Get an Event}
+\end{algorithm}
+
+
+SUMMARIZE TEXT
+\begin{algorithm}
+\SetKwInOut{Input}{Input}
+    \SetKwInOut{Output}{Output}
+	\Input{A Grammatical Tree T of the Sentence to summarize}
+	\Input{threshold: Threshold value}
+	\Output{A Summary of the given sentence}
+	get the leftmost-lower subtree with root S\;
+	remove time expressions\;
+	remove determiners (e.g. 'a', 'the')\;
+	\While{the number of leaves in tree $>$ threshold and there are subtrees to remove with this rule}{
+		remove all the children except the first, where the rightmost-lowest subtree with root XP and its first child also being an identifier XP (where XP can be NP, VP, or S)\;
+	}
+	\While{the number of leaves in tree $>$ threshold and there are subtrees to remove with this rule}{
+		remove any XP (where XP can be NP,VP,PP) before the first NP found\;
+	}
+	get Tree T' from lastRule\;
+	from T' create a sentence S by reading of the leaves in pre-order\;
+	return S\;
+\caption{Dorr, B., Zajic, D. and Schwartzm R, (2003). Hedge Trimmer: A Parse-and-Trim Approach to Headline Generation}
+\label{alg:trim}
+\end{algorithm}
+SUMMARIZE TEXT - LAST RULE
+\begin{algorithm}
+\SetKwInOut{Input}{Input}
+\SetKwInOut{Output}{Output}
+\Input{A Grammatical Tree T of the Sentence to summarize}
+\Input{threshold: Threshold value}
+\Output{A Grammatical Tree of the Summary of the input after the last rule has been applied}
+\If{the number of leaves in tree > threshold}{
+		make a copy of the tree T'\;
+		\While{the number of leaves in tree $>$ threshold and there are subtrees to remove with this rule}{
+			remove any trailling PP nodes (and their children)\;
+		}
+		\If{the number of leaves in tree $>$ threshold}{
+			\While{the number of leaves in tree $>$ threshold and there are subtrees to remove with this rule}{
+				remove any trailling SBARs (and their children)\;
+			}
+			\While{the number of leaves in tree $>$ threshold and there are subtrees to remove with this rule}{
+				remove any trailling PPs (and their children)\;
+			}
+		}{
+			return T'\;
+		}
+}
+return T\;
+\label{alg:lastRule}
+\caption{Last Rule}
+\end{algorithm}
+
+
+PARSE NER DATE
+\begin{algorithm}
+\SetKwInOut{Input}{Input}
+\SetKwInOut{Output}{Output}
+\Input{Base Date}
+\Input{NER DATE}
+\Output{date1 being the lowest Date, and date2 the greatest Date}
+	List L\;
+	split the date by "/"\;
+	\ForEach{date in the split}{
+		call getDate() on the date\;
+		add result to list L\;
+	}
+	call enforceRule()\;
+\label{alg:parse}
+\caption{Parse NER Dates}
+\end{algorithm}
+
+
+PROCESS NER DATE
+\begin{algorithm}
+\SetKwInOut{Input}{Input}
+\SetKwInOut{Output}{Output}
+\Input{A Normalized Date d of the format given by ISO 8601}
+\Input{Base Date}
+\Output{Exact Dates in a List L}
+initialize year1,month1,day1 to their default values\;
+set year2,month2,day2 to null\;
+\If{d matches PAST REF pattern}{
+	create a date1 with format 0001-01-01\;
+	create a date2 with value of the Base Date\;
+	add date1 and date2 to L\;
+}
+\If{d matches PRESENT REF pattern}{
+	create a date1 with value of the Base Date\;
+	add date1 to L\;
+}
+\If{d matches FUTURE REF pattern}{
+	create a date1 with value of the Base Date\;
+	create a date2 with format 9999-12-31\;
+	add date1 and date2 to L\;
+}{
+	check if its a BC date\;
+	split the input by '-'\;
+	\For{i =0; i $<$ split.length; i{+}{+}}{
+		\If{i == 0}{
+			\If{split[i] matches year pattern}{
+				set year1 to it, replacing every X with a 0\;
+				set year2 to it, replacing every X with a 9\;
+			}
+		}
+		\If{i == 1}{
+			\If{split[i] matches month pattern}{
+				set month1 to it\;
+			}
+			\If{split[i] matches week pattern}{
+				calculate month1, day1. month2, and day2 using the week data\;
+			}
+			\If{split[i] matches season pattern}{
+				calculate month1,day1,year2,month2,day2 using season data\;
+			}
+		}
+		\If{i == 2}{
+			\If{we found a week pattern before and split[i] is a decimal value}{
+				calculate which day of the week it is\;
+				set year1,month1,day1 using the week and day of the week data\;
+			}
+			\If{split[i] matches day pattern}{
+				set day1 to it\;
+			}
+			\If{split[i] matches weekend pattern}{
+				set day1, year2, month2, day2 using weekedn data\;
+			}
+		}
+	}
+	create a Date for date1 using year1,month1,day1 data\;
+	add date1 to L\;
+	\If{year2,month2,and day2 have values}{
+		create a Date for date2 using year2,month2,day2 data\;
+		add date2 to L\;
+	}
+}
+return L\;
+\label{alg:getDate}
+\caption{getDate}
+\end{algorithm}
+
+
+ENFORCE DATE RULE
+\begin{algorithm}
+\SetKwInOut{Input}{Input}
+\SetKwInOut{Output}{Output}
+\Input{List of new Dates L}
+\Output{date1 being the lowest Date up to now}
+\Output{date2 being the greatest Date up to now}
+\ForEach{Date d in the list L}{
+	\If{date1 $>$ d}{
+		date1 $:=$ d\;
+	}
+	\If{(date2 is null $||$ date2 $<$ d) and $date1 \neq d$}{
+		date2 $:=$ d\;
+	}
+}
+\label{alg:enforceRule}
+\caption{Enforce Rule}
+\end{algorithm}
+
+POS TREE OF INPUT TEXT
+\begin{figure}
+\resizebox{\linewidth}{!}{
+\Tree
+[.ROOT
+	[.S 
+		[.PP 
+			[.IN \textit{On} ]
+               		[.NP 
+				[.NNP \textit{Friday} ]
+			]
+		]
+          	[.NP 
+			[.DT \textit{the} ]
+			[.NNP \textit{Washington} ]
+			[.NNP \textit{Post} ]
+		]
+		[.VP 
+			[.VBD \textit{came} ]
+			[.PRT 
+				[.RP \textit{out} ]
+			]
+			[.PP 
+				[.IN \textit{with} ]
+				[.NP 
+					[.NP 
+						[.DT \textit{the} ] 
+						[.JJS \textit{latest} ]
+					]
+					[.PP 
+						[.IN \textit{from} ] 
+						[.NP 
+							[.PRP \textit{its} ] 
+							[.JJ \textit{long-running} ] 
+							[.NN \textit{investigation} ]
+						]
+					]
+				]
+			]
+			[.PP 
+				[.IN \textit{into} ]
+				[.NP
+					[.NP 
+						[.NNP\textit{Trump} ]
+						[.POS \textit{'s} ]
+					]
+					[.JJ \textit{charitable} ]
+					[.JJ \textit{donations} ]
+				]
+			]
+		]
+		[.DOT \textit{.} ]
+	]
+]
+}
+\caption{P.O.S/Grammatical Tree of: "On Friday the Washington Post came out with the latest from its long-running investigation into Trump's charitable donations."}
+\label{tree:origString}
+\end{figure}
+\begin{figure}
+\resizebox{\linewidth}{!}{
+\Tree
+[.ROOT
+	[.S 
+          	[.NP 
+			[.DT \textit{the} ]
+			[.NNP \textit{Washington} ]
+			[.NNP \textit{Post} ]
+		]
+		[.VP 
+			[.VBD \textit{came} ]
+			[.PRT 
+				[.RP \textit{out} ]
+			]
+			[.PP 
+				[.IN \textit{with} ]
+				[.NP 
+					[.NP 
+						[.DT \textit{the} ] 
+						[.JJS \textit{latest} ]
+					]
+					[.PP 
+						[.IN \textit{from} ] 
+						[.NP 
+							[.PRP \textit{its} ] 
+							[.JJ \textit{long-running} ] 
+							[.NN \textit{investigation} ]
+						]
+					]
+				]
+			]
+			[.PP 
+				[.IN \textit{into} ]
+				[.NP
+					[.NP 
+						[.NNP\textit{Trump} ]
+						[.POS \textit{'s} ]
+					]
+					[.JJ \textit{charitable} ]
+					[.JJ \textit{donations} ]
+				]
+			]
+		]
+		[.DOT \textit{.} ]
+	]
+]
+}
+\caption{P.O.S/Grammatical Tree after removing time expressions}
+\label{tree:removeTime}
+\end{figure}
+
+
+POS TREE REMOVE DET
+\begin{figure}
+\resizebox{\linewidth}{!}{
+\Tree
+[.ROOT
+	[.S 
+          	[.NP 
+			[.NNP \textit{Washington} ]
+			[.NNP \textit{Post} ]
+		]
+		[.VP 
+			[.VBD \textit{came} ]
+			[.PRT 
+				[.RP \textit{out} ]
+			]
+			[.PP 
+				[.IN \textit{with} ]
+				[.NP 
+					[.NP 
+						[.JJS \textit{latest} ]
+					]
+					[.PP 
+						[.IN \textit{from} ] 
+						[.NP 
+							[.PRP \textit{its} ] 
+							[.JJ \textit{long-running} ] 
+							[.NN \textit{investigation} ]
+						]
+					]
+				]
+			]
+			[.PP 
+				[.IN \textit{into} ]
+				[.NP
+					[.NP 
+						[.NNP\textit{Trump} ]
+						[.POS \textit{'s} ]
+					]
+					[.JJ \textit{charitable} ]
+					[.JJ \textit{donations} ]
+				]
+			]
+		]
+		[.DOT \textit{.} ]
+	]
+]
+}
+\caption{P.O.S/Grammatical Tree after removing determiners}
+\label{tree:removeDeterminers}
+\end{figure}
+
+
+POS TREE XP-OVER-XP FIRST
+\begin{figure}
+\resizebox{\linewidth}{!}{
+\Tree
+[.ROOT
+	[.S 
+          	[.NP 
+			[.NNP \textit{Washington} ]
+			[.NNP \textit{Post} ]
+		]
+		[.VP 
+			[.VBD \textit{came} ]
+			[.PRT 
+				[.RP \textit{out} ]
+			]
+			[.PP 
+				[.IN \textit{with} ]
+				[.NP 
+					[.NP 
+						[.JJS \textit{latest} ]
+					]
+					[.PP 
+						[.IN \textit{from} ] 
+						[.NP 
+							[.PRP \textit{its} ] 
+							[.JJ \textit{long-running} ] 
+							[.NN \textit{investigation} ]
+						]
+					]
+				]
+			]
+			[.PP 
+				[.IN \textit{into} ]
+				[.NP
+					[.NP 
+						[.NNP\textit{Trump} ]
+						[.POS \textit{'s} ]
+					]
+				]
+			]
+		]
+		[.DOT \textit{.} ]
+	]
+]
+}
+\caption{P.O.S/Grammatical Tree after XP-Over-XP first iteration}
+\label{tree:xpOverXp}
+\end{figure}
+
+
+POS TREE XP-OVER-XP SECOND ITERATION
+\begin{figure}
+\resizebox{\linewidth}{!}{
+\Tree
+[.ROOT
+	[.S 
+          	[.NP 
+			[.NNP \textit{Washington} ]
+			[.NNP \textit{Post} ]
+		]
+		[.VP 
+			[.VBD \textit{came} ]
+			[.PRT 
+				[.RP \textit{out} ]
+			]
+			[.PP 
+				[.IN \textit{with} ]
+				[.NP 
+					[.NP 
+						[.JJS \textit{latest} ]
+					]
+				]
+			]
+			[.PP 
+				[.IN \textit{into} ]
+				[.NP
+					[.NP 
+						[.NNP\textit{Trump} ]
+						[.POS \textit{'s} ]
+					]
+				]
+			]
+		]
+		[.DOT \textit{.} ]
+	]
+]
+}
+\caption{P.O.S/Grammatical Tree after XP-Over-XP second iteration}
+\end{figure}
