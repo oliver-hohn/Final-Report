@@ -181,6 +181,62 @@ return L\;
 \label{alg:enforceRule}
 \caption{Enforce Rule}
 \end{algorithm}
+\begin{figure}
+\resizebox{\linewidth}{!}{
+\Tree
+[.ROOT
+	[.S 
+		[.PP 
+			[.IN \textit{On} ]
+               		[.NP 
+				[.NNP \textit{Friday} ]
+			]
+		]
+          	[.NP 
+			[.DT \textit{the} ]
+			[.NNP \textit{Washington} ]
+			[.NNP \textit{Post} ]
+		]
+		[.VP 
+			[.VBD \textit{came} ]
+			[.PRT 
+				[.RP \textit{out} ]
+			]
+			[.PP 
+				[.IN \textit{with} ]
+				[.NP 
+					[.NP 
+						[.DT \textit{the} ] 
+						[.JJS \textit{latest} ]
+					]
+					[.PP 
+						[.IN \textit{from} ] 
+						[.NP 
+							[.PRP \textit{its} ] 
+							[.JJ \textit{long-running} ] 
+							[.NN \textit{investigation} ]
+						]
+					]
+				]
+			]
+			[.PP 
+				[.IN \textit{into} ]
+				[.NP
+					[.NP 
+						[.NNP\textit{Trump} ]
+						[.POS \textit{'s} ]
+					]
+					[.JJ \textit{charitable} ]
+					[.JJ \textit{donations} ]
+				]
+			]
+		]
+		[.DOT \textit{.} ]
+	]
+]
+}
+\caption{P.O.S/Grammatical Tree of: "On Friday the Washington Post came out with the latest from its long-running investigation into Trump's charitable donations."}
+\end{figure}
 \section{Data Processing and Representation}
 \par In the grammatical tree formed, the inner leave identifiers are given by the P.O.S Treebank (cite). Each word or set of words are given a part of speech tag identifying them. An example can be found below. (example figure).
 \par On the grammatical tree shown in the previous figure, we will apply the algorithm proposed by Dorr, Zajic, and Schwartz \cite{dorrzajicschwartz2003}. This can be shown graphically in the following figure. It is to be noted that the value of the threshold does not force the summary to be below it, but it is a length of the summary to which the algorithm is working to.
