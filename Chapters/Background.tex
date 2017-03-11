@@ -15,25 +15,10 @@ The resulting system aims to produce a timeline of events based on the input tex
 \par The decision based models, are older than the statistic based models and use the grammar of the input text to trim (remove) parts of the inputs until no more rules can be applied or the summary produced is below a given threshold \cite{dorrzajicschwartz2003}. This is done by tokenizing, breaking an input text into words, phrases, symbols and tagging them each by an identifier(cite). The tokenized text, which is usually represented as a tree where the leaves are the words in the input text and the inner children the identifiers, is passed through an algorithm which applies rules which removes branches of the tree until no more rules can be applied or the summary text is below a given threshold. The trimmed tree is then used to produce the summary.
 //compare statistics to decision
 \par The trimming based models do not tend to produce as good of summaries as the statistic based model, due to them producing, usually, only one summary while the statistic based models produce a selection to choose from. However, as can be seen from the works of Knight and Marcu \cite{knightmarcu2000}, the trimming based models can produce better summaries than the statistic models in some occassions. The main advantage of the trimming model is their speed, and not requiring a large corpus of data (like the statistic models) by relying on the grammar to build the summary. In newer works of text summarization, neural network models are being used. These fall under the statistical based models. They produce extremely accurate results, but as most statistical models they require a large corpus of data. They requirement of the extensive sample of annotated data also leads to these algorithms being processor-heavy, as the data needs to be read, and calculations need to be performed to produce the probability values used in identifying suitable summaries.
-\par Due to the time-constraints of the project, it was decided to use the trimming approach, in specific the algorithm provided by Dorr, Zajic, and Schwartz \cite{dorrzajicschwartz2003} (figure of algorthim). Where the given input text is turned into a tree based on its grammatical structure, with the words in the text as the leaves, and the inner nodes being the identifiers, which is then trimmed. In addition, in statistical models the input text size is multiple sentences, i.e. a paragraph or more of text, where loading the models from the annotated data has less of an impact in performance as this being done for every sentence in that input text. 
+\par Due to the time-constraints of the project, it was decided to use the trimming approach, in specific the algorithm provided by Dorr, Zajic, and Schwartz \cite{dorrzajicschwartz2003} (Figures \ref{alg:trim} and \ref{alg:last}). Where the given input text is turned into a tree based on its grammatical structure, with the words in the text as the leaves, and the inner nodes being the identifiers, which is then trimmed. In addition, in statistical models the input text size is multiple sentences, i.e. a paragraph or more of text, where loading the models from the annotated data has less of an impact in performance as this being done for every sentence in that input text. 
 -cite
-\begin{algorithm}
-\SetKwInOut{Input}{Input}
-\SetKwInOut{Output}{Output}
-	\Input{A text with events to be found}
-	\Output{A list of Events (Results)}
-	\For{every sentence in the input text}
-		create an event\;
-		use NER annotator to add subjects (LOCATION, PERSON, ORGANIZATION, MONEY, MISC) and parse the DATEs\;
-		\If{found a date(s)}{
-			produce a summary of the sentence and set it for the event \ref{alg:trim}\;
-			add the event to the list of Events\;
-		}
-		return the list of Events\;	
-\label{alg:getEvent}
-\caption{Get an Event}
-\end{algorithm}
-\begin{algorithm}
+
+\begin{algorithm}[H]
 \SetKwInOut{Input}{Input}
     \SetKwInOut{Output}{Output}
 	\Input{A Grammatical Tree T of the Sentence to summarize}
@@ -54,7 +39,7 @@ The resulting system aims to produce a timeline of events based on the input tex
 \caption{Dorr, B., Zajic, D. and Schwartzm R, (2003). Hedge Trimmer: A Parse-and-Trim Approach to Headline Generation}
 \label{alg:trim}
 \end{algorithm}
-\begin{algorithm}
+\begin{algorithm}[H]
 \SetKwInOut{Input}{Input}
 \SetKwInOut{Output}{Output}
 \Input{A Grammatical Tree T of the Sentence to summarize}
@@ -77,111 +62,14 @@ The resulting system aims to produce a timeline of events based on the input tex
 		}
 }
 return T\;
-\label{alg:lastRule}
 \caption{Last Rule}
-\end{algorithm}
-\begin{algorithm}
-\SetKwInOut{Input}{Input}
-\SetKwInOut{Output}{Output}
-\Input{Base Date}
-\Input{NER DATE}
-\Output{date1 being the lowest Date, and date2 the greatest Date}
-	List L\;
-	split the date by "/"\;
-	\ForEach{date in the split}{
-		call getDate() on the date\;
-		add result to list L\;
-	}
-	call enforceRule()\;
-\label{alg:parse}
-\caption{Parse NER Dates}
+\label{alg:last}
 \end{algorithm}
 
-\begin{algorithm}
-\SetKwInOut{Input}{Input}
-\SetKwInOut{Output}{Output}
-\Input{A Normalized Date d of the format given by ISO 8601}
-\Input{Base Date}
-\Output{Exact Dates in a List L}
-initialize year1,month1,day1 to their default values\;
-set year2,month2,day2 to null\;
-\If{d matches PAST REF pattern}{
-	create a date1 with format 0001-01-01\;
-	create a date2 with value of the Base Date\;
-	add date1 and date2 to L\;
-}
-\If{d matches PRESENT REF pattern}{
-	create a date1 with value of the Base Date\;
-	add date1 to L\;
-}
-\If{d matches FUTURE REF pattern}{
-	create a date1 with value of the Base Date\;
-	create a date2 with format 9999-12-31\;
-	add date1 and date2 to L\;
-}{
-	check if its a BC date\;
-	split the input by '-'\;
-	\For{i =0; i $<$ split.length; i{+}{+}}{
-		\If{i == 0}{
-			\If{split[i] matches year pattern}{
-				set year1 to it, replacing every X with a 0\;
-				set year2 to it, replacing every X with a 9\;
-			}
-		}
-		\If{i == 1}{
-			\If{split[i] matches month pattern}{
-				set month1 to it\;
-			}
-			\If{split[i] matches week pattern}{
-				calculate month1, day1. month2, and day2 using the week data\;
-			}
-			\If{split[i] matches season pattern}{
-				calculate month1,day1,year2,month2,day2 using season data\;
-			}
-		}
-		\If{i == 2}{
-			\If{we found a week pattern before and split[i] is a decimal value}{
-				calculate which day of the week it is\;
-				set year1,month1,day1 using the week and day of the week data\;
-			}
-			\If{split[i] matches day pattern}{
-				set day1 to it\;
-			}
-			\If{split[i] matches weekend pattern}{
-				set day1, year2, month2, day2 using weekedn data\;
-			}
-		}
-	}
-	create a Date for date1 using year1,month1,day1 data\;
-	add date1 to L\;
-	\If{year2,month2,and day2 have values}{
-		create a Date for date2 using year2,month2,day2 data\;
-		add date2 to L\;
-	}
-}
-return L\;
-\label{alg:getDate}
-\caption{getDate}
-\end{algorithm}
-
-\begin{algorithm}
-\SetKwInOut{Input}{Input}
-\SetKwInOut{Output}{Output}
-\Input{List of new Dates L}
-\Output{date1 being the lowest Date up to now}
-\Output{date2 being the greatest Date up to now}
-\ForEach{Date d in the list L}{
-	\If{date1 $>$ d}{
-		date1 $:=$ d\;
-	}
-	\If{(date2 is null $||$ date2 $<$ d) and $date1 \neq d$}{
-		date2 $:=$ d\;
-	}
-}
-\label{alg:enforceRule}
-\caption{Enforce Rule}
-\end{algorithm}
-\begin{figure}
+\section{Data Processing and Representation}
+\par In the grammatical tree formed, the inner leave identifiers are given by the P.O.S Treebank\footnote{\url{http://www.ling.upenn.edu/courses/Fall_2003/ling001/penn_treebank_pos.html}}. Each word or set of words are given a part of speech tag identifying them. An example can be found below. (example figure).
+\par On the grammatical tree shown in the previous figure, we will apply the algorithm proposed by Dorr, Zajic, and Schwartz \cite{dorrzajicschwartz2003}. This can be shown graphically in the following figure. It is to be noted that the value of the threshold does not force the summary to be below it, but it is a length of the summary to which the algorithm is working to. For the sentence: "On Friday the Washington Post came out with the latest from its long-running investigation into Trump's charitable donations.", the following gramamtical tree is produced \ref{tree:origString}.
+\begin{figure}[h]
 \resizebox{\linewidth}{!}{
 \Tree
 [.ROOT
@@ -238,10 +126,10 @@ return L\;
 \caption{P.O.S/Grammatical Tree of: "On Friday the Washington Post came out with the latest from its long-running investigation into Trump's charitable donations."}
 \label{tree:origString}
 \end{figure}
-\begin{figure}
+\par The inner nodes in the tree are identifiers given by the P.O.S Treebank, and the leaves are the words in the sentence. A parent identifier can be a broader identifier of a collection of sub-identifiers. Using the algorithm described previously \cite{dorrzajicschwartz2003}, the tree can be processed as follows. The following example is used as a visualisation of how the decision-based algorithm works. Firstly, the lowest-leftmost S must be identified, as can be seen from the figure \ref{tree:origString} there is only one subtree with root S. This subtree is  extracted, and the algorithm is continued on it. The next step is to remove time expressions, of which there is only one "Friday", however we must remove its parent to (and thereby its children) to avoid producing a grammatically incorrect summary. The result is graphically shown in the following figure \ref{tree:removeTime}.
+\begin{figure}[h]
 \resizebox{\linewidth}{!}{
 \Tree
-[.ROOT
 	[.S 
           	[.NP 
 			[.DT \textit{the} ]
@@ -284,15 +172,14 @@ return L\;
 		]
 		[.DOT \textit{.} ]
 	]
-]
 }
 \caption{P.O.S/Grammatical Tree after removing time expressions}
 \label{tree:removeTime}
 \end{figure}
-\begin{figure}
+\par On the resulting tree, the algorithm dictates the removal of some determiners. A determiner is identified by the "DT" parent tag, however not all of the parents identified are removed, only ones that have a child of label "the" or "a". The resulting tree of applying this rule is given by Figure \ref{tree:removeDeterminers}.
+\begin{figure}[h]
 \resizebox{\linewidth}{!}{
 \Tree
-[.ROOT
 	[.S 
           	[.NP 
 			[.NNP \textit{Washington} ]
@@ -333,15 +220,14 @@ return L\;
 		]
 		[.DOT \textit{.} ]
 	]
-]
 }
 \caption{P.O.S/Grammatical Tree after removing determiners}
 \label{tree:removeDeterminers}
 \end{figure}
-\begin{figure}
+\par The threshold value is used in the next following rules. For this example, the threshold value is 10. From the two rules that are left, only one will be applied as the resulting tree's number of leaves will fall below the threshold value, such that the last rule will not be applied to avoid the algorithm from trimming the summary to much. Hence, the threshold's value importance is of stopping the algorithm from over-trimming or under-trimming. When the tree is over-trimmed there is the possibility that the resulting summary does not have the core meaning of the original sentence, or has no meaning. The advantage of under-trimming is that the meaning of the sentence is very likely kept, due to the summary sentence being of greater length of the optimal summary, thereby having more words and such more meaning, and being closer to the original sentence. However, the aim is to produce a summary, i.e. a short sentence with the same meaning as the original, thus under-trimming can ensure the meaning is kept in the summary, but not that the resulting summary is optimal in size or time (when reading many summaries, shorter ones will be appreciated over longer ones). When applying the XP-Over-XP rule, when a parent of identifier type XP (where XP can be NP,VP or S), has a first child identifier of type XP also, then all other children of the parent are removed. This is done iteratively until the resulting tree is below the threshold, or the rule cannot be applied further due to there not being anymore parent XP, first child XP pairs. The first iteration of the rule is shown in Figure \ref{tree:xpOverXpFirst}, and the second and final iteration in Figure \ref{tree:xpOverXpSecond}.
+\begin{figure}[h]
 \resizebox{\linewidth}{!}{
 \Tree
-[.ROOT
 	[.S 
           	[.NP 
 			[.NNP \textit{Washington} ]
@@ -380,15 +266,13 @@ return L\;
 		]
 		[.DOT \textit{.} ]
 	]
-]
 }
-\caption{P.O.S/Grammatical Tree after XP Over-XP first iteration}
-\label{tree:xpOverXp}
+\caption{P.O.S/Grammatical Tree after XP-Over-XP first iteration}
+\label{tree:xpOverXpFirst}
 \end{figure}
-\begin{figure}
+\begin{figure}[h]
 \resizebox{\linewidth}{!}{
 \Tree
-[.ROOT
 	[.S 
           	[.NP 
 			[.NNP \textit{Washington} ]
@@ -419,19 +303,18 @@ return L\;
 		]
 		[.DOT \textit{.} ]
 	]
-]
 }
 \caption{P.O.S/Grammatical Tree after XP-Over-XP second iteration}
+\label{tree:xpOverXpSecond}
 \end{figure}
-\section{Data Processing and Representation}
-\par In the grammatical tree formed, the inner leave identifiers are given by the P.O.S Treebank (cite). Each word or set of words are given a part of speech tag identifying them. An example can be found below. (example figure).
-\par On the grammatical tree shown in the previous figure, we will apply the algorithm proposed by Dorr, Zajic, and Schwartz \cite{dorrzajicschwartz2003}. This can be shown graphically in the following figure. It is to be noted that the value of the threshold does not force the summary to be below it, but it is a length of the summary to which the algorithm is working to.
--tags are POS (cite)
--example of input text to tree
--example of producing summary
--algorithm
--what are the options for the summary (Neural Networks vs Decision-Based)
--give an algorithm for determining the summary, with an example
+\par If the number of leaves did not fall under the threshold value, then the next rule to be applied is XP-Before-NP. In this rule, any XP before the NP of the sentence (the grammatical subject) is removed. This would be carried out until the number of leaves falls below the threshold, or the rule cannot be applied further. Finally, the last rule is applied where iteratively trailing PP and SBAR subtrees are removed until the threshold is reached or the rule cant be applied. The result of applying this algorithm (ref algorithm) on the input text: "On Friday the Washington Post came out with the latest from its long-running investigation into Trump's charitable donations.", is "Washington Post came out with latest into Trump's". It should be noted that the original meaning of the sentence, which is that the Washington Post released a new article, is kept. However, it should also be noted that the resulting summary is not grammatically correct as "Trump's" should be "Trump". Even though the summary is not grammatically correct the summary is significantly shorter than the input text, and does represent the same event. It is a headline of the input, and should indicate to a reader what the event is about, to allow them to have a general understanding of what occurred.
+-tags are POS (cite) //d
+-example of input text to tree //d
+-example of producing summary //d 
+-algorithm //d 
+-what are the options for the summary (Neural Networks vs Decision-Based) //d
+-give an algorithm for determining the summary, with an example //d
+
 -explain the date problem, with example (determine that it uses an ISO standard)
 
 
