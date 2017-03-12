@@ -4,7 +4,7 @@ The top-level auxiliary file: report.aux
 A level-1 auxiliary file: Chapters/Background.aux
 A level-1 auxiliary file: Chapters/Body.aux
 A level-1 auxiliary file: Chapters/RequirementsSpecification.aux
-A level-1 auxiliary file: Chapters/DesignSpecification.aux
+A level-1 auxiliary file: Chapters/Design.aux
 A level-1 auxiliary file: Chapters/Implementation.aux
 A level-1 auxiliary file: Chapters/ProfessionalIssues.aux
 A level-1 auxiliary file: Chapters/Evaluation.aux
@@ -18,7 +18,7 @@ Warning--to sort, need author or key in grammar
 Warning--empty year in grammar
 You've used 8 entries,
             2773 wiz_defined-function locations,
-            660 strings with 7308 characters,
+            660 strings with 7295 characters,
 and the built_in function-call counts, 4414 in all, are:
 = -- 420
 > -- 192

@@ -1,0 +1,85 @@
+\chapter{Design}
+-objectives
+-use cases (actors)
+-architecture of backend
+-design patterns
+-gui (with screenshots)
+\section{Objectives}
+\par \textbf{Visability} -  It should be visible to the user what are the functions that are available. This includes being able to distinguish actions from informative text. This can be ensured through the use of buttons that are highlighted. This would allow to provide an application that can be picked up and used with minimal to none training. Therefore, it would be beneficial to the growth of the systems use, by attracting more users through its simplicity of use. This can be completed by providing a simple and intuitive User Interface (UI), where buttons are highlighted, and the interface is not cluttered with actions, instead just providing what is necessary. The timeline produced will be available in three different formats: graphically in the system, as a PDF file, or as a JSON. The latter is the only one that is not a graphical representation, while the other two do.
+\par \textbf{Efficient} - The time spent to perform tasks should be reasonable in the context of the input. This can be further expressed in mathematical notation of Big-Oh. If an algorithm takes an input of size $n$, and roughly performs $n$ operations to produce a result, then the algorithm is said to have a runtime of Big-Oh of $n$. This allows the efficiency of an algorithm to be compared to other algorithms, and for the run-time to be scaled to larger inputs. An objective would be to avoid having a run-time, a Big-Oh, that is exponential. Since for a small $n$ the run-time is large, therefore, for a large $n$ it is infeasible for a result to be produced in time. This objective can be completed through the use of Threads. A Thread is a lightweight processor computation unit. Using more than one-thread allows for tasks to be carried out in parallel. Therefore, if the input is $n$ documents, and there are $n$ threads, then the running time of the system would be the greatest running time of all the documents being carried out. Since if all documents are being processed in parallel, and completely independently of each other, the one document that takes the longest to be processed will give the time of processing all of the documents (cite). The amount of threads running in parallel should be an editable setting to the user, as they may wish to reduce the load of running many threads in parallel in the case they are doing other work on their machine, or they may wish to use the maximum amount of possible threads they can.
+\par \textbf{Effective} - The system should meeet its purpose. That is, its task is to take as input documents and produce a timeline. Thereby, the system should provide the user options to load documents, and then provide a graphical response. In the case where no response can be produced, i.e. due to the document encoding not being parsable, then the system should not attempt indefinetely to produce a timeline with that document, and instead produce an empty timeline. 
+\section{Use Cases}
+\par A use case is a task a actor in the system may want to perform. An actor is any type of user of the system. In this case, the user can be a law professional that requires to have a general understanding of a given set law-realted documents. Therefore, it can be assumed that the user does not necessarily have experience with NLP, and the tasks that are involved in processing the document. It should be transparent to the user how the documents are being parsed, and only if they are interested would they require to look at the available source-code. The technical skill of the user does not need to be of an expert, as the tasks required are to provide documents, and then from the resulting timeline they can traverse it and perform their analysis. In some cases, the user may produce their own graphical representation of a timeline and just use the produced JSON of the system.
+\par The use cases of the system are given by the requirements, and they are found below.
+\begin{enumerate}
+  \item Load Documents
+  \begin{enumerate}
+    \item Primary Actor: User
+    \item Goal: load set of given documents, where the document file types can be  .pdf, .docx, or .txt.
+    \item Main Sequence:
+	\begin{enumerate}
+		\item User selects the "Load Documents" option.
+		\item System prompts a File Selector.
+		\item User selects set of documents and the base dates (or reference dates) to use with them.
+		\item System responds with timeline of events.
+	\end{enumerate}
+  \end{enumerate}
+  \item Swap from Timeline to Document
+   \begin{enumerate}
+	\item Primary Actor: User
+	\item Goal: show the sentence, in context, that produced the given event.
+	\item Main Sequence:
+	\begin{enumerate}
+		\item User selects event.
+		\item System responds with dialog to "Edit Event" or "Go to Document".
+		\item User selects "Go to Document" option.
+		\item System opens new window with the text of the document where the event originates from, with the sentence that produced it highglighted.
+	\end{enumerate}
+    \end{enumerate}
+   \item Edit Event
+      \begin{enumerate}
+	\item Primary Actor: User
+	\item Goal: modify the data of an event.
+	\item Main Sequence:
+	\begin{enumerate}
+		\item User selects event.
+		\item System responds with dialog to "Edit Event" or "Go to Document".
+		\item User selects "Edit Event" option.
+		\item System responds with dialog with the data of the event set in fields.
+		\item User edits the data as needed.
+		\item System validates the entered data, and saves.
+	\end{enumerate}
+     \end{enumerate}
+   \item Save Timeline
+    \begin{enumerate}
+	\item Primary Actor: User
+	\item Goal: save the produced timeline as a PDF or JSON.
+	\item Main Sequence:
+	\begin{enumerate}
+		\item User selects "Save To..." option.
+		\item System responds with option dialog to select the file format to save.
+		\item User selects the needed file format.
+		\item System responds with File Selector.
+		\item User selects the location to save the timeline.
+		\item System generates the required data to save the timeline in the desired format and attempts to save it in the system.
+	\end{enumerate}
+    \end{enumerate}
+\end{enumerate}
+//note load documents use case includes adding to an existing timeline, user is the person using the system, edit event incl delete, checks for invalid data, file not available
+\par The main sequence are the steps of the interaction in the use case to reach the desired goal. An error can occur during the interaction. It should be the systems responsibility to deal with the error, and not end the execution of the program. The primary actor, is the agent, or entity that initiates the use case (cite or footnote).
+\par It should be noted that loading a document includes both when it is the first set of documents to be loaded, i.e. the timeline is empty, and when there is already a populated timeline. In the latter case, it would be beneficial to discard duplicated events. A duplicated event is one where it is produced from the same file, using the same reference date, and the data is equal. This is done to not clutter the timeline with events that are repeated, as the timeline should be efficient in the data it provides, i.e. describe the events in the document with as little as possible of additional data. It can occur that two documents produce the same event, these should not count as duplicated, as the event may have a different context depending on what file it is from. The reference date is included, as for the same document different events may be produced depending on the reference date used for that document. 
+\par When an event is being edited, the user should have the option to delete said event. It can be that the system produced an event that is not relevant for the user, or another event describes it. This can be the case when a set of closely related documents are loaded, and two or more events have the same meaning, but are not direct duplicates as they originate from separate files. In addition, when the user edits the data of an event, validation checks are performed before the changes are saved. It can occur that the modification inserted invalid data. For example, if the date of an event is modified but instead of a new date being set, text is placed. In the case of the event occuring during a range of dates, i.e. it has a start date and end date, a plausible validation check should be that the second date does not occur before the first. The system can do these checks before it attempts to save the modifications, and in cases where the validations fails, the changes should not be saved, instead the user should be prompted to enter correct data or cancel the action. The system should inform the user of where they validation failed, to allow them to correct the data.
+\par It can occur that the desired location of where the timeline should be saved is unavailable. This can be due to the system not having write access to that part of the Operating System, or the file which is being overwritten is in use (i.e. another process locked the file (cite or footnote)).
+\section{Architecture}
+\section{Design Patterns}
+\section{UI}
+
+
+
+
+
+
+
+
+
+

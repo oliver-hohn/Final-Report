@@ -16,20 +16,24 @@
 \contentsline {subsection}{\numberline {4.2.2}Non-Functional Requirements}{17}
 \contentsline {section}{\numberline {4.3}Limitations}{18}
 \contentsline {section}{\numberline {4.4}Additional Aims}{19}
-\contentsline {chapter}{\numberline {5}Design \& Specification}{20}
-\contentsline {section}{\numberline {5.1}Section Heading}{20}
-\contentsline {chapter}{\numberline {6}Implementation}{21}
-\contentsline {section}{\numberline {6.1}Section Heading}{21}
-\contentsline {chapter}{\numberline {7}Professional and Ethical Issues}{22}
-\contentsline {section}{\numberline {7.1}Section Heading}{22}
-\contentsline {chapter}{\numberline {8}Results/Evaluation}{23}
-\contentsline {section}{\numberline {8.1}Software Testing}{23}
-\contentsline {section}{\numberline {8.2}Section Heading}{23}
-\contentsline {chapter}{\numberline {9}Conclusion and Future Work}{24}
-\contentsline {section}{Bibliography}{26}
-\contentsline {chapter}{\numberline {A}Extra Information}{27}
-\contentsline {section}{\numberline {A.1}Tables, proofs, graphs, test cases, ...}{27}
-\contentsline {chapter}{\numberline {B}User Guide}{28}
-\contentsline {section}{\numberline {B.1}Instructions}{28}
-\contentsline {chapter}{\numberline {C}Source Code}{29}
-\contentsline {section}{\numberline {C.1}Instructions}{29}
+\contentsline {chapter}{\numberline {5}Design}{20}
+\contentsline {section}{\numberline {5.1}Objectives}{20}
+\contentsline {section}{\numberline {5.2}Use Cases}{21}
+\contentsline {section}{\numberline {5.3}Architecture}{24}
+\contentsline {section}{\numberline {5.4}Design Patterns}{24}
+\contentsline {section}{\numberline {5.5}UI}{24}
+\contentsline {chapter}{\numberline {6}Implementation}{25}
+\contentsline {section}{\numberline {6.1}Section Heading}{25}
+\contentsline {chapter}{\numberline {7}Professional and Ethical Issues}{26}
+\contentsline {section}{\numberline {7.1}Section Heading}{26}
+\contentsline {chapter}{\numberline {8}Results/Evaluation}{27}
+\contentsline {section}{\numberline {8.1}Software Testing}{27}
+\contentsline {section}{\numberline {8.2}Section Heading}{27}
+\contentsline {chapter}{\numberline {9}Conclusion and Future Work}{28}
+\contentsline {section}{Bibliography}{30}
+\contentsline {chapter}{\numberline {A}Extra Information}{31}
+\contentsline {section}{\numberline {A.1}Tables, proofs, graphs, test cases, ...}{31}
+\contentsline {chapter}{\numberline {B}User Guide}{32}
+\contentsline {section}{\numberline {B.1}Instructions}{32}
+\contentsline {chapter}{\numberline {C}Source Code}{33}
+\contentsline {section}{\numberline {C.1}Instructions}{33}
