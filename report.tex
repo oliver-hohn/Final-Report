@@ -40,25 +40,18 @@ This is one of the most important components of the report. It should begin with
 -What is Project About (incl scope)? What is Aim? Bakground? Relevance to other works? (Pointers to other sections?)
 The project aims to facilitate the understandment of a substantial number of documents, especially in law cases. When an employee is tasked with a law case, it is expected that the fully understand the overall structure and occurrence of events. However, when a large collection of documents are involved, this task can be both cumbersome for the employee and expensive (in time and financially) for the employer. Since time is spent reading and understanding the documents, instead of moving ahead with the task that the documents are used for.
 \section{Project Scope}
-Due to the system receiving as input a collection of documents, then processing and graphically showing a timeline, the main areas are Natural Language Processing (NLP), and Data Processing and Representation. All of which will be discussed in the Background section.
+\par Due to the system receiving as input a collection of documents, then processing and graphically showing a timeline, the main areas are Natural Language Processing (NLP), and Data Processing and Representation. All of which will be discussed in the Background section.
 \section{Objectives}
 //what is an event (summary, size, subjects, date, etc)
-The Objectives are to produce a system that is simple to use and effective. This system should take in as input a selection of documents written in correct English (i.e. in natural language) and produce a timeline.\par
-Since most users are from other fields, not Computer Science, they should be able to understand that the system requires as input documents and produces timelines. The timeline should self-expanatory, such that the user understands which events happened during certain dates, and what each event means. The system should produce responses in an appropriate time based on the input, and allow the user to rectify where the system has made mistakes. In addition, it should allow expert users to be able to change some of the input parameters used when the events are produced, such as the length of the summary or how many processors can the program use in parallel (to limit/improve the performance). As it will be likely that the users will want to save the produced timeline for later use, they will have the ability to choose between saving the timeline as a PDF or as a JSON. The latter allows for the system to be used with 3rd-parties that would like to change the graphical representation or manipulate the given timeline in their own system.\par 
-The aim is to develop a system that produces a timeline based on the given input autonomously. The Requirements of the project are:
-\begin{enumerate}
-	\item Allow documents of different format types as input (such as .docx, .pdf, .txt).
-	\item Show a graphical representation of the documents based on the events in them.
-	\item Allow the editing of produced events, within the constraints of what an event can be.
-	\item Produce an intemediary output to be saved (as a .pdf or .json).
-	\item The processing of the system should be reasonable (based on the input size).
-\end{enumerate}
+\par The Objectives are to produce a system that is simple to use and effective. This system should take in as input a selection of documents written in correct English (i.e. in natural language) and produce a timeline.
+\par Since most users are from other fields, not Computer Science, they should be able to understand that the system requires as input documents and produces timelines. The timeline should self-expanatory, such that the user understands which events happened during certain dates, and what each event means. The system should produce responses in an appropriate time based on the input, and allow the user to rectify where the system has made mistakes. In addition, it should allow expert users to be able to change some of the input parameters used when the events are produced, such as the length of the summary or how many processors can the program use in parallel (to limit/improve the performance). As it will be likely that the users will want to save the produced timeline for later use, they will have the ability to choose between saving the timeline as a PDF or as a JSON. The latter allows for the system to be used with 3rd-parties that would like to change the graphical representation or manipulate the given timeline in their own system.
 \section{Report Structure}
 In the following chapter, the background of the project will be presented in detail. Which is then followed by the design architecture and patterns used in the system. Followed by the implementation, testing and analysis of the system. In the analysis it will be determined how the requirements have been met. In the final chapter, the project will be concluded and improvements for future work will be discussed.
 
 
 \include{Chapters/Background}
 \include{Chapters/Body}
+\include{Chapters/RequirementsSpecification}
 \include{Chapters/DesignSpecification}
 \include{Chapters/Implementation}
 \include{Chapters/ProfessionalIssues}

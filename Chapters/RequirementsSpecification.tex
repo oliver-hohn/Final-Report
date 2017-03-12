@@ -1,0 +1,38 @@
+\chapter{Requirements \& Specification}
+\section{Brief}
+-purpose of project
+-how established requirements
+\par The system should take as input a set of documents, process them autonomously (i.e. without the users involvment), and produce a graphical representation of events in the documents. This requires the identification of sentences in the text that contain dates, provide an exact date (to compare to other events), identify subjects and provide a summary of the sentence. From this the requirements can be determined.
+
+\section {Requirements}
+\subsection{Functional Requirements}
+\par The functional requirements of a system are behaviours a system should have\footnote{\url{http://reqtest.com/requirements-blog/functional-vs-non-functional-requirements/}}. In this project the functional requirements are as follows:
+\begin{enumerate}
+\item Process documents of different file types (e.g. .pdf, .txt, and .docx).
+\item Identify dates and subjects in text.
+\item Summarize sentences.
+\item Produce a graphical timeline of the events in the input documents.
+\item Modify/Delete events in the timeline.
+\item Travel between timeline and relevant document.
+\item Save timeline (as .pdf or .JSON).
+\end{enumerate} 
+\par As the software will require as input text, the 3 most used document file types\footnote{\url{http://www.computerhope.com/issues/ch001789.htm}} should be processable. As the aim is to identify events in the input text, it is trivial that dates should be identified. The subjects of a sentence are required to give an overall description of what the event is about. Subjects, in this case, include names of people, locations, and quantities of money. The resulting system should enable users to modify events as it can be the case that the summary, subjects, or date determined by the system are wrong. Thereby allowing the user to correct the mistake. 
+\par The final two requirements do not affect the processing of the system, but can be advantageous to users. As being able to swaitch between timeline and document will provide the ability to go from a general description of an event to the actual, full-detail, and in context description. Saving the timeline to a PDF file will allow the results to be included in documents. However, more interestingly, producing an intermediate JSON output makes the system compatible with 3rd- applications that can provide other graphical representations and/or process further the data.
+
+\subsection{Non-Functional Requirements}
+\par Non-functional requirements of a project are descriptions of how the system must do the functional requirements, and the qualities the system should have. In this project the non-functional requirements are as follows:
+\begin{enumerate}
+\item A responsive and intuitive UI (Usability).
+\item Reasonable output time (Efficient).
+\item Identify the majority of events (Effective).
+\end{enumerate}
+\par As the system should be used by any kind of user, with any technical knowledge, it should be understandable for the user how to use it, i.e. the system should be usable. The users of the system will be described further in later chapters. It is trivial that the system should produce an output reasonable to the amount of input given. It would be unreasonable that the resulting system should have an exponential running time, i.e. given an input of amount $n$, the system carries out more than $2^n$, which would make it slow. The system should be efficient. Identifying most events is the most important non-functional requirement, and one of the most important general requirements of the system. The system should be able to extract simple events in text where the full date is mentioned, but also be able to extract more complicated events where the temporal expressions are ambigious. Thus, making the system effective.
+\par A point that will be further explored in later chapters, is the extraction, and inference to concrete dates, of ambigious temporal expressions, which are known to have happened after and/or before other temporal expressions, which can be ambigious or concrete. This would produce a timeline, where the exact date of when an event occurred is not known, however it is known that it happened before or after another event, and thereby the timeline can be formed. However, this requires changing models in already established NLP tools, which is discussed further in the Future Works chapter.
+
+\section{Limitations}
+\par The greatest limitation of the project is time, both in its development and in the execution of the system. As the project time is limited, compromises have to be made. For example, a noisy-channel neural-network summary system would produce different plausible summaries for a given text, of which one should be a reasonable summary. However, as mentioned previously, noisy-channel models require a large amount of annotated data (and thus are domain-dependent). Thereby, providing this set of data would require more development time. In addition, the loading of these large models of data to summarize one sentence, would have a substantial impact in the running time of the system. If the system then takes longer than a user to produce the timeline, then the user will most likely prefer to produce the timeline manually.
+\par A limitation that must be recognised, is the understanding of context. Natural-Language Processing (NLP) is still an area of research, and will continue to be. It is a clear issue in this project, that some texts will produce poor timelines, as the context in which the text was written in will not be encapsulated fully. This can be applied to ambgious temporal expressions, or the meaning of the sentence. Some NLP tools attempt to maintain the context of text, by looking for references between sentences. However, this does not replace the context that humans understand when reading text or having a conversation.
+
+\section{Additional Aims} 
+-open source (with documentation), to be used in 3rd parties and allow the project to be further developed
+\par The project will be open-source. It will be available on GitHub, along with a license that allows anyone that is interested in processing text to use it. This will be benefitial, as the application does produce an intermediate JSON to be used by 3rd-party systems. Thereby, iteratively improving the system. Open-source may also be required, however this is dependent on the libraries used in the development.
