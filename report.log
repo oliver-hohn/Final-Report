@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2017.1.17)  12 MAR 2017 16:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2017.1.17)  12 MAR 2017 16:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -857,6 +857,9 @@ ABD: EveryShipout initializing macros
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 
+! I can't write on file `report.pdf'.
+(Press Enter to retry, or Control-Z to exit; default file extension is `.pdf')
+Please type another file name for output: 
 <FrontMatter/logo.png, id=4, 234.8775pt x 214.8025pt>
 File: FrontMatter/logo.png Graphic file (type png)
 
@@ -1052,7 +1055,7 @@ pe1/public/lm/lmr7.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/lm/lmri10
 .pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/lm/lmtt10.pfb><d:/texlive/2
 016/texmf-dist/fonts/type1/public/lm/lmtt8.pfb><d:/texlive/2016/texmf-dist/font
 s/type1/public/mathabx-type1/matha10.pfb>
-Output written on report.pdf (33 pages, 331642 bytes).
+Output written on report.pdf (33 pages, 331691 bytes).
 PDF statistics:
  170 PDF objects out of 1000 (max. 8388607)
  119 compressed objects within 2 object streams
