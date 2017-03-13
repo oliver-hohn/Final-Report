@@ -10,7 +10,7 @@
 \par \textbf{Effective} - The system should meeet its purpose. That is, its task is to take as input documents and produce a timeline. Thereby, the system should provide the user options to load documents, and then provide a graphical response. In the case where no response can be produced, i.e. due to the document encoding not being parsable, then the system should not attempt indefinetely to produce a timeline with that document, and instead produce an empty timeline. 
 \section{Use Cases}
 \par A use case is a task a actor in the system may want to perform. An actor is any type of user of the system. In this case, the user can be a law professional that requires to have a general understanding of a given set law-realted documents. Therefore, it can be assumed that the user does not necessarily have experience with NLP, and the tasks that are involved in processing the document. It should be transparent to the user how the documents are being parsed, and only if they are interested would they require to look at the available source-code. The technical skill of the user does not need to be of an expert, as the tasks required are to provide documents, and then from the resulting timeline they can traverse it and perform their analysis. In some cases, the user may produce their own graphical representation of a timeline and just use the produced JSON of the system.
-\par The use cases of the system are given by the requirements, and they are found below.
+\par The use cases of the system are given by the requirements, and they are found below. //use case stick figure diagram
 \begin{enumerate}
   \item Load Documents
   \begin{enumerate}
@@ -71,6 +71,62 @@
 \par When an event is being edited, the user should have the option to delete said event. It can be that the system produced an event that is not relevant for the user, or another event describes it. This can be the case when a set of closely related documents are loaded, and two or more events have the same meaning, but are not direct duplicates as they originate from separate files. In addition, when the user edits the data of an event, validation checks are performed before the changes are saved. It can occur that the modification inserted invalid data. For example, if the date of an event is modified but instead of a new date being set, text is placed. In the case of the event occuring during a range of dates, i.e. it has a start date and end date, a plausible validation check should be that the second date does not occur before the first. The system can do these checks before it attempts to save the modifications, and in cases where the validations fails, the changes should not be saved, instead the user should be prompted to enter correct data or cancel the action. The system should inform the user of where they validation failed, to allow them to correct the data.
 \par It can occur that the desired location of where the timeline should be saved is unavailable. This can be due to the system not having write access to that part of the Operating System, or the file which is being overwritten is in use (i.e. another process locked the file (cite or footnote)).
 \section{Architecture}
+\par The architecture of a system, is the structure of the components of the system\footnote{\url{https://msdn.microsoft.com/en-gb/library/ee658098.aspx}}. It focuses on the back-end, or logic, of the system as opposed to the graphical, or front-end task. A good software architecture is one where the components of the system are encapsulated with other related components. For this project, the software architecture has been produced using Unified-Modelling Language (UML). In UML, components or classes are represented by a rectangle, with their available functions listed. The architecture of the whole system is presented in the figure below (Figure \ref{fig:fullArch}). We will look at each package individually.
+\begin{figure}[H]
+\caption{Full UML Architecture of Automated Timeline Extraction system.}
+\label{fig: fullArch}
+\includegraphics[width=\linewidth]{fullarch.png}
+\centering
+\end{figure}
+\subsection{Process Package}
+\par The core of the system is the process package (see Figure \ref{fig:process}). The architecture used here, is that interaction is done through ProcessFiles. A list of files is passed in, along with their data (such as the file name, its path, or the creation date used). Each file is processed in parallel. The maximum number of parallel processing that can be done is given by the settings of the system (in the settings package). This is the maximum number of threads that can be ran at any given point. However, in the implemented system one more thread should be added to the count, as the graphical user interface always runs on a separate thread. The idea is that if the maximum setting is $n$, then at any given point at most $n$ files are being processed. Whenever one file finishes processing, another begins to be processed. As mentioned before, if $n$ files are allowed to process at any given point, and the input size of documents is $n$, then the time it takes for the system to process all the documents is given by the greates maximum time to process one of the $n$ files. The pseudo-code for this is given below (see Algorithm \ref{alg:processFiles}), in an actual implementation semaphores can be used. A semaphore is a control data structure to limit how many processes can run in parallel. It is done by acquiring a lock when a process needs to be ran, if a lock is available then the process can run, if no lock is available then the process waits until one is available.
+\begin{figure}[h]
+\caption{UML of the Processing Package}
+\label{fig:process}
+\includegraphics[width=\linewidth]{process.png}
+\centering
+\end{figure}
+\begin{algorithm}
+\SetKwInOut{Input}{Input}
+\SetKwInOut{Output}{Output}
+\Input{A list of Files to Process}
+\Output{A list of Results}
+\ForEach{File in the input list}{
+	wait until can run\; \COMMENT if the maximum number of threads running in parallel has not been reached then stop waiting, else wait
+	process the file\;
+	add the produced Result to the list of Results to return\;
+}
+return list of Results\;
+\caption{Algorithm for processing a list of Files}
+\label{alg:processFiles}
+\end{algorithm}
+\par A Result is the event of a timeline in this system. It holds the start and end date of an event, its subjects, and its summary. The start and end date are determined through the TimelineDate component.
+\par When a temporal expression is detected in a sentence, it must be processed to an exact date to be useful. This is done through TimelineDate. It attempts to parse them. In this system, the decision was made to use the StanfordCoreNLP suite \footnote{\url{http://stanfordnlp.github.io/CoreNLP/}}. It is a well-known and tested tool for Natural Language Processing. Other tools exist, such as ApacheNLP, however Stanford's tool has a larger set of documentation and support, as well as being a thread-safe and efficient tool. Thread-safe refers to the ability to share this tool between separate processes without having to worrry about concurrency issues. 
+\par When a file is processed, its text is extracted, and this is then passed through the Engine. The Engine is responsible for producing the Results for that file. It identifies sentences with dates, and for those it extracts subjects such as people, locations, money, etc. In addition, it implements the Hedge-Trimmer discussed in the Background Chapter.
+\subsection{System Package}
+//talk about system to be shared throughout the system (same data shared)
+\par The system package holds the system and settings components (see Figure \ref{fig:system}). It is responsible for providing global settings, such as the maximum number of threads to be ran in parallel, the threshold value used in the sumamry algorithm, and graphical settings such as the width and height of the window. An interesting aspect of this package is the SystemState. As the system moves from start, to processing files and then finishing the processing. This can be modelled in the system. When files are passed through the process package, the state of the system is changed. This allows for the graphical representation of the system to be decoupled of the logic, as it can use the system state to determine when certain actions are available, when a loading bar needs to be shown, and when a timeline should be displayed.
+\begin{figure}[H]
+\caption{UML of the System Package}
+\label{fig:system}
+\includegraphics[width=\linewidth]{system.png}
+\end{figure}
+\subsection{Ranges Package}
+//trees of ranges with results, algorithm, example
+\par The ranges package was one of the later packages developed (see Figure \ref{fig:ranges}). Its focus is on placing already produced Results into ranges of dates. A Range is defined by a start and end date. A Result is placed within this Range if it has the exact same start and end date, if this is not the case then it attempts to look at the children of that Range. If it is not possible to place the Result in a Rangeor its children then another root Range is checked. If after checking all Ranges this is still not possible, then a new separate root Range is created using the Results dates and the Result is placed there.This allows to order events within each other, such that if one event occurred during the period of a longer event, than that event will be contained by the other. 
+\begin{figure}
+\caption{UML of the Ranges Package}
+\label{fig:ranges}
+\includegraphics[width=\linewidth]{ranges.png}
+\end{figure}[H]
+\subsection{Helpers Package}
+//define refactoring, common functionality, link to ranges
+\par The helper package holds utility components used throughout the system (see Figure \ref{fig:helpers}). It provides sorting of lists, and the production of JSON and .PDF files for given list of Results. It is a package used in the refactoring of the logic of the system. Refactoring is done to remove repeated components and operations and have them available in one place only, to not have duplicate code. Common functionality includes sorting of Results by their dates, or sort by number of days between the start and end dates of an event
+\begin{figure}[H]
+\caption{UML of the Helpers Package}
+\label{fig:helpers}
+\includegraphics[width=\linewidth]{helpers.png}
+\end{figure}
 \section{Design Patterns}
 \section{UI}
 
