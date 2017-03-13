@@ -74,7 +74,7 @@
 \par The architecture of a system, is the structure of the components of the system\footnote{\url{https://msdn.microsoft.com/en-gb/library/ee658098.aspx}}. It focuses on the back-end, or logic, of the system as opposed to the graphical, or front-end task. A good software architecture is one where the components of the system are encapsulated with other related components. For this project, the software architecture has been produced using Unified-Modelling Language (UML). In UML, components or classes are represented by a rectangle, with their available functions listed. The architecture of the whole system is presented in the figure below (Figure \ref{fig:fullArch}). We will look at each package individually.
 \begin{figure}[H]
 \caption{Full UML Architecture of Automated Timeline Extraction system.}
-\label{fig: fullArch}
+\label{fig:fullArch}
 \includegraphics[width=\linewidth]{fullarch.png}
 \centering
 \end{figure}
@@ -105,30 +105,104 @@ return list of Results\;
 \par When a file is processed, its text is extracted, and this is then passed through the Engine. The Engine is responsible for producing the Results for that file. It identifies sentences with dates, and for those it extracts subjects such as people, locations, money, etc. In addition, it implements the Hedge-Trimmer discussed in the Background Chapter.
 \subsection{System Package}
 //talk about system to be shared throughout the system (same data shared)
-\par The system package holds the system and settings components (see Figure \ref{fig:system}). It is responsible for providing global settings, such as the maximum number of threads to be ran in parallel, the threshold value used in the sumamry algorithm, and graphical settings such as the width and height of the window. An interesting aspect of this package is the SystemState. As the system moves from start, to processing files and then finishing the processing. This can be modelled in the system. When files are passed through the process package, the state of the system is changed. This allows for the graphical representation of the system to be decoupled of the logic, as it can use the system state to determine when certain actions are available, when a loading bar needs to be shown, and when a timeline should be displayed.
+\par The system package holds the system and settings components (see Figure \ref{fig:system}). It is responsible for providing global settings, such as the maximum number of threads to be ran in parallel, the threshold value used in the sumamry algorithm, and graphical settings such as the width and height of the window. An interesting aspect of this package is the SystemState. As the system moves from start, to processing files and then finishing the processing. This can be modelled in the system. When files are passed through the process package, the state of the system is changed. This allows for the graphical representation of the system to be decoupled of the logic, as it can use the system state to determine when certain actions are available, when a loading bar needs to be shown, and when a timeline should be displayed. This component is shared throughout the system, as it contains data that is required in other components, both for the logical aspects of the system and the graphical aspects.
 \begin{figure}[H]
 \caption{UML of the System Package}
 \label{fig:system}
 \includegraphics[width=\linewidth]{system.png}
 \end{figure}
 \subsection{Ranges Package}
-//trees of ranges with results, algorithm, example
-\par The ranges package was one of the later packages developed (see Figure \ref{fig:ranges}). Its focus is on placing already produced Results into ranges of dates. A Range is defined by a start and end date. A Result is placed within this Range if it has the exact same start and end date, if this is not the case then it attempts to look at the children of that Range. If it is not possible to place the Result in a Rangeor its children then another root Range is checked. If after checking all Ranges this is still not possible, then a new separate root Range is created using the Results dates and the Result is placed there.This allows to order events within each other, such that if one event occurred during the period of a longer event, than that event will be contained by the other. 
-\begin{figure}
+//trees of ranges with results, algorithm, example, running time
+\par The ranges package was one of the later packages developed (see Figure \ref{fig:ranges}). Its focus is on placing already produced Results into ranges of dates (see the Algorithm \ref{alg:produceRanges}). A Range is defined by a start and end date. A Result is placed within this Range if it has the exact same start and end date, if this is not the case then it attempts to look at the children of that Range. If it is not possible to place the Result in a Rangeor its children then another root Range is checked. If after checking all Ranges this is still not possible, then a new separate root Range is created using the Results dates and the Result is placed there.This allows to order events within each other, such that if one event occurred during the period of a longer event, than that event will be contained by the other. 
+\begin{figure}[H]
 \caption{UML of the Ranges Package}
 \label{fig:ranges}
 \includegraphics[width=\linewidth]{ranges.png}
-\end{figure}[H]
+\end{figure}
+\begin{algorithm}
+\SetKwInOut{Input}{Input}
+\SetKwInOut{Output}{Output}
+\Input{A list of Results}
+\Output{A list of Range roots, i.e. a forest of Ranges}
+sort the list of Results by the number of days in between the start and end date in descending order\;
+\ForEach{Result in the sorted list}{
+	attempt to add it to one of the existing Range roots\;
+	\If{failed to add to existing Range}{
+		make a new Range using the data of the Result\;
+		add the new Range to the list of Range roots\;
+	}
+}
+return list of Range roots\;
+\caption{Algorithm for placing Results in Ranges}
+\label{alg:produceRanges}
+\end{algorithm}
+\par The Results are sorted by the range of the start and end date, i.e. the numer of days between the two. A Result that only has one date, because it just occurred on that specific date, has a range of 0. The Results with the largest ranges are added first as it is more likely that in the possible dates inbetween their start and end date, there will be Results that have start and end dates there. This leads to the production of a tree, which will be shown below. Where the root is a Range with a start and end date that encapsulates all the start and end dates that are in the tree. In some cases it will be necessary to expand the dates of a Range if it is the case that a Result has an event that overlaps with the dates of the Range. This will then lead to have a Range that has no results, but has two children, the newly made Range for the Result that is being added, and a subtree which was Range that was being overlapped.
+\par For example, if you have the two Results presented in the table \ref{fig:resultsTable} and the pre-existing tree in Figure \ref{fig:rangeTreePre}. The Results would be sorted by their range, such that the second result would be the first to be added. This would produce the tree in Figure \ref{fig:rangeTree1}. Aftwerwards, the first Result in the table would be added, producing the tree in Figure \ref{fig:rangeTree2}. In the Figure \ref{fig:rangeTree2}, the following occurred: it was determined that the Result that was being added overlapped an existing Range, so a new Range was formed that would encapsulate the previous Range and the new Result by extending the start and end dates appropriately. Then a new Range was made that held the Result to be added data, and along with the old Range it was added to the children of the new expanded Range.
+\par As can be seen from the last tree produced, the largest start-end date pair encapsulates the smaller start-end date pair, and this is done recursively. This allows for when a list of Results needs to be produced, for example for a Timeline, and the aim is to show which Results happened around the same time period, as Results that overlap with dates are encapsulated.
+\begin{figure}[h]
+\begin{center}
+\begin{tabular}{ |c|c|c| } 
+ \hline
+Result & Start Date & End Date \\
+\hline
+\hline
+1 & 12-12-2016 & 18-12-2016 \\
+2 & 13-12-2016 & 20-12-2016 \\
+ \hline
+\end{tabular}
+\end{center}
+\caption{Example Results Start and End Date}
+\label{fig:resultsTable}
+\end{figure}
+\begin{figure}[h]
+\resizebox{\linewidth}{!}{
+\Tree
+ [.{01-01-1980  $\shortrightarrow$ 31-12-2016}
+	[.{01-01-2008  $\shortrightarrow$ 31-05-2016} {01-01-2015} ]
+	[{01-11-2016} ] 
+]
+}
+\caption{Pre-existing Range Tree}
+\label{fig:rangeTreePre}
+\end{figure}
+\begin{figure}[h]
+\resizebox{\linewidth}{!}{
+\Tree
+ [.{01-01-1980 $\shortrightarrow$ 31-12-2016}
+	[.{01-01-2008  $\shortrightarrow$ 31-05-2016} {01-01-2015} ]
+	[{13-12-2016  $\shortrightarrow$ 20-12-2016} ]
+	[{01-11-2016} ] 
+]
+}
+\caption{Resulting Range Tree after adding the Result: 13-12-2016  $\shortrightarrow$ 20-12-2016}
+\label{fig:rangeTree1}
+\end{figure}
+\begin{figure}
+\resizebox{\linewidth}{!}{
+\Tree
+ [.{01-01-1980 $\shortrightarrow$ 31-12-2016}
+	[.{01-01-2008  $\shortrightarrow$ 31-05-2016} {01-01-2015} ]
+	[.{12-12-2016  $\shortrightarrow$ 20-12-2016} 
+		[{12-12-2016  $\shortrightarrow$ 18-12-2016} ]
+		[{13-12-2016  $\shortrightarrow$ 20-12-2016} ]
+	]
+	[{01-11-2016} ] 
+]
+}
+\caption{Resulting Range Tree after adding the Result: 12-12-2016 $\shortrightarrow$ 18-12-2016}
+\label{fig:rangeTree2}
+\end{figure}
 \subsection{Helpers Package}
-//define refactoring, common functionality, link to ranges
-\par The helper package holds utility components used throughout the system (see Figure \ref{fig:helpers}). It provides sorting of lists, and the production of JSON and .PDF files for given list of Results. It is a package used in the refactoring of the logic of the system. Refactoring is done to remove repeated components and operations and have them available in one place only, to not have duplicate code. Common functionality includes sorting of Results by their dates, or sort by number of days between the start and end dates of an event
+\par The helper package holds utility components used throughout the system (see Figure \ref{fig:helpers}). It provides sorting of lists, and the production of JSON and .PDF files for given list of Results. It is a package used in the refactoring of the logic of the system. Refactoring is done to remove repeated components and operations. Thereby having them in one place only instead of being duplicated around the system. The main advantage is that when a change needs to be made, it is made in one place, but if the operations are duplicated throughout the system then that change needs to be carried out at each place. The common functionality that has been placed in one component to use throughout the system includes sorting Results by their dates or by the number of days between the start and end dates.
 \begin{figure}[H]
 \caption{UML of the Helpers Package}
 \label{fig:helpers}
 \includegraphics[width=\linewidth]{helpers.png}
 \end{figure}
 \section{Design Patterns}
+//singleton, obsever-observee, describe, explain why, and what other options were available
 \section{UI}
+//wireframes, reason for this, why no color, why no other layout?
 
 
 
