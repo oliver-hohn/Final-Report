@@ -110,6 +110,7 @@ return list of Results\;
 \caption{UML of the System Package}
 \label{fig:system}
 \includegraphics[width=\linewidth]{system.png}
+\centering
 \end{figure}
 \subsection{Ranges Package}
 //trees of ranges with results, algorithm, example, running time
@@ -118,6 +119,7 @@ return list of Results\;
 \caption{UML of the Ranges Package}
 \label{fig:ranges}
 \includegraphics[width=\linewidth]{ranges.png}
+\centering
 \end{figure}
 \begin{algorithm}
 \SetKwInOut{Input}{Input}
@@ -197,12 +199,47 @@ Result & Start Date & End Date \\
 \begin{figure}[H]
 \caption{UML of the Helpers Package}
 \label{fig:helpers}
-\includegraphics[width=\linewidth]{helpers.png}
+\includegraphics[scale=0.75]{helpers.png}
+\centering
 \end{figure}
 \section{Design Patterns}
-//singleton, obsever-observee, describe, explain why, and what other options were available
+\par Design Patters are general solutions to common problems in software development\footnote{\url{https://sourcemaking.com/design_patterns}}. The solutions usually include a system architecture to follow. For this project, the main design patterns are Singleton and Observer.
+\par \textbf{Singleton} - This design pattern ensures that only a certain number of instances of a component are available\footnote{\url{http://www.journaldev.com/1377/java-singleton-design-pattern-best-practices-examples}}. In most cases the number of components is restricted to one. The advantage of this pattern is that it allows for global data used throughout the system to be available in one area. As in the System component the NLP processing tool is held, along with the system state, which is used throughout the system at different places, it is beneficial to have this component follow the Singleton pattern. 
+\par \textbf{Observer} - This design pattern allows an observee to notify a list of its observers. The observee can be a model, and the the observers its view. This is used to separate the logic of the system from its user interface. It allows for the back-end of the system to be developed completely independently from the front-end. In this system, the front-end will be notified by the back-end. This is then stregnthened further through the different system states available. As the back-end begins processing documents, its state is changed, the front-end can then use this to modify its view appropriately, by retrieving the relevant data and showing the relevant options for that state. If the system were to be developed further, with other graphical interfaces used or added to the pre-existing UI, it can be added in without any issues. Since the logic of the system is independent of its view.
+\par \textbf{Model-View Controller} - It is mentioned as a main design pattern of the system, because it is similar to the Observer design pattern. In that it separates the view of data (a model) through a controller. The controller manipulates the data, and applies the appropriate changes in the view. It separates the logicof the system with its view, like an Observer pattern. This design pattern is enforced by many Graphical User Interface (GUI) frameworks, incluiding the one used in this project.
+\par Other design patterns are available, however these are the most relevant ones to this project. While the solution for the multi-threading is not a design pattern, it is worth mentioning that precautions have to be taken to independently process each document, which includes the previously mentioned semaphores. 
+//singleton, model-view-controller, describe, explain why, and what other options were available
 \section{UI}
-//wireframes, reason for this, why no color, why no other layout?
+\par The system is intended to be used by law professionals. However, it can be used by anyone that requires its services of producing timelines, as it will be open-source.  These considerations are taken into account during the development of the User-Interface. For example, as the main data representation of the system is the timeline of events, it is clear that it should occupy a majority of the screen. Options that are not relevant to the current state of the system should be unavailable, while options that are most likely to be used should be highlighted. This aims to achieve the visibility objective of the project.
+\par As the main actor can have any level of computer experience, it is important that they are not overloaded with options, and instead are just presented what was is needed. For example, when the system is initially launched, no timeline can be presented as no documents are available to be processed. Thereby, in the Figure presented below (see Figure \ref{fig:startup}) of the launch wireframe, the user is invited to begin using the system by loading documents. It should be noted that a wireframe is a mostly colourless screenshot of what the system should look like.
+\begin{figure}[h]
+\caption{Wireframe of System at Startup}
+\label{fig:startup}
+\includegraphics[width=\linewidth]{startup.png}
+\centering
+\end{figure}
+\par From this screen the user can load documents and select the reference dates used for these documents. During this period, the back-end of the system can load any resources it requires to process documents. Once the documents have been chosen by the user, they are presented with a loading dialog, to inform them that the system is processing. After this the timeline should be presented (see Figure \ref{fig:timeline}).
+\begin{figure}[h]
+\caption{Timeline of System}
+\label{fig:timeline}
+\includegraphics[width=\linewidth]{timeline.png}
+\centering
+\end{figure}
+\par For each event produced by the system, a timeline row will be produced. With each event an option to edit its data is available, which will provide a dialog (see Figure \ref{fig:editDialog}) that includes the option to delete an event, and the option to view the document that produced the given event (see Figure \ref{fig:viewDoc}). In addition, the user is provided valuable information such as which documents have been loaded (with the option to remove them and add to them), and the ability to save the timeline. It should be noted, that as can be seen from Figure \ref{fig:startup} the Timeline option is unvailable as the there is no timeline for the user to interact, while in the Figure \ref{fig:timeline} the option is enabled.
+\begin{figure}[h]
+\caption{Edit Event Dialog of System}
+\label{fig:editDialog}
+\includegraphics[scale=0.6]{editDialog.png}
+\centering
+\end{figure}
+\begin{figure}[h]
+\caption{Document Viewer of System}
+\label{fig:viewDoc}
+\includegraphics[scale=0.75]{viewDoc.png}
+\centering
+\end{figure}
+\par In the Document Viewer (see Figure \ref{fig:viewDoc}), it should be noted that the relevant sentence that produced the event, which the user interacted with to view this, is highlighted. This allows the user to see in context the event, as they can read the text surrounding this, giving them a better understanding of what occurred. This also allows the user to swap between the system and the documents, viewing how each event has been produced, and judging how effective the system is. In addition, if the user is interested in a certain event, they can jump to the document and just read the part related to that event, instead of having to read the entire document just to obtain more information on one aspect of it. This being extremely beneficial for large documents, as it is both time-efficient, and thereby cost-effective, as the user can focus on that specific aspect of the document (i.e. the text surrounding the sentence that produced the event) instead of having to re-read the chapter, or even the whole document. It should be noted that this tool should not replace the reading of highly sensative law documents, as the user may require the full context of the document, but it can serve as a time-effective tool after the user has done this. Since it allows them to skip through the document event-by-event, and focus on certain events and areas of the document that they may need to revisit.
+//wireframes, reason for this, why no color, why no other layout?, update to new system
 
 
 
