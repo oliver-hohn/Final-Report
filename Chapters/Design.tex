@@ -92,7 +92,7 @@
 \Input{A list of Files to Process}
 \Output{A list of Results}
 \ForEach{File in the input list}{
-	wait until can run\; \COMMENT if the maximum number of threads running in parallel has not been reached then stop waiting, else wait
+	wait until can run\; \tcc{if the maximum number of threads running in parallel has not been reached then stop waiting, else wait}
 	process the file\;
 	add the produced Result to the list of Results to return\;
 }

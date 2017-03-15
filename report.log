@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2017.1.17)  15 MAR 2017 12:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2017.1.17)  15 MAR 2017 20:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -863,6 +863,9 @@ ABD: EveryShipout initializing macros
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 
+! I can't write on file `report.pdf'.
+(Press Enter to retry, or Control-Z to exit; default file extension is `.pdf')
+Please type another file name for output: 
 <FrontMatter/logo.png, id=4, 234.8775pt x 214.8025pt>
 File: FrontMatter/logo.png Graphic file (type png)
 
@@ -902,14 +905,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 2.
 LaTeX Font Info:    Try loading font information for U+stmry on input line 2.
 
-(d:/texlive/2016/texmf-dist/tex/latex/stmaryrd/ustmry.fd)
-! Misplaced alignment tab character &.
-<argument> \numberline {6.2}Tools &
-                                    Software Libraries
-l.31 ...rline {6.2}Tools & Software Libraries}{38}
-                                                  
-? 
-[1
+(d:/texlive/2016/texmf-dist/tex/latex/stmaryrd/ustmry.fd) [1
 
 ])
 \tf@toc=\write4
@@ -984,12 +980,6 @@ File: process.png Graphic file (type png)
 Package pdftex.def Info: process.png used on input line 86.
 (pdftex.def)             Requested size: 411.9399pt x 408.9371pt.
 
-! Undefined control sequence.
-<argument>  wait until can run\; \COMMENT 
-                                          if the maximum number of threads r...
-l.99 r
-      eturn list of Results\;
-? 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -1000,7 +990,7 @@ File: system.png Graphic file (type png)
 Package pdftex.def Info: system.png used on input line 112.
 (pdftex.def)             Requested size: 411.9399pt x 538.97153pt.
  [27]
-<ranges.png, id=123, 977.6525pt x 462.72874pt>
+<ranges.png, id=124, 977.6525pt x 462.72874pt>
 File: ranges.png Graphic file (type png)
  <use ranges.png>
 Package pdftex.def Info: ranges.png used on input line 121.
@@ -1009,13 +999,13 @@ Package pdftex.def Info: ranges.png used on input line 121.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<helpers.png, id=132, 472.76625pt x 361.35pt>
+<helpers.png, id=133, 472.76625pt x 361.35pt>
 File: helpers.png Graphic file (type png)
  <use helpers.png>
 Package pdftex.def Info: helpers.png used on input line 202.
 (pdftex.def)             Requested size: 354.5738pt x 271.01184pt.
  [30] [31]
-[32 <./helpers.png>] <startup.png, id=144, 767.86874pt x 455.301pt>
+[32 <./helpers.png>] <startup.png, id=145, 767.86874pt x 455.301pt>
 File: startup.png Graphic file (type png)
 
 <use startup.png>
@@ -1025,7 +1015,7 @@ Package pdftex.def Info: startup.png used on input line 218.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<timeline.png, id=145, 768.471pt x 475.17525pt>
+<timeline.png, id=146, 768.471pt x 475.17525pt>
 File: timeline.png Graphic file (type png)
  <use timeline.png>
 Package pdftex.def Info: timeline.png used on input line 225.
@@ -1034,13 +1024,13 @@ Package pdftex.def Info: timeline.png used on input line 225.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<editDialog.png, id=150, 329.43076pt x 208.3785pt>
+<editDialog.png, id=151, 329.43076pt x 208.3785pt>
 File: editDialog.png Graphic file (type png)
  <use editDialog.png>
 Package pdftex.def Info: editDialog.png used on input line 232.
 (pdftex.def)             Requested size: 197.65997pt x 125.02805pt.
 
-<viewDoc.png, id=151, 344.487pt x 416.757pt>
+<viewDoc.png, id=152, 344.487pt x 416.757pt>
 File: viewDoc.png Graphic file (type png)
  <use viewDoc.png>
 Package pdftex.def Info: viewDoc.png used on input line 238.
@@ -1062,19 +1052,12 @@ Chapter 6.
 
 
 
-]
-! Misplaced alignment tab character &.
-<argument> Tools &
-                   Software Libraries
-l.8 \section{Tools & Software Libraries}
-                                        
-? 
-) [38]
+] [38] [39]) [40]
 \openout2 = `Chapters/ProfessionalIssues.aux'.
 
  (./Chapters/ProfessionalIssues.tex
 Chapter 7.
-) [39
+) [41
 
 
 
@@ -1083,7 +1066,7 @@ Chapter 7.
 
  (./Chapters/Evaluation.tex
 Chapter 8.
-) [40
+) [42
 
 
 
@@ -1092,19 +1075,19 @@ Chapter 8.
 
  (./Chapters/Conclusion.tex
 Chapter 9.
-) [41
+) [43
 
 
 
-] (./report.bbl [42
+] (./report.bbl [44
 
 
-]) [43]
+]) [45]
 \openout2 = `Appendices/appendix.aux'.
 
  (./Appendices/appendix.tex
 Appendix A.
-) [44
+) [46
 
 
 ]
@@ -1112,7 +1095,7 @@ Appendix A.
 
  (./Appendices/UserGuide.tex
 Appendix B.
-) [45
+) [47
 
 
 
@@ -1121,7 +1104,7 @@ Appendix B.
 
  (./Appendices/SourceCode.tex
 Appendix C.
-) [46
+) [48
 
 
 
@@ -1140,13 +1123,13 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 ### simple group (level 1) entered at line 1061 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 19528 strings out of 493013
- 366238 string characters out of 6136993
+ 19527 strings out of 493013
+ 366231 string characters out of 6136993
  546187 words of memory out of 5000000
- 22631 multiletter control sequences out of 15000+600000
+ 22630 multiletter control sequences out of 15000+600000
  62430 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,18n,84p,1771b,11964s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 62i,18n,84p,2004b,11964s stack positions out of 5000i,500n,10000p,200000b,80000s
 {d:/texlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-rmtt.enc}{d:/
 texlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{d:/texlive/2016/texmf
 -dist/fonts/enc/dvips/lm/lm-rm.enc}<d:/texlive/2016/texmf-dist/fonts/type1/publ
@@ -1161,10 +1144,10 @@ pe1/public/lm/lmr7.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/lm/lmri10
 016/texmf-dist/fonts/type1/public/lm/lmtt8.pfb><d:/texlive/2016/texmf-dist/font
 s/type1/public/mathabx-type1/matha10.pfb><d:/texlive/2016/texmf-dist/fonts/type
 1/public/stmaryrd/stmary10.pfb>
-Output written on report.pdf (50 pages, 834031 bytes).
+Output written on report.pdf (52 pages, 849365 bytes).
 PDF statistics:
- 249 PDF objects out of 1000 (max. 8388607)
- 162 compressed objects within 2 object streams
+ 255 PDF objects out of 1000 (max. 8388607)
+ 166 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  63 words of extra memory for PDF output out of 10000 (max. 10000000)
 
