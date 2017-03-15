@@ -27,17 +27,21 @@
 \contentsline {section}{\numberline {5.4}Design Patterns}{32}
 \contentsline {section}{\numberline {5.5}UI}{33}
 \contentsline {chapter}{\numberline {6}Implementation}{37}
-\contentsline {section}{\numberline {6.1}Section Heading}{37}
-\contentsline {chapter}{\numberline {7}Professional and Ethical Issues}{38}
-\contentsline {section}{\numberline {7.1}Section Heading}{38}
-\contentsline {chapter}{\numberline {8}Results/Evaluation}{39}
-\contentsline {section}{\numberline {8.1}Software Testing}{39}
-\contentsline {section}{\numberline {8.2}Section Heading}{39}
-\contentsline {chapter}{\numberline {9}Conclusion and Future Work}{40}
-\contentsline {section}{Bibliography}{42}
-\contentsline {chapter}{\numberline {A}Extra Information}{43}
-\contentsline {section}{\numberline {A.1}Tables, proofs, graphs, test cases, ...}{43}
-\contentsline {chapter}{\numberline {B}User Guide}{44}
-\contentsline {section}{\numberline {B.1}Instructions}{44}
-\contentsline {chapter}{\numberline {C}Source Code}{45}
-\contentsline {section}{\numberline {C.1}Instructions}{45}
+\contentsline {section}{\numberline {6.1}Approach}{37}
+\contentsline {section}{\numberline {6.2}Tools & Software Libraries}{38}
+\contentsline {section}{\numberline {6.3}Issues}{38}
+\contentsline {section}{\numberline {6.4}Testing}{38}
+\contentsline {section}{\numberline {6.5}UI}{38}
+\contentsline {chapter}{\numberline {7}Professional and Ethical Issues}{39}
+\contentsline {section}{\numberline {7.1}Section Heading}{39}
+\contentsline {chapter}{\numberline {8}Results/Evaluation}{40}
+\contentsline {section}{\numberline {8.1}Software Testing}{40}
+\contentsline {section}{\numberline {8.2}Section Heading}{40}
+\contentsline {chapter}{\numberline {9}Conclusion and Future Work}{41}
+\contentsline {section}{Bibliography}{43}
+\contentsline {chapter}{\numberline {A}Extra Information}{44}
+\contentsline {section}{\numberline {A.1}Tables, proofs, graphs, test cases, ...}{44}
+\contentsline {chapter}{\numberline {B}User Guide}{45}
+\contentsline {section}{\numberline {B.1}Instructions}{45}
+\contentsline {chapter}{\numberline {C}Source Code}{46}
+\contentsline {section}{\numberline {C.1}Instructions}{46}

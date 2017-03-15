@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2017.1.17)  14 MAR 2017 20:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2017.1.17)  15 MAR 2017 12:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -902,7 +902,14 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 2.
 LaTeX Font Info:    Try loading font information for U+stmry on input line 2.
 
-(d:/texlive/2016/texmf-dist/tex/latex/stmaryrd/ustmry.fd) [1
+(d:/texlive/2016/texmf-dist/tex/latex/stmaryrd/ustmry.fd)
+! Misplaced alignment tab character &.
+<argument> \numberline {6.2}Tools &
+                                    Software Libraries
+l.31 ...rline {6.2}Tools & Software Libraries}{38}
+                                                  
+? 
+[1
 
 ])
 \tf@toc=\write4
@@ -1051,16 +1058,23 @@ ng>]
 
  (./Chapters/Implementation.tex
 Chapter 6.
-) [37
+[37
 
 
 
 ]
+! Misplaced alignment tab character &.
+<argument> Tools &
+                   Software Libraries
+l.8 \section{Tools & Software Libraries}
+                                        
+? 
+) [38]
 \openout2 = `Chapters/ProfessionalIssues.aux'.
 
  (./Chapters/ProfessionalIssues.tex
 Chapter 7.
-) [38
+) [39
 
 
 
@@ -1069,7 +1083,7 @@ Chapter 7.
 
  (./Chapters/Evaluation.tex
 Chapter 8.
-) [39
+) [40
 
 
 
@@ -1078,19 +1092,19 @@ Chapter 8.
 
  (./Chapters/Conclusion.tex
 Chapter 9.
-) [40
+) [41
 
 
 
-] (./report.bbl [41
+] (./report.bbl [42
 
 
-]) [42]
+]) [43]
 \openout2 = `Appendices/appendix.aux'.
 
  (./Appendices/appendix.tex
 Appendix A.
-) [43
+) [44
 
 
 ]
@@ -1098,7 +1112,7 @@ Appendix A.
 
  (./Appendices/UserGuide.tex
 Appendix B.
-) [44
+) [45
 
 
 
@@ -1107,7 +1121,7 @@ Appendix B.
 
  (./Appendices/SourceCode.tex
 Appendix C.
-) [45
+) [46
 
 
 
@@ -1147,10 +1161,10 @@ pe1/public/lm/lmr7.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/lm/lmri10
 016/texmf-dist/fonts/type1/public/lm/lmtt8.pfb><d:/texlive/2016/texmf-dist/font
 s/type1/public/mathabx-type1/matha10.pfb><d:/texlive/2016/texmf-dist/fonts/type
 1/public/stmaryrd/stmary10.pfb>
-Output written on report.pdf (49 pages, 823456 bytes).
+Output written on report.pdf (50 pages, 834031 bytes).
 PDF statistics:
- 246 PDF objects out of 1000 (max. 8388607)
- 160 compressed objects within 2 object streams
+ 249 PDF objects out of 1000 (max. 8388607)
+ 162 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  63 words of extra memory for PDF output out of 10000 (max. 10000000)
 
