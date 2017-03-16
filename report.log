@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2017.1.17)  15 MAR 2017 20:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2017.1.17)  16 MAR 2017 17:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -866,9 +866,6 @@ ABD: EveryShipout initializing macros
 ! I can't write on file `report.pdf'.
 (Press Enter to retry, or Control-Z to exit; default file extension is `.pdf')
 Please type another file name for output: 
-! I can't write on file `report.pdf'.
-(Press Enter to retry, or Control-Z to exit; default file extension is `.pdf')
-Please type another file name for output: 
 <FrontMatter/logo.png, id=4, 234.8775pt x 214.8025pt>
 File: FrontMatter/logo.png Graphic file (type png)
 
@@ -1055,12 +1052,65 @@ Chapter 6.
 
 
 
-] [38] [39]) [40]
+] [38] [39]
+Overfull \hbox (316.68428pt too wide) in paragraph at lines 24--29
+\OT1/lmr/m/n/10 iden-tify it as a date). Thus, from the men-tion, it can be nor
+-mal-ized us-ing: []
+ []
+
+LaTeX Font Info:    Try loading font information for OML+lmr on input line 32.
+(d:/texlive/2016/texmf-dist/tex/latex/lm/omllmr.fd
+File: omllmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Font shape `OML/lmr/m/n' in size <10> not available
+(Font)              Font shape `OML/lmm/m/it' tried instead on input line 32.
+LaTeX Font Info:    Try loading font information for OMS+lmr on input line 32.
+
+(d:/texlive/2016/texmf-dist/tex/latex/lm/omslmr.fd
+File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 32.
+
+Overfull \hbox (2.06432pt too wide) in paragraph at lines 37--38
+[][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (62.06493pt too wide) in paragraph at lines 52--53
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (44.06474pt too wide) in paragraph at lines 59--60
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (62.06493pt too wide) in paragraph at lines 63--64
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (44.06474pt too wide) in paragraph at lines 73--74
+[][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (50.0648pt too wide) in paragraph at lines 74--75
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[40]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+) [41] [42] [43]
 \openout2 = `Chapters/ProfessionalIssues.aux'.
 
  (./Chapters/ProfessionalIssues.tex
 Chapter 7.
-) [41
+) [44
 
 
 
@@ -1069,7 +1119,7 @@ Chapter 7.
 
  (./Chapters/Evaluation.tex
 Chapter 8.
-) [42
+) [45
 
 
 
@@ -1078,19 +1128,19 @@ Chapter 8.
 
  (./Chapters/Conclusion.tex
 Chapter 9.
-) [43
+) [46
 
 
 
-] (./report.bbl [44
+] (./report.bbl [47
 
 
-]) [45]
+]) [48]
 \openout2 = `Appendices/appendix.aux'.
 
  (./Appendices/appendix.tex
 Appendix A.
-) [46
+) [49
 
 
 ]
@@ -1098,7 +1148,7 @@ Appendix A.
 
  (./Appendices/UserGuide.tex
 Appendix B.
-) [47
+) [50
 
 
 
@@ -1107,7 +1157,7 @@ Appendix B.
 
  (./Appendices/SourceCode.tex
 Appendix C.
-) [48
+) [51
 
 
 
@@ -1126,31 +1176,32 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 ### simple group (level 1) entered at line 1061 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 19527 strings out of 493013
- 366231 string characters out of 6136993
- 546187 words of memory out of 5000000
- 22630 multiletter control sequences out of 15000+600000
+ 19567 strings out of 493013
+ 366881 string characters out of 6136993
+ 546205 words of memory out of 5000000
+ 22664 multiletter control sequences out of 15000+600000
  62430 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,18n,84p,2004b,11964s stack positions out of 5000i,500n,10000p,200000b,80000s
-{d:/texlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-rmtt.enc}{d:/
-texlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{d:/texlive/2016/texmf
--dist/fonts/enc/dvips/lm/lm-rm.enc}<d:/texlive/2016/texmf-dist/fonts/type1/publ
-ic/lm/lmbx10.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><
-d:/texlive/2016/texmf-dist/fonts/type1/public/lm/lmbx7.pfb><d:/texlive/2016/tex
-mf-dist/fonts/type1/public/lm/lmmi10.pfb><d:/texlive/2016/texmf-dist/fonts/type
-1/public/lm/lmmi7.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/lm/lmr10.p
-fb><d:/texlive/2016/texmf-dist/fonts/type1/public/lm/lmr12.pfb><d:/texlive/2016
-/texmf-dist/fonts/type1/public/lm/lmr6.pfb><d:/texlive/2016/texmf-dist/fonts/ty
-pe1/public/lm/lmr7.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/lm/lmri10
-.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/lm/lmtt10.pfb><d:/texlive/2
-016/texmf-dist/fonts/type1/public/lm/lmtt8.pfb><d:/texlive/2016/texmf-dist/font
-s/type1/public/mathabx-type1/matha10.pfb><d:/texlive/2016/texmf-dist/fonts/type
-1/public/stmaryrd/stmary10.pfb>
-Output written on report.pdf (52 pages, 849365 bytes).
+ 62i,18n,84p,2729b,12000s stack positions out of 5000i,500n,10000p,200000b,80000s
+{d:/texlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{d
+:/texlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-rmtt.enc}{d:/texlive/2016/texmf
+-dist/fonts/enc/dvips/lm/lm-mathit.enc}{d:/texlive/2016/texmf-dist/fonts/enc/dv
+ips/lm/lm-rm.enc}<d:/texlive/2016/texmf-dist/fonts/type1/public/lm/lmbx10.pfb><
+d:/texlive/2016/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><d:/texlive/2016/te
+xmf-dist/fonts/type1/public/lm/lmbx7.pfb><d:/texlive/2016/texmf-dist/fonts/type
+1/public/lm/lmmi10.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/lm/lmmi7.
+pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/lm/lmr10.pfb><d:/texlive/201
+6/texmf-dist/fonts/type1/public/lm/lmr12.pfb><d:/texlive/2016/texmf-dist/fonts/
+type1/public/lm/lmr6.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/lm/lmr7
+.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/lm/lmri10.pfb><d:/texlive/2
+016/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><d:/texlive/2016/texmf-dist/fon
+ts/type1/public/lm/lmtt10.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/lm
+/lmtt8.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/mathabx-type1/matha10
+.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/stmaryrd/stmary10.pfb>
+Output written on report.pdf (55 pages, 861733 bytes).
 PDF statistics:
- 255 PDF objects out of 1000 (max. 8388607)
- 166 compressed objects within 2 object streams
+ 270 PDF objects out of 1000 (max. 8388607)
+ 177 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  63 words of extra memory for PDF output out of 10000 (max. 10000000)
 
