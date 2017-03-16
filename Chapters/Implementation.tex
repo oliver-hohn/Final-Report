@@ -22,62 +22,84 @@
 \par Two main issues arised during the implementation of the system. The creation of exact dates for named  entity dates and the creation of a encapsulated timeline. In addition, a minor issue in the system is input of documents that are grammatically incorrect.
 \subsection{Named Entity Recognition (NER) of Dates}
 \par The StanfordCoreNLP tool, allows the resolution of temporal expressions. To explain this, an example is presented. For example, the Stanford tool allows for reference dates be used when a document is processed. When the tool tags a temporal expression as DATE, it allows for this temporal expression to be normalized. The annotator treats each word in the sentence as a mention. To identify it's named entity recognition tag, the following is done on the mention: 
-\makebox[\textwidth]{\textbf{mention.get(CoreAnnotations.NamedEntityTagAnnotation.class)}.} 
-If it is a temporal expression that was tagged, the result of the operation is a String DATE (to identify it as a date). Thus, from the mention, it can be normalized using: 
-\makebox[\textwidth]{\textbf{CoreAnnotations.NormalizedNamedEntityTagAnnotation.class)}.} 
+\makebox[\textwidth]{\textbf{mention.get(CoreAnnotations.NamedEntityTagAnnotation.class)}.}
+If it is a temporal expression that was tagged, the result of the operation is a String DATE (to identify it as a date). Thus, from the mention, it can be normalized using: \par
+\makebox[\textwidth]{\textbf{mention.get(CoreAnnotations.NormalizedNamedEntityTagAnnotation.class)}.}
 The Stanford tool will attempt to produce a date in the ISO 8601\footnote{\url{https://www.cl.cam.ac.uk/~mgk25/iso-time.html}} format. As can be seen from the format, it can produce exact dates of the type dd-MM-yyyy. Where dd is an integer value from 1 to 31, MM is the month as an integer value from 1 to 12, and yyyy the year. In addition, if BC dates are used, at the start of the normalized result a '-' is added. Using the ISO standard, a method was written to process these dates. However, in addition to the possible dates given by the ISO standard, Stanford builds on top of the standard, producing 3 additional Date normalizations.
 \par The normalizations refer to temporal expressions that are ambigious even with a reference point. For example, the temporal expression "now" would produce a normalized NER: "PRESENT\textunderscore REF", i.e. a reference to the present moment. For a temporal expression that refers to the past, e.g. "...they once used to...", "once" would be normalized to "PAST\textunderscore REF", i.e. a reference to the past of this moment. For a temporal expression that refers to the future, e.g. "In the future..., "future" would be normalized to "FUTURE\textunderscore REF", i.e. a reference to the future after this moment. The issue with these normalizations is that the do not allow for the comparison of events used to sort them, as the start and end dates of events cannot be compared. To allow for comparison, the most possible general dates for these references are derived. Since a "PRESENT\textunderscore REF" refers to the present moment, it can be deducted that it represents the moment in which the text was written in, as that is the time context in which the author wrote it in. Thereby, the decision was made to produce as a general date for "PRESENT\textunderscore REF" the reference point provided by the user. Since the reference point is supposed to be the date in which the text was written in, it would be appropriate to link a reference of the present moment to it. The user can change the reference point to when-ever they would like not just the assumed date of the written document, but a present reference should match the base date used by the system to determine all other ambigious dates. For "PAST\textunderscore REF" and "FUTURE\textunderscore REF" a range of dates is used, i.e. a start and end date. For the former, the start date of the era is used, i.e. 01-01-0001, and a end date to the reference point. Since it can be determined that a ambigious mention of the past would fall anywhere within that time period, however an exact determination cannot be made as the temporal expression is not precise enough. For the latter, the start date is the present moment, i.e. the base date, and the end date is the last possible allowable date in the system, i.e. 31-12-9999. Since it would be appropriate for a mention of the future would refer to a moment from now (i.e. the present moment in which the text is presumed to be written in), up until the end of times. However as a limitation to our system, the end of times is considered the date 31-12-9999. This detection part of the normalized NER for Dates is presented as a snippet of the method that produces the exact dates from Normalized NER dates (see Figure \ref{fig:refCode}).
-\begin{figure}[h]
+\begin{figure}[H]
 \begin{lstlisting}
 private ArrayList<Date> getDate(String date) {
 	...
 	/* Set up variables for processing */
 	if (onlyPastRefPattern.matcher(date).matches()) {
-            System.out.println("PAST REF");
             //past so make range from 0001-01-01 -> base date (range)
             if (yearMonthDayPattern.matcher(baseDate).matches()) {
                 //base date has the format yyyy-MM-dd
-                String[] splitBaseDate = baseDate.split("-");
-                //year1, month1, day1 values stay with default value
-                year2 = splitBaseDate[0];
-                month2 = splitBaseDate[1];
-                day2 = splitBaseDate[2];//safe as pattern matched
+               /*split it and set the values in date1,month1, year1 of 
+		the start year 01-01-0001*/
+		/*and the end date values of date2, month2, year2 
+		to the base date data*/
+		...
             }
         } else if (onlyPresentRefPattern.matcher(date).matches()) {
-            System.out.println("PRESENT REF");
-            //use the base date (single date)
             if (yearMonthDayPattern.matcher(baseDate).matches()) {
-                System.out.println("BaseDate matches: " + baseDate);
-                String[] splitDate = baseDate.split("-");
-		//so its safe to split it into 3 parts as pattern matched above
-                year1 = splitDate[0];
-                month1 = splitDate[1];
-                day1 = splitDate[2];
+                //base date has the format yyyy-MM-dd
+		/*set day1,month1,year1 to the data in the base
+		 date data*/
+		...
             }
         } else if (onlyFutureRefPattern.matcher(date).matches()) {
-            System.out.println("FUTURE REF");
-            //future, from now til the last date we allow 9999-12-31 (range)
             if (yearMonthDayPattern.matcher(baseDate).matches()) {
-                System.out.println("BaseDate matches: " + baseDate);
-                String[] splitDate = baseDate.split("-");
-		//so its safe to split it into 3 parts as pattern matched above
-                year1 = splitDate[0];
-                month1 = splitDate[1];
-                day1 = splitDate[2];
+		//set the day1,month1,year1 to the base date data
             }
-            year2 = "9999";//future point
-            month2 = "12";
-            day2 = "31";
+           //set year2,month2,day2 to the end year 31-12-9999
         }
 	...
-	/* date1,date2,month1,month2,year1,year2 are then used appropriately 
-	to generate dates used for the event that holds this Timeline Date */
+	/* date1,date2,month1,month2,year1,year2 are 
+	then used appropriately to generate dates used 
+	for the event that holds this Timeline Date */
 }
 \end{lstlisting}
 \caption{Part of the Implementation of Resolution of Normalized NER Dates}
 \label{fig:refCode}
 \end{figure}
 \subsection{Encapsulated Timeline View}
+\par The initial representation of the events was a traditional timeline (see Figure \ref{fig:traditionalView}). This view is effective when the events are on separate time periods, as it presents them one after the other in a sequence. However, when there are multiple events that occur during the same time period, they still appear one after the other. The issue is that unless the user specifically looks at the dates associated to the event, it will look at a first glance as events occuring in different time periods. This clearly violates the visibility objective of the user-interface of the system. A solution to this issue is to provide two views, the traditional timeline view which is effective at displaying events that have disjoint dates. The other view, is one where dates encapsulalte other dates, and hold the events that occur in that time period. For example, if there is more than one event that occurs on the "25-01-2017", then isntead of listing them both of these events are below the same date. This canthey cause a "bin-placing" problem. This where there are a set of bins, or in this case a set of graphical events, and they need to fit in a finite area(cite), in this case a box of certain width and height. However, this problem can be avoided through the use of scrollbars, which provides a container of infinite height, thereby all the bins (graphical representation of events) can be placed. This view has been called the "Range View". However, producing this view, requires placing the Results (the events of a set of documents) in Ranges (a data structure that can have one date, or a start and end date). The theory was discussed in the Design Chapter.
+\begin{figure}[H]
+\caption{Screenshot of the Traditional View of the Timeline of Events}
+\label{fig:traditionalView}
+\includegraphics[width=\linewidth]{traditionalView.png}
+\centering
+\end{figure}
+\par The theory behind the Range View, is having a list of Ranges, where each Range is a root node of a Tree of Ranges. Where each Range may hold zero or more Results (i.e. events), and a set of children Ranges (zero or more). When the timeline needs to be produced, the list of Roots is iterated over, assuming the list is of Roots has been sorted in the order of the start date, for each a GridPane is made. A GridPane is a layout which consists of rows and columns that can contain subviews (where a subview is a view, i.e. a graphical component). In the first column of the of the layout, the current Range's data is placed (i.e. the date(s) and the Results held), and in the second column the layouts of the child Ranges is recursively made. The algorithm is presented in Figure \ref{alg:rangeLayout}, it is done for each root Range in the list of Ranges to be created.
+\begin{algorithm}[H]
+\underline{function getRangeLayout(list l)\; }
+\SetKwInOut{Input}{Input}
+\SetKwInOut{Output}{Output}
+\Input{A list of Ranges, of size $n$, to add in the first column}
+\Output{a layout that encapsulates the Ranges passed in the input, and their child Ranges}
+GridPane toReturn\;
+toReturn set the number of rows to the size of the input\;
+toReturn set the number of columns $:= 2$\;
+\For{i $:=$ 0 $\shortrightarrow$ n}{
+	Range $:=$ input list at $i$\;
+	set up layout for this Range, and set it in toReturn at position $(i,0)$\;
+	set its column span at $(i,0)$ to remaining\;
+	get layout for the children of this Range $:=$ getRangeLayout(range.children)\;
+	set this layout in toReturn at position $(i,1)$\;
+}
+return toReturn\;
+\caption{Pseudo-Code of the Recursive Production of the Range Layout}
+\label{alg:rangeLayout}
+\end{algorithm}
+\par The full implementation can be found in the Appendix. In the implementation, it was deceided to include 3 columns, to have a separator between a Range and its children Ranges, to improve the visibility of the system. Allowing the user to differentiate a Range and its child Ranges, and thereby differentiate the Results they hold. The individual layouts of Range is the listing of the Results in that Range (i.e. in the time period of that Range), and the date or start and end date for that Range. An example look of the Range View can be found in Figure \ref{fig:rangeView}.
+\begin{figure}[H]
+\caption{Screenshot of the Range View of the Timeline of Events}
+\label{fig:rangeView}
+\includegraphics[width=\linewidth]{rangeView.png}
+\centering
+\end{figure}
 \subsection{Incorrect Input Documents}
 
 -ner dates (explain, then present how to solve it through examples of code)
