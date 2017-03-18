@@ -139,57 +139,16 @@ In the build command, Gradle will not only run the test cases, but also produce 
 \includegraphics[width=\linewidth]{viewDocImplemented.png}
 \centering
 \end{figure}
-\par It should be noted that in the Range view (see Figure \ref{rangeView}) is zoomable. This allows the user to have a broader image of the Range View, if it is required. It may allow the user to obtain a general picture of what occurred.
+\par It should be noted that in the Range view (see Figure \ref{fig:rangeView}) is zoomable. This allows the user to have a broader image of the Range View, if it is required. It may allow the user to obtain a general picture of what occurred.
 \par The data presented of events includes the subjects and its summary. Since the events are encapsulated in Ranges, it is sufficient to show the date(s) for this Range at the top. Thereby intuitively demonstrating to the user that the following events occurred during that time period. This separates meta data from the event, e.g. when the event occurred, from the actual data which is what occurred in the event and what are the subjects of interests of the event. In addition, each event is accompanied by two buttons, which are both the relevant main operations: to edit the event (which includes deleting it, as can be seen from Figure \ref{fig:editDialogImplemented}, and to view the document that produced it.
 \par An advantage of the Traditional View over the Range view, is memory efficiency. As the Range view has the function of being zoomable, i.e. the user can zoom in/out, due to language specific constraints, it cannot be implemented through a ListView. A ListView being a layout data structure where objects of a list are placed row by row. To avoid stack overflows if the list is to large, the ListView will only produce the graphical layout for the rows when they are needed (i.e. they need to be shown), and otherwise delete them. For example, for a list of 10000 items, it is very expensive to hold in memory the individual layouts of 10000 rows, even when only 5 are being shown. Instead only the 5 that are being shown are held in memory, and the rest are generated as necessary. This is not the case with the Range View, as a tradeoff was made to allow the zoom function. As the memory capicity of personal computing systems (where the tool is intended to be used, but is not limited to) is large, this would not be an issue for the processing of tens or hundreds of events, however for larger sets this would cause memory issues. Thus the traditional view is suggested in such case.
 \section{Important Algorithms}
 //highlight algorithm implementation: processing of files through semaphores, adding to ranges, pdf save and json save
 \par This sections intended use is to present noteworthy algorithms. In specific their implementation.
 \subsection{Processing Files}
-\par The pseudo-code of the processing files was presented in the Design Chapter. It was also mentioned the use of semaphores, where they enforce that only $n$ processes can acquire their lock, with the $n+1$ process having to wait until a process releases its lock. However, the implementation is not trivial (see Figure \ref{fig:processingFilesImplemented}). The system must allow a certain maximum number of threads to be ran in parallel to process documents. It must not fall in deadlock and starvation, that is when processes are waiting indefinetely to run, and thereby the system does not move ahead. Thus can occur when semaphores are used, and they are not released when a process finishes its task, in this case processing a file and producing a list of Results. Thus a callback is used when the Threads are used, this callback is to be used when the Thread finished it task. It will ensure that the semaphores are released. The processing of documents ensures that when an error occurs, a result is still produced, thus the thread should not finish and not use the callback. However, necessary multi-threading precautions must be considered. When the callback is used, data is also transferred (specifically the Results of processing the document) which can cause concurrency issues when two threads attempt to add to the result list at the same time. Fortunetely, Java provides the \textbf{synchronized} keyword for methods (see Figure \ref{fig:callbackFilesImplemented}). This ensures that no two threads may run the method at the same time. One thread must finish its execution of the method before another one can begin its execution. Thus dealing with the issue of adding to a list at the same time. 
-\par Threading precautions have been taken throughout the project. Where threads and data are used, it is ensured that the data can be processed independently of itself to allow for parallelism. Where this is not the case, synchronization and semaphores are used to ensure that concurrency issues are dealt with.
-\begin{figure}[h]
-\begin{lstlisting}
-public List<Result> processFiles(List<File> files, List<FileData> fileDatas) {
-	//semaphoreFinished initally value of 0
-        maxNoOfThreads = 
-		BackEndSystem.getInstance().getSettings().getMaxNoOfThreads();
-	//set the Max number of Threads that can run in parallel
-        semaphore = new Semaphore(maxNoOfThreads);
-        //should only run if we are not Processing
-        if (BackEndSystem.getInstance().getSystemState() != 
-		SystemState.PROCESSING && files.size() == fileDatas.size()) {
-            filesToGo = files.size();
-	    //are now processing
-            BackEndSystem.getInstance()
-			.setSystemState(SystemState.PROCESSING);
-            for (int i = 0; i < files.size(); i++) {//for all the files to process
-                File file = files.get(i);
-                FileData fileData = fileDatas.get(i);//should be the same
-                try {
-		     //will wait if there is already maxnoofthreads running,
-		    //until one releases the semaphore
-                    semaphore.acquire();
-                    //process file
-                    Thread thread = 
-			new ProcessFile(file, ProcessFileCallback.this, fileData);
-		    //pass a callback, that can be called when file is finished
-		    //adds generated Results to the result list
-                    thread.start();//start processing the file
-                } catch (InterruptedException e) {}
-            }
-            try {
-                semaphoreFinished.acquire();
-            } catch (InterruptedException e) {}
-            return results;//could run, so return the results
-        }
-        return null;
-}
-\end{lstlisting}
-\caption{Implementation of Processing of Files}
-\label{fig:processingFilesImplemented}
-\end{figure}
-\begin{figure}[h]
+\par The pseudo-code of the processing files was presented in the Design Chapter. It was also mentioned the use of semaphores, where they enforce that only $n$ processes can acquire their lock, with the $n+1$ process having to wait until a process releases its lock. However, the implementation is not trivial (see the Appendix). The system must allow a certain maximum number of threads to be ran in parallel to process documents. It must not fall in deadlock and starvation, that is when processes are waiting indefinetely to run, and thereby the system does not move ahead. Thus can occur when semaphores are used, and they are not released when a process finishes its task, in this case processing a file and producing a list of Results. Thus a callback is used when the Threads are used, this callback is to be used when the Thread finished it task. It will ensure that the semaphores are released. The processing of documents ensures that when an error occurs, a result is still produced, thus the thread should not finish and not use the callback. However, necessary multi-threading precautions must be considered. When the callback is used, data is also transferred (specifically the Results of processing the document) which can cause concurrency issues when two threads attempt to add to the result list at the same time. Fortunetely, Java provides the \textbf{synchronized} keyword for methods (see Figure \ref{fig:callbackFilesImplemented}). This ensures that no two threads may run the method at the same time. One thread must finish its execution of the method before another one can begin its execution. Thus dealing with the issue of adding to a list at the same time. 
+%%Processing File was here
+\begin{figure}[H]
 \begin{lstlisting}
 public synchronized void callBack(ArrayList<Result> results, FileData fileData) {
     //we finished processing a file
@@ -213,9 +172,10 @@ public synchronized void callBack(ArrayList<Result> results, FileData fileData) 
 \caption{Implementation of Callback after Files have been processed}
 \label{fig:callbackFilesImplemented}
 \end{figure}
+\par Threading precautions have been taken throughout the project. Where threads and data are used, it is ensured that the data can be processed independently of itself to allow for parallelism. Where this is not the case, synchronization and semaphores are used to ensure that concurrency issues are dealt with.
 \subsection{Building Ranges}
 \par The algorithm for building Ranges out of Results was presented in the Design Chapter. However, it was not described how it can is checked whether or not a Result can be added to an existing Range. When a Result is attempted to be added to a pre-existing Range, a \textbf{add()} (see Figure \ref{fig:addRangeImplementation}) method is called. In this method, it is initally checked whether the Result should be attempted to be added to this Range. This check involves looking at the dates of the Result and checking whether they are fully or partially encapsulated by the Range's dates. If this is not the case, then the attempt of adding the Result fails, otherwise the algorithm continues. Next it will be checked whether it can be added to any of the nodes of the Range tree, if there is any node that holds the exact same date(s) as the Result, i.e. the Result should be held by this Range. If this is the case then the Result will be added and that node, however if this is not the case, then it can be determined that the Result belongs to this Range, however its position in the tree needs to be created or a Range that partially encapsulates it needs to be expanded. This involves traversing the tree and finding the position where the new Range note should be placed, or expanding a Range and moving subtrees to maintain the structure of the Range tree.
-\begin{figure}[h]
+\begin{figure}[H]
 \begin{lstlisting}
 public boolean add(Result result) {
     TimelineDate timelineDate = result.getTimelineDate();
@@ -241,7 +201,7 @@ public boolean add(Result result) {
 \subsection{Saving Results}
 \par Saving the results of the processed documents, is divided into two parts: saving them as a PDF, or as a JSON. 
 \par In the PDF system, the file that is saved, is a graphical representation of the events, using the traditional timeline view. It is aided through the use of the Apache PDFBox and Commons library. The libraries work like a painting tool. The pages are canvises, where lines and text can be drawn on at specific positions. These positions are given by coordinates $(x,y)$, where the top left of the page is the origin, i.e. (0,0), and the x values increment towards the right of the page, and the y values towards the bottom of the page. To build a dynamic system, that can create a pdf for any number of Results, it requires certain constraints. Such as the maximum number of events to be displayed on each page, and the size of the text of the summaries and subjects. Due to issues with the tool, it is not possible to continue on the next page of the PDF, hence it is limited to how many events are shown and the size of the text (as it can overflow to the next page). However, since the text that is used in the summary, should  be short (since it is a summary), the constraint can be applied. Therefore, it can be assumed that there is a max size of the container that holds one event. This allows for every container to be of this max size, to avoid the issue of resizing containers depending on the amount of text. Therefore, the system can be considered as drawing containers on the page and filling them with the data, moving along to the next position and repeat. Hence the task, in the implementation, has been broken down to padding, writting text, and drawing the rectangle. Since in the traditional view, the layout of the events are one on the left and the next on the right, the tasks have to be changed minimally to allow for this. The full implementation can be found in the Appendix. As an example, the Figure \ref{fig:drawRecImplemented} has been provided to demonstrate the task of drawing for an event that is to be placed on the right of the page.
-\begin{figure}
+\begin{figure}[H]
 \begin{lstlisting}
 private void drawOddEvent(Result result, 
    PDPageContentStream contentStream, int position)
@@ -270,8 +230,8 @@ private void drawOddEvent(Result result,
 \caption{Implementation of drawing for a Result in the PDF timeline}
 \label{fig:drawRecImplemented}
 \end{figure}
-\par In the JSON implementation, it is aided by the use of the Google GSON library. The advantage of this library is that it allows for a flexible creation of JSONs. In specific, it allows the developer to specify how an object of a given type should  be serialized. In this implementation, the objects to be serialized are Result objects. The data to be added for them is the dates, the subjects, the summary and the relevant data of the file that produced it. This can be done through defining the adapter to be used for the objects of the Result class. In the adpater the resulting \textbf{JsonObject} can be created, the data can be set in it, and then return it. For a list of Results, this will be carried out for each Result, and thereby a resulting list of JsonObjects will be returned, i.e. a JsonArray. This can then be saved by the user in a file, and can be interpreted by ay third-party system, as this is the use of JSON and the format of each event (Result) is clearly defined with key-value pairs. The format of a JSON of a Result is given in Figure \ref{fig:jsonResult}. Where G in the dates is the ERA (i.e. BC or AD) of the date.
-\begin{figure}
+\par In the JSON implementation, it is aided by the use of the Google GSON library. The advantage of this library is that it allows for a flexible creation of JSONs. In specific, it allows the developer to specify how an object of a given type should  be serialized (see Figure \ref{fig:adapterGsonImplemented}). In this implementation, the objects to be serialized are Result objects. The data to be added for them is the dates, the subjects, the summary and the relevant data of the file that produced it. This can be done through defining the adapter to be used for the objects of the Result class. In the adpater the resulting \textbf{JsonObject} can be created, the data can be set in it, and then return it. For a list of Results, this will be carried out for each Result, and thereby a resulting list of JsonObjects will be returned, i.e. a JsonArray. This can then be saved by the user in a file, and can be interpreted by ay third-party system, as this is the use of JSON and the format of each event (Result) is clearly defined with key-value pairs. The format of a JSON of a Result is given in Figure \ref{fig:jsonResult}. Where G in the dates is the ERA (i.e. BC or AD) of the date.
+\begin{figure}[h]
 \begin{lstlisting}
 {
 "date1":dd-MM-yyyy G,
@@ -287,5 +247,42 @@ private void drawOddEvent(Result result,
 \caption{Structure of Result (event) JSON}
 \label{fig:jsonResult}
 \end{figure}
-//TODO: code implementation
+\begin{figure}[H]
+\begin{lstlisting}
+public JsonElement serialize(Result src, Type typeOfSrc, 
+		JsonSerializationContext context) {
+    //json object for this result
+    JsonObject jsonObject = new JsonObject();
+	//adding the range dates (which can be null)
+	/* whenever a value is null, the key-pair will 
+	not be included in the final JSON */
+	jsonObject.addProperty("date1", 
+		src.getTimelineDate().getDate1FormattedDayMonthYear());
+	jsonObject.addProperty("date2", 
+		src.getTimelineDate().getDate2FormattedDayMonthYear());
+	//adding the subjects
+	JsonArray subjectJsonArray = new JsonArray();
+	for (String subject : src.getSubjects()) {
+		subjectJsonArray.add(subject);
+	}
+	jsonObject.add("subjects", subjectJsonArray);
+	//adding the event
+	jsonObject.addProperty("event", src.getEvent());
+	/*adding the file data (excluding the path, since 
+	this can be used on other system where files are elsewhere)*/
+	JsonObject fromJsonObject = new JsonObject();
+	FileData fileData = src.getFileData();
+	if (fileData != null) {
+		fromJsonObject.addProperty("filename", fileData.getFileName());
+		fromJsonObject.addProperty("baseDate", 
+			fileData.getCreationDateFormattedDayMonthYear());
+	}
+	jsonObject.add("from", fromJsonObject);
+	return jsonObject;
+}
+\end{lstlisting}
+\caption{Implementation of the Serializer used in the Adapter to generate JSON for a list of Results}
+\label{fig:adapterGsonImplemented}
+\end{figure}
+
 -main algorithms: for building events, building ranges, pdf save, json save, processing files

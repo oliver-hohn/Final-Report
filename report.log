@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2017.1.17)  18 MAR 2017 18:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2017.1.17)  18 MAR 2017 18:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -863,6 +863,9 @@ ABD: EveryShipout initializing macros
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 
+! I can't write on file `report.pdf'.
+(Press Enter to retry, or Control-Z to exit; default file extension is `.pdf')
+Please type another file name for output: 
 <FrontMatter/logo.png, id=4, 234.8775pt x 214.8025pt>
 File: FrontMatter/logo.png Graphic file (type png)
 
@@ -1131,85 +1134,61 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-
-LaTeX Warning: Reference `rangeView' on page 49 undefined on input line 142.
-
 [49] [50 <./startUpImplemented.png>] [51 <./editDialogImplemented.png>]
-[52 <./viewDocImplemented.png>]
-Overfull \hbox (56.06487pt too wide) in paragraph at lines 153--154
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (56.06487pt too wide) in paragraph at lines 156--157
-[][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (50.0648pt too wide) in paragraph at lines 161--162
-[][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (80.06511pt too wide) in paragraph at lines 166--167
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (26.06456pt too wide) in paragraph at lines 168--169
-[][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (44.06474pt too wide) in paragraph at lines 170--171
-[][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (80.06511pt too wide) in paragraph at lines 175--176
-[][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (62.06493pt too wide) in paragraph at lines 176--177
-[][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (74.06505pt too wide) in paragraph at lines 194--195
+Overfull \hbox (74.06505pt too wide) in paragraph at lines 153--154
 [][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (32.06462pt too wide) in paragraph at lines 205--206
+Overfull \hbox (32.06462pt too wide) in paragraph at lines 164--165
 [][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (26.06456pt too wide) in paragraph at lines 207--208
+Overfull \hbox (26.06456pt too wide) in paragraph at lines 166--167
 [][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (38.06468pt too wide) in paragraph at lines 209--210
+Overfull \hbox (38.06468pt too wide) in paragraph at lines 168--169
 [][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
+[52 <./viewDocImplemented.png>] [53] [54] [55] [56]
+Overfull \hbox (14.06444pt too wide) in paragraph at lines 260--261
+[][][][][][][][][] 
+ []
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+
+Overfull \hbox (14.06444pt too wide) in paragraph at lines 262--263
+[][][][][][][][][] 
+ []
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+Overfull \hbox (2.06432pt too wide) in paragraph at lines 272--273
+[][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+Overfull \hbox (62.06493pt too wide) in paragraph at lines 276--277
+[][][][][][][][][][][][][][] 
+ []
 
-[53] [54]) [55] [56] [57]
+
+Overfull \hbox (26.06456pt too wide) in paragraph at lines 278--279
+[][][][][][][] 
+ []
+
+[57] [58]
+Overfull \vbox (11.24986pt too high) has occurred while \output is active []
+
+
+[59]) [60]
 \openout2 = `Chapters/ProfessionalIssues.aux'.
 
  (./Chapters/ProfessionalIssues.tex
 Chapter 7.
-) [58
+) [61
 
 
 
@@ -1218,7 +1197,7 @@ Chapter 7.
 
  (./Chapters/Evaluation.tex
 Chapter 8.
-) [59
+) [62
 
 
 
@@ -1227,19 +1206,19 @@ Chapter 8.
 
  (./Chapters/Conclusion.tex
 Chapter 9.
-) [60
+) [63
 
 
 
-] (./report.bbl [61
+] (./report.bbl [64
 
 
-]) [62]
+]) [65]
 \openout2 = `Appendices/appendix.aux'.
 
  (./Appendices/appendix.tex
 Appendix A.
-) [63
+) [66
 
 
 ]
@@ -1247,7 +1226,7 @@ Appendix A.
 
  (./Appendices/UserGuide.tex
 Appendix B.
-) [64
+) [67
 
 
 
@@ -1256,7 +1235,7 @@ Appendix B.
 
  (./Appendices/SourceCode.tex
 Appendix C.
-) [65
+) [68
 
 
 
@@ -1267,9 +1246,6 @@ Appendix C.
 (./Appendices/appendix.aux) (./Appendices/UserGuide.aux)
 (./Appendices/SourceCode.aux))
 
-LaTeX Warning: There were undefined references.
-
-
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  )
@@ -1278,10 +1254,10 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 ### simple group (level 1) entered at line 1061 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 19604 strings out of 493013
- 367750 string characters out of 6136993
+ 19603 strings out of 493013
+ 367735 string characters out of 6136993
  545335 words of memory out of 5000000
- 22696 multiletter control sequences out of 15000+600000
+ 22695 multiletter control sequences out of 15000+600000
  62430 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,18n,84p,2729b,11992s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1300,10 +1276,10 @@ type1/public/lm/lmr6.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/lm/lmr7
 ts/type1/public/lm/lmtt10.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/lm
 /lmtt8.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/mathabx-type1/matha10
 .pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/stmaryrd/stmary10.pfb>
-Output written on report.pdf (69 pages, 1084088 bytes).
+Output written on report.pdf (72 pages, 1092130 bytes).
 PDF statistics:
- 325 PDF objects out of 1000 (max. 8388607)
- 207 compressed objects within 3 object streams
+ 334 PDF objects out of 1000 (max. 8388607)
+ 213 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  88 words of extra memory for PDF output out of 10000 (max. 10000000)
 

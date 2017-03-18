@@ -37,18 +37,18 @@
 \contentsline {section}{\numberline {6.5}UI}{49}
 \contentsline {section}{\numberline {6.6}Important Algorithms}{51}
 \contentsline {subsection}{\numberline {6.6.1}Processing Files}{52}
-\contentsline {subsection}{\numberline {6.6.2}Building Ranges}{53}
-\contentsline {subsection}{\numberline {6.6.3}Saving Results}{53}
-\contentsline {chapter}{\numberline {7}Professional and Ethical Issues}{58}
-\contentsline {section}{\numberline {7.1}Section Heading}{58}
-\contentsline {chapter}{\numberline {8}Results/Evaluation}{59}
-\contentsline {section}{\numberline {8.1}Software Testing}{59}
-\contentsline {section}{\numberline {8.2}Section Heading}{59}
-\contentsline {chapter}{\numberline {9}Conclusion and Future Work}{60}
-\contentsline {section}{Bibliography}{62}
-\contentsline {chapter}{\numberline {A}Extra Information}{63}
-\contentsline {section}{\numberline {A.1}Tables, proofs, graphs, test cases, ...}{63}
-\contentsline {chapter}{\numberline {B}User Guide}{64}
-\contentsline {section}{\numberline {B.1}Instructions}{64}
-\contentsline {chapter}{\numberline {C}Source Code}{65}
-\contentsline {section}{\numberline {C.1}Instructions}{65}
+\contentsline {subsection}{\numberline {6.6.2}Building Ranges}{54}
+\contentsline {subsection}{\numberline {6.6.3}Saving Results}{55}
+\contentsline {chapter}{\numberline {7}Professional and Ethical Issues}{61}
+\contentsline {section}{\numberline {7.1}Section Heading}{61}
+\contentsline {chapter}{\numberline {8}Results/Evaluation}{62}
+\contentsline {section}{\numberline {8.1}Software Testing}{62}
+\contentsline {section}{\numberline {8.2}Section Heading}{62}
+\contentsline {chapter}{\numberline {9}Conclusion and Future Work}{63}
+\contentsline {section}{Bibliography}{65}
+\contentsline {chapter}{\numberline {A}Extra Information}{66}
+\contentsline {section}{\numberline {A.1}Tables, proofs, graphs, test cases, ...}{66}
+\contentsline {chapter}{\numberline {B}User Guide}{67}
+\contentsline {section}{\numberline {B.1}Instructions}{67}
+\contentsline {chapter}{\numberline {C}Source Code}{68}
+\contentsline {section}{\numberline {C.1}Instructions}{68}
