@@ -31,21 +31,24 @@
 \contentsline {section}{\numberline {6.2}Tools \& Software Libraries}{38}
 \contentsline {section}{\numberline {6.3}Issues}{40}
 \contentsline {subsection}{\numberline {6.3.1}Named Entity Recognition (NER) of Dates}{40}
-\contentsline {subsection}{\numberline {6.3.2}Encapsulated Timeline View}{43}
-\contentsline {subsection}{\numberline {6.3.3}Incorrect Input Documents}{46}
-\contentsline {section}{\numberline {6.4}Testing}{47}
-\contentsline {section}{\numberline {6.5}UI}{47}
-\contentsline {section}{\numberline {6.6}Algorithms}{47}
-\contentsline {chapter}{\numberline {7}Professional and Ethical Issues}{48}
-\contentsline {section}{\numberline {7.1}Section Heading}{48}
-\contentsline {chapter}{\numberline {8}Results/Evaluation}{49}
-\contentsline {section}{\numberline {8.1}Software Testing}{49}
-\contentsline {section}{\numberline {8.2}Section Heading}{49}
-\contentsline {chapter}{\numberline {9}Conclusion and Future Work}{50}
-\contentsline {section}{Bibliography}{52}
-\contentsline {chapter}{\numberline {A}Extra Information}{53}
-\contentsline {section}{\numberline {A.1}Tables, proofs, graphs, test cases, ...}{53}
-\contentsline {chapter}{\numberline {B}User Guide}{54}
-\contentsline {section}{\numberline {B.1}Instructions}{54}
-\contentsline {chapter}{\numberline {C}Source Code}{55}
-\contentsline {section}{\numberline {C.1}Instructions}{55}
+\contentsline {subsection}{\numberline {6.3.2}Encapsulated Timeline View}{44}
+\contentsline {subsection}{\numberline {6.3.3}Incorrect Input Documents}{47}
+\contentsline {section}{\numberline {6.4}Testing}{48}
+\contentsline {section}{\numberline {6.5}UI}{49}
+\contentsline {section}{\numberline {6.6}Important Algorithms}{51}
+\contentsline {subsection}{\numberline {6.6.1}Processing Files}{52}
+\contentsline {subsection}{\numberline {6.6.2}Building Ranges}{53}
+\contentsline {subsection}{\numberline {6.6.3}Saving Results}{53}
+\contentsline {chapter}{\numberline {7}Professional and Ethical Issues}{58}
+\contentsline {section}{\numberline {7.1}Section Heading}{58}
+\contentsline {chapter}{\numberline {8}Results/Evaluation}{59}
+\contentsline {section}{\numberline {8.1}Software Testing}{59}
+\contentsline {section}{\numberline {8.2}Section Heading}{59}
+\contentsline {chapter}{\numberline {9}Conclusion and Future Work}{60}
+\contentsline {section}{Bibliography}{62}
+\contentsline {chapter}{\numberline {A}Extra Information}{63}
+\contentsline {section}{\numberline {A.1}Tables, proofs, graphs, test cases, ...}{63}
+\contentsline {chapter}{\numberline {B}User Guide}{64}
+\contentsline {section}{\numberline {B.1}Instructions}{64}
+\contentsline {chapter}{\numberline {C}Source Code}{65}
+\contentsline {section}{\numberline {C.1}Instructions}{65}

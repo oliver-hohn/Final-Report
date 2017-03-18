@@ -27,6 +27,7 @@ If it is a temporal expression that was tagged, the result of the operation is a
 \makebox[\textwidth]{\textbf{mention.get(CoreAnnotations.NormalizedNamedEntityTagAnnotation.class)}.}
 The Stanford tool will attempt to produce a date in the ISO 8601\footnote{\url{https://www.cl.cam.ac.uk/~mgk25/iso-time.html}} format. As can be seen from the format, it can produce exact dates of the type dd-MM-yyyy. Where dd is an integer value from 1 to 31, MM is the month as an integer value from 1 to 12, and yyyy the year. In addition, if BC dates are used, at the start of the normalized result a '-' is added. Using the ISO standard, a method was written to process these dates. However, in addition to the possible dates given by the ISO standard, Stanford builds on top of the standard, producing 3 additional Date normalizations.
 \par The normalizations refer to temporal expressions that are ambigious even with a reference point. For example, the temporal expression "now" would produce a normalized NER: "PRESENT\textunderscore REF", i.e. a reference to the present moment. For a temporal expression that refers to the past, e.g. "...they once used to...", "once" would be normalized to "PAST\textunderscore REF", i.e. a reference to the past of this moment. For a temporal expression that refers to the future, e.g. "In the future..., "future" would be normalized to "FUTURE\textunderscore REF", i.e. a reference to the future after this moment. The issue with these normalizations is that the do not allow for the comparison of events used to sort them, as the start and end dates of events cannot be compared. To allow for comparison, the most possible general dates for these references are derived. Since a "PRESENT\textunderscore REF" refers to the present moment, it can be deducted that it represents the moment in which the text was written in, as that is the time context in which the author wrote it in. Thereby, the decision was made to produce as a general date for "PRESENT\textunderscore REF" the reference point provided by the user. Since the reference point is supposed to be the date in which the text was written in, it would be appropriate to link a reference of the present moment to it. The user can change the reference point to when-ever they would like not just the assumed date of the written document, but a present reference should match the base date used by the system to determine all other ambigious dates. For "PAST\textunderscore REF" and "FUTURE\textunderscore REF" a range of dates is used, i.e. a start and end date. For the former, the start date of the era is used, i.e. 01-01-0001, and a end date to the reference point. Since it can be determined that a ambigious mention of the past would fall anywhere within that time period, however an exact determination cannot be made as the temporal expression is not precise enough. For the latter, the start date is the present moment, i.e. the base date, and the end date is the last possible allowable date in the system, i.e. 31-12-9999. Since it would be appropriate for a mention of the future would refer to a moment from now (i.e. the present moment in which the text is presumed to be written in), up until the end of times. However as a limitation to our system, the end of times is considered the date 31-12-9999. This detection part of the normalized NER for Dates is presented as a snippet of the method that produces the exact dates from Normalized NER dates (see Figure \ref{fig:refCode}).
+\par Even though the StanfordCoreNLP library is well documented, it was difficult to find all the template outputs of the tool when Normalizing NER Dates, as no file was initially found that pointed to all the outputs (specifically the "REF" outputs). However, afterwards it was found that the tool uses TimeML for the normalized dates, thus the templates could be found \footnote{\url{http://www.timeml.org/timeMLdocs/TimeML.xsd}}. 
 \begin{figure}[H]
 \begin{lstlisting}
 private ArrayList<Date> getDate(String date) {
@@ -74,7 +75,7 @@ private ArrayList<Date> getDate(String date) {
 \end{figure}
 \par The theory behind the Range View, is having a list of Ranges, where each Range is a root node of a Tree of Ranges. Where each Range may hold zero or more Results (i.e. events), and a set of children Ranges (zero or more). When the timeline needs to be produced, the list of Roots is iterated over, assuming the list is of Roots has been sorted in the order of the start date, for each a GridPane is made. A GridPane is a layout which consists of rows and columns that can contain subviews (where a subview is a view, i.e. a graphical component). In the first column of the of the layout, the current Range's data is placed (i.e. the date(s) and the Results held), and in the second column the layouts of the child Ranges is recursively made. The algorithm is presented in Figure \ref{alg:rangeLayout}, it is done for each root Range in the list of Ranges to be created.
 \begin{algorithm}[H]
-\underline{function getRangeLayout(list l)\; }
+\underline{function getRangeLayout(list l)}\;
 \SetKwInOut{Input}{Input}
 \SetKwInOut{Output}{Output}
 \Input{A list of Ranges, of size $n$, to add in the first column}
@@ -108,6 +109,183 @@ return toReturn\;
 -new timeline view (present how to solve it through examples of code)
 -minor issue of incorrect text
 \section{Testing}
+\par The focus of the testing in the system were Unit Tests. A Unit Test is when individual units (or pars) of source code of a system are tested to determine whether they are working correctly (cite). As the system was implemented in Java, the library used to aid this is JUnit\footnote{\url{http://junit.org/junit4/}}. Unit tests are primarily done on the back-end, or logic, of a system, as they focus on these parts to work correctly, and not the interaction of a user with the system. To test a users interaction with a system, Instrumentation tests are carried out. These involves emulating the users interaction with the system. Both the Unit and Instrumentation tests can be automated, such that they are carried out one after the other without the involvement of the developer.
+\par The reason as to why only Unit Tests were used, is that the systems primary focus is its processing of documents, and not the graphical representation. The representation is used to display the results, however as disussed previously, the system could also just be used to process the texts, and the intermediate JSON used for a third-party visual representation. Hence, Instrumentation tests were not carried out.
+\par A total of 35 tests were developed. The main advantage of these is that when new features are developed, to ensure that the system is still functioning correctly, the tests can be ran. If the test cases are appropriate, then it can be assured that the system will work correctly with the new features. This is aided additionally through the use of Git, where the features are developed on a separate branch of the current working version of code, and are only merged into the working version if all the test cases pass.
+\par The tests focus was on the Engine (the component that takes as input text and produces lists of Results), the processing of Files (test files were used in this case), the production of Ranges, the changing of the systems states throughout the processing task, the parsing of Normalized NER dates, and the production of JSON's from a list of Results. Tests worked through assertions. Assertions are made where the expected output must match the actual output.
+\par The tests were divided into three categories, a simple test, an intermediate test, and a complex test where all possibilities of input are tested. For example, for the production of Ranges, the complex test case expects multiple Range trees of different heights to be produced. The tests can be found in the Appendix. Due to the benefit of Gradle, the tests can be ran using the command:\par
+\makebox[\textwidth]{\textbf{gradlew test}}
+or, in the case the libraries need to be loaded:\par
+\makebox[\textwidth]{\textbf{gradlew build)}.}
+In the build command, Gradle will not only run the test cases, but also produce the executable JAR which can be used to distribute the system as an executable to its non-developer users.
 \section{UI}
-\section{Algorithms}
+//implementation ofthe UI.
+\par From the wireframes presented in the Design Chapter, the actual User Interfaces (UI) were developed. The screenshots of the different windows are presented in the Figures below (see Figures \ref{fig:startUpImplemented}, \ref{fig:traditionalView}, \ref{fig:rangeView}, \ref{fig:editDialogImplemented}, and \ref{fig:viewDocImplemented}). As can be noted, the interface provides the requested functionality through the buttons and menus, but are missing color. Since the focus was on the processing of the text, a color palette was not developed for the system as it is believed that the system will be used for work related tasks, thereby its focus is not on enjoyment but rather functionality, visibility and simplicity. These objectives were attempted to be reached with this UI implementation.
+\begin{figure}[h]
+\caption{Screenshot of the Start Up View}
+\label{fig:startUpImplemented}
+\includegraphics[width=\linewidth]{startUpImplemented.png}
+\centering
+\end{figure}
+\begin{figure}[h]
+\caption{Screenshot of the Edit Dialog View}
+\label{fig:editDialogImplemented}
+\includegraphics[width=\linewidth]{editDialogImplemented.png}
+\centering
+\end{figure}
+\begin{figure}[h]
+\caption{Screenshot of the Document Viewer}
+\label{fig:viewDocImplemented}
+\includegraphics[width=\linewidth]{viewDocImplemented.png}
+\centering
+\end{figure}
+\par It should be noted that in the Range view (see Figure \ref{rangeView}) is zoomable. This allows the user to have a broader image of the Range View, if it is required. It may allow the user to obtain a general picture of what occurred.
+\par The data presented of events includes the subjects and its summary. Since the events are encapsulated in Ranges, it is sufficient to show the date(s) for this Range at the top. Thereby intuitively demonstrating to the user that the following events occurred during that time period. This separates meta data from the event, e.g. when the event occurred, from the actual data which is what occurred in the event and what are the subjects of interests of the event. In addition, each event is accompanied by two buttons, which are both the relevant main operations: to edit the event (which includes deleting it, as can be seen from Figure \ref{fig:editDialogImplemented}, and to view the document that produced it.
+\par An advantage of the Traditional View over the Range view, is memory efficiency. As the Range view has the function of being zoomable, i.e. the user can zoom in/out, due to language specific constraints, it cannot be implemented through a ListView. A ListView being a layout data structure where objects of a list are placed row by row. To avoid stack overflows if the list is to large, the ListView will only produce the graphical layout for the rows when they are needed (i.e. they need to be shown), and otherwise delete them. For example, for a list of 10000 items, it is very expensive to hold in memory the individual layouts of 10000 rows, even when only 5 are being shown. Instead only the 5 that are being shown are held in memory, and the rest are generated as necessary. This is not the case with the Range View, as a tradeoff was made to allow the zoom function. As the memory capicity of personal computing systems (where the tool is intended to be used, but is not limited to) is large, this would not be an issue for the processing of tens or hundreds of events, however for larger sets this would cause memory issues. Thus the traditional view is suggested in such case.
+\section{Important Algorithms}
+//highlight algorithm implementation: processing of files through semaphores, adding to ranges, pdf save and json save
+\par This sections intended use is to present noteworthy algorithms. In specific their implementation.
+\subsection{Processing Files}
+\par The pseudo-code of the processing files was presented in the Design Chapter. It was also mentioned the use of semaphores, where they enforce that only $n$ processes can acquire their lock, with the $n+1$ process having to wait until a process releases its lock. However, the implementation is not trivial (see Figure \ref{fig:processingFilesImplemented}). The system must allow a certain maximum number of threads to be ran in parallel to process documents. It must not fall in deadlock and starvation, that is when processes are waiting indefinetely to run, and thereby the system does not move ahead. Thus can occur when semaphores are used, and they are not released when a process finishes its task, in this case processing a file and producing a list of Results. Thus a callback is used when the Threads are used, this callback is to be used when the Thread finished it task. It will ensure that the semaphores are released. The processing of documents ensures that when an error occurs, a result is still produced, thus the thread should not finish and not use the callback. However, necessary multi-threading precautions must be considered. When the callback is used, data is also transferred (specifically the Results of processing the document) which can cause concurrency issues when two threads attempt to add to the result list at the same time. Fortunetely, Java provides the \textbf{synchronized} keyword for methods (see Figure \ref{fig:callbackFilesImplemented}). This ensures that no two threads may run the method at the same time. One thread must finish its execution of the method before another one can begin its execution. Thus dealing with the issue of adding to a list at the same time. 
+\par Threading precautions have been taken throughout the project. Where threads and data are used, it is ensured that the data can be processed independently of itself to allow for parallelism. Where this is not the case, synchronization and semaphores are used to ensure that concurrency issues are dealt with.
+\begin{figure}[h]
+\begin{lstlisting}
+public List<Result> processFiles(List<File> files, List<FileData> fileDatas) {
+	//semaphoreFinished initally value of 0
+        maxNoOfThreads = 
+		BackEndSystem.getInstance().getSettings().getMaxNoOfThreads();
+	//set the Max number of Threads that can run in parallel
+        semaphore = new Semaphore(maxNoOfThreads);
+        //should only run if we are not Processing
+        if (BackEndSystem.getInstance().getSystemState() != 
+		SystemState.PROCESSING && files.size() == fileDatas.size()) {
+            filesToGo = files.size();
+	    //are now processing
+            BackEndSystem.getInstance()
+			.setSystemState(SystemState.PROCESSING);
+            for (int i = 0; i < files.size(); i++) {//for all the files to process
+                File file = files.get(i);
+                FileData fileData = fileDatas.get(i);//should be the same
+                try {
+		     //will wait if there is already maxnoofthreads running,
+		    //until one releases the semaphore
+                    semaphore.acquire();
+                    //process file
+                    Thread thread = 
+			new ProcessFile(file, ProcessFileCallback.this, fileData);
+		    //pass a callback, that can be called when file is finished
+		    //adds generated Results to the result list
+                    thread.start();//start processing the file
+                } catch (InterruptedException e) {}
+            }
+            try {
+                semaphoreFinished.acquire();
+            } catch (InterruptedException e) {}
+            return results;//could run, so return the results
+        }
+        return null;
+}
+\end{lstlisting}
+\caption{Implementation of Processing of Files}
+\label{fig:processingFilesImplemented}
+\end{figure}
+\begin{figure}[h]
+\begin{lstlisting}
+public synchronized void callBack(ArrayList<Result> results, FileData fileData) {
+    //we finished processing a file
+    filesToGo--;//one less to look at
+    //add the results to the list held
+    this.results.addAll(results);
+    //release semaphore
+    semaphore.release();
+    //check if we have processed everything, 
+    //if so release the finished semaphore
+    if (filesToGo == 0) {
+        //has processed
+        BackEndSystem.getInstance().setSystemState(SystemState.PROCESSED);
+        //has returned the results so we finished
+        BackEndSystem.getInstance().setSystemState(SystemState.FINISHED);
+        semaphoreFinished.release();
+	    //value is now 1, so the thread that was acquiring can continue
+    }
+}
+\end{lstlisting}
+\caption{Implementation of Callback after Files have been processed}
+\label{fig:callbackFilesImplemented}
+\end{figure}
+\subsection{Building Ranges}
+\par The algorithm for building Ranges out of Results was presented in the Design Chapter. However, it was not described how it can is checked whether or not a Result can be added to an existing Range. When a Result is attempted to be added to a pre-existing Range, a \textbf{add()} (see Figure \ref{fig:addRangeImplementation}) method is called. In this method, it is initally checked whether the Result should be attempted to be added to this Range. This check involves looking at the dates of the Result and checking whether they are fully or partially encapsulated by the Range's dates. If this is not the case, then the attempt of adding the Result fails, otherwise the algorithm continues. Next it will be checked whether it can be added to any of the nodes of the Range tree, if there is any node that holds the exact same date(s) as the Result, i.e. the Result should be held by this Range. If this is the case then the Result will be added and that node, however if this is not the case, then it can be determined that the Result belongs to this Range, however its position in the tree needs to be created or a Range that partially encapsulates it needs to be expanded. This involves traversing the tree and finding the position where the new Range note should be placed, or expanding a Range and moving subtrees to maintain the structure of the Range tree.
+\begin{figure}[h]
+\begin{lstlisting}
+public boolean add(Result result) {
+    TimelineDate timelineDate = result.getTimelineDate();
+    //check constraints
+    if (!shouldAdd(timelineDate)) {
+	//check constraints if we can even add to this range
+        return false;
+    }
+    //attempt to add through an existing range
+    Range toAdd = checkCanAdd(result);
+    if (toAdd != null) {
+	//add to the results of the given range
+        toAdd.results.add(result);
+        return true;
+    }
+    //now we try to extend the range
+    return createRangeAndAdd(result);
+}
+\end{lstlisting}
+\caption{Implementation of Adding Results to a Range}
+\label{fig:addRangeImplementation}
+\end{figure}
+\subsection{Saving Results}
+\par Saving the results of the processed documents, is divided into two parts: saving them as a PDF, or as a JSON. 
+\par In the PDF system, the file that is saved, is a graphical representation of the events, using the traditional timeline view. It is aided through the use of the Apache PDFBox and Commons library. The libraries work like a painting tool. The pages are canvises, where lines and text can be drawn on at specific positions. These positions are given by coordinates $(x,y)$, where the top left of the page is the origin, i.e. (0,0), and the x values increment towards the right of the page, and the y values towards the bottom of the page. To build a dynamic system, that can create a pdf for any number of Results, it requires certain constraints. Such as the maximum number of events to be displayed on each page, and the size of the text of the summaries and subjects. Due to issues with the tool, it is not possible to continue on the next page of the PDF, hence it is limited to how many events are shown and the size of the text (as it can overflow to the next page). However, since the text that is used in the summary, should  be short (since it is a summary), the constraint can be applied. Therefore, it can be assumed that there is a max size of the container that holds one event. This allows for every container to be of this max size, to avoid the issue of resizing containers depending on the amount of text. Therefore, the system can be considered as drawing containers on the page and filling them with the data, moving along to the next position and repeat. Hence the task, in the implementation, has been broken down to padding, writting text, and drawing the rectangle. Since in the traditional view, the layout of the events are one on the left and the next on the right, the tasks have to be changed minimally to allow for this. The full implementation can be found in the Appendix. As an example, the Figure \ref{fig:drawRecImplemented} has been provided to demonstrate the task of drawing for an event that is to be placed on the right of the page.
+\begin{figure}
+\begin{lstlisting}
+private void drawOddEvent(Result result, 
+   PDPageContentStream contentStream, int position)
+      throws IOException {
+   //initially y is the top right where this needs to 
+  //be shown, x starts from the middle
+  currentY -= padding; //add some padding to y
+  currentX = (int) widthOfPage / 2;
+  contentStream.moveTo(currentX, currentY);
+  //write the text for the Event
+  int lengthOfHorLine = (int) ((widthOfPage / 2)
+	- (padding + widthOfRectangle));
+  currentX += lengthOfHorLine;
+  writeText(result, contentStream, currentX, position);
+  //draw the rectangle to surround the text
+  drawRectangle(contentStream, currentX, currentY 
+  	- heightOfRectangle);
+  //draw the horizontal line connecting event timeline
+  currentY -= heightOfRectangle / 2;
+  contentStream.moveTo(currentX, currentY);
+  contentStream.lineTo(widthOfPage / 2, currentY);
+  contentStream.stroke();
+  currentY -= (heightOfRectangle / 2) + padding;
+}
+\end{lstlisting}
+\caption{Implementation of drawing for a Result in the PDF timeline}
+\label{fig:drawRecImplemented}
+\end{figure}
+\par In the JSON implementation, it is aided by the use of the Google GSON library. The advantage of this library is that it allows for a flexible creation of JSONs. In specific, it allows the developer to specify how an object of a given type should  be serialized. In this implementation, the objects to be serialized are Result objects. The data to be added for them is the dates, the subjects, the summary and the relevant data of the file that produced it. This can be done through defining the adapter to be used for the objects of the Result class. In the adpater the resulting \textbf{JsonObject} can be created, the data can be set in it, and then return it. For a list of Results, this will be carried out for each Result, and thereby a resulting list of JsonObjects will be returned, i.e. a JsonArray. This can then be saved by the user in a file, and can be interpreted by ay third-party system, as this is the use of JSON and the format of each event (Result) is clearly defined with key-value pairs. The format of a JSON of a Result is given in Figure \ref{fig:jsonResult}. Where G in the dates is the ERA (i.e. BC or AD) of the date.
+\begin{figure}
+\begin{lstlisting}
+{
+"date1":dd-MM-yyyy G,
+"date2":dd-MM-yyyy G,
+"subjects":[],
+"event":String,
+"from":{
+	"filename":String,
+	"baseDate":dd-MM-yyyy
+	}
+}
+\end{lstlisting}
+\caption{Structure of Result (event) JSON}
+\label{fig:jsonResult}
+\end{figure}
+//TODO: code implementation
 -main algorithms: for building events, building ranges, pdf save, json save, processing files
