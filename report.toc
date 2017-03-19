@@ -40,15 +40,14 @@
 \contentsline {subsection}{\numberline {6.6.2}Building Ranges}{54}
 \contentsline {subsection}{\numberline {6.6.3}Saving Results}{55}
 \contentsline {chapter}{\numberline {7}Professional and Ethical Issues}{61}
-\contentsline {section}{\numberline {7.1}Section Heading}{61}
-\contentsline {chapter}{\numberline {8}Results/Evaluation}{62}
-\contentsline {section}{\numberline {8.1}Software Testing}{62}
-\contentsline {section}{\numberline {8.2}Section Heading}{62}
-\contentsline {chapter}{\numberline {9}Conclusion and Future Work}{63}
-\contentsline {section}{Bibliography}{65}
-\contentsline {chapter}{\numberline {A}Extra Information}{66}
-\contentsline {section}{\numberline {A.1}Tables, proofs, graphs, test cases, ...}{66}
-\contentsline {chapter}{\numberline {B}User Guide}{67}
-\contentsline {section}{\numberline {B.1}Instructions}{67}
-\contentsline {chapter}{\numberline {C}Source Code}{68}
-\contentsline {section}{\numberline {C.1}Instructions}{68}
+\contentsline {chapter}{\numberline {8}Results/Evaluation}{63}
+\contentsline {section}{\numberline {8.1}Software Testing}{63}
+\contentsline {section}{\numberline {8.2}Section Heading}{63}
+\contentsline {chapter}{\numberline {9}Conclusion and Future Work}{64}
+\contentsline {section}{Bibliography}{66}
+\contentsline {chapter}{\numberline {A}Extra Information}{67}
+\contentsline {section}{\numberline {A.1}Tables, proofs, graphs, test cases, ...}{67}
+\contentsline {chapter}{\numberline {B}User Guide}{68}
+\contentsline {section}{\numberline {B.1}Instructions}{68}
+\contentsline {chapter}{\numberline {C}Source Code}{69}
+\contentsline {section}{\numberline {C.1}Instructions}{69}
