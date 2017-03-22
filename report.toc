@@ -44,10 +44,12 @@
 \contentsline {section}{\numberline {8.1}Software Testing}{63}
 \contentsline {section}{\numberline {8.2}Section Heading}{63}
 \contentsline {chapter}{\numberline {9}Conclusion and Future Work}{64}
-\contentsline {section}{Bibliography}{66}
-\contentsline {chapter}{\numberline {A}Extra Information}{67}
-\contentsline {section}{\numberline {A.1}Tables, proofs, graphs, test cases, ...}{67}
-\contentsline {chapter}{\numberline {B}User Guide}{68}
-\contentsline {section}{\numberline {B.1}Instructions}{68}
-\contentsline {chapter}{\numberline {C}Source Code}{69}
-\contentsline {section}{\numberline {C.1}Instructions}{69}
+\contentsline {section}{\numberline {9.1}Conclusion of Project}{64}
+\contentsline {section}{\numberline {9.2}Future Work}{64}
+\contentsline {section}{Bibliography}{67}
+\contentsline {chapter}{\numberline {A}Extra Information}{68}
+\contentsline {section}{\numberline {A.1}Tables, proofs, graphs, test cases, ...}{68}
+\contentsline {chapter}{\numberline {B}User Guide}{69}
+\contentsline {section}{\numberline {B.1}Instructions}{69}
+\contentsline {chapter}{\numberline {C}Source Code}{70}
+\contentsline {section}{\numberline {C.1}Instructions}{70}
