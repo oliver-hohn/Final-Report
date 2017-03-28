@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2017.1.17)  28 MAR 2017 18:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2017.1.17)  28 MAR 2017 18:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1273,13 +1273,14 @@ Chapter 8.
 ]
 
 LaTeX Warning: Reference `alg:documentsProcessing' on page 61 undefined on inpu
-t line 19.
+t line 41.
 
+[61]
 
-LaTeX Warning: Reference `alg:processDocument' on page 61 undefined on input li
-ne 19.
+LaTeX Warning: Reference `alg:processDocument' on page 62 undefined on input li
+ne 41.
 
-[61] [62] [63] [64]) [65]
+[62] [63] [64]) [65]
 \openout2 = `Chapters/Conclusion.aux'.
 
  (./Chapters/Conclusion.tex
@@ -1338,10 +1339,10 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 ### simple group (level 1) entered at line 1061 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 20719 strings out of 493013
- 383457 string characters out of 6136993
- 690447 words of memory out of 5000000
- 23773 multiletter control sequences out of 15000+600000
+ 20720 strings out of 493013
+ 383482 string characters out of 6136993
+ 690458 words of memory out of 5000000
+ 23774 multiletter control sequences out of 15000+600000
  78684 words of font info for 69 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,18n,84p,2724b,13370s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1360,7 +1361,7 @@ lm/lmr6.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/lm/lmr7.pfb><d:/texl
 ive/2016/texmf-dist/fonts/type1/public/lm/lmri10.pfb><d:/texlive/2016/texmf-dis
 t/fonts/type1/public/mathabx-type1/matha10.pfb><d:/texlive/2016/texmf-dist/font
 s/type1/public/stmaryrd/stmary10.pfb>
-Output written on report.pdf (76 pages, 1099212 bytes).
+Output written on report.pdf (76 pages, 1107711 bytes).
 PDF statistics:
  348 PDF objects out of 1000 (max. 8388607)
  224 compressed objects within 3 object streams

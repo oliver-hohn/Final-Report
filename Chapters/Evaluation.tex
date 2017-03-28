@@ -12,7 +12,29 @@
 \par Efficiency relates to the time it takes for the system to produce an answer. A system is efficient if it produces a result in an appropriate amount of time based on its input.
 \par A way to evaluate this is to run the system on different inputs and record the time taken to produce a timeline. However, the time recorded is specific not only to the machine that the system is being run on, but also the other workload the machine has. If the system is ran with many other 3rd party tasks running in the background then the time will be longer than if it is the only process running. In addition, different machines with different hardware parts may be faster or slower depending on the number of cores of the system, and how the workload is scheduled (cite). The Operating System could also affect this (cite). Also, not all different input sizes can be tested, as the document set size can be infinite. The solution is to consider the time complexity of the main algorithms of the system. The time complexity of an algorithm is, the number of operations that need to be carried out for an input of a given size (cite). This allows to determine how well the system scales with larger inputs, by only considering how many operations are performed as a function of the input.
 \par Time complexity focuses on the worst case situation, and does not consider low-order operations. For example, if for an input $n$ an algorithm performs $3n+2$ operations, the low-order term $2$ and the co-efficient $3$ can be omitted. This would result in a time complexity $O(n)$ (where $O$ is called big-Oh). In general the highest order-term is taken, and all the rest are omitted. For example, for $4n^2+10n+2$ would have time complexity $O(n^2)$.  The low-order terms are omitted as with a very large input, or as ${n\to\infty}$ the effect of the number of operations of the low-order terms becomes smaller to irrelevant. The co-efficient of the high-order term is omitted, as a machine can be 4 times faster, or 4 times slower, so it does not affect the greately the number of operations performed.
-\par To measure the efficiency of the system, the time complexity of the front-end (graphical part) and back-end (logical part) of the system have been computed separately, as the system can be used as a library to produce a list of events to then use in a separate 3rd party graphical representation.
+\par To measure the efficiency of the system, the time complexity of the front-end (graphical part) and back-end (logical part) of the system have been computed separately, as the system can be used as a library to produce a list of events to then use in a separate 3rd party graphical representation. The complexity of each algorithm is presented in the table below (see Figure \ref{fig:timecomplexityTable}).
+
+\begin{figure}[h]
+\begin{center}
+\begin{tabular}{ |c|c|c| } 
+ \hline
+Algorithm & Information & Time Complexity\\
+\hline
+\hline
+Document Processing &  \begin{tabular}[x]{@{}c@{}}$n$ - number of documents\\$s$ - number of sentences\\$w$ - number of words\end{tabular} & $O(nsw^2)$ \\
+\hline
+Range Production & $n$ - number of Results & $O(n^2)$\\
+\hline
+Range Timeline View & $n$ - number of Results & $O(n)$\\
+\hline
+Traditional Timeline View & $n$ - number of Results & $O(n)$\\
+ \hline
+\end{tabular}
+\end{center}
+\caption{Time complexity of main Algorithms in System}
+\label{fig:timecomplexityTable}
+\end{figure}
+
 \subsection{Back-End}
 \subsubsection{Processing Documents}
 \par The two main algorithms are the processing of documents, and the production of Ranges. The complexity of each will be presented and discussed. It assumes the complexity of annotating the text in the documents is $O(w)$ (for all $w$ words in the document), and that the documents are annotated before being processed.

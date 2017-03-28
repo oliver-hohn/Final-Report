@@ -116,7 +116,7 @@ return toReturn\;
 \par The tests were divided into three categories, a simple test, an intermediate test, and a complex test where all possibilities of input are tested. For example, for the production of Ranges, the complex test case expects multiple Range trees of different heights to be produced. The tests can be found in the Appendix. Due to the benefit of Gradle, the tests can be ran using the command:\par
 \makebox[\textwidth]{\textbf{gradlew test}}
 or, in the case the libraries need to be loaded:\par
-\makebox[\textwidth]{\textbf{gradlew build)}.}
+\makebox[\textwidth]{\textbf{gradlew build}.}
 In the build command, Gradle will not only run the test cases, but also produce the executable JAR which can be used to distribute the system as an executable to its non-developer users.
 \section{UI}
 //implementation ofthe UI.
@@ -247,7 +247,7 @@ private void drawOddEvent(Result result, PDPageContentStream contentStream, int 
 \begin{lstlisting}
 public JsonElement serialize(Result src, Type typeOfSrc, JsonSerializationContext context) {
 	//json object for this result
-    JsonObject jsonObject = new JsonObject();
+    	JsonObject jsonObject = new JsonObject();
 	//adding the range dates (which can be null)
 	/* whenever a value is null, the key-pair will not be included in the final JSON */
 	jsonObject.addProperty("date1", src.getTimelineDate().getDate1FormattedDayMonthYear());
