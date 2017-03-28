@@ -54,7 +54,7 @@ Traditional Timeline View & $n$ - number of Results & $O(n)$\\
 \subsection{Front-End}
 \par In this section the focus is on the creation of the range and traditional timeline views.
 \subsubsection{Range View}
-\par As can be seen by the algorithm to produce the Range view (??), it considers each Range separetely when building it. In the worst case, there is one Range with a fully expanded tree (i.e. a full binary Range tree). If the tree holds $n$ results, which are held at the leaves, then it has a total of $2n-1$ nodes. For all nodes it must produce a layout, which includes the production of its children recursively. Therefore, $2n-$ layouts are produced, so the time complexity is given by $O(n)$. 
+\par As can be seen by the algorithm to produce the Range view (??), it considers each Range separetely when building it. In the worst case, there is one Range with a fully expanded tree (i.e. a full binary Range tree). If the tree holds $n$ results, which are held at the leaves, then it has a total of $2n-1$ nodes. For all nodes it must produce a layout, which includes the production of its children recursively. Therefore, $2n-1$ layouts are produced, so the time complexity is given by $O(n)$. 
 \par There can be performance issues, as there are embedded layouts, and many views being created and graphically shown. However, the focus in this section is to consider the time for the system to produce the UI, not how heavy it is for the system's memory.
 \subsubsection{Timeline UI}
 \par The creation of the timeline view is trivial. For a list of $n$ results, the layout for each row of the listview is produced. Hence, $n$ rows are produced. This leads to a time complexity of $O(n)$.
@@ -65,3 +65,133 @@ Traditional Timeline View & $n$ - number of Results & $O(n)$\\
 -safeguard participants
 -data set
 -why test this way
+\par The effectiveness of the system is how well it is at producing timelines. This requires an experimental testing to determine whether the produced timelines are correct. The following section explains the testing process and presents the data.
+\subsection{Testing Preparations}
+\par In order to test the effectiveness of the timelines, test participants were asked to build manual timelines given by a document. These were compared with the produced timelines to check the percentage of matched events, the percentage of different dates, and the number of events that were not picked.
+\par There is no perfect timeline. Each timeline produced by test participants will have differences. The aim is to aggregate them, and compare them to the manual timeline, in order to determine whether the system had the same general sense.
+\par Participants were kept anonymous during the entire process, and will be kept anonymous during the presentation of data. The participants came from different academic backgrounds, were of different ages, and had different levels of exposure to the document data sets. A clear limitation in the data gathering was the availability of participants. Therefore, further data could not be gathered. 
+\par The data sets consisted of publicly available newspaper articles of different domains: politics, criminal cases, and short bibliographys. To ensure that a substantial amount of data could be gathered, articles that were rich in temporal expressions were picked. This allowed for lower inaccuracies and determining how close the system was in producing similar timelines.
+\par Keeping the participants anonymous, and the data sets being publicly available, led to the project not requiring an ethical approval. As well as following the provisions from BCS, in protecting user data and fair use.
+
+\subsection{Testing}
+\par Participants were provided the document, and were asked to select events line-by-line. It was important that the events selected came from individual sentences, to be able to compare to the system, which follows the same approach. 
+\par There was no time limit for the participants, as the aim was for them to produce correct timelines instead of producing timelines quickly, as the system would be at a clear advantage in that regard.
+\par The manual events produced by the participants, included the date of the event and a short summary of what occurred. It would occur that the dates were sometimes ambigious, in which case the participants indentified after/before which events they believed this event occurred. This is an area that the current system lacks, as it cannot establish links between events.
+\par The manual timelines were collected and were each compared to the system timeline for the same document. The document data set was of 3 documents.
+
+\subsection{Analysis}
+\par The comparison of the manual timelines consisted in: the number of events collected, the percentage of matched and unmatched sentences, the percentage of mismatched exact dates, and the similarity in summaries. 
+\par The number of events allows to determine what are the expected amount of events for a given document, and how close the system was in reaching it. This can be combined with the other data to determine if the timeline is to broad in its event generation, or too specific.
+\par The matching and unmatching of sentences, consists of identifying which sentences the users used in their generation of events and which the system used (as in the system it holds the original sentence that produced the event). This allows to pinpoint the systems weakest components. If the events do not match the events of the manual timelines, but they come from the same sentences, then it can be determined that the issue is not in the identification of events in the documents but the production of them.
+\par Mismatched dates consists of determining how accurate the system is in producing exact dates for events. It is expected that the system will perform in extremely ambigious temporal expressions that can only be linked to other temporal expressions, but cannot be pinpointed to an exact date. For test participants this is not a problem, as they understand context and can apply their own thinking to determine whether an event occurred before or after another event, even when there is no temporal data to support this. This is done by checking system event dates to participant dates for events originated from the same sentence.
+\par The similarities in summaries determines how effective the system is in conveying the meaning of the original sentence that produced it. This is done by comparing the system produced timeline with its summary and subjects, and the manual summary, and checking whether they convey the same key idea. This is generally done by checking whether they have the same keywords.
+\par The results of the following are presented in the table below (see Figure \ref{fig:tableAnalysis}). The name of the article used is provided, along with its source and its published date.
+\begin{figure}[h]
+\begin{subfigure}{.5\textwidth}
+\begin{tabular}{ |p{5cm}|c|c|c| } 
+ \hline
+Comparing System to Manual Timelines From... & Participant 1 & Participant 2 & Participant 3\\
+\hline
+\hline
+Difference In collected events (+/-) (19 events collected by system) &  +5 & -1 & -3 \\
+\hline
+Percentage (\%) of events produced by the same sentence & 66.7 & 83.3 & 87.5\\
+\hline
+Percentage (\%) of events produced by other sentence & 33.3 & 16.7 & 12.5\\
+\hline
+Percentage (\%) of mismatched dates & 0.0 & 6.7 & 0.0\\
+\hline
+Percentage (\%) of similar summaries (matching keywords) & 75.0 & 73.3 & 78.6\\
+\hline
+Unkown Dates of Manual Timelines From... & 4 & 2 & 2\\
+\hline
+\end{tabular}
+\caption{BBC: US elections 2016: Donald Trump Life Story (Published 20th of January 2017)}
+\end{subfigure}
+
+\begin{subfigure}{.5\textwidth}
+\begin{tabular}{ |p{5cm}|c|c|c| } 
+ \hline
+Comparing System to Manual Timelines From... & Participant 1 & Participant 2 & Participant 3\\
+\hline
+\hline
+Difference In collected events (+/-) (4 events collected by system) &  +5 & 0 & +3 \\
+\hline
+Percentage (\%) of events produced by the same sentence & 44.4 & 100.0 & 57.1\\
+\hline
+Percentage (\%) of events produced by other sentence & 55.6 & 0.0 & 42.9\\
+\hline
+Percentage (\%) of mismatched dates & 0.0 & 0.0 & 0.0\\
+\hline
+Percentage (\%) of similar summaries (matching keywords) & 50.0 & 50.0 & 50.0\\
+\hline
+Unkown Dates of Manual Timelines From... & 0 & 0 & -1\\
+\hline
+\end{tabular}
+\caption{Guardian: British Toddle Abducted, Police believe (Published 5th of May 2007)}
+\end{subfigure}
+
+\begin{subfigure}{.5\textwidth}
+\begin{tabular}{ |p{5cm}|c|c|c| } 
+ \hline
+Comparing System to Manual Timelines From... & Participant 1 & Participant 2 & Participant 3\\
+\hline
+\hline
+Difference In collected events (+/-) (6 events collected by system) &  +2 & +1 & +1 \\
+\hline
+Percentage (\%) of events produced by the same sentence & 75.0 & 88.5 & 71.4\\
+\hline
+Percentage (\%) of events produced by other sentence & 25.0 & 12.5 & 28.6\\
+\hline
+Percentage (\%) of mismatched dates (on matched events) & 33.3 & 16.7 & 0.0\\
+\hline
+Percentage (\%) of similar summaries (matching keywords) & 66.7 & 66.7 & 80.0\\
+\hline
+Unkown Dates of Manual Timelines From... & 1 & 0 & 1\\
+\hline
+\end{tabular}
+\caption{Guardian: Madeleine McCann detectives arrive in Portugal to question 11 suspects (Published 9th of December 2014)}
+\end{subfigure}
+
+\caption{Manual vs Automated Timelines Comparison}
+\label{fig:tableAnalysis}
+\end{figure}
+%explain that same sentence means from system to timeline 
+%what can be concluded (ie on average summary ...), and final conclusion of system
+\par It should be noted that in the vents produced by the same sentence considers the amount of events in the manual timeline that are produced from the same sentences as the events in the automated timeline. This aims to check how many of the manual timeline events are produced from the same text as the automated events.
+\par It can be concluded that for this data set the system produced an above ?? certainty in selecting the correct event sentences. The uknown dates were not picked up by the system, as they did not contain temporal expressions, but were related to other events, which the participants detected. It is clear that the production of summaries is not optimal ??. It shows the weaknesses of decision-based headline generation algorithms, and the reason for the growing prominence of statistic based models. An effective point of the system was the production of exact dates from temporal expressions. This value is ignoring the events that were not picked by the system. For the temporal expressions selected by the system, the exact dates produced match the dates given by participants for those events.
+\par Therefore, the system does not produce perfect summaries that convey the same meaning as the original sentence. However, the system is effective in the production of exact dates from temporal expressions, and has an over ?? in the identification of events in text.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

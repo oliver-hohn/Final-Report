@@ -50,13 +50,16 @@
 \contentsline {subsubsection}{Range View}{64}
 \contentsline {subsubsection}{Timeline UI}{65}
 \contentsline {section}{\numberline {8.3}Effectiveness}{65}
-\contentsline {chapter}{\numberline {9}Conclusion and Future Work}{66}
-\contentsline {section}{\numberline {9.1}Conclusion of Project}{66}
-\contentsline {section}{\numberline {9.2}Future Work}{66}
-\contentsline {section}{Bibliography}{69}
-\contentsline {chapter}{\numberline {A}Extra Information}{70}
-\contentsline {section}{\numberline {A.1}Tables, proofs, graphs, test cases, ...}{70}
-\contentsline {chapter}{\numberline {B}User Guide}{71}
-\contentsline {section}{\numberline {B.1}Instructions}{71}
-\contentsline {chapter}{\numberline {C}Source Code}{72}
-\contentsline {section}{\numberline {C.1}Instructions}{72}
+\contentsline {subsection}{\numberline {8.3.1}Testing Preparations}{65}
+\contentsline {subsection}{\numberline {8.3.2}Testing}{66}
+\contentsline {subsection}{\numberline {8.3.3}Analysis}{66}
+\contentsline {chapter}{\numberline {9}Conclusion and Future Work}{69}
+\contentsline {section}{\numberline {9.1}Conclusion of Project}{69}
+\contentsline {section}{\numberline {9.2}Future Work}{69}
+\contentsline {section}{Bibliography}{72}
+\contentsline {chapter}{\numberline {A}Extra Information}{73}
+\contentsline {section}{\numberline {A.1}Tables, proofs, graphs, test cases, ...}{73}
+\contentsline {chapter}{\numberline {B}User Guide}{74}
+\contentsline {section}{\numberline {B.1}Instructions}{74}
+\contentsline {chapter}{\numberline {C}Source Code}{75}
+\contentsline {section}{\numberline {C.1}Instructions}{75}

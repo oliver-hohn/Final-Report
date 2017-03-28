@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2017.1.17)  28 MAR 2017 18:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2017.1.17)  28 MAR 2017 22:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -816,6 +816,30 @@ File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
 \zifour@ocount=\count164
 )
+(d:/texlive/2016/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2016/05/22 v1.1-161 Sub-captions (AR)
+
+(d:/texlive/2016/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
+
+(d:/texlive/2016/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2016/05/22 v1.7-166 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 67.
+\captionmargin=\dimen191
+\captionmargin@=\dimen192
+\captionwidth=\dimen193
+\caption@tempdima=\dimen194
+\caption@indent=\dimen195
+\caption@parindent=\dimen196
+\caption@hangindent=\dimen197
+)
+\c@ContinuedFloat=\count165
+Package caption Info: float package is loaded.
+Package caption Info: listings package is loaded.
+)
+\c@subfigure=\count166
+\c@subtable=\count167
+)
 (d:/texlive/2016/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 ) (./report.aux
@@ -827,42 +851,42 @@ File: lstlang1.sty 2015/06/04 1.6 listings language file
 (./Appendices/SourceCode.aux))
 \openout1 = `report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for U/mathx/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 47.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 47.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for U/mathx/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 49.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 49.
 
 (d:/texlive/2016/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Try loading font information for T1+lmr on input line 47.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 49.
 
 (d:/texlive/2016/texmf-dist/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 (d:/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count165
-\scratchdimen=\dimen191
+\scratchcounter=\count168
+\scratchdimen=\dimen198
 \scratchbox=\box50
-\nofMPsegments=\count166
-\nofMParguments=\count167
+\nofMPsegments=\count169
+\nofMParguments=\count170
 \everyMPshowfont=\toks38
-\MPscratchCnt=\count168
-\MPscratchDim=\dimen192
-\MPnumerator=\count169
-\makeMPintoPDFobject=\count170
+\MPscratchCnt=\count171
+\MPscratchDim=\dimen199
+\MPnumerator=\count172
+\makeMPintoPDFobject=\count173
 \everyMPtoPDFconversion=\toks39
 ) (d:/texlive/2016/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2016/05/21 v0.22 Utility functions of pdfTeX for LuaTeX (HO
@@ -944,12 +968,14 @@ e
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\c@lstlisting=\count171
+\c@lstlisting=\count174
 ABD: EveryShipout initializing macros
 (d:/texlive/2016/texmf-dist/tex/latex/upquote/upquote.sty
 Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
 tim
 )
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: pdftex
 * paper: <default>
@@ -987,7 +1013,7 @@ tim
 File: FrontMatter/logo.png Graphic file (type png)
 
 <use FrontMatter/logo.png>
-Package pdftex.def Info: FrontMatter/logo.png used on input line 48.
+Package pdftex.def Info: FrontMatter/logo.png used on input line 50.
 (pdftex.def)             Requested size: 93.94933pt x 85.91946pt.
  [1
 
@@ -1248,11 +1274,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[55]
-Overfull \vbox (9.98409pt too high) has occurred while \output is active []
-
-
-[56]) [57]
+[55] [56]) [57]
 \openout2 = `Chapters/ProfessionalIssues.aux'.
 
  (./Chapters/ProfessionalIssues.tex
@@ -1280,24 +1302,75 @@ t line 41.
 LaTeX Warning: Reference `alg:processDocument' on page 62 undefined on input li
 ne 41.
 
-[62] [63] [64]) [65]
+[62] [63] [64] [65] [66]
+Underfull \hbox (badness 1005) in paragraph at lines 93--93
+[]\T1/lmr/m/n/10 Comparing Sys-tem to Man-ual
+ []
+
+
+Underfull \hbox (badness 2600) in paragraph at lines 96--96
+[]\T1/lmr/m/n/10 Difference In col-lected events
+ []
+
+
+Overfull \hbox (156.46068pt too wide) in paragraph at lines 91--109
+[][] 
+ []
+
+
+Underfull \hbox (badness 1005) in paragraph at lines 115--115
+[]\T1/lmr/m/n/10 Comparing Sys-tem to Man-ual
+ []
+
+
+Underfull \hbox (badness 2600) in paragraph at lines 118--118
+[]\T1/lmr/m/n/10 Difference In col-lected events
+ []
+
+
+Overfull \hbox (156.46068pt too wide) in paragraph at lines 113--131
+[][] 
+ []
+
+
+Underfull \hbox (badness 1005) in paragraph at lines 137--137
+[]\T1/lmr/m/n/10 Comparing Sys-tem to Man-ual
+ []
+
+
+Underfull \hbox (badness 2600) in paragraph at lines 140--140
+[]\T1/lmr/m/n/10 Difference In col-lected events
+ []
+
+
+Overfull \hbox (156.46068pt too wide) in paragraph at lines 135--153
+[][] 
+ []
+
+
+LaTeX Warning: Float too large for page by 9.71606pt on input line 158.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+) [67] [68]
 \openout2 = `Chapters/Conclusion.aux'.
 
  (./Chapters/Conclusion.tex
 Chapter 9.
-[66
+[69
 
 
 
-]) [67] (./report.bbl [68
+]) [70] (./report.bbl [71
 
 
-]) [69]
+]) [72]
 \openout2 = `Appendices/appendix.aux'.
 
  (./Appendices/appendix.tex
 Appendix A.
-) [70
+) [73
 
 
 ]
@@ -1305,7 +1378,7 @@ Appendix A.
 
  (./Appendices/UserGuide.tex
 Appendix B.
-) [71
+) [74
 
 
 
@@ -1314,7 +1387,7 @@ Appendix B.
 
  (./Appendices/SourceCode.tex
 Appendix C.
-) [72
+) [75
 
 
 
@@ -1339,13 +1412,13 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 ### simple group (level 1) entered at line 1061 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 20720 strings out of 493013
- 383482 string characters out of 6136993
- 690458 words of memory out of 5000000
- 23774 multiletter control sequences out of 15000+600000
- 78684 words of font info for 69 fonts, out of 8000000 for 9000
+ 21831 strings out of 493013
+ 403612 string characters out of 6136993
+ 710669 words of memory out of 5000000
+ 24875 multiletter control sequences out of 15000+600000
+ 81681 words of font info for 70 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,18n,84p,2724b,13370s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 62i,18n,94p,2724b,14220s stack positions out of 5000i,500n,10000p,200000b,80000s
 {d:/texlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{d:/te
 xlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{d:/texlive/2016/texmf-dist/
 fonts/enc/dvips/lm/lm-mathit.enc}{d:/texlive/2016/texmf-dist/fonts/enc/dvips/in
@@ -1358,13 +1431,14 @@ mmi10.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/lm/lmmi7.pfb><d:/texli
 ve/2016/texmf-dist/fonts/type1/public/lm/lmr10.pfb><d:/texlive/2016/texmf-dist/
 fonts/type1/public/lm/lmr12.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/
 lm/lmr6.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/lm/lmr7.pfb><d:/texl
-ive/2016/texmf-dist/fonts/type1/public/lm/lmri10.pfb><d:/texlive/2016/texmf-dis
-t/fonts/type1/public/mathabx-type1/matha10.pfb><d:/texlive/2016/texmf-dist/font
-s/type1/public/stmaryrd/stmary10.pfb>
-Output written on report.pdf (76 pages, 1107711 bytes).
+ive/2016/texmf-dist/fonts/type1/public/lm/lmr9.pfb><d:/texlive/2016/texmf-dist/
+fonts/type1/public/lm/lmri10.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public
+/mathabx-type1/matha10.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/stmar
+yrd/stmary10.pfb>
+Output written on report.pdf (79 pages, 1137388 bytes).
 PDF statistics:
- 348 PDF objects out of 1000 (max. 8388607)
- 224 compressed objects within 3 object streams
+ 362 PDF objects out of 1000 (max. 8388607)
+ 234 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  88 words of extra memory for PDF output out of 10000 (max. 10000000)
 
