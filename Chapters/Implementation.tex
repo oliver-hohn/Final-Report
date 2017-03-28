@@ -203,28 +203,24 @@ public boolean add(Result result) {
 \par In the PDF system, the file that is saved, is a graphical representation of the events, using the traditional timeline view. It is aided through the use of the Apache PDFBox and Commons library. The libraries work like a painting tool. The pages are canvises, where lines and text can be drawn on at specific positions. These positions are given by coordinates $(x,y)$, where the top left of the page is the origin, i.e. (0,0), and the x values increment towards the right of the page, and the y values towards the bottom of the page. To build a dynamic system, that can create a pdf for any number of Results, it requires certain constraints. Such as the maximum number of events to be displayed on each page, and the size of the text of the summaries and subjects. Due to issues with the tool, it is not possible to continue on the next page of the PDF, hence it is limited to how many events are shown and the size of the text (as it can overflow to the next page). However, since the text that is used in the summary, should  be short (since it is a summary), the constraint can be applied. Therefore, it can be assumed that there is a max size of the container that holds one event. This allows for every container to be of this max size, to avoid the issue of resizing containers depending on the amount of text. Therefore, the system can be considered as drawing containers on the page and filling them with the data, moving along to the next position and repeat. Hence the task, in the implementation, has been broken down to padding, writting text, and drawing the rectangle. Since in the traditional view, the layout of the events are one on the left and the next on the right, the tasks have to be changed minimally to allow for this. The full implementation can be found in the Appendix. As an example, the Figure \ref{fig:drawRecImplemented} has been provided to demonstrate the task of drawing for an event that is to be placed on the right of the page.
 \begin{figure}[H]
 \begin{lstlisting}
-private void drawOddEvent(Result result, 
-   PDPageContentStream contentStream, int position)
-      throws IOException {
-   //initially y is the top right where this needs to 
-  //be shown, x starts from the middle
-  currentY -= padding; //add some padding to y
-  currentX = (int) widthOfPage / 2;
-  contentStream.moveTo(currentX, currentY);
-  //write the text for the Event
-  int lengthOfHorLine = (int) ((widthOfPage / 2)
-	- (padding + widthOfRectangle));
-  currentX += lengthOfHorLine;
-  writeText(result, contentStream, currentX, position);
-  //draw the rectangle to surround the text
-  drawRectangle(contentStream, currentX, currentY 
-  	- heightOfRectangle);
-  //draw the horizontal line connecting event timeline
-  currentY -= heightOfRectangle / 2;
-  contentStream.moveTo(currentX, currentY);
-  contentStream.lineTo(widthOfPage / 2, currentY);
-  contentStream.stroke();
-  currentY -= (heightOfRectangle / 2) + padding;
+private void drawOddEvent(Result result, PDPageContentStream contentStream, int position) throws IOException {
+	//initially y is the top right where this needs to 
+	//be shown, x starts from the middle
+	currentY -= padding; //add some padding to y
+	currentX = (int) widthOfPage / 2;
+	contentStream.moveTo(currentX, currentY);
+	//write the text for the Event
+	int lengthOfHorLine = (int) ((widthOfPage / 2) - (padding + widthOfRectangle));
+	currentX += lengthOfHorLine;
+	writeText(result, contentStream, currentX, position);
+	//draw the rectangle to surround the text
+	drawRectangle(contentStream, currentX, currentY - heightOfRectangle);
+	//draw the horizontal line connecting event timeline
+	currentY -= heightOfRectangle / 2;
+	contentStream.moveTo(currentX, currentY);
+	contentStream.lineTo(widthOfPage / 2, currentY);
+	contentStream.stroke();
+	currentY -= (heightOfRectangle / 2) + padding;
 }
 \end{lstlisting}
 \caption{Implementation of drawing for a Result in the PDF timeline}
@@ -249,17 +245,13 @@ private void drawOddEvent(Result result,
 \end{figure}
 \begin{figure}[H]
 \begin{lstlisting}
-public JsonElement serialize(Result src, Type typeOfSrc, 
-		JsonSerializationContext context) {
-    //json object for this result
+public JsonElement serialize(Result src, Type typeOfSrc, JsonSerializationContext context) {
+	//json object for this result
     JsonObject jsonObject = new JsonObject();
 	//adding the range dates (which can be null)
-	/* whenever a value is null, the key-pair will 
-	not be included in the final JSON */
-	jsonObject.addProperty("date1", 
-		src.getTimelineDate().getDate1FormattedDayMonthYear());
-	jsonObject.addProperty("date2", 
-		src.getTimelineDate().getDate2FormattedDayMonthYear());
+	/* whenever a value is null, the key-pair will not be included in the final JSON */
+	jsonObject.addProperty("date1", src.getTimelineDate().getDate1FormattedDayMonthYear());
+	jsonObject.addProperty("date2", src.getTimelineDate().getDate2FormattedDayMonthYear());
 	//adding the subjects
 	JsonArray subjectJsonArray = new JsonArray();
 	for (String subject : src.getSubjects()) {
@@ -268,14 +260,12 @@ public JsonElement serialize(Result src, Type typeOfSrc,
 	jsonObject.add("subjects", subjectJsonArray);
 	//adding the event
 	jsonObject.addProperty("event", src.getEvent());
-	/*adding the file data (excluding the path, since 
-	this can be used on other system where files are elsewhere)*/
+	/*adding the file data (excluding the path, since this can be used on other system where files are elsewhere)*/
 	JsonObject fromJsonObject = new JsonObject();
 	FileData fileData = src.getFileData();
 	if (fileData != null) {
 		fromJsonObject.addProperty("filename", fileData.getFileName());
-		fromJsonObject.addProperty("baseDate", 
-			fileData.getCreationDateFormattedDayMonthYear());
+		fromJsonObject.addProperty("baseDate", fileData.getCreationDateFormattedDayMonthYear());
 	}
 	jsonObject.add("from", fromJsonObject);
 	return jsonObject;

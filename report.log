@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2017.1.17)  22 MAR 2017 18:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2017.1.17)  28 MAR 2017 18:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -709,6 +709,115 @@ Package: stmaryrd 1994/03/03 St Mary's Road symbol package
 \symstmry=\mathgroup7
 LaTeX Font Info:    Overwriting symbol font `stmry' in version `bold'
 (Font)                  U/stmry/m/n --> U/stmry/b/n on input line 89.
+)
+(d:/texlive/2016/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2016/06/19 v1.99m Standard LaTeX package
+
+(d:/texlive/2016/texmf-dist/tex/latex/base/t1enc.def
+File: t1enc.def 2016/06/19 v1.99m Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
+))
+(d:/texlive/2016/texmf-dist/tex/latex/inconsolata/inconsolata.sty
+Package: inconsolata 2017/01/04 v1.112
+
+`inconsolata-zi4' v1.112, 2017/01/04 Text macros for Inconsolata (msharpe)
+(d:/texlive/2016/texmf-dist/tex/latex/base/textcomp.sty
+Package: textcomp 2016/06/19 v1.99m Standard LaTeX package
+Package textcomp Info: Sub-encoding information:
+(textcomp)               5 = only ISO-Adobe without \textcurrency
+(textcomp)               4 = 5 + \texteuro
+(textcomp)               3 = 4 + \textohm
+(textcomp)               2 = 3 + \textestimated + \textcurrency
+(textcomp)               1 = TS1 - \textcircled - \t
+(textcomp)               0 = TS1 (full)
+(textcomp)             Font families with sub-encoding setting implement
+(textcomp)             only a restricted character set as indicated.
+(textcomp)             Family '?' is the default used for unknown fonts.
+(textcomp)             See the documentation for details.
+Package textcomp Info: Setting ? sub-encoding to TS1/1 on input line 79.
+
+(d:/texlive/2016/texmf-dist/tex/latex/base/ts1enc.def
+File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
+)
+LaTeX Info: Redefining \oldstylenums on input line 334.
+Package textcomp Info: Setting cmr sub-encoding to TS1/0 on input line 349.
+Package textcomp Info: Setting cmss sub-encoding to TS1/0 on input line 350.
+Package textcomp Info: Setting cmtt sub-encoding to TS1/0 on input line 351.
+Package textcomp Info: Setting cmvtt sub-encoding to TS1/0 on input line 352.
+Package textcomp Info: Setting cmbr sub-encoding to TS1/0 on input line 353.
+Package textcomp Info: Setting cmtl sub-encoding to TS1/0 on input line 354.
+Package textcomp Info: Setting ccr sub-encoding to TS1/0 on input line 355.
+Package textcomp Info: Setting ptm sub-encoding to TS1/4 on input line 356.
+Package textcomp Info: Setting pcr sub-encoding to TS1/4 on input line 357.
+Package textcomp Info: Setting phv sub-encoding to TS1/4 on input line 358.
+Package textcomp Info: Setting ppl sub-encoding to TS1/3 on input line 359.
+Package textcomp Info: Setting pag sub-encoding to TS1/4 on input line 360.
+Package textcomp Info: Setting pbk sub-encoding to TS1/4 on input line 361.
+Package textcomp Info: Setting pnc sub-encoding to TS1/4 on input line 362.
+Package textcomp Info: Setting pzc sub-encoding to TS1/4 on input line 363.
+Package textcomp Info: Setting bch sub-encoding to TS1/4 on input line 364.
+Package textcomp Info: Setting put sub-encoding to TS1/5 on input line 365.
+Package textcomp Info: Setting uag sub-encoding to TS1/5 on input line 366.
+Package textcomp Info: Setting ugq sub-encoding to TS1/5 on input line 367.
+Package textcomp Info: Setting ul8 sub-encoding to TS1/4 on input line 368.
+Package textcomp Info: Setting ul9 sub-encoding to TS1/4 on input line 369.
+Package textcomp Info: Setting augie sub-encoding to TS1/5 on input line 370.
+Package textcomp Info: Setting dayrom sub-encoding to TS1/3 on input line 371.
+Package textcomp Info: Setting dayroms sub-encoding to TS1/3 on input line 372.
+
+Package textcomp Info: Setting pxr sub-encoding to TS1/0 on input line 373.
+Package textcomp Info: Setting pxss sub-encoding to TS1/0 on input line 374.
+Package textcomp Info: Setting pxtt sub-encoding to TS1/0 on input line 375.
+Package textcomp Info: Setting txr sub-encoding to TS1/0 on input line 376.
+Package textcomp Info: Setting txss sub-encoding to TS1/0 on input line 377.
+Package textcomp Info: Setting txtt sub-encoding to TS1/0 on input line 378.
+Package textcomp Info: Setting lmr sub-encoding to TS1/0 on input line 379.
+Package textcomp Info: Setting lmdh sub-encoding to TS1/0 on input line 380.
+Package textcomp Info: Setting lmss sub-encoding to TS1/0 on input line 381.
+Package textcomp Info: Setting lmssq sub-encoding to TS1/0 on input line 382.
+Package textcomp Info: Setting lmvtt sub-encoding to TS1/0 on input line 383.
+Package textcomp Info: Setting lmtt sub-encoding to TS1/0 on input line 384.
+Package textcomp Info: Setting qhv sub-encoding to TS1/0 on input line 385.
+Package textcomp Info: Setting qag sub-encoding to TS1/0 on input line 386.
+Package textcomp Info: Setting qbk sub-encoding to TS1/0 on input line 387.
+Package textcomp Info: Setting qcr sub-encoding to TS1/0 on input line 388.
+Package textcomp Info: Setting qcs sub-encoding to TS1/0 on input line 389.
+Package textcomp Info: Setting qpl sub-encoding to TS1/0 on input line 390.
+Package textcomp Info: Setting qtm sub-encoding to TS1/0 on input line 391.
+Package textcomp Info: Setting qzc sub-encoding to TS1/0 on input line 392.
+Package textcomp Info: Setting qhvc sub-encoding to TS1/0 on input line 393.
+Package textcomp Info: Setting futs sub-encoding to TS1/4 on input line 394.
+Package textcomp Info: Setting futx sub-encoding to TS1/4 on input line 395.
+Package textcomp Info: Setting futj sub-encoding to TS1/4 on input line 396.
+Package textcomp Info: Setting hlh sub-encoding to TS1/3 on input line 397.
+Package textcomp Info: Setting hls sub-encoding to TS1/3 on input line 398.
+Package textcomp Info: Setting hlst sub-encoding to TS1/3 on input line 399.
+Package textcomp Info: Setting hlct sub-encoding to TS1/5 on input line 400.
+Package textcomp Info: Setting hlx sub-encoding to TS1/5 on input line 401.
+Package textcomp Info: Setting hlce sub-encoding to TS1/5 on input line 402.
+Package textcomp Info: Setting hlcn sub-encoding to TS1/5 on input line 403.
+Package textcomp Info: Setting hlcw sub-encoding to TS1/5 on input line 404.
+Package textcomp Info: Setting hlcf sub-encoding to TS1/5 on input line 405.
+Package textcomp Info: Setting pplx sub-encoding to TS1/3 on input line 406.
+Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 407.
+Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 408.
+Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 409.
+)
+(d:/texlive/2016/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
+
+(d:/texlive/2016/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(d:/texlive/2016/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+\XKV@toks=\toks36
+\XKV@tempa@toks=\toks37
+)
+\XKV@depth=\count163
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
+\zifour@ocount=\count164
+)
+(d:/texlive/2016/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2015/06/04 1.6 listings language file
 ) (./report.aux
 (./Chapters/Background.aux) (./Chapters/Body.aux)
 (./Chapters/RequirementsSpecification.aux) (./Chapters/Design.aux)
@@ -718,36 +827,43 @@ LaTeX Font Info:    Overwriting symbol font `stmry' in version `bold'
 (./Appendices/SourceCode.aux))
 \openout1 = `report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for U/mathx/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 29.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for U/mathx/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 47.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 47.
 
-(d:/texlive/2016/texmf-dist/tex/latex/lm/ot1lmr.fd
-File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+(d:/texlive/2016/texmf-dist/tex/latex/base/ts1cmr.fd
+File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 47.
+
+(d:/texlive/2016/texmf-dist/tex/latex/lm/t1lmr.fd
+File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 (d:/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count163
+\scratchcounter=\count165
 \scratchdimen=\dimen191
 \scratchbox=\box50
-\nofMPsegments=\count164
-\nofMParguments=\count165
-\everyMPshowfont=\toks36
-\MPscratchCnt=\count166
+\nofMPsegments=\count166
+\nofMParguments=\count167
+\everyMPshowfont=\toks38
+\MPscratchCnt=\count168
 \MPscratchDim=\dimen192
-\MPnumerator=\count167
-\makeMPintoPDFobject=\count168
-\everyMPtoPDFconversion=\toks37
+\MPnumerator=\count169
+\makeMPintoPDFobject=\count170
+\everyMPtoPDFconversion=\toks39
 ) (d:/texlive/2016/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2016/05/21 v0.22 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -828,8 +944,12 @@ e
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\c@lstlisting=\count169
+\c@lstlisting=\count171
 ABD: EveryShipout initializing macros
+(d:/texlive/2016/texmf-dist/tex/latex/upquote/upquote.sty
+Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
+tim
+)
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: pdftex
 * paper: <default>
@@ -867,7 +987,7 @@ ABD: EveryShipout initializing macros
 File: FrontMatter/logo.png Graphic file (type png)
 
 <use FrontMatter/logo.png>
-Package pdftex.def Info: FrontMatter/logo.png used on input line 30.
+Package pdftex.def Info: FrontMatter/logo.png used on input line 48.
 (pdftex.def)             Requested size: 93.94933pt x 85.91946pt.
  [1
 
@@ -879,6 +999,11 @@ ogo.png (PNG copy)>] (./FrontMatter/abstract.tex)
 ] [1] (./FrontMatter/acknowledgements.tex) [0
 
 ] (./report.toc
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 2.
+
+(d:/texlive/2016/texmf-dist/tex/latex/lm/ot1lmr.fd
+File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
 LaTeX Font Info:    Try loading font information for OML+lmm on input line 2.
 
 (d:/texlive/2016/texmf-dist/tex/latex/lm/omllmm.fd
@@ -925,12 +1050,14 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <8> on input line 70.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <6> on input line 70.
-LaTeX Font Info:    Try loading font information for OT1+lmtt on input line 70.
+LaTeX Font Info:    Try loading font information for T1+zi4 on input line 70.
+ (d:/texlive/2016/texmf-dist/tex/latex/inconsolata/t1zi4.fd
+File: t1zi4.fd 2016/12/29 T1/zi4 (Inconsolata)
+)
+LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
+(Font)              scaled to size 8.0pt on input line 70.
 
- (d:/texlive/2016/texmf-dist/tex/latex/lm/ot1lmtt.fd
-File: ot1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [9]
-[10]
+[9] [10]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -964,30 +1091,32 @@ Chapter 5.
 
 
 
-] [21] [22] [23] <fullarch.png, id=104, 2294.5725pt x 1336.995pt>
+] [21] [22] [23] <fullarch.png, id=106, 2294.5725pt x 1336.995pt>
 File: fullarch.png Graphic file (type png)
 
 <use fullarch.png>
 Package pdftex.def Info: fullarch.png used on input line 78.
 (pdftex.def)             Requested size: 411.9399pt x 240.01628pt.
- [24] <process.png, id=109, 1103.12125pt x 1095.09125pt>
+ [24] <process.png, id=111, 1103.12125pt x 1095.09125pt>
 File: process.png Graphic file (type png)
 
 <use process.png>
 Package pdftex.def Info: process.png used on input line 86.
 (pdftex.def)             Requested size: 411.9399pt x 408.9371pt.
+LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
+(Font)              scaled to size 10.0pt on input line 99.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [25 <./fullarch.png>] [26 <./process.png>]
-<system.png, id=118, 563.10374pt x 736.7525pt>
+<system.png, id=120, 563.10374pt x 736.7525pt>
 File: system.png Graphic file (type png)
  <use system.png>
 Package pdftex.def Info: system.png used on input line 112.
 (pdftex.def)             Requested size: 411.9399pt x 538.97153pt.
  [27]
-<ranges.png, id=124, 977.6525pt x 462.72874pt>
+<ranges.png, id=125, 977.6525pt x 462.72874pt>
 File: ranges.png Graphic file (type png)
  <use ranges.png>
 Package pdftex.def Info: ranges.png used on input line 121.
@@ -996,13 +1125,13 @@ Package pdftex.def Info: ranges.png used on input line 121.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<helpers.png, id=133, 472.76625pt x 361.35pt>
+<helpers.png, id=134, 472.76625pt x 361.35pt>
 File: helpers.png Graphic file (type png)
  <use helpers.png>
 Package pdftex.def Info: helpers.png used on input line 202.
 (pdftex.def)             Requested size: 354.5738pt x 271.01184pt.
  [30] [31]
-[32 <./helpers.png>] <startup.png, id=145, 767.86874pt x 455.301pt>
+[32 <./helpers.png>] <startup.png, id=146, 767.86874pt x 455.301pt>
 File: startup.png Graphic file (type png)
 
 <use startup.png>
@@ -1012,7 +1141,7 @@ Package pdftex.def Info: startup.png used on input line 218.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<timeline.png, id=146, 768.471pt x 475.17525pt>
+<timeline.png, id=147, 768.471pt x 475.17525pt>
 File: timeline.png Graphic file (type png)
  <use timeline.png>
 Package pdftex.def Info: timeline.png used on input line 225.
@@ -1021,13 +1150,13 @@ Package pdftex.def Info: timeline.png used on input line 225.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<editDialog.png, id=151, 329.43076pt x 208.3785pt>
+<editDialog.png, id=152, 329.43076pt x 208.3785pt>
 File: editDialog.png Graphic file (type png)
  <use editDialog.png>
 Package pdftex.def Info: editDialog.png used on input line 232.
 (pdftex.def)             Requested size: 197.65997pt x 125.02805pt.
 
-<viewDoc.png, id=152, 344.487pt x 416.757pt>
+<viewDoc.png, id=153, 344.487pt x 416.757pt>
 File: viewDoc.png Graphic file (type png)
  <use viewDoc.png>
 Package pdftex.def Info: viewDoc.png used on input line 238.
@@ -1055,43 +1184,26 @@ Overfull \hbox (15.0pt too wide) in paragraph at lines 27--29
  []
 
 [40]
-LaTeX Font Info:    Try loading font information for OML+lmr on input line 33.
- (d:/texlive/2016/texmf-dist/tex/latex/lm/omllmr.fd
-File: omllmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-LaTeX Font Info:    Font shape `OML/lmr/m/n' in size <10> not available
-(Font)              Font shape `OML/lmm/m/it' tried instead on input line 33.
-LaTeX Font Info:    Try loading font information for OMS+lmr on input line 33.
 
-(d:/texlive/2016/texmf-dist/tex/latex/lm/omslmr.fd
-File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 33.
+LaTeX Font Warning: Font shape `T1/zi4/m/it' undefined
+(Font)              using `T1/zi4/m/n' instead on input line 35.
 
-Overfull \hbox (2.06432pt too wide) in paragraph at lines 37--38
-[][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (8.06438pt too wide) in paragraph at lines 40--41
-[][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-[41] [42] <traditionalView.png, id=185, 658.25925pt x 606.46574pt>
+LaTeX Font Info:    Font shape `T1/zi4/m/it' will be
+(Font)              scaled to size 8.0pt on input line 35.
+[41] <traditionalView.png, id=183, 658.25925pt x 606.46574pt>
 File: traditionalView.png Graphic file (type png)
 
 <use traditionalView.png>
 Package pdftex.def Info: traditionalView.png used on input line 73.
 (pdftex.def)             Requested size: 411.9399pt x 379.53061pt.
- [43] [44] [45 <./traditionalView.png>]
-<rangeView.png, id=198, 691.98524pt x 591.4095pt>
+ [42] [43] [44 <./traditionalView.png>]
+<rangeView.png, id=195, 691.98524pt x 591.4095pt>
 File: rangeView.png Graphic file (type png)
  <use rangeView.png>
 Package pdftex.def Info: rangeView.png used on input line 101.
 (pdftex.def)             Requested size: 411.9399pt x 352.06898pt.
- [46]
-[47 <./rangeView.png>] [48]
+ [45]
+[46 <./rangeView.png>] [47]
 Overfull \hbox (15.0pt too wide) in paragraph at lines 117--118
 [][]
  []
@@ -1101,21 +1213,21 @@ Overfull \hbox (15.0pt too wide) in paragraph at lines 119--121
 [][]
  []
 
-<startUpImplemented.png, id=210, 873.2625pt x 638.98724pt>
+<startUpImplemented.png, id=208, 873.2625pt x 638.98724pt>
 File: startUpImplemented.png Graphic file (type png)
 
 <use startUpImplemented.png>
 Package pdftex.def Info: startUpImplemented.png used on input line 127.
 (pdftex.def)             Requested size: 411.9399pt x 301.42581pt.
 
-<editDialogImplemented.png, id=211, 363.759pt x 327.624pt>
+<editDialogImplemented.png, id=209, 363.759pt x 327.624pt>
 File: editDialogImplemented.png Graphic file (type png)
 
 <use editDialogImplemented.png>
 Package pdftex.def Info: editDialogImplemented.png used on input line 133.
 (pdftex.def)             Requested size: 411.9399pt x 371.02565pt.
 
-<viewDocImplemented.png, id=212, 616.704pt x 505.89pt>
+<viewDocImplemented.png, id=210, 616.704pt x 505.89pt>
 File: viewDocImplemented.png Graphic file (type png)
 
 <use viewDocImplemented.png>
@@ -1131,91 +1243,60 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[49] [50 <./startUpImplemented.png>] [51 <./editDialogImplemented.png>]
-Overfull \hbox (74.06505pt too wide) in paragraph at lines 153--154
-[][][][][][][][][][][][][][][][][][][][][][][][] 
- []
+[48] [49 <./startUpImplemented.png>] [50 <./editDialogImplemented.png>]
+[51 <./viewDocImplemented.png>] [52] [53] [54]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[55]
+Overfull \vbox (9.98409pt too high) has occurred while \output is active []
 
 
-Overfull \hbox (32.06462pt too wide) in paragraph at lines 164--165
-[][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (26.06456pt too wide) in paragraph at lines 166--167
-[][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (38.06468pt too wide) in paragraph at lines 168--169
-[][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-[52 <./viewDocImplemented.png>] [53] [54] [55] [56]
-Overfull \hbox (14.06444pt too wide) in paragraph at lines 260--261
-[][][][][][][][][] 
- []
-
-
-Overfull \hbox (14.06444pt too wide) in paragraph at lines 262--263
-[][][][][][][][][] 
- []
-
-
-Overfull \hbox (2.06432pt too wide) in paragraph at lines 272--273
-[][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (62.06493pt too wide) in paragraph at lines 276--277
-[][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (26.06456pt too wide) in paragraph at lines 278--279
-[][][][][][][] 
- []
-
-[57] [58]
-Overfull \vbox (11.24986pt too high) has occurred while \output is active []
-
-
-[59]) [60]
+[56]) [57]
 \openout2 = `Chapters/ProfessionalIssues.aux'.
 
  (./Chapters/ProfessionalIssues.tex
 Chapter 7.
-[61
+[58
 
 
 
-]) [62]
+]) [59]
 \openout2 = `Chapters/Evaluation.aux'.
 
  (./Chapters/Evaluation.tex
 Chapter 8.
-) [63
+[60
 
 
 
 ]
+
+LaTeX Warning: Reference `alg:documentsProcessing' on page 61 undefined on inpu
+t line 19.
+
+
+LaTeX Warning: Reference `alg:processDocument' on page 61 undefined on input li
+ne 19.
+
+[61] [62] [63] [64]) [65]
 \openout2 = `Chapters/Conclusion.aux'.
 
  (./Chapters/Conclusion.tex
 Chapter 9.
-[64
+[66
 
 
 
-]) [65] (./report.bbl [66
+]) [67] (./report.bbl [68
 
 
-]) [67]
+]) [69]
 \openout2 = `Appendices/appendix.aux'.
 
  (./Appendices/appendix.tex
 Appendix A.
-) [68
+) [70
 
 
 ]
@@ -1223,7 +1304,7 @@ Appendix A.
 
  (./Appendices/UserGuide.tex
 Appendix B.
-) [69
+) [71
 
 
 
@@ -1232,7 +1313,7 @@ Appendix B.
 
  (./Appendices/SourceCode.tex
 Appendix C.
-) [70
+) [72
 
 
 
@@ -1243,6 +1324,12 @@ Appendix C.
 (./Appendices/appendix.aux) (./Appendices/UserGuide.aux)
 (./Appendices/SourceCode.aux))
 
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+
+LaTeX Warning: There were undefined references.
+
+
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  )
@@ -1251,32 +1338,32 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 ### simple group (level 1) entered at line 1061 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 19603 strings out of 493013
- 367735 string characters out of 6136993
- 545335 words of memory out of 5000000
- 22695 multiletter control sequences out of 15000+600000
- 62430 words of font info for 63 fonts, out of 8000000 for 9000
+ 20719 strings out of 493013
+ 383457 string characters out of 6136993
+ 690447 words of memory out of 5000000
+ 23773 multiletter control sequences out of 15000+600000
+ 78684 words of font info for 69 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,18n,84p,2729b,11992s stack positions out of 5000i,500n,10000p,200000b,80000s
-{d:/texlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{d
-:/texlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-rmtt.enc}{d:/texlive/2016/texmf
--dist/fonts/enc/dvips/lm/lm-mathit.enc}{d:/texlive/2016/texmf-dist/fonts/enc/dv
-ips/lm/lm-rm.enc}<d:/texlive/2016/texmf-dist/fonts/type1/public/lm/lmbx10.pfb><
-d:/texlive/2016/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><d:/texlive/2016/te
-xmf-dist/fonts/type1/public/lm/lmbx7.pfb><d:/texlive/2016/texmf-dist/fonts/type
-1/public/lm/lmmi10.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/lm/lmmi7.
-pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/lm/lmr10.pfb><d:/texlive/201
-6/texmf-dist/fonts/type1/public/lm/lmr12.pfb><d:/texlive/2016/texmf-dist/fonts/
-type1/public/lm/lmr6.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/lm/lmr7
-.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/lm/lmri10.pfb><d:/texlive/2
-016/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><d:/texlive/2016/texmf-dist/fon
-ts/type1/public/lm/lmtt10.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/lm
-/lmtt8.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/mathabx-type1/matha10
-.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/stmaryrd/stmary10.pfb>
-Output written on report.pdf (74 pages, 1097443 bytes).
+ 62i,18n,84p,2724b,13370s stack positions out of 5000i,500n,10000p,200000b,80000s
+{d:/texlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{d:/te
+xlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{d:/texlive/2016/texmf-dist/
+fonts/enc/dvips/lm/lm-mathit.enc}{d:/texlive/2016/texmf-dist/fonts/enc/dvips/in
+consolata/i4-t1-0.enc}<d:/texlive/2016/texmf-dist/fonts/type1/public/inconsolat
+a/Inconsolata-zi4r.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/lm/lmbx10
+.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><d:/texlive/2
+016/texmf-dist/fonts/type1/public/lm/lmbx7.pfb><d:/texlive/2016/texmf-dist/font
+s/type1/public/lm/lmbx8.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/lm/l
+mmi10.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/lm/lmmi7.pfb><d:/texli
+ve/2016/texmf-dist/fonts/type1/public/lm/lmr10.pfb><d:/texlive/2016/texmf-dist/
+fonts/type1/public/lm/lmr12.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/
+lm/lmr6.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/lm/lmr7.pfb><d:/texl
+ive/2016/texmf-dist/fonts/type1/public/lm/lmri10.pfb><d:/texlive/2016/texmf-dis
+t/fonts/type1/public/mathabx-type1/matha10.pfb><d:/texlive/2016/texmf-dist/font
+s/type1/public/stmaryrd/stmary10.pfb>
+Output written on report.pdf (76 pages, 1099212 bytes).
 PDF statistics:
- 342 PDF objects out of 1000 (max. 8388607)
- 219 compressed objects within 3 object streams
+ 348 PDF objects out of 1000 (max. 8388607)
+ 224 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  88 words of extra memory for PDF output out of 10000 (max. 10000000)
 
