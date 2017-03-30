@@ -1,4 +1,4 @@
-\begin{thebibliography}{8}
+\begin{thebibliography}{9}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -46,6 +46,12 @@ D.~McClosky and C.~Manning.
   Methods in Natural Language Processing and Computational Natural Language
   Learning}, pages 873--883, 2012.
 \newblock URL \url{http://nlp.stanford.edu/pubs/dmcc-emnlp-2012.pdf}.
+
+\bibitem[Nielsen(1995)]{nielsen1995}
+J.~Nielsen.
+\newblock 10 usability heuristics for user interface design.
+\newblock 1995.
+\newblock \doi{https://www.nngroup.com/articles/ten-usability-heuristics/}.
 
 \bibitem[Ritter et~al.(2011)Ritter, Clark, Mausam, and Etzioni]{ritter2011}
 A.~Ritter, S.~Clark, Mausam, and Etzioni.

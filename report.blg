@@ -16,45 +16,46 @@ A level-1 auxiliary file: Appendices/SourceCode.aux
 Database file #1: references.bib
 Warning--to sort, need author or key in grammar
 Warning--empty year in grammar
-You've used 8 entries,
+Warning--empty journal in nielsen1995
+You've used 9 entries,
             2773 wiz_defined-function locations,
-            660 strings with 7295 characters,
-and the built_in function-call counts, 4414 in all, are:
-= -- 420
-> -- 192
-< -- 9
-+ -- 65
-- -- 57
-* -- 312
-:= -- 596
-add.period$ -- 31
-call.type$ -- 8
-change.case$ -- 43
-chr.to.int$ -- 8
-cite$ -- 19
-duplicate$ -- 232
-empty$ -- 395
-format.name$ -- 70
-if$ -- 998
+            665 strings with 7428 characters,
+and the built_in function-call counts, 4725 in all, are:
+= -- 448
+> -- 202
+< -- 10
++ -- 69
+- -- 60
+* -- 329
+:= -- 647
+add.period$ -- 35
+call.type$ -- 9
+change.case$ -- 47
+chr.to.int$ -- 9
+cite$ -- 22
+duplicate$ -- 251
+empty$ -- 425
+format.name$ -- 74
+if$ -- 1062
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 7
-newline$ -- 55
-num.names$ -- 28
-pop$ -- 112
+missing$ -- 8
+newline$ -- 61
+num.names$ -- 32
+pop$ -- 122
 preamble$ -- 1
-purify$ -- 35
+purify$ -- 38
 quote$ -- 0
-skip$ -- 194
+skip$ -- 207
 stack$ -- 0
-substring$ -- 201
+substring$ -- 203
 swap$ -- 67
 text.length$ -- 6
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 88
-warning$ -- 2
-while$ -- 39
+type$ -- 99
+warning$ -- 3
+while$ -- 42
 width$ -- 0
-write$ -- 122
-(There were 2 warnings)
+write$ -- 135
+(There were 3 warnings)

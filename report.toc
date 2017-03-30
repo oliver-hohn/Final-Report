@@ -42,24 +42,24 @@
 \contentsline {chapter}{\numberline {7}Professional and Ethical Issues}{58}
 \contentsline {chapter}{\numberline {8}Evaluation}{60}
 \contentsline {section}{\numberline {8.1}Visibility}{60}
-\contentsline {section}{\numberline {8.2}Efficiency}{60}
-\contentsline {subsection}{\numberline {8.2.1}Back-End}{61}
-\contentsline {subsubsection}{Processing Documents}{61}
-\contentsline {subsubsection}{Range Production}{63}
-\contentsline {subsection}{\numberline {8.2.2}Front-End}{64}
-\contentsline {subsubsection}{Range View}{64}
-\contentsline {subsubsection}{Timeline UI}{65}
-\contentsline {section}{\numberline {8.3}Effectiveness}{65}
-\contentsline {subsection}{\numberline {8.3.1}Testing Preparations}{65}
-\contentsline {subsection}{\numberline {8.3.2}Testing}{66}
-\contentsline {subsection}{\numberline {8.3.3}Analysis}{66}
-\contentsline {chapter}{\numberline {9}Conclusion and Future Work}{69}
-\contentsline {section}{\numberline {9.1}Conclusion of Project}{69}
-\contentsline {section}{\numberline {9.2}Future Work}{69}
-\contentsline {section}{Bibliography}{72}
-\contentsline {chapter}{\numberline {A}Extra Information}{73}
-\contentsline {section}{\numberline {A.1}Tables, proofs, graphs, test cases, ...}{73}
-\contentsline {chapter}{\numberline {B}User Guide}{74}
-\contentsline {section}{\numberline {B.1}Instructions}{74}
-\contentsline {chapter}{\numberline {C}Source Code}{75}
-\contentsline {section}{\numberline {C.1}Instructions}{75}
+\contentsline {section}{\numberline {8.2}Efficiency}{62}
+\contentsline {subsection}{\numberline {8.2.1}Back-End}{63}
+\contentsline {subsubsection}{Processing Documents}{63}
+\contentsline {subsubsection}{Range Production}{65}
+\contentsline {subsection}{\numberline {8.2.2}Front-End}{66}
+\contentsline {subsubsection}{Range View}{66}
+\contentsline {subsubsection}{Timeline UI}{67}
+\contentsline {section}{\numberline {8.3}Effectiveness}{67}
+\contentsline {subsection}{\numberline {8.3.1}Testing Preparations}{67}
+\contentsline {subsection}{\numberline {8.3.2}Testing}{68}
+\contentsline {subsection}{\numberline {8.3.3}Analysis}{68}
+\contentsline {chapter}{\numberline {9}Conclusion and Future Work}{71}
+\contentsline {section}{\numberline {9.1}Conclusion of Project}{71}
+\contentsline {section}{\numberline {9.2}Future Work}{71}
+\contentsline {section}{Bibliography}{74}
+\contentsline {chapter}{\numberline {A}Extra Information}{75}
+\contentsline {section}{\numberline {A.1}Tables, proofs, graphs, test cases, ...}{75}
+\contentsline {chapter}{\numberline {B}User Guide}{76}
+\contentsline {section}{\numberline {B.1}Instructions}{76}
+\contentsline {chapter}{\numberline {C}Source Code}{77}
+\contentsline {section}{\numberline {C.1}Instructions}{77}
