@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2017.1.17)  30 MAR 2017 22:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2017.1.17)  31 MAR 2017 17:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1009,9 +1009,6 @@ Package caption Info: End \AtBeginDocument code.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 
-! I can't write on file `report.pdf'.
-(Press Enter to retry, or Control-Z to exit; default file extension is `.pdf')
-Please type another file name for output: 
 <FrontMatter/logo.png, id=4, 234.8775pt x 214.8025pt>
 File: FrontMatter/logo.png Graphic file (type png)
 
@@ -1365,15 +1362,15 @@ Chapter 9.
 
 
 
-]) [72] (./report.bbl [73
+] [72]) [73] (./report.bbl [74
 
 
-]) [74]
+]) [75]
 \openout2 = `Appendices/appendix.aux'.
 
  (./Appendices/appendix.tex
 Appendix A.
-) [75
+) [76
 
 
 ]
@@ -1381,7 +1378,7 @@ Appendix A.
 
  (./Appendices/UserGuide.tex
 Appendix B.
-) [76
+) [77
 
 
 
@@ -1390,7 +1387,7 @@ Appendix B.
 
  (./Appendices/SourceCode.tex
 Appendix C.
-) [77
+) [78
 
 
 
@@ -1434,14 +1431,14 @@ mmi10.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/lm/lmmi7.pfb><d:/texli
 ve/2016/texmf-dist/fonts/type1/public/lm/lmr10.pfb><d:/texlive/2016/texmf-dist/
 fonts/type1/public/lm/lmr12.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/
 lm/lmr6.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/lm/lmr7.pfb><d:/texl
-ive/2016/texmf-dist/fonts/type1/public/lm/lmr9.pfb><d:/texlive/2016/texmf-dist/
-fonts/type1/public/lm/lmri10.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public
-/mathabx-type1/matha10.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/stmar
-yrd/stmary10.pfb>
-Output written on report.pdf (81 pages, 1150895 bytes).
+ive/2016/texmf-dist/fonts/type1/public/lm/lmr8.pfb><d:/texlive/2016/texmf-dist/
+fonts/type1/public/lm/lmr9.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/l
+m/lmri10.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/mathabx-type1/matha
+10.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/stmaryrd/stmary10.pfb>
+Output written on report.pdf (82 pages, 1176737 bytes).
 PDF statistics:
- 368 PDF objects out of 1000 (max. 8388607)
- 238 compressed objects within 3 object streams
+ 375 PDF objects out of 1000 (max. 8388607)
+ 243 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  88 words of extra memory for PDF output out of 10000 (max. 10000000)
 

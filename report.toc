@@ -55,11 +55,11 @@
 \contentsline {subsection}{\numberline {8.3.3}Analysis}{68}
 \contentsline {chapter}{\numberline {9}Conclusion and Future Work}{71}
 \contentsline {section}{\numberline {9.1}Conclusion of Project}{71}
-\contentsline {section}{\numberline {9.2}Future Work}{71}
-\contentsline {section}{Bibliography}{74}
-\contentsline {chapter}{\numberline {A}Extra Information}{75}
-\contentsline {section}{\numberline {A.1}Tables, proofs, graphs, test cases, ...}{75}
-\contentsline {chapter}{\numberline {B}User Guide}{76}
-\contentsline {section}{\numberline {B.1}Instructions}{76}
-\contentsline {chapter}{\numberline {C}Source Code}{77}
-\contentsline {section}{\numberline {C.1}Instructions}{77}
+\contentsline {section}{\numberline {9.2}Future Work}{72}
+\contentsline {section}{Bibliography}{75}
+\contentsline {chapter}{\numberline {A}Extra Information}{76}
+\contentsline {section}{\numberline {A.1}Tables, proofs, graphs, test cases, ...}{76}
+\contentsline {chapter}{\numberline {B}User Guide}{77}
+\contentsline {section}{\numberline {B.1}Instructions}{77}
+\contentsline {chapter}{\numberline {C}Source Code}{78}
+\contentsline {section}{\numberline {C.1}Instructions}{78}
