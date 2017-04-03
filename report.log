@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2017.1.17)  31 MAR 2017 17:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2017.1.17)  3 APR 2017 18:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1071,19 +1071,19 @@ Chapter 2.
 [5
 
 
-] [6] [7] [8]
+]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 70.
+(Font)              <8> on input line 13.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 70.
-LaTeX Font Info:    Try loading font information for T1+zi4 on input line 70.
+(Font)              <6> on input line 13.
+LaTeX Font Info:    Try loading font information for T1+zi4 on input line 13.
  (d:/texlive/2016/texmf-dist/tex/latex/inconsolata/t1zi4.fd
 File: t1zi4.fd 2016/12/29 T1/zi4 (Inconsolata)
 )
 LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
-(Font)              scaled to size 8.0pt on input line 70.
-
-[9] [10]
+(Font)              scaled to size 8.0pt on input line 13.
+ [6] [7]
+[8] [9] [10]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -1414,7 +1414,7 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 Here is how much of TeX's memory you used:
  21834 strings out of 493013
  403669 string characters out of 6136993
- 710695 words of memory out of 5000000
+ 710024 words of memory out of 5000000
  24878 multiletter control sequences out of 15000+600000
  81681 words of font info for 70 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1435,7 +1435,7 @@ ive/2016/texmf-dist/fonts/type1/public/lm/lmr8.pfb><d:/texlive/2016/texmf-dist/
 fonts/type1/public/lm/lmr9.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/l
 m/lmri10.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/mathabx-type1/matha
 10.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/stmaryrd/stmary10.pfb>
-Output written on report.pdf (82 pages, 1169031 bytes).
+Output written on report.pdf (82 pages, 1178363 bytes).
 PDF statistics:
  375 PDF objects out of 1000 (max. 8388607)
  243 compressed objects within 3 object streams
