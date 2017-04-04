@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2017.1.17)  3 APR 2017 20:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2017.1.17)  4 APR 2017 21:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1117,75 +1117,72 @@ Chapter 5.
 
 
 
-] [21] [22] [23] <fullarch.png, id=106, 2294.5725pt x 1336.995pt>
+] [21] [22] [23] <fullarch.png, id=103, 2294.5725pt x 1336.995pt>
 File: fullarch.png Graphic file (type png)
 
 <use fullarch.png>
-Package pdftex.def Info: fullarch.png used on input line 78.
+Package pdftex.def Info: fullarch.png used on input line 85.
 (pdftex.def)             Requested size: 411.9399pt x 240.01628pt.
- [24] <process.png, id=111, 1103.12125pt x 1095.09125pt>
+ <process.png, id=105, 1103.12125pt x 1095.09125pt>
 File: process.png Graphic file (type png)
 
 <use process.png>
-Package pdftex.def Info: process.png used on input line 86.
+Package pdftex.def Info: process.png used on input line 93.
 (pdftex.def)             Requested size: 411.9399pt x 408.9371pt.
+ [24 <./fullarch.png>]
 LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
-(Font)              scaled to size 10.0pt on input line 99.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[25 <./fullarch.png>] [26 <./process.png>]
-<system.png, id=120, 563.10374pt x 736.7525pt>
+(Font)              scaled to size 10.0pt on input line 106.
+ [25] [26 <./process.png>]
+<system.png, id=117, 563.10374pt x 736.7525pt>
 File: system.png Graphic file (type png)
  <use system.png>
-Package pdftex.def Info: system.png used on input line 112.
+Package pdftex.def Info: system.png used on input line 121.
 (pdftex.def)             Requested size: 411.9399pt x 538.97153pt.
  [27]
-<ranges.png, id=125, 977.6525pt x 462.72874pt>
+<ranges.png, id=122, 977.6525pt x 462.72874pt>
 File: ranges.png Graphic file (type png)
  <use ranges.png>
-Package pdftex.def Info: ranges.png used on input line 121.
+Package pdftex.def Info: ranges.png used on input line 131.
 (pdftex.def)             Requested size: 411.9399pt x 194.97314pt.
  [28 <./system.png>] [29 <./ranges.png>]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<helpers.png, id=134, 472.76625pt x 361.35pt>
+<helpers.png, id=131, 472.76625pt x 361.35pt>
 File: helpers.png Graphic file (type png)
  <use helpers.png>
-Package pdftex.def Info: helpers.png used on input line 202.
+Package pdftex.def Info: helpers.png used on input line 214.
 (pdftex.def)             Requested size: 354.5738pt x 271.01184pt.
  [30] [31]
-[32 <./helpers.png>] <startup.png, id=146, 767.86874pt x 455.301pt>
+[32 <./helpers.png>] <startup.png, id=143, 767.86874pt x 455.301pt>
 File: startup.png Graphic file (type png)
 
 <use startup.png>
-Package pdftex.def Info: startup.png used on input line 218.
+Package pdftex.def Info: startup.png used on input line 231.
 (pdftex.def)             Requested size: 411.9399pt x 244.26099pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<timeline.png, id=147, 768.471pt x 475.17525pt>
+<timeline.png, id=144, 768.471pt x 475.17525pt>
 File: timeline.png Graphic file (type png)
  <use timeline.png>
-Package pdftex.def Info: timeline.png used on input line 225.
+Package pdftex.def Info: timeline.png used on input line 238.
 (pdftex.def)             Requested size: 411.9399pt x 254.7129pt.
  [33]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<editDialog.png, id=152, 329.43076pt x 208.3785pt>
+<editDialog.png, id=149, 329.43076pt x 208.3785pt>
 File: editDialog.png Graphic file (type png)
  <use editDialog.png>
-Package pdftex.def Info: editDialog.png used on input line 232.
+Package pdftex.def Info: editDialog.png used on input line 245.
 (pdftex.def)             Requested size: 197.65997pt x 125.02805pt.
 
-<viewDoc.png, id=153, 344.487pt x 416.757pt>
+<viewDoc.png, id=150, 344.487pt x 416.757pt>
 File: viewDoc.png Graphic file (type png)
  <use viewDoc.png>
-Package pdftex.def Info: viewDoc.png used on input line 238.
+Package pdftex.def Info: viewDoc.png used on input line 251.
 (pdftex.def)             Requested size: 258.36461pt x 312.56699pt.
 
 
@@ -1216,14 +1213,14 @@ LaTeX Font Warning: Font shape `T1/zi4/m/it' undefined
 
 LaTeX Font Info:    Font shape `T1/zi4/m/it' will be
 (Font)              scaled to size 8.0pt on input line 35.
-[41] <traditionalView.png, id=183, 658.25925pt x 606.46574pt>
+[41] <traditionalView.png, id=180, 658.25925pt x 606.46574pt>
 File: traditionalView.png Graphic file (type png)
 
 <use traditionalView.png>
 Package pdftex.def Info: traditionalView.png used on input line 73.
 (pdftex.def)             Requested size: 411.9399pt x 379.53061pt.
  [42] [43] [44 <./traditionalView.png>]
-<rangeView.png, id=195, 691.98524pt x 591.4095pt>
+<rangeView.png, id=192, 691.98524pt x 591.4095pt>
 File: rangeView.png Graphic file (type png)
  <use rangeView.png>
 Package pdftex.def Info: rangeView.png used on input line 101.
@@ -1239,21 +1236,21 @@ Overfull \hbox (15.0pt too wide) in paragraph at lines 119--121
 [][]
  []
 
-<startUpImplemented.png, id=208, 873.2625pt x 638.98724pt>
+<startUpImplemented.png, id=206, 873.2625pt x 638.98724pt>
 File: startUpImplemented.png Graphic file (type png)
 
 <use startUpImplemented.png>
 Package pdftex.def Info: startUpImplemented.png used on input line 127.
 (pdftex.def)             Requested size: 411.9399pt x 301.42581pt.
 
-<editDialogImplemented.png, id=209, 363.759pt x 327.624pt>
+<editDialogImplemented.png, id=207, 363.759pt x 327.624pt>
 File: editDialogImplemented.png Graphic file (type png)
 
 <use editDialogImplemented.png>
 Package pdftex.def Info: editDialogImplemented.png used on input line 133.
 (pdftex.def)             Requested size: 411.9399pt x 371.02565pt.
 
-<viewDocImplemented.png, id=210, 616.704pt x 505.89pt>
+<viewDocImplemented.png, id=208, 616.704pt x 505.89pt>
 File: viewDocImplemented.png Graphic file (type png)
 
 <use viewDocImplemented.png>
@@ -1427,18 +1424,18 @@ a/Inconsolata-zi4r.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/lm/lmbx10
 .pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><d:/texlive/2
 016/texmf-dist/fonts/type1/public/lm/lmbx7.pfb><d:/texlive/2016/texmf-dist/font
 s/type1/public/lm/lmbx8.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/lm/l
-mmi10.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/lm/lmmi7.pfb><d:/texli
-ve/2016/texmf-dist/fonts/type1/public/lm/lmr10.pfb><d:/texlive/2016/texmf-dist/
-fonts/type1/public/lm/lmr12.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/
-lm/lmr6.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/lm/lmr7.pfb><d:/texl
-ive/2016/texmf-dist/fonts/type1/public/lm/lmr8.pfb><d:/texlive/2016/texmf-dist/
-fonts/type1/public/lm/lmr9.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/l
-m/lmri10.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/mathabx-type1/matha
-10.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/stmaryrd/stmary10.pfb>
-Output written on report.pdf (82 pages, 1178504 bytes).
+mmi10.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/lm/lmr10.pfb><d:/texli
+ve/2016/texmf-dist/fonts/type1/public/lm/lmr12.pfb><d:/texlive/2016/texmf-dist/
+fonts/type1/public/lm/lmr6.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/l
+m/lmr7.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/lm/lmr8.pfb><d:/texli
+ve/2016/texmf-dist/fonts/type1/public/lm/lmr9.pfb><d:/texlive/2016/texmf-dist/f
+onts/type1/public/lm/lmri10.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/
+mathabx-type1/matha10.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/stmary
+rd/stmary10.pfb>
+Output written on report.pdf (82 pages, 1166853 bytes).
 PDF statistics:
- 375 PDF objects out of 1000 (max. 8388607)
- 243 compressed objects within 3 object streams
+ 371 PDF objects out of 1000 (max. 8388607)
+ 240 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  88 words of extra memory for PDF output out of 10000 (max. 10000000)
 
