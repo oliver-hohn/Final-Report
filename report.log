@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2017.1.17)  4 APR 2017 21:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2017.1.17)  6 APR 2017 01:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1202,37 +1202,37 @@ Chapter 6.
 
 
 ] [38] [39]
-Overfull \hbox (15.0pt too wide) in paragraph at lines 27--29
+Overfull \hbox (15.0pt too wide) in paragraph at lines 40--41
+[][]
+ []
+
+
+Overfull \hbox (15.0pt too wide) in paragraph at lines 42--44
 [][]
  []
 
 [40]
 
 LaTeX Font Warning: Font shape `T1/zi4/m/it' undefined
-(Font)              using `T1/zi4/m/n' instead on input line 35.
+(Font)              using `T1/zi4/m/n' instead on input line 57.
 
 LaTeX Font Info:    Font shape `T1/zi4/m/it' will be
-(Font)              scaled to size 8.0pt on input line 35.
-[41] <traditionalView.png, id=180, 658.25925pt x 606.46574pt>
+(Font)              scaled to size 8.0pt on input line 57.
+[41] [42] <traditionalView.png, id=184, 658.25925pt x 606.46574pt>
 File: traditionalView.png Graphic file (type png)
 
 <use traditionalView.png>
-Package pdftex.def Info: traditionalView.png used on input line 73.
+Package pdftex.def Info: traditionalView.png used on input line 97.
 (pdftex.def)             Requested size: 411.9399pt x 379.53061pt.
- [42] [43] [44 <./traditionalView.png>]
+ [43] [44 <./traditionalView.png>]
 <rangeView.png, id=192, 691.98524pt x 591.4095pt>
 File: rangeView.png Graphic file (type png)
  <use rangeView.png>
-Package pdftex.def Info: rangeView.png used on input line 101.
+Package pdftex.def Info: rangeView.png used on input line 129.
 (pdftex.def)             Requested size: 411.9399pt x 352.06898pt.
  [45]
 [46 <./rangeView.png>] [47]
-Overfull \hbox (15.0pt too wide) in paragraph at lines 117--118
-[][]
- []
-
-
-Overfull \hbox (15.0pt too wide) in paragraph at lines 119--121
+Overfull \hbox (15.0pt too wide) in paragraph at lines 153--155
 [][]
  []
 
@@ -1240,66 +1240,63 @@ Overfull \hbox (15.0pt too wide) in paragraph at lines 119--121
 File: startUpImplemented.png Graphic file (type png)
 
 <use startUpImplemented.png>
-Package pdftex.def Info: startUpImplemented.png used on input line 127.
+Package pdftex.def Info: startUpImplemented.png used on input line 163.
 (pdftex.def)             Requested size: 411.9399pt x 301.42581pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 <editDialogImplemented.png, id=207, 363.759pt x 327.624pt>
 File: editDialogImplemented.png Graphic file (type png)
 
 <use editDialogImplemented.png>
-Package pdftex.def Info: editDialogImplemented.png used on input line 133.
+Package pdftex.def Info: editDialogImplemented.png used on input line 169.
 (pdftex.def)             Requested size: 411.9399pt x 371.02565pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 <viewDocImplemented.png, id=208, 616.704pt x 505.89pt>
 File: viewDocImplemented.png Graphic file (type png)
 
 <use viewDocImplemented.png>
-Package pdftex.def Info: viewDocImplemented.png used on input line 139.
+Package pdftex.def Info: viewDocImplemented.png used on input line 175.
 (pdftex.def)             Requested size: 411.9399pt x 337.92558pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
 [48] [49 <./startUpImplemented.png>] [50 <./editDialogImplemented.png>]
-[51 <./viewDocImplemented.png>] [52] [53] [54]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[55] [56]) [57]
+[51 <./viewDocImplemented.png>] [52] [53] [54] [55]) [56]
 \openout2 = `Chapters/ProfessionalIssues.aux'.
 
- (./Chapters/ProfessionalIssues.tex
+
+(./Chapters/ProfessionalIssues.tex
 Chapter 7.
-[58
+[57
 
 
 
-]) [59]
+]) [58]
 \openout2 = `Chapters/Evaluation.aux'.
 
  (./Chapters/Evaluation.tex
 Chapter 8.
-[60
+[59
 
 
 
-] [61] [62]
+] [60] [61]
 
-LaTeX Warning: Reference `alg:documentsProcessing' on page 63 undefined on inpu
+LaTeX Warning: Reference `alg:documentsProcessing' on page 62 undefined on inpu
 t line 50.
 
-[63]
+[62]
 
-LaTeX Warning: Reference `alg:processDocument' on page 64 undefined on input li
+LaTeX Warning: Reference `alg:processDocument' on page 63 undefined on input li
 ne 50.
 
-[64] [65] [66] [67] [68]
+[63] [64] [65] [66] [67]
 Underfull \hbox (badness 1005) in paragraph at lines 102--102
 []\T1/lmr/m/n/10 Comparing Sys-tem to Man-ual
  []
@@ -1350,24 +1347,24 @@ LaTeX Warning: Float too large for page by 9.71606pt on input line 167.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-) [69] [70]
+) [68] [69]
 \openout2 = `Chapters/Conclusion.aux'.
 
  (./Chapters/Conclusion.tex
 Chapter 9.
-[71
+[70
 
 
 
-] [72]) [73] (./report.bbl [74
+] [71]) [72] (./report.bbl [73
 
 
-]) [75]
+]) [74]
 \openout2 = `Appendices/appendix.aux'.
 
  (./Appendices/appendix.tex
 Appendix A.
-) [76
+) [75
 
 
 ]
@@ -1375,7 +1372,7 @@ Appendix A.
 
  (./Appendices/UserGuide.tex
 Appendix B.
-) [77
+) [76
 
 
 
@@ -1384,7 +1381,7 @@ Appendix B.
 
  (./Appendices/SourceCode.tex
 Appendix C.
-) [78
+) [77
 
 
 
@@ -1411,11 +1408,11 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 Here is how much of TeX's memory you used:
  21834 strings out of 493013
  403669 string characters out of 6136993
- 711021 words of memory out of 5000000
+ 621020 words of memory out of 5000000
  24878 multiletter control sequences out of 15000+600000
  81681 words of font info for 70 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,18n,94p,2724b,14220s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 62i,18n,94p,1992b,14220s stack positions out of 5000i,500n,10000p,200000b,80000s
 {d:/texlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{d:/te
 xlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{d:/texlive/2016/texmf-dist/
 fonts/enc/dvips/lm/lm-mathit.enc}{d:/texlive/2016/texmf-dist/fonts/enc/dvips/in
@@ -1432,10 +1429,10 @@ ve/2016/texmf-dist/fonts/type1/public/lm/lmr9.pfb><d:/texlive/2016/texmf-dist/f
 onts/type1/public/lm/lmri10.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/
 mathabx-type1/matha10.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/stmary
 rd/stmary10.pfb>
-Output written on report.pdf (82 pages, 1166853 bytes).
+Output written on report.pdf (81 pages, 1165614 bytes).
 PDF statistics:
- 371 PDF objects out of 1000 (max. 8388607)
- 240 compressed objects within 3 object streams
+ 368 PDF objects out of 1000 (max. 8388607)
+ 238 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  88 words of extra memory for PDF output out of 10000 (max. 10000000)
 

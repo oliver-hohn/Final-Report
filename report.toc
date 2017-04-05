@@ -37,30 +37,30 @@
 \contentsline {section}{\numberline {6.4}Testing}{47}
 \contentsline {section}{\numberline {6.5}UI}{48}
 \contentsline {section}{\numberline {6.6}Important Algorithms}{50}
-\contentsline {subsection}{\numberline {6.6.1}Processing Files}{51}
+\contentsline {subsection}{\numberline {6.6.1}Processing Files}{50}
 \contentsline {subsection}{\numberline {6.6.2}Building Ranges}{52}
 \contentsline {subsection}{\numberline {6.6.3}Saving Results}{53}
-\contentsline {chapter}{\numberline {7}Professional and Ethical Issues}{58}
-\contentsline {chapter}{\numberline {8}Evaluation}{60}
-\contentsline {section}{\numberline {8.1}Visibility}{60}
-\contentsline {section}{\numberline {8.2}Efficiency}{62}
-\contentsline {subsection}{\numberline {8.2.1}Back-End}{63}
-\contentsline {subsubsection}{Processing Documents}{63}
-\contentsline {subsubsection}{Range Production}{65}
-\contentsline {subsection}{\numberline {8.2.2}Front-End}{66}
-\contentsline {subsubsection}{Range View}{66}
-\contentsline {subsubsection}{Timeline UI}{67}
-\contentsline {section}{\numberline {8.3}Effectiveness}{67}
-\contentsline {subsection}{\numberline {8.3.1}Testing Preparations}{67}
-\contentsline {subsection}{\numberline {8.3.2}Testing}{68}
-\contentsline {subsection}{\numberline {8.3.3}Analysis}{68}
-\contentsline {chapter}{\numberline {9}Conclusion and Future Work}{71}
-\contentsline {section}{\numberline {9.1}Conclusion of Project}{71}
-\contentsline {section}{\numberline {9.2}Future Work}{72}
-\contentsline {section}{Bibliography}{75}
-\contentsline {chapter}{\numberline {A}Extra Information}{76}
-\contentsline {section}{\numberline {A.1}Tables, proofs, graphs, test cases, ...}{76}
-\contentsline {chapter}{\numberline {B}User Guide}{77}
-\contentsline {section}{\numberline {B.1}Instructions}{77}
-\contentsline {chapter}{\numberline {C}Source Code}{78}
-\contentsline {section}{\numberline {C.1}Instructions}{78}
+\contentsline {chapter}{\numberline {7}Professional and Ethical Issues}{57}
+\contentsline {chapter}{\numberline {8}Evaluation}{59}
+\contentsline {section}{\numberline {8.1}Visibility}{59}
+\contentsline {section}{\numberline {8.2}Efficiency}{61}
+\contentsline {subsection}{\numberline {8.2.1}Back-End}{62}
+\contentsline {subsubsection}{Processing Documents}{62}
+\contentsline {subsubsection}{Range Production}{64}
+\contentsline {subsection}{\numberline {8.2.2}Front-End}{65}
+\contentsline {subsubsection}{Range View}{65}
+\contentsline {subsubsection}{Timeline UI}{66}
+\contentsline {section}{\numberline {8.3}Effectiveness}{66}
+\contentsline {subsection}{\numberline {8.3.1}Testing Preparations}{66}
+\contentsline {subsection}{\numberline {8.3.2}Testing}{67}
+\contentsline {subsection}{\numberline {8.3.3}Analysis}{67}
+\contentsline {chapter}{\numberline {9}Conclusion and Future Work}{70}
+\contentsline {section}{\numberline {9.1}Conclusion of Project}{70}
+\contentsline {section}{\numberline {9.2}Future Work}{71}
+\contentsline {section}{Bibliography}{74}
+\contentsline {chapter}{\numberline {A}Extra Information}{75}
+\contentsline {section}{\numberline {A.1}Tables, proofs, graphs, test cases, ...}{75}
+\contentsline {chapter}{\numberline {B}User Guide}{76}
+\contentsline {section}{\numberline {B.1}Instructions}{76}
+\contentsline {chapter}{\numberline {C}Source Code}{77}
+\contentsline {section}{\numberline {C.1}Instructions}{77}
