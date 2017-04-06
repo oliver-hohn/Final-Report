@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2017.1.17)  6 APR 2017 01:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2017.1.17)  6 APR 2017 18:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1009,6 +1009,9 @@ Package caption Info: End \AtBeginDocument code.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 
+! I can't write on file `report.pdf'.
+(Press Enter to retry, or Control-Z to exit; default file extension is `.pdf')
+Please type another file name for output: 
 <FrontMatter/logo.png, id=4, 234.8775pt x 214.8025pt>
 File: FrontMatter/logo.png Graphic file (type png)
 
@@ -1286,63 +1289,68 @@ Chapter 8.
 
 
 
-] [60] [61]
-
-LaTeX Warning: Reference `alg:documentsProcessing' on page 62 undefined on inpu
-t line 50.
-
-[62]
-
-LaTeX Warning: Reference `alg:processDocument' on page 63 undefined on input li
-ne 50.
-
-[63] [64] [65] [66] [67]
-Underfull \hbox (badness 1005) in paragraph at lines 102--102
+] [60] [61] [62] [63] [64] [65] [66] [67]
+Underfull \hbox (badness 1005) in paragraph at lines 150--150
 []\T1/lmr/m/n/10 Comparing Sys-tem to Man-ual
  []
 
 
-Underfull \hbox (badness 2600) in paragraph at lines 105--105
+Underfull \hbox (badness 2600) in paragraph at lines 153--153
 []\T1/lmr/m/n/10 Difference In col-lected events
  []
 
 
-Overfull \hbox (156.46068pt too wide) in paragraph at lines 100--118
+Underfull \hbox (badness 1360) in paragraph at lines 157--157
+[]\T1/lmr/m/n/10 Percentage (%) of events not
+ []
+
+
+Overfull \hbox (156.46068pt too wide) in paragraph at lines 148--166
 [][] 
  []
 
 
-Underfull \hbox (badness 1005) in paragraph at lines 124--124
+Underfull \hbox (badness 1005) in paragraph at lines 172--172
 []\T1/lmr/m/n/10 Comparing Sys-tem to Man-ual
  []
 
 
-Underfull \hbox (badness 2600) in paragraph at lines 127--127
+Underfull \hbox (badness 2600) in paragraph at lines 175--175
 []\T1/lmr/m/n/10 Difference In col-lected events
  []
 
 
-Overfull \hbox (156.46068pt too wide) in paragraph at lines 122--140
+Underfull \hbox (badness 1360) in paragraph at lines 179--179
+[]\T1/lmr/m/n/10 Percentage (%) of events not
+ []
+
+
+Overfull \hbox (156.46068pt too wide) in paragraph at lines 170--188
 [][] 
  []
 
 
-Underfull \hbox (badness 1005) in paragraph at lines 146--146
+Underfull \hbox (badness 1005) in paragraph at lines 194--194
 []\T1/lmr/m/n/10 Comparing Sys-tem to Man-ual
  []
 
 
-Underfull \hbox (badness 2600) in paragraph at lines 149--149
+Underfull \hbox (badness 2600) in paragraph at lines 197--197
 []\T1/lmr/m/n/10 Difference In col-lected events
  []
 
 
-Overfull \hbox (156.46068pt too wide) in paragraph at lines 144--162
+Underfull \hbox (badness 1360) in paragraph at lines 201--201
+[]\T1/lmr/m/n/10 Percentage (%) of events not
+ []
+
+
+Overfull \hbox (156.46068pt too wide) in paragraph at lines 192--210
 [][] 
  []
 
 
-LaTeX Warning: Float too large for page by 9.71606pt on input line 167.
+LaTeX Warning: Float too large for page by 9.71606pt on input line 215.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -1395,9 +1403,6 @@ Appendix C.
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 
-LaTeX Warning: There were undefined references.
-
-
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  )
@@ -1406,10 +1411,10 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 ### simple group (level 1) entered at line 1061 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 21834 strings out of 493013
- 403669 string characters out of 6136993
- 621020 words of memory out of 5000000
- 24878 multiletter control sequences out of 15000+600000
+ 21832 strings out of 493013
+ 403623 string characters out of 6136993
+ 621021 words of memory out of 5000000
+ 24876 multiletter control sequences out of 15000+600000
  81681 words of font info for 70 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,18n,94p,1992b,14220s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1429,7 +1434,7 @@ ve/2016/texmf-dist/fonts/type1/public/lm/lmr9.pfb><d:/texlive/2016/texmf-dist/f
 onts/type1/public/lm/lmri10.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/
 mathabx-type1/matha10.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/stmary
 rd/stmary10.pfb>
-Output written on report.pdf (81 pages, 1165614 bytes).
+Output written on report.pdf (81 pages, 1173002 bytes).
 PDF statistics:
  368 PDF objects out of 1000 (max. 8388607)
  238 compressed objects within 3 object streams

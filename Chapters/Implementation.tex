@@ -150,7 +150,7 @@ return toReturn\;
 \par The focus was on the Engine (the component that takes as input text, and produces lists of Results), the processing of Files (test files were used in this case), the production of Ranges, the changing of the systems states throughout the processing task, the parsing of Normalized NER dates, and the production of JSON's from a list of Results (a timeline). Tests perform assertions. Assertions are when an actual output of code is checked with an expected output.
 
 \par Tests were divided into three categories: a simple test, an intermediate test, and a complex test (where all possibilities of input are tested). For example, for the production of Ranges, the complex test case expects multiple Range trees of different heights to be produced. Due to the benefit of Gradle, the tests can be ran using the command:\par
-\makebox[\textwidth]{\textbf{gradlew test\footnote{after running \textbf{gradlew build}}}.}
+\makebox[\textwidth]{\textbf{gradlew test\footnote{after running gradlew build}}.}
 In the build command, Gradle will not only run the test cases, but also produce the executable JAR which can be used to distribute the system as an executable to its non-developer users.
 
 \section{UI}
