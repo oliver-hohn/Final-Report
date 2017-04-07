@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2017.1.17)  7 APR 2017 18:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2017.1.17)  7 APR 2017 18:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1405,25 +1405,25 @@ the Doc-u-men-tRead-
 [167] [168] [169] [170] [171] [172] [173] [174] [175] [176] [177] [178]
 [179] [180] [181] [182] [183] [184] [185] [186] [187] [188] [189] [190]
 [191] [192] [193] [194] [195] [196] [197] [198] [199]
-Overfull \hbox (29.05956pt too wide) in paragraph at lines 3922--3923
+Overfull \hbox (29.05956pt too wide) in paragraph at lines 3923--3924
 [][][][][][][][][][][][][][][][][][][][][][]  
  []
 
 [200] [201] [202] [203] [204] [205] [206] [207] [208] [209] [210] [211]
 [212]
-Overfull \hbox (14.65977pt too wide) in paragraph at lines 4361--4362
+Overfull \hbox (14.65977pt too wide) in paragraph at lines 4362--4363
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]  
  []
 
 [213] [214] [215] [216] [217] [218] [219] [220] [221] [222] [223] [224]
 [225]
-Overfull \hbox (3.85912pt too wide) in paragraph at lines 4782--4783
+Overfull \hbox (3.85912pt too wide) in paragraph at lines 4783--4784
 [][][][][][][][][][][][][][][][][][][] 
  []
 
 [226] [227] [228] [229] [230] [231] [232] [233] [234] [235] [236] [237]
 [238] [239] [240] [241] [242]
-Overfull \hbox (5.65977pt too wide) in paragraph at lines 5322--5323
+Overfull \hbox (5.65977pt too wide) in paragraph at lines 5323--5324
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]  
  []
 
@@ -1434,20 +1434,22 @@ Overfull \hbox (5.65977pt too wide) in paragraph at lines 5322--5323
 File: icaddcircleoutline.png Graphic file (type png)
 
 <use icaddcircleoutline.png>
-Package pdftex.def Info: icaddcircleoutline.png used on input line 6541.
+Package pdftex.def Info: icaddcircleoutline.png used on input line 6542.
 (pdftex.def)             Requested size: 24.08992pt x 24.08992pt.
  <iccloseblack.png, id=954, 14.454pt x 14.454pt>
 File: iccloseblack.png Graphic file (type png)
 
 <use iccloseblack.png>
-Package pdftex.def Info: iccloseblack.png used on input line 6547.
+Package pdftex.def Info: iccloseblack.png used on input line 6548.
 (pdftex.def)             Requested size: 14.45393pt x 14.45393pt.
- [280 <./icaddcircleoutline.png> <./iccloseblack.png>]
-[281] [282] [283] [284] [285] [286] [287] [288] [289] [290] [291] [292]
-[293] [294] [295] [296] [297] [298] [299] [300] [301] [302] [303] [304]
-[305] [306] [307] [308] [309] [310] [311] [312] [313] [314] [315] [316]
-[317] [318] [319] [320] [321] [322] [323] [324] [325] [326] [327] [328]
-[329] [330] [331] [332] [333] [334]) [335] (./report.aux
+ [280 <./icaddcircleoutline.png>] [281 <./iccloseblack.png>] [282] [283] [284] 
+[285] [286] [287] [288] [289] [290] [291] [292] [293]
+[294] [295] [296] [297] [298] [299] [300] [301] [302] [303] [304] [305]
+[306] [307] [308] [309] [310] [311] [312] [313] [314] [315] [316] [317]
+[318] [319] [320] [321] [322] [323] [324] [325] [326] [327] [328] [329]
+[330] [331] [332] [333] [334] [335]
+Missing character: There is no œ in font t1-zi4r-0!
+ [336]) [337] (./report.aux
 (./Chapters/Background.aux) (./Chapters/RequirementsSpecification.aux)
 (./Chapters/Design.aux) (./Chapters/Implementation.aux)
 (./Chapters/ProfessionalIssues.aux) (./Chapters/Evaluation.aux)
@@ -1462,13 +1464,13 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 ### simple group (level 1) entered at line 1061 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 23104 strings out of 493013
- 423470 string characters out of 6136993
- 582784 words of memory out of 5000000
- 26154 multiletter control sequences out of 15000+600000
+ 23127 strings out of 493013
+ 423794 string characters out of 6136993
+ 580785 words of memory out of 5000000
+ 26177 multiletter control sequences out of 15000+600000
  78985 words of font info for 70 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,18n,94p,1992b,14616s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 62i,18n,94p,1992b,14615s stack positions out of 5000i,500n,10000p,200000b,80000s
 {d:/texlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{d:/te
 xlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{d:/texlive/2016/texmf-dist/
 fonts/enc/dvips/lm/lm-mathit.enc}{d:/texlive/2016/texmf-dist/fonts/enc/dvips/in
@@ -1484,10 +1486,10 @@ onts/type1/public/lm/lmr7.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/lm
 e/2016/texmf-dist/fonts/type1/public/lm/lmri10.pfb><d:/texlive/2016/texmf-dist/
 fonts/type1/public/mathabx-type1/matha10.pfb><d:/texlive/2016/texmf-dist/fonts/
 type1/public/stmaryrd/stmary10.pfb>
-Output written on report.pdf (339 pages, 1566124 bytes).
+Output written on report.pdf (341 pages, 1577571 bytes).
 PDF statistics:
- 1200 PDF objects out of 1200 (max. 8388607)
- 803 compressed objects within 9 object streams
+ 1206 PDF objects out of 1440 (max. 8388607)
+ 807 compressed objects within 9 object streams
  0 named destinations out of 1000 (max. 500000)
  98 words of extra memory for PDF output out of 10000 (max. 10000000)
 

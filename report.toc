@@ -57,6 +57,8 @@
 \contentsline {section}{Bibliography}{74}
 \contentsline {chapter}{\numberline {A}Extra Information}{75}
 \contentsline {section}{\numberline {A.1}Tables, proofs, graphs, test cases, ...}{75}
+\contentsline {section}{\numberline {A.2}Timelines}{75}
+\contentsline {section}{\numberline {A.3}Data Sets}{75}
 \contentsline {chapter}{\numberline {B}User Guide}{76}
 \contentsline {section}{\numberline {B.1}Instructions}{76}
 \contentsline {chapter}{\numberline {C}Source Code}{77}
@@ -86,7 +88,7 @@
 \contentsline {section}{\numberline {C.5}src/main/java/frontend}{177}
 \contentsline {subsection}{\numberline {C.5.1}Controllers}{177}
 \contentsline {subsubsection}{CustomResultRowController.java}{177}
-\contentsline {subsubsection}{CustomTimelineRow.java}{181}
+\contentsline {subsubsection}{CustomTimelineRow.java}{182}
 \contentsline {subsubsection}{DocumentLoadedRowController.java}{186}
 \contentsline {subsubsection}{DocumentReaderController.java}{188}
 \contentsline {subsubsection}{EditEventController.java}{195}
@@ -124,23 +126,24 @@
 \contentsline {subsubsection}{iccloseblack.png}{280}
 \contentsline {subsubsection}{listViewTheme.css}{280}
 \contentsline {subsubsection}{listViewThemeTimeline.css}{281}
-\contentsline {subsubsection}{rangeDataLayout.fxml}{281}
+\contentsline {subsubsection}{rangeDataLayout.fxml}{282}
 \contentsline {subsubsection}{timelineRowEven.fxml}{282}
 \contentsline {subsubsection}{timelineRowOdd.fxml}{285}
 \contentsline {subsection}{\numberline {C.6.2}dialogs}{287}
 \contentsline {subsubsection}{customErrorFields.css}{287}
-\contentsline {subsubsection}{loadingDialog.css}{287}
+\contentsline {subsubsection}{loadingDialog.css}{288}
 \contentsline {subsection}{\numberline {C.6.3}documentListViewTheme.css}{288}
 \contentsline {subsection}{\numberline {C.6.4}listView.fxml}{288}
 \contentsline {subsection}{\numberline {C.6.5}startup.fxml}{292}
 \contentsline {section}{\numberline {C.7}src/test/backend}{294}
 \contentsline {subsubsection}{EngineTest.java}{294}
 \contentsline {subsubsection}{ProcessFileTest.java}{298}
-\contentsline {subsubsection}{ProduceRangesTest.java}{305}
-\contentsline {subsubsection}{SystemStateTest.java}{314}
+\contentsline {subsubsection}{ProduceRangesTest.java}{306}
+\contentsline {subsubsection}{SystemStateTest.java}{315}
 \contentsline {subsubsection}{TimelineDateTest.java}{317}
 \contentsline {subsubsection}{ToJSONTest.java}{329}
-\contentsline {section}{\numberline {C.8}src/test/resources/backend}{334}
-\contentsline {subsection}{\numberline {C.8.1}testfile1.txt, textfile2.txt, and textfile3.txt}{334}
+\contentsline {section}{\numberline {C.8}src/test/resources/backend}{335}
+\contentsline {subsection}{\numberline {C.8.1}testfile1.txt, textfile2.txt, and textfile3.txt}{335}
 \contentsline {subsection}{\numberline {C.8.2}testfile4.docx}{335}
 \contentsline {subsection}{\numberline {C.8.3}testfile5.pdf}{335}
+\contentsline {section}{\numberline {C.9}build.gradle}{335}

@@ -1,6 +1,6 @@
 \chapter{Source Code}
 \section{Information}
-I verify that I am the sole author of the programs contained in this folder, except where explicitly stated to the contrary' - Oliver H\''ohn, \today.
+I verify that I am the sole author of the programs contained in this folder, except where explicitly stated to the contrary - {Oliver H\''ohn}, \today.
 \section{Table of Contents}
 \begin{enumerate}
 	\item src/main/java/backend: Package for the logic of the system.
@@ -109,12 +109,13 @@ I verify that I am the sole author of the programs contained in this folder, exc
 	\end{enumerate}
 	\item src/test/resources: Package for the test files used in the backend tests. Mostly used in ProcessFileTest.java, to test how well files are being processed.
 	\begin{enumerate}
-	\item testfile1.txt: sample text to test the extraction and processing of .txt documents. 
-	\item testfile2.txt: sample text to test the extraction and processing of .txt documents. 
-	\item testfile3.txt: sample text to test the extraction and processing of .txt documents. 
-	\item testfile4.docx: sample text to test the extraction and processing of .docx documents. 
-	\item testfile5.pdf: sample text to test the extraction and processing of .pdf documents. 
+		\item testfile1.txt: sample text to test the extraction and processing of .txt documents. 
+		\item testfile2.txt: sample text to test the extraction and processing of .txt documents. 
+		\item testfile3.txt: sample text to test the extraction and processing of .txt documents. 
+		\item testfile4.docx: sample text to test the extraction and processing of .docx documents. 
+		\item testfile5.pdf: sample text to test the extraction and processing of .pdf documents. 
 	\end{enumerate}
+	\item build.gradle: a settings file for Gradle to set the location of the main method to run the system, the libraries required at different compilations (incluiding for tests), and define tasks for debugging.
 \end{enumerate}
 
 \section{Instructions}
@@ -8289,4 +8290,72 @@ In response to the piece, the Trump campaign told the Post that he "has personal
 \subsection{testfile5.pdf}
 \begin{lstlisting}
 On Friday, the US chose not to veto a UN Security Council resolution calling for an end to Israeli settlement construction, leading to an angry response from Israel. The issue of Jewish settlements is one of the most contentious between Israel and the Palestinians, who see them as an obstacle to peace and the creation of a viable Palestinian state. More than 500,000 Jews live in about 140 settlements built since Israel's 1967 occupation of the West Bank and East Jerusalem. The settlements are considered illegal under international law, though Israel disputes this.
+\end{lstlisting}
+
+\section{build.gradle}
+\begin{lstlisting}
+apply plugin: 'idea'
+apply plugin: 'java'
+apply plugin: 'application'
+
+mainClassName = 'frontend.Main'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+    //added slf4j  because one of the libraries points to it, hence throwing the error Failed to load class “org.slf4j.impl.StaticLoggerBinder”
+    //when running the build
+   	 compile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.7'
+    	compile group: 'org.slf4j', name: 'slf4j-simple', version: '1.7.7'
+	compile group: 'edu.stanford.nlp', name: 'stanford-corenlp', version: '3.7.0'
+	compile group: 'edu.stanford.nlp', name: 'stanford-corenlp', version: '3.7.0', classifier: 'models-english'
+	compile group: 'org.apache.pdfbox', name: 'pdfbox', version: '2.0.4'
+	compile group: 'org.apache.poi', name: 'poi', version: '3.15'
+	compile group: 'org.apache.xmlbeans', name: 'xmlbeans', version: '2.6.0'
+	compile group: 'org.fxmisc.richtext', name: 'richtextfx', version: '0.6.10'
+	compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.5'
+	compile group: 'org.apache.poi', name: 'poi-ooxml', version: '3.15'
+	compile group: 'com.google.code.gson', name: 'gson', version: '2.8.0'
+	compile group: 'joda-time', name: 'joda-time', version: '2.9.7'
+
+	testCompile 'junit:junit:4.12'
+    	testCompile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.7'
+    	testCompile group: 'org.slf4j', name: 'slf4j-simple', version: '1.7.7'
+	testCompile group: 'edu.stanford.nlp', name: 'stanford-corenlp', version: '3.7.0'
+	testCompile group: 'edu.stanford.nlp', name: 'stanford-corenlp', version: '3.7.0', classifier: 'models-english'
+	testCompile group: 'org.apache.pdfbox', name: 'pdfbox', version: '2.0.4'
+	testCompile group: 'org.apache.poi', name: 'poi', version: '3.15'
+	testCompile group: 'org.apache.xmlbeans', name: 'xmlbeans', version: '2.6.0'
+	testCompile group: 'org.fxmisc.richtext', name: 'richtextfx', version: '0.6.10'
+	testCompile group: 'org.apache.commons', name: 'commons-lang3', version: '3.5'
+	testCompile group: 'org.apache.poi', name: 'poi-ooxml', version: '3.15'
+	testCompile group: 'com.google.code.gson', name: 'gson', version: '2.8.0'
+	testCompile group: 'joda-time', name: 'joda-time', version: '2.9.7'
+
+}
+
+jar {
+	baseName = 'timeline-extraction'
+	version = '0.1.0'
+}
+
+configurations.all {
+    resolutionStrategy {
+        force 'xml-apis:xml-apis:1.4.01'
+    }
+}
+
+task copyTestResources(type: Copy) {
+    from "${projectDir}/src/test/resources"
+    into "${buildDir}/classes/test"
+}
+processTestResources.dependsOn copyTestResources
+
+task showMeCache {
+    doLast {
+        configurations.compile.each { println it }
+    }
+}
 \end{lstlisting}
