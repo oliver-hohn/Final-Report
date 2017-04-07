@@ -17,20 +17,27 @@
 \usepackage{inconsolata}
 \usepackage{subcaption}
 
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
 
-\lstset{
-  basicstyle=\footnotesize\tt,        % the size of the fonts that are used for the code
-  breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
-  breaklines=true,                 % sets automatic line breaking
-  captionpos=b,                    % sets the caption-position to bottom
-  extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
-  frame=single,                    % adds a frame around the code
-  language=Java,                 % the language of the code
-  keywordstyle=\bf,
-  showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
-  showstringspaces=false,          % underline spaces within strings only
-  showtabs=false,                  % show tabs within strings adding particular underscores
-  tabsize=2                       % sets default tabsize to 2 spaces
+
+\lstset{frame=tb,
+  language=Java,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3,
+  frame = single
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -76,7 +83,7 @@ This is one of the most important components of the report. It should begin with
 
 
 \include{Chapters/Background}
-\include{Chapters/Body}
+%\include{Chapters/Body}
 \include{Chapters/RequirementsSpecification}
 \include{Chapters/Design}
 \include{Chapters/Implementation}
@@ -98,4 +105,7 @@ This is one of the most important components of the report. It should begin with
 \include{Appendices/appendix}
 \include{Appendices/UserGuide}
 \include{Appendices/SourceCode}
+%\addcontentsline{toc}{chapter}{Appendix}
+%\addcontentsline{toc}{chapter}{User Guide}
+%\addcontentsline{toc}{chapter}{Source Code}
 \end{document}
