@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2017.1.17)  8 APR 2017 01:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2017.1.17)  8 APR 2017 01:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1403,16 +1403,16 @@ Missing character: There is no œ in font t1-zi4r-0!
 
  (./Appendices/UserGuide.tex
 Appendix B.
-) [90
+[90
 
 
 
-]
+]) [91]
 \openout2 = `Appendices/SourceCode.aux'.
 
  (./Appendices/SourceCode.tex
 Appendix C.
-[91
+[92
 
 
 
@@ -1422,13 +1422,13 @@ Overfull \hbox (7.84349pt too wide) in paragraph at lines 43--44
 the Doc-u-ment Reader
  []
 
-[92]
+[93]
 Overfull \hbox (0.4553pt too wide) in paragraph at lines 66--67
 []\T1/lmr/m/n/10 DocumentReaderObserver.java: in-ter-face for the ob-server of 
 the Doc-u-men-tRead-
  []
 
-[93] [94] [95] [96] [97] [98] [99] [100] [101] [102] [103] [104] [105] [106]
+[94] [95] [96] [97] [98] [99] [100] [101] [102] [103] [104] [105] [106]
 [107] [108] [109] [110] [111] [112] [113] [114] [115] [116] [117] [118]
 [119] [120] [121] [122] [123] [124] [125] [126] [127] [128] [129] [130]
 [131] [132] [133] [134] [135] [136] [137] [138] [139] [140] [141] [142]
@@ -1437,52 +1437,52 @@ the Doc-u-men-tRead-
 [167] [168] [169] [170] [171] [172] [173] [174] [175] [176] [177] [178]
 [179] [180] [181] [182] [183] [184] [185] [186] [187] [188] [189] [190]
 [191] [192] [193] [194] [195] [196] [197] [198] [199] [200] [201] [202]
-[203] [204] [205] [206] [207] [208] [209] [210] [211] [212] [213]
+[203] [204] [205] [206] [207] [208] [209] [210] [211] [212] [213] [214]
 Overfull \hbox (29.05956pt too wide) in paragraph at lines 3923--3924
 [][][][][][][][][][][][][][][][][][][][][][]  
  []
 
-[214] [215] [216] [217] [218] [219] [220] [221] [222] [223] [224] [225]
-[226]
+[215] [216] [217] [218] [219] [220] [221] [222] [223] [224] [225] [226]
+[227]
 Overfull \hbox (14.65977pt too wide) in paragraph at lines 4362--4363
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]  
  []
 
-[227] [228] [229] [230] [231] [232] [233] [234] [235] [236] [237] [238]
-[239]
+[228] [229] [230] [231] [232] [233] [234] [235] [236] [237] [238] [239]
+[240]
 Overfull \hbox (3.85912pt too wide) in paragraph at lines 4783--4784
 [][][][][][][][][][][][][][][][][][][] 
  []
 
-[240] [241] [242] [243] [244] [245] [246] [247] [248] [249] [250] [251]
-[252] [253] [254] [255] [256]
+[241] [242] [243] [244] [245] [246] [247] [248] [249] [250] [251] [252]
+[253] [254] [255] [256] [257]
 Overfull \hbox (5.65977pt too wide) in paragraph at lines 5323--5324
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]  
  []
 
-[257] [258] [259] [260] [261] [262] [263] [264] [265] [266] [267] [268]
-[269] [270] [271] [272] [273] [274] [275] [276] [277] [278] [279] [280]
-[281] [282] [283] [284] [285] [286] [287] [288] [289] [290] [291] [292]
-[293] <icaddcircleoutline.png, id=997, 24.09pt x 24.09pt>
+[258] [259] [260] [261] [262] [263] [264] [265] [266] [267] [268] [269]
+[270] [271] [272] [273] [274] [275] [276] [277] [278] [279] [280] [281]
+[282] [283] [284] [285] [286] [287] [288] [289] [290] [291] [292] [293]
+[294] <icaddcircleoutline.png, id=1000, 24.09pt x 24.09pt>
 File: icaddcircleoutline.png Graphic file (type png)
 
 <use icaddcircleoutline.png>
 Package pdftex.def Info: icaddcircleoutline.png used on input line 6542.
 (pdftex.def)             Requested size: 24.08992pt x 24.08992pt.
- <iccloseblack.png, id=998, 14.454pt x 14.454pt>
+ <iccloseblack.png, id=1001, 14.454pt x 14.454pt>
 File: iccloseblack.png Graphic file (type png)
 
 <use iccloseblack.png>
 Package pdftex.def Info: iccloseblack.png used on input line 6548.
 (pdftex.def)             Requested size: 14.45393pt x 14.45393pt.
- [294 <./icaddcircleoutline.png>] [295 <./iccloseblack.png>] [296] [297] [298] 
-[299] [300] [301] [302] [303] [304] [305] [306] [307]
-[308] [309] [310] [311] [312] [313] [314] [315] [316] [317] [318] [319]
-[320] [321] [322] [323] [324] [325] [326] [327] [328] [329] [330] [331]
-[332] [333] [334] [335] [336] [337] [338] [339] [340] [341] [342] [343]
-[344] [345] [346] [347] [348] [349]
+ [295 <./icaddcircleoutline.png>] [296 <./iccloseblack.png>] [297] [298] [299] 
+[300] [301] [302] [303] [304] [305] [306] [307] [308]
+[309] [310] [311] [312] [313] [314] [315] [316] [317] [318] [319] [320]
+[321] [322] [323] [324] [325] [326] [327] [328] [329] [330] [331] [332]
+[333] [334] [335] [336] [337] [338] [339] [340] [341] [342] [343] [344]
+[345] [346] [347] [348] [349] [350]
 Missing character: There is no œ in font t1-zi4r-0!
- [350]) [351] (./report.aux
+ [351]) [352] (./report.aux
 (./Chapters/Background.aux) (./Chapters/RequirementsSpecification.aux)
 (./Chapters/Design.aux) (./Chapters/Implementation.aux)
 (./Chapters/ProfessionalIssues.aux) (./Chapters/Evaluation.aux)
@@ -1519,10 +1519,10 @@ onts/type1/public/lm/lmr7.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/lm
 e/2016/texmf-dist/fonts/type1/public/lm/lmri10.pfb><d:/texlive/2016/texmf-dist/
 fonts/type1/public/mathabx-type1/matha10.pfb><d:/texlive/2016/texmf-dist/fonts/
 type1/public/stmaryrd/stmary10.pfb>
-Output written on report.pdf (355 pages, 1602813 bytes).
+Output written on report.pdf (356 pages, 1605463 bytes).
 PDF statistics:
- 1251 PDF objects out of 1440 (max. 8388607)
- 838 compressed objects within 9 object streams
+ 1254 PDF objects out of 1440 (max. 8388607)
+ 840 compressed objects within 9 object streams
  0 named destinations out of 1000 (max. 500000)
  98 words of extra memory for PDF output out of 10000 (max. 10000000)
 

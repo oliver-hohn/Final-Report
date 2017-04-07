@@ -1,6 +1,18 @@
 \chapter{User Guide}
 \section{Instructions}
 You must provide an adequate user guide for your software. The guide should provide easily understood instructions on how to use your software. A particularly useful approach is to treat the user guide as a walk-through of a typical session, or set of sessions, which collectively display all of the features of your package. Technical details of how the package works are rarely required. Keep the guide concise and simple. The extensive use of diagrams, illustrating the package in action, can often be particularly helpful. The user guide is sometimes included as a chapter in the main body of the report, but is often better included in an appendix to the main report.
--how to set up (commands)
--how to use given pieces of sample text
--images
+-how to set up (commands)//d
+-how to use given pieces of sample text//d
+-images//d
+
+\par For the zipped file given, unzip them. In the unzip folder there is a build.gradle file which can be used by used by Gradle locally (if it installed), and by the Gradle wrapper provided in the zip. It is advised to install Gradle\footnote{\url{https://gradle.org/install}}, specifically the latest version (v3.4.1+).
+
+\par To run the system traverse to the root directory of the unzipped folder in command-line or terminal. If Gradle is locally installed, to build the system (i.e. retrieve the libraries, and run the tests) use the command: \textbf{gradle build}. To run the actual application with the interacting UI to load documents, use the command: \textbf{gradle run}. To run the 35 unit tests, to ensure the application is functioning correctly, use the command: \textbf{gradle test}. The unit tests include tests on file processing, JSON converting, and event creation.
+
+\par If Gradle is not installed, the Gradle wrapper can be used. First, in command line, traverse the system's file space to the root directory of the project. In the root directory, to build the system use the command: \textbf{gradlew build}. To run the actual application, use the command: \textbf{gradlew run}. To run the tests, use the command: \textbf{gradlew test}.
+
+\par Once the system is running, a GUI is shown inviting the user to load documents. Pressing on the button will open the file chooser dialog to choose PDF, TXT, or DOCX files to load. The sample documents provided in the submission can be used. Once these have been loaded a timeline will be shown. Initially, the traditional timeline is shown, to swap to the Range Timeline use the Timeline menu option to select it. An event can be edited by pressing on the `Edit Event' button, where a dialog is shown to edit its data. If the data is not valid, the user will be informed by highlighting in red the input field that is invalid. When no data is present, a hint is given for the input format (e.g. for dates the input format is: dd-MM-yyyy, where dd is a day value from 01 to 31m MM a month value from 01 to 12, and yyyy a year value from 0001 to 9999). Events can be deleted from the timeline through the `Delete' button in the `Edit Event' dialog. More documents can be loaded using the `Load Documents' button. Events relating to a document can be removed by pressing on the red cross next to a document in the `Document Viewer'. To view the sentence that produced an event, use the `View' button from an event.
+
+\par Settings can be changed using the File->Settings menu item. This allows the user to change document processing such as how many threads used, and the threshold value used for summaries, as well as GUI settings such as start up width and height of the window. Saving the Settings will produce a System.ini file in the root directory.
+
+\par To save a timeline, the `Save To..' button can be used. This allows the user to decide the file format to save the timeline to, JSON or PDF. Afterwhich the file chooser dialog is shown to choose the location to save the timeline file. If it cannot be saved at that location, the user will be notified, and asked to select a new location.
