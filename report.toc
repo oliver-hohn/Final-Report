@@ -58,92 +58,95 @@
 \contentsline {chapter}{\numberline {A}Extra Information}{75}
 \contentsline {section}{\numberline {A.1}Tables, proofs, graphs, test cases, ...}{75}
 \contentsline {section}{\numberline {A.2}Timelines}{75}
-\contentsline {section}{\numberline {A.3}Data Sets}{75}
-\contentsline {chapter}{\numberline {B}User Guide}{76}
-\contentsline {section}{\numberline {B.1}Instructions}{76}
-\contentsline {chapter}{\numberline {C}Source Code}{77}
-\contentsline {section}{\numberline {C.1}Information}{77}
-\contentsline {section}{\numberline {C.2}Table of Contents}{77}
-\contentsline {section}{\numberline {C.3}Instructions}{81}
-\contentsline {section}{\numberline {C.4}src/main/java/backend}{82}
-\contentsline {subsection}{\numberline {C.4.1}Helpers}{82}
-\contentsline {subsubsection}{Sort.java}{82}
-\contentsline {subsubsection}{ToJSON.java}{83}
-\contentsline {subsubsection}{ToPDF.java}{85}
-\contentsline {subsection}{\numberline {C.4.2}Process}{92}
-\contentsline {subsubsection}{CallbackResults.java}{92}
-\contentsline {subsubsection}{Engine.java}{93}
-\contentsline {subsubsection}{FileData.java}{107}
-\contentsline {subsubsection}{ProcessFileCallback.java}{113}
-\contentsline {subsubsection}{ProcessFiles.java}{114}
-\contentsline {subsubsection}{Result.java}{123}
-\contentsline {subsubsection}{TimelineDate.java}{131}
-\contentsline {subsection}{\numberline {C.4.3}Ranges}{150}
-\contentsline {subsubsection}{ProduceRanges.java}{150}
-\contentsline {subsubsection}{Range.java}{153}
-\contentsline {subsection}{\numberline {C.4.4}System}{165}
-\contentsline {subsubsection}{BackEndSystem.java}{165}
-\contentsline {subsubsection}{Settings.java}{168}
-\contentsline {subsubsection}{SystemState.java}{177}
-\contentsline {section}{\numberline {C.5}src/main/java/frontend}{177}
-\contentsline {subsection}{\numberline {C.5.1}Controllers}{177}
-\contentsline {subsubsection}{CustomResultRowController.java}{177}
-\contentsline {subsubsection}{CustomTimelineRow.java}{182}
-\contentsline {subsubsection}{DocumentLoadedRowController.java}{186}
-\contentsline {subsubsection}{DocumentReaderController.java}{188}
-\contentsline {subsubsection}{EditEventController.java}{195}
-\contentsline {subsubsection}{ListViewController.java}{207}
-\contentsline {subsubsection}{MenuBarControllerInter.java}{223}
-\contentsline {subsubsection}{RangeDataController.java}{224}
-\contentsline {subsubsection}{StartUpController.java}{227}
-\contentsline {subsubsection}{TimelineRowController.java}{231}
-\contentsline {subsection}{\numberline {C.5.2}Dialogs}{235}
-\contentsline {subsubsection}{AboutDialog.java}{235}
-\contentsline {subsubsection}{EditEventDialog.java}{236}
-\contentsline {subsubsection}{FileConfirmationDialog.java}{241}
-\contentsline {subsubsection}{LoadingDialog.java}{245}
-\contentsline {subsubsection}{RemoveConfirmationDialog.java}{248}
-\contentsline {subsubsection}{SettingsDialog.java}{249}
-\contentsline {subsection}{\numberline {C.5.3}Helpers}{255}
-\contentsline {subsubsection}{TextFieldState.java}{255}
-\contentsline {subsection}{\numberline {C.5.4}Observers}{255}
-\contentsline {subsubsection}{DocumentReaderObserver.java}{255}
-\contentsline {subsubsection}{DocumentsLoadedObserver.java}{256}
-\contentsline {subsubsection}{EditEventDialogObserver.java}{256}
-\contentsline {subsubsection}{MenuBarObserver.java}{257}
-\contentsline {subsubsection}{StartUpObserver.java}{258}
-\contentsline {subsubsection}{TimelineObserver.java}{258}
-\contentsline {subsubsection}{TimelineRowObserver.java}{259}
-\contentsline {subsection}{\numberline {C.5.5}Main.java}{260}
-\contentsline {section}{\numberline {C.6}src/main/resources/frontend}{272}
-\contentsline {subsection}{\numberline {C.6.1}controllers}{272}
-\contentsline {subsubsection}{customErrorFields.css}{272}
-\contentsline {subsubsection}{customResultRow.fxml}{272}
-\contentsline {subsubsection}{documentLoadedRow.fxml}{275}
-\contentsline {subsubsection}{documentReader.fxml}{276}
-\contentsline {subsubsection}{editEventDialog.fxml}{277}
-\contentsline {subsubsection}{icaddcircleoutline.png}{280}
-\contentsline {subsubsection}{iccloseblack.png}{280}
-\contentsline {subsubsection}{listViewTheme.css}{280}
-\contentsline {subsubsection}{listViewThemeTimeline.css}{281}
-\contentsline {subsubsection}{rangeDataLayout.fxml}{282}
-\contentsline {subsubsection}{timelineRowEven.fxml}{282}
-\contentsline {subsubsection}{timelineRowOdd.fxml}{285}
-\contentsline {subsection}{\numberline {C.6.2}dialogs}{287}
-\contentsline {subsubsection}{customErrorFields.css}{287}
-\contentsline {subsubsection}{loadingDialog.css}{288}
-\contentsline {subsection}{\numberline {C.6.3}documentListViewTheme.css}{288}
-\contentsline {subsection}{\numberline {C.6.4}listView.fxml}{288}
-\contentsline {subsection}{\numberline {C.6.5}startup.fxml}{292}
-\contentsline {section}{\numberline {C.7}src/test/backend}{294}
-\contentsline {subsubsection}{EngineTest.java}{294}
-\contentsline {subsubsection}{ProcessFileTest.java}{298}
-\contentsline {subsubsection}{ProduceRangesTest.java}{306}
-\contentsline {subsubsection}{SystemStateTest.java}{315}
-\contentsline {subsubsection}{TimelineDateTest.java}{317}
-\contentsline {subsubsection}{ToJSONTest.java}{329}
-\contentsline {section}{\numberline {C.8}src/test/resources/backend}{335}
-\contentsline {subsection}{\numberline {C.8.1}testfile1.txt, textfile2.txt, and textfile3.txt}{335}
-\contentsline {subsection}{\numberline {C.8.2}testfile4.docx}{335}
-\contentsline {subsection}{\numberline {C.8.3}testfile5.pdf}{335}
-\contentsline {section}{\numberline {C.9}build.gradle}{335}
+\contentsline {subsection}{\numberline {A.2.1}BBC: US elections 2016 results: Donald Trump's life story. Published on the 20th of January 2017}{75}
+\contentsline {subsection}{\numberline {A.2.2}The Guardian: British toddler abducted, police believe. Published on the 5th May 2007}{80}
+\contentsline {subsection}{\numberline {A.2.3}The Guardian: Madeleine McCann detectives arrive in Portugal to question 11 suspects. Publlished on the 9th December 2014}{82}
+\contentsline {section}{\numberline {A.3}Data Sets}{84}
+\contentsline {chapter}{\numberline {B}User Guide}{90}
+\contentsline {section}{\numberline {B.1}Instructions}{90}
+\contentsline {chapter}{\numberline {C}Source Code}{91}
+\contentsline {section}{\numberline {C.1}Information}{91}
+\contentsline {section}{\numberline {C.2}Table of Contents}{91}
+\contentsline {section}{\numberline {C.3}Instructions}{95}
+\contentsline {section}{\numberline {C.4}src/main/java/backend}{96}
+\contentsline {subsection}{\numberline {C.4.1}Helpers}{96}
+\contentsline {subsubsection}{Sort.java}{96}
+\contentsline {subsubsection}{ToJSON.java}{97}
+\contentsline {subsubsection}{ToPDF.java}{99}
+\contentsline {subsection}{\numberline {C.4.2}Process}{106}
+\contentsline {subsubsection}{CallbackResults.java}{106}
+\contentsline {subsubsection}{Engine.java}{107}
+\contentsline {subsubsection}{FileData.java}{121}
+\contentsline {subsubsection}{ProcessFileCallback.java}{127}
+\contentsline {subsubsection}{ProcessFiles.java}{128}
+\contentsline {subsubsection}{Result.java}{137}
+\contentsline {subsubsection}{TimelineDate.java}{145}
+\contentsline {subsection}{\numberline {C.4.3}Ranges}{164}
+\contentsline {subsubsection}{ProduceRanges.java}{164}
+\contentsline {subsubsection}{Range.java}{167}
+\contentsline {subsection}{\numberline {C.4.4}System}{179}
+\contentsline {subsubsection}{BackEndSystem.java}{179}
+\contentsline {subsubsection}{Settings.java}{182}
+\contentsline {subsubsection}{SystemState.java}{191}
+\contentsline {section}{\numberline {C.5}src/main/java/frontend}{191}
+\contentsline {subsection}{\numberline {C.5.1}Controllers}{191}
+\contentsline {subsubsection}{CustomResultRowController.java}{191}
+\contentsline {subsubsection}{CustomTimelineRow.java}{196}
+\contentsline {subsubsection}{DocumentLoadedRowController.java}{200}
+\contentsline {subsubsection}{DocumentReaderController.java}{202}
+\contentsline {subsubsection}{EditEventController.java}{209}
+\contentsline {subsubsection}{ListViewController.java}{221}
+\contentsline {subsubsection}{MenuBarControllerInter.java}{237}
+\contentsline {subsubsection}{RangeDataController.java}{238}
+\contentsline {subsubsection}{StartUpController.java}{241}
+\contentsline {subsubsection}{TimelineRowController.java}{245}
+\contentsline {subsection}{\numberline {C.5.2}Dialogs}{249}
+\contentsline {subsubsection}{AboutDialog.java}{249}
+\contentsline {subsubsection}{EditEventDialog.java}{250}
+\contentsline {subsubsection}{FileConfirmationDialog.java}{255}
+\contentsline {subsubsection}{LoadingDialog.java}{259}
+\contentsline {subsubsection}{RemoveConfirmationDialog.java}{262}
+\contentsline {subsubsection}{SettingsDialog.java}{263}
+\contentsline {subsection}{\numberline {C.5.3}Helpers}{269}
+\contentsline {subsubsection}{TextFieldState.java}{269}
+\contentsline {subsection}{\numberline {C.5.4}Observers}{269}
+\contentsline {subsubsection}{DocumentReaderObserver.java}{269}
+\contentsline {subsubsection}{DocumentsLoadedObserver.java}{270}
+\contentsline {subsubsection}{EditEventDialogObserver.java}{270}
+\contentsline {subsubsection}{MenuBarObserver.java}{271}
+\contentsline {subsubsection}{StartUpObserver.java}{272}
+\contentsline {subsubsection}{TimelineObserver.java}{272}
+\contentsline {subsubsection}{TimelineRowObserver.java}{273}
+\contentsline {subsection}{\numberline {C.5.5}Main.java}{274}
+\contentsline {section}{\numberline {C.6}src/main/resources/frontend}{286}
+\contentsline {subsection}{\numberline {C.6.1}controllers}{286}
+\contentsline {subsubsection}{customErrorFields.css}{286}
+\contentsline {subsubsection}{customResultRow.fxml}{286}
+\contentsline {subsubsection}{documentLoadedRow.fxml}{289}
+\contentsline {subsubsection}{documentReader.fxml}{290}
+\contentsline {subsubsection}{editEventDialog.fxml}{291}
+\contentsline {subsubsection}{icaddcircleoutline.png}{294}
+\contentsline {subsubsection}{iccloseblack.png}{294}
+\contentsline {subsubsection}{listViewTheme.css}{294}
+\contentsline {subsubsection}{listViewThemeTimeline.css}{295}
+\contentsline {subsubsection}{rangeDataLayout.fxml}{296}
+\contentsline {subsubsection}{timelineRowEven.fxml}{296}
+\contentsline {subsubsection}{timelineRowOdd.fxml}{299}
+\contentsline {subsection}{\numberline {C.6.2}dialogs}{301}
+\contentsline {subsubsection}{customErrorFields.css}{301}
+\contentsline {subsubsection}{loadingDialog.css}{302}
+\contentsline {subsection}{\numberline {C.6.3}documentListViewTheme.css}{302}
+\contentsline {subsection}{\numberline {C.6.4}listView.fxml}{302}
+\contentsline {subsection}{\numberline {C.6.5}startup.fxml}{306}
+\contentsline {section}{\numberline {C.7}src/test/backend}{308}
+\contentsline {subsubsection}{EngineTest.java}{308}
+\contentsline {subsubsection}{ProcessFileTest.java}{312}
+\contentsline {subsubsection}{ProduceRangesTest.java}{320}
+\contentsline {subsubsection}{SystemStateTest.java}{329}
+\contentsline {subsubsection}{TimelineDateTest.java}{331}
+\contentsline {subsubsection}{ToJSONTest.java}{343}
+\contentsline {section}{\numberline {C.8}src/test/resources/backend}{349}
+\contentsline {subsection}{\numberline {C.8.1}testfile1.txt, textfile2.txt, and textfile3.txt}{349}
+\contentsline {subsection}{\numberline {C.8.2}testfile4.docx}{349}
+\contentsline {subsection}{\numberline {C.8.3}testfile5.pdf}{349}
+\contentsline {section}{\numberline {C.9}build.gradle}{349}
