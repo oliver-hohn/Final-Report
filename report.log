@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2017.1.17)  8 APR 2017 15:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2017.1.17)  8 APR 2017 18:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1111,28 +1111,28 @@ Chapter 4.
 File: fullarch.png Graphic file (type png)
 
 <use fullarch.png>
-Package pdftex.def Info: fullarch.png used on input line 85.
+Package pdftex.def Info: fullarch.png used on input line 86.
 (pdftex.def)             Requested size: 411.9399pt x 240.01628pt.
  <process.png, id=102, 1103.12125pt x 1095.09125pt>
 File: process.png Graphic file (type png)
 
 <use process.png>
-Package pdftex.def Info: process.png used on input line 93.
+Package pdftex.def Info: process.png used on input line 94.
 (pdftex.def)             Requested size: 411.9399pt x 408.9371pt.
  [23 <./fullarch.png>]
 LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
-(Font)              scaled to size 10.0pt on input line 106.
+(Font)              scaled to size 10.0pt on input line 107.
  [24] [25 <./process.png>]
 <system.png, id=114, 563.10374pt x 736.7525pt>
 File: system.png Graphic file (type png)
  <use system.png>
-Package pdftex.def Info: system.png used on input line 121.
+Package pdftex.def Info: system.png used on input line 122.
 (pdftex.def)             Requested size: 411.9399pt x 538.97153pt.
  [26]
 <ranges.png, id=118, 977.6525pt x 462.72874pt>
 File: ranges.png Graphic file (type png)
  <use ranges.png>
-Package pdftex.def Info: ranges.png used on input line 131.
+Package pdftex.def Info: ranges.png used on input line 132.
 (pdftex.def)             Requested size: 411.9399pt x 194.97314pt.
  [27 <./system.png>] [28 <./ranges.png>]
 
@@ -1141,14 +1141,14 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 <helpers.png, id=128, 472.76625pt x 361.35pt>
 File: helpers.png Graphic file (type png)
  <use helpers.png>
-Package pdftex.def Info: helpers.png used on input line 214.
+Package pdftex.def Info: helpers.png used on input line 215.
 (pdftex.def)             Requested size: 354.5738pt x 271.01184pt.
  [29] [30]
 [31 <./helpers.png>] <startup.png, id=140, 767.86874pt x 455.301pt>
 File: startup.png Graphic file (type png)
 
 <use startup.png>
-Package pdftex.def Info: startup.png used on input line 231.
+Package pdftex.def Info: startup.png used on input line 233.
 (pdftex.def)             Requested size: 411.9399pt x 244.26099pt.
 
 
@@ -1157,7 +1157,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 <timeline.png, id=141, 768.471pt x 475.17525pt>
 File: timeline.png Graphic file (type png)
  <use timeline.png>
-Package pdftex.def Info: timeline.png used on input line 238.
+Package pdftex.def Info: timeline.png used on input line 240.
 (pdftex.def)             Requested size: 411.9399pt x 254.7129pt.
  [32]
 
@@ -1166,13 +1166,13 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 <editDialog.png, id=145, 329.43076pt x 208.3785pt>
 File: editDialog.png Graphic file (type png)
  <use editDialog.png>
-Package pdftex.def Info: editDialog.png used on input line 245.
+Package pdftex.def Info: editDialog.png used on input line 247.
 (pdftex.def)             Requested size: 197.65997pt x 125.02805pt.
 
 <viewDoc.png, id=146, 344.487pt x 416.757pt>
 File: viewDoc.png Graphic file (type png)
  <use viewDoc.png>
-Package pdftex.def Info: viewDoc.png used on input line 251.
+Package pdftex.def Info: viewDoc.png used on input line 253.
 (pdftex.def)             Requested size: 258.36461pt x 312.56699pt.
 
 
@@ -1391,30 +1391,31 @@ Underfull \hbox (badness 1009) in paragraph at lines 378--379
  []
 
 [84] [85] [86] [87] [88]
-Underfull \hbox (badness 2538) in paragraph at lines 465--465
+Underfull \hbox (badness 2538) in paragraph at lines 464--464
 []\T1/lmr/m/n/10 Listing A.3: |Madeleine Mc-Cann de-tec-tives ar-rive in Por-tu
 -gal to ques-tion 11 sus-
+ []
+
+
+Underfull \hbox (badness 1565) in paragraph at lines 464--464
+\T1/lmr/m/n/10 pects. Pub-lished: 9th of De-cem-ber 2014. URL: https://www.theg
+uardian.com/uk-
  []
 
 [89]
 Missing character: There is no œ in font t1-zi4r-0!
 
-Underfull \hbox (badness 3769) in paragraph at lines 491--491
-\T1/lmr/bx/n/10 the real world\T1/lmr/m/n/10 : Sys-tem speaks
- []
-
-
-Underfull \hbox (badness 1038) in paragraph at lines 497--497
+Underfull \hbox (badness 1038) in paragraph at lines 496--496
 []\T1/lmr/bx/n/10 Error Pre-ven-tion\T1/lmr/m/n/10 : Pre-vent er-rors
  []
 
 
-Underfull \hbox (badness 1226) in paragraph at lines 503--503
+Underfull \hbox (badness 1226) in paragraph at lines 502--502
 []\T1/lmr/bx/n/10 Aesthetic and Min-i-mal-is-tic De-
  []
 
 
-Overfull \hbox (10.39867pt too wide) in paragraph at lines 484--510
+Overfull \hbox (10.39867pt too wide) in paragraph at lines 483--509
 [][] 
  []
 
@@ -1640,13 +1641,13 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 ### simple group (level 1) entered at line 1061 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 23771 strings out of 493013
- 431790 string characters out of 6136993
- 639971 words of memory out of 5000000
- 26805 multiletter control sequences out of 15000+600000
- 78985 words of font info for 70 fonts, out of 8000000 for 9000
+ 23767 strings out of 493013
+ 431745 string characters out of 6136993
+ 639961 words of memory out of 5000000
+ 26800 multiletter control sequences out of 15000+600000
+ 81966 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,18n,94p,1992b,14675s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 62i,18n,94p,1983b,14675s stack positions out of 5000i,500n,10000p,200000b,80000s
 {d:/texlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{d:/te
 xlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{d:/texlive/2016/texmf-dist/
 fonts/enc/dvips/lm/lm-mathit.enc}{d:/texlive/2016/texmf-dist/fonts/enc/dvips/in
@@ -1656,16 +1657,17 @@ a/Inconsolata-zi4r.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/lm/lmbx10
 016/texmf-dist/fonts/type1/public/lm/lmbx7.pfb><d:/texlive/2016/texmf-dist/font
 s/type1/public/lm/lmmi10.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/lm/
 lmr10.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/lm/lmr12.pfb><d:/texli
-ve/2016/texmf-dist/fonts/type1/public/lm/lmr6.pfb><d:/texlive/2016/texmf-dist/f
-onts/type1/public/lm/lmr7.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/lm
-/lmr8.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/lm/lmr9.pfb><d:/texliv
-e/2016/texmf-dist/fonts/type1/public/lm/lmri10.pfb><d:/texlive/2016/texmf-dist/
-fonts/type1/public/mathabx-type1/matha10.pfb><d:/texlive/2016/texmf-dist/fonts/
-type1/public/stmaryrd/stmary10.pfb>
-Output written on report.pdf (364 pages, 2002482 bytes).
+ve/2016/texmf-dist/fonts/type1/public/lm/lmr5.pfb><d:/texlive/2016/texmf-dist/f
+onts/type1/public/lm/lmr6.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/lm
+/lmr7.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/lm/lmr8.pfb><d:/texliv
+e/2016/texmf-dist/fonts/type1/public/lm/lmr9.pfb><d:/texlive/2016/texmf-dist/fo
+nts/type1/public/lm/lmri10.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/m
+athabx-type1/matha10.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/stmaryr
+d/stmary10.pfb>
+Output written on report.pdf (364 pages, 1975542 bytes).
 PDF statistics:
- 1310 PDF objects out of 1440 (max. 8388607)
- 858 compressed objects within 9 object streams
+ 1314 PDF objects out of 1440 (max. 8388607)
+ 861 compressed objects within 9 object streams
  0 named destinations out of 1000 (max. 500000)
  173 words of extra memory for PDF output out of 10000 (max. 10000000)
 

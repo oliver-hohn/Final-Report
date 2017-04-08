@@ -60,7 +60,7 @@
 \contentsline {section}{\numberline {A.2}Timelines}{75}
 \contentsline {subsection}{\numberline {A.2.1}BBC: US elections 2016 results: Donald Trump's life story. Published on the 20th of January 2017}{76}
 \contentsline {subsection}{\numberline {A.2.2}The Guardian: British toddler abducted, police believe. Published on the 5th May 2007}{81}
-\contentsline {subsection}{\numberline {A.2.3}The Guardian: Madeleine McCann detectives arrive in Portugal to question 11 suspects. Publlished on the 9th December 2014}{83}
+\contentsline {subsection}{\numberline {A.2.3}The Guardian: Madeleine McCann detectives arrive in Portugal to question 11 suspects. Published on the 9th December 2014}{83}
 \contentsline {section}{\numberline {A.3}Data Sets}{85}
 \contentsline {section}{\numberline {A.4}Expert Heuristic}{90}
 \contentsline {chapter}{\numberline {B}User Guide}{92}
@@ -147,7 +147,7 @@
 \contentsline {subsubsection}{TimelineDateTest.java}{340}
 \contentsline {subsubsection}{ToJSONTest.java}{352}
 \contentsline {section}{\numberline {C.8}src/test/resources/backend}{358}
-\contentsline {subsection}{\numberline {C.8.1}testfile1.txt, textfile2.txt, and textfile3.txt}{358}
+\contentsline {subsection}{\numberline {C.8.1}testfile1.txt, testfile2.txt, and testfile3.txt}{358}
 \contentsline {subsection}{\numberline {C.8.2}testfile4.docx}{358}
 \contentsline {subsection}{\numberline {C.8.3}testfile5.pdf}{358}
-\contentsline {section}{\numberline {C.9}build.gradle}{358}
+\contentsline {section}{\numberline {C.9}build.gradle}{359}
