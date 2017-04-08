@@ -478,5 +478,37 @@ Portuguese police closed down their investigation in 2008 but the Met police lau
 \end{lstlisting}
 
 
+\section{Expert Heuristic}
+\par Note that the expert Heuristic provided below (see Figure \ref{fig:expertHer}), includes the comments made by the expert on the GUI for each of the Principles as they used the system.
+\begin{figure}[h]
+\begin{tabular}{|p{6cm}|p{8cm}|}
+\hline
+Heuristic & Experts comments \\
+\hline
+\hline
+\textbf{Visibility of System Status}: Keep users informed about what is going on through appropriate feedback within reasonable time & Quite visible. For example, when exceed summary the limit turns red (same with dates, tell users they did wrong). However, click to remove subjects should be more obvious.\\
+\hline
+\textbf{Match between the System and the real world}: System speaks the user’s language, with familiar phrases and words. & The Timeline menu option could be changed to a text that is more known, such as `View'. However, the technical language used is limited.\\
+\hline
+\textbf{User control and freedom}: Users can make mistakes, will need clearly marked emergency exists to leave unwanted states without going through extended dialog. & Can remove documents, and confirmation dialogs used allow the user to confirm their choice. However, should inform the user when no events can be shown.\\
+\hline
+\textbf{Consistency and Standards}: User should not wonder whether different words, situations or actions mean the same thing. Follow platform conventions. & Same font and colours are used everywhere in the project.\\
+\hline
+\textbf{Error Prevention}: Prevent errors from occurring in the first place. Either eliminate error-prone conditions or check for them and prevent users with a confirmation & Confirmation dialogs to allow user to commit to their action. Only allow processable documents as input in the File Chooser,can't select other file types. Can't save event changes if data is not valid. Costly actions, such as Delete Event, are separated from common actions, such as Save Event. Can't save timeline in a file that is in use, and the user is informed in this case). Principle met.\\
+\hline
+\textbf{Recognition rather than Recall}: Minimise user's memory load. Instructions for use should be visible or easily retrievable. &simple to use, buttons have label explaining their options, could add images to buttons to show what they do. (e.g. load a document could use an upload icon)\\
+\hline
+\textbf{Flexibility and Efficiency of use}: Accelerators for expert users not seen by novice users. Allow users to tailor frequent actions. & Can load many documents at once in a simple step.\\
+\hline
+\textbf{Aesthetic and Minimalistic Design}: Dialogs should not contain information that is irrelevant or rarely needed. & Should show no events when there is nothing to show in the timeline. Progress bar would be useful to show how many documents have been processed. Should extend the document ListView, and remove the dots next to document names. Should add icons along with buttons to explain what they do. However, design is minimal as it uses little colors (which also don't strain the eyes).\\
+\hline
+\textbf{Help users recognise, diagnose, recover from errors}: Error messages should be expressed in plain language, precisely indicate the problem, and how to fix it. & File Chooser informing file may be in use when trying to overwrite a file. Should add a Help Button. The use of red borders in TextFields with invalid data is useful and matches the principle, e.g. when date is invalid, or over the character limit for a summary).\\
+\hline
+\textbf{Help and Documentation}: Any help documentation should be easy to search for, focused on user’s tasks and not too large. & There is no manual included, should include. However, the system is straightforward to use.\\
+\hline
+\end{tabular}
+\caption{Expert Heuristic on the GUI of the Automated Timeline Extraction System}
+\label{fig:expertHer}
+\end{figure}
 
 
