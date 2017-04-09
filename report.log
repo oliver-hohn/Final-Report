@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2017.1.17)  8 APR 2017 18:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2017.1.17)  9 APR 2017 18:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1072,15 +1072,15 @@ Chapter 2.
 
 ]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 13.
+(Font)              <8> on input line 9.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 13.
-LaTeX Font Info:    Try loading font information for T1+zi4 on input line 13.
+(Font)              <6> on input line 9.
+LaTeX Font Info:    Try loading font information for T1+zi4 on input line 9.
  (d:/texlive/2016/texmf-dist/tex/latex/inconsolata/t1zi4.fd
 File: t1zi4.fd 2016/12/29 T1/zi4 (Inconsolata)
 )
 LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
-(Font)              scaled to size 8.0pt on input line 13.
+(Font)              scaled to size 8.0pt on input line 9.
  [6] [7]
 [8] [9] [10]
 
@@ -1089,90 +1089,93 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[11] [12] [13]) [14]
+[11] [12]) [13]
 \openout2 = `Chapters/RequirementsSpecification.aux'.
 
  (./Chapters/RequirementsSpecification.tex
 Chapter 3.
-[15
+[14
 
 
 
-] [16] [17]) [18]
+] [15] [16]) [17]
 \openout2 = `Chapters/Design.aux'.
 
  (./Chapters/Design.tex
 Chapter 4.
-[19
+[18
 
 
 
-] [20] [21] [22] <fullarch.png, id=100, 2294.5725pt x 1336.995pt>
+] [19] [20] [21] <fullarch.png, id=97, 2294.5725pt x 1336.995pt>
 File: fullarch.png Graphic file (type png)
 
 <use fullarch.png>
-Package pdftex.def Info: fullarch.png used on input line 86.
+Package pdftex.def Info: fullarch.png used on input line 81.
 (pdftex.def)             Requested size: 411.9399pt x 240.01628pt.
- <process.png, id=102, 1103.12125pt x 1095.09125pt>
+ <process.png, id=99, 1103.12125pt x 1095.09125pt>
 File: process.png Graphic file (type png)
 
 <use process.png>
-Package pdftex.def Info: process.png used on input line 94.
+Package pdftex.def Info: process.png used on input line 89.
 (pdftex.def)             Requested size: 411.9399pt x 408.9371pt.
- [23 <./fullarch.png>]
+ [22 <./fullarch.png>]
 LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
-(Font)              scaled to size 10.0pt on input line 107.
- [24] [25 <./process.png>]
-<system.png, id=114, 563.10374pt x 736.7525pt>
+(Font)              scaled to size 10.0pt on input line 102.
+ [23 <./process.png>]
+<system.png, id=108, 563.10374pt x 736.7525pt>
 File: system.png Graphic file (type png)
  <use system.png>
-Package pdftex.def Info: system.png used on input line 122.
+Package pdftex.def Info: system.png used on input line 116.
 (pdftex.def)             Requested size: 411.9399pt x 538.97153pt.
- [26]
-<ranges.png, id=118, 977.6525pt x 462.72874pt>
+ [24]
+<ranges.png, id=112, 977.6525pt x 462.72874pt>
 File: ranges.png Graphic file (type png)
  <use ranges.png>
-Package pdftex.def Info: ranges.png used on input line 132.
+Package pdftex.def Info: ranges.png used on input line 125.
 (pdftex.def)             Requested size: 411.9399pt x 194.97314pt.
- [27 <./system.png>] [28 <./ranges.png>]
+ [25 <./system.png>] [26 <./ranges.png>]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<helpers.png, id=128, 472.76625pt x 361.35pt>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<helpers.png, id=121, 472.76625pt x 361.35pt>
 File: helpers.png Graphic file (type png)
  <use helpers.png>
-Package pdftex.def Info: helpers.png used on input line 215.
+Package pdftex.def Info: helpers.png used on input line 208.
 (pdftex.def)             Requested size: 354.5738pt x 271.01184pt.
- [29] [30]
-[31 <./helpers.png>] <startup.png, id=140, 767.86874pt x 455.301pt>
+ [27] [28]
+[29 <./helpers.png>] <startup.png, id=134, 767.86874pt x 455.301pt>
 File: startup.png Graphic file (type png)
 
 <use startup.png>
-Package pdftex.def Info: startup.png used on input line 233.
+Package pdftex.def Info: startup.png used on input line 226.
 (pdftex.def)             Requested size: 411.9399pt x 244.26099pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<timeline.png, id=141, 768.471pt x 475.17525pt>
+<timeline.png, id=135, 768.471pt x 475.17525pt>
 File: timeline.png Graphic file (type png)
  <use timeline.png>
-Package pdftex.def Info: timeline.png used on input line 240.
+Package pdftex.def Info: timeline.png used on input line 233.
 (pdftex.def)             Requested size: 411.9399pt x 254.7129pt.
- [32]
+ [30]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<editDialog.png, id=145, 329.43076pt x 208.3785pt>
+<editDialog.png, id=139, 329.43076pt x 208.3785pt>
 File: editDialog.png Graphic file (type png)
  <use editDialog.png>
-Package pdftex.def Info: editDialog.png used on input line 247.
+Package pdftex.def Info: editDialog.png used on input line 240.
 (pdftex.def)             Requested size: 197.65997pt x 125.02805pt.
 
-<viewDoc.png, id=146, 344.487pt x 416.757pt>
+<viewDoc.png, id=140, 344.487pt x 416.757pt>
 File: viewDoc.png Graphic file (type png)
  <use viewDoc.png>
-Package pdftex.def Info: viewDoc.png used on input line 253.
+Package pdftex.def Info: viewDoc.png used on input line 246.
 (pdftex.def)             Requested size: 258.36461pt x 312.56699pt.
 
 
@@ -1181,378 +1184,386 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[33 <./startup.png>]) [34 <./timeline.png> <./editDialog.png>] [35 <./viewDoc.p
+[31 <./startup.png>]) [32 <./timeline.png> <./editDialog.png>] [33 <./viewDoc.p
 ng>]
 \openout2 = `Chapters/Implementation.aux'.
 
  (./Chapters/Implementation.tex
 Chapter 5.
-[36
+[34
 
 
 
-] [37] [38]
-Overfull \hbox (15.0pt too wide) in paragraph at lines 40--41
+] [35] [36]
+Overfull \hbox (15.0pt too wide) in paragraph at lines 35--36
 [][]
  []
 
 
-Overfull \hbox (15.0pt too wide) in paragraph at lines 42--44
+Overfull \hbox (15.0pt too wide) in paragraph at lines 37--39
 [][]
  []
 
-[39]
+[37]
 LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
-(Font)              scaled to size 9.0pt on input line 54.
- [40] [41] <traditionalView.png, id=180, 658.25925pt x 606.46574pt>
+(Font)              scaled to size 9.0pt on input line 49.
+ [38] [39] <traditionalView.png, id=174, 658.25925pt x 606.46574pt>
 File: traditionalView.png Graphic file (type png)
 
 <use traditionalView.png>
-Package pdftex.def Info: traditionalView.png used on input line 97.
+Package pdftex.def Info: traditionalView.png used on input line 92.
 (pdftex.def)             Requested size: 411.9399pt x 379.53061pt.
- [42] [43 <./traditionalView.png>]
-<rangeView.png, id=188, 691.98524pt x 591.4095pt>
+ [40] [41 <./traditionalView.png>]
+<rangeView.png, id=182, 691.98524pt x 591.4095pt>
 File: rangeView.png Graphic file (type png)
  <use rangeView.png>
-Package pdftex.def Info: rangeView.png used on input line 129.
+Package pdftex.def Info: rangeView.png used on input line 124.
 (pdftex.def)             Requested size: 411.9399pt x 352.06898pt.
- [44]
-[45 <./rangeView.png>] [46]
-Overfull \hbox (15.0pt too wide) in paragraph at lines 153--155
+ [42]
+[43 <./rangeView.png>] [44]
+Overfull \hbox (15.0pt too wide) in paragraph at lines 146--148
 [][]
  []
 
-<startUpImplemented.png, id=202, 873.2625pt x 638.98724pt>
+<startUpImplemented.png, id=194, 873.2625pt x 638.98724pt>
 File: startUpImplemented.png Graphic file (type png)
 
 <use startUpImplemented.png>
-Package pdftex.def Info: startUpImplemented.png used on input line 163.
+Package pdftex.def Info: startUpImplemented.png used on input line 155.
 (pdftex.def)             Requested size: 411.9399pt x 301.42581pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<editDialogImplemented.png, id=203, 363.759pt x 327.624pt>
+<editDialogImplemented.png, id=195, 363.759pt x 327.624pt>
 File: editDialogImplemented.png Graphic file (type png)
 
 <use editDialogImplemented.png>
-Package pdftex.def Info: editDialogImplemented.png used on input line 169.
+Package pdftex.def Info: editDialogImplemented.png used on input line 161.
 (pdftex.def)             Requested size: 411.9399pt x 371.02565pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<viewDocImplemented.png, id=204, 616.704pt x 505.89pt>
+<viewDocImplemented.png, id=196, 616.704pt x 505.89pt>
 File: viewDocImplemented.png Graphic file (type png)
 
 <use viewDocImplemented.png>
-Package pdftex.def Info: viewDocImplemented.png used on input line 175.
+Package pdftex.def Info: viewDocImplemented.png used on input line 167.
 (pdftex.def)             Requested size: 411.9399pt x 337.92558pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[47] [48 <./startUpImplemented.png>] [49 <./editDialogImplemented.png>]
-[50 <./viewDocImplemented.png>] [51] [52] [53]
+[45] [46 <./startUpImplemented.png>] [47 <./editDialogImplemented.png>]
+[48 <./viewDocImplemented.png>] [49] [50] [51]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[54]
+[52]
 Overfull \vbox (57.76021pt too high) has occurred while \output is active []
 
 
-[55]) [56]
+[53])
 \openout2 = `Chapters/ProfessionalIssues.aux'.
 
  (./Chapters/ProfessionalIssues.tex
 Chapter 6.
-[57
+) [54
 
 
 
-]) [58]
+]
 \openout2 = `Chapters/Evaluation.aux'.
 
  (./Chapters/Evaluation.tex
 Chapter 7.
-[59
+[55
 
 
 
-] [60] [61] [62] [63] [64] [65] [66] [67]
-Underfull \hbox (badness 1005) in paragraph at lines 150--150
+] [56] [57] [58] [59] [60] [61] [62] [63]
+Underfull \hbox (badness 1005) in paragraph at lines 139--139
 []\T1/lmr/m/n/10 Comparing Sys-tem to Man-ual
  []
 
 
-Underfull \hbox (badness 2600) in paragraph at lines 153--153
+Underfull \hbox (badness 2600) in paragraph at lines 142--142
 []\T1/lmr/m/n/10 Difference In col-lected events
  []
 
 
-Underfull \hbox (badness 1360) in paragraph at lines 157--157
+Underfull \hbox (badness 1360) in paragraph at lines 146--146
 []\T1/lmr/m/n/10 Percentage (%) of events not
  []
 
 
-Overfull \hbox (156.46068pt too wide) in paragraph at lines 148--166
+Overfull \hbox (156.46068pt too wide) in paragraph at lines 137--155
 [][] 
  []
 
 
-Underfull \hbox (badness 1005) in paragraph at lines 172--172
+Underfull \hbox (badness 1005) in paragraph at lines 161--161
 []\T1/lmr/m/n/10 Comparing Sys-tem to Man-ual
  []
 
 
-Underfull \hbox (badness 2600) in paragraph at lines 175--175
+Underfull \hbox (badness 2600) in paragraph at lines 164--164
 []\T1/lmr/m/n/10 Difference In col-lected events
  []
 
 
-Underfull \hbox (badness 1360) in paragraph at lines 179--179
+Underfull \hbox (badness 1360) in paragraph at lines 168--168
 []\T1/lmr/m/n/10 Percentage (%) of events not
  []
 
 
-Overfull \hbox (156.46068pt too wide) in paragraph at lines 170--188
+Overfull \hbox (156.46068pt too wide) in paragraph at lines 159--177
 [][] 
  []
 
 
-Underfull \hbox (badness 1005) in paragraph at lines 194--194
+Underfull \hbox (badness 1005) in paragraph at lines 183--183
 []\T1/lmr/m/n/10 Comparing Sys-tem to Man-ual
  []
 
 
-Underfull \hbox (badness 2600) in paragraph at lines 197--197
+Underfull \hbox (badness 2600) in paragraph at lines 186--186
 []\T1/lmr/m/n/10 Difference In col-lected events
  []
 
 
-Underfull \hbox (badness 1360) in paragraph at lines 201--201
+Underfull \hbox (badness 1360) in paragraph at lines 190--190
 []\T1/lmr/m/n/10 Percentage (%) of events not
  []
 
 
-Overfull \hbox (156.46068pt too wide) in paragraph at lines 192--210
+Overfull \hbox (156.46068pt too wide) in paragraph at lines 181--199
 [][] 
  []
 
 
-LaTeX Warning: Float too large for page by 9.71606pt on input line 215.
+LaTeX Warning: Float too large for page by 9.71606pt on input line 204.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-) [68] [69]
+) [64] [65]
 \openout2 = `Chapters/Conclusion.aux'.
 
  (./Chapters/Conclusion.tex
 Chapter 8.
-[70
+[66
 
 
 
-] [71]) [72] (./report.bbl [73
+] [67]) [68] (./report.bbl [69
 
 
-]) [74]
+]) [70]
 \openout2 = `Appendices/appendix.aux'.
 
  (./Appendices/appendix.tex
 Appendix A.
-[75
+[71
 
 
-] [76] [77] [78] [79] [80] [81]
-Underfull \hbox (badness 1297) in paragraph at lines 284--285
+] [72] [73] [74] [75] [76]
+Underfull \hbox (badness 1297) in paragraph at lines 282--283
 []\T1/lmr/m/n/10 (British, Madeleine Mc-Cann, Por-tuguese):
  []
 
-[82]
-Underfull \hbox (badness 1082) in paragraph at lines 328--329
+[77]
+Underfull \hbox (badness 1082) in paragraph at lines 326--327
 \T1/lmr/m/n/10 ar-eas of land in Al-garve, close to where
  []
 
 
-Underfull \hbox (badness 1478) in paragraph at lines 336--337
+Underfull \hbox (badness 1478) in paragraph at lines 334--335
 []\T1/lmr/m/n/10 Detectives will spend three days work-ing
  []
 
-[83]
-Underfull \hbox (badness 10000) in paragraph at lines 360--361
+[78]
+Underfull \hbox (badness 10000) in paragraph at lines 358--359
 []\T1/lmr/m/n/10 Detectives in-ves-ti-gated 11 peo-ple on
  []
 
 
-Underfull \hbox (badness 1009) in paragraph at lines 378--379
+Underfull \hbox (badness 1009) in paragraph at lines 376--377
 []\T1/lmr/m/n/10 (Portuguese, Met) Por-tuguese po-lice close
  []
 
-[84] [85] [86] [87] [88]
-Underfull \hbox (badness 2538) in paragraph at lines 464--464
+[79] [80] [81] [82] [83]
+Underfull \hbox (badness 2538) in paragraph at lines 462--462
 []\T1/lmr/m/n/10 Listing A.3: |Madeleine Mc-Cann de-tec-tives ar-rive in Por-tu
 -gal to ques-tion 11 sus-
  []
 
 
-Underfull \hbox (badness 1565) in paragraph at lines 464--464
+Underfull \hbox (badness 1565) in paragraph at lines 462--462
 \T1/lmr/m/n/10 pects. Pub-lished: 9th of De-cem-ber 2014. URL: https://www.theg
 uardian.com/uk-
  []
 
-[89]
+[84]
 Missing character: There is no œ in font t1-zi4r-0!
 
-Underfull \hbox (badness 1038) in paragraph at lines 496--496
+Underfull \hbox (badness 1038) in paragraph at lines 494--494
 []\T1/lmr/bx/n/10 Error Pre-ven-tion\T1/lmr/m/n/10 : Pre-vent er-rors
  []
 
 
-Underfull \hbox (badness 1226) in paragraph at lines 502--502
+Underfull \hbox (badness 1226) in paragraph at lines 500--500
 []\T1/lmr/bx/n/10 Aesthetic and Min-i-mal-is-tic De-
  []
 
 
-Overfull \hbox (10.39867pt too wide) in paragraph at lines 483--509
+Overfull \hbox (10.39867pt too wide) in paragraph at lines 481--507
 [][] 
  []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-) [90] [91]
+) [85] [86]
 \openout2 = `Appendices/UserGuide.aux'.
 
  (./Appendices/UserGuide.tex
 Appendix B.
-<gradleVersion.PNG, id=353, 433.01775pt x 166.82326pt>
+<gradleVersion.PNG, id=337, 433.01775pt x 166.82326pt>
 File: gradleVersion.PNG Graphic file (type png)
  <use gradleVersion.PNG>
-Package pdftex.def Info: gradleVersion.PNG used on input line 13.
+Package pdftex.def Info: gradleVersion.PNG used on input line 7.
 (pdftex.def)             Requested size: 433.01668pt x 166.82285pt.
 
-Overfull \hbox (21.07678pt too wide) in paragraph at lines 13--15
+Overfull \hbox (21.07678pt too wide) in paragraph at lines 7--9
  [][] 
  []
 
-[92
-
-
-
-] <folderDirectory.PNG, id=357, 470.9595pt x 174.6525pt>
+<folderDirectory.PNG, id=338, 470.9595pt x 174.6525pt>
 File: folderDirectory.PNG Graphic file (type png)
 
 <use folderDirectory.PNG>
-Package pdftex.def Info: folderDirectory.PNG used on input line 23.
+Package pdftex.def Info: folderDirectory.PNG used on input line 17.
 (pdftex.def)             Requested size: 470.95834pt x 174.65207pt.
 
-Overfull \hbox (59.01845pt too wide) in paragraph at lines 23--25
+Overfull \hbox (59.01845pt too wide) in paragraph at lines 17--19
  [][] 
  []
 
-<traverseToRootDir.PNG, id=358, 349.90726pt x 75.8835pt>
+[87
+
+
+
+ <./gradleVersion.PNG>]
+<traverseToRootDir.PNG, id=344, 349.90726pt x 75.8835pt>
 File: traverseToRootDir.PNG Graphic file (type png)
 
 <use traverseToRootDir.PNG>
-Package pdftex.def Info: traverseToRootDir.PNG used on input line 30.
+Package pdftex.def Info: traverseToRootDir.PNG used on input line 24.
 (pdftex.def)             Requested size: 349.90639pt x 75.8833pt.
- [93 <./gradleVersion.PNG> <./folderDirectory.PNG>]
-<gradleRun.PNG, id=365, 655.248pt x 181.27725pt>
+ <gradleRun.PNG, id=345, 655.248pt x 181.27725pt>
 File: gradleRun.PNG Graphic file (type png)
- <use gradleRun.PNG>
-Package pdftex.def Info: gradleRun.PNG used on input line 37.
+
+<use gradleRun.PNG>
+Package pdftex.def Info: gradleRun.PNG used on input line 31.
 (pdftex.def)             Requested size: 411.9399pt x 113.96739pt.
-
-<gradleBuild.PNG, id=366, 492.6405pt x 225.84375pt>
+ <gradleBuild.PNG, id=346, 492.6405pt x 225.84375pt>
 File: gradleBuild.PNG Graphic file (type png)
- <use gradleBuild.PNG>
-Package pdftex.def Info: gradleBuild.PNG used on input line 44.
-(pdftex.def)             Requested size: 411.9399pt x 188.85281pt.
 
-<gradleTest.PNG, id=367, 433.01775pt x 137.91525pt>
+<use gradleBuild.PNG>
+Package pdftex.def Info: gradleBuild.PNG used on input line 38.
+(pdftex.def)             Requested size: 411.9399pt x 188.85281pt.
+ [88 <./folderDirectory.PNG> <./traverseToRootDir.PNG> <./gradleRun.PNG>] <grad
+leTest.PNG, id=353, 433.01775pt x 137.91525pt>
 File: gradleTest.PNG Graphic file (type png)
- <use gradleTest.PNG>
-Package pdftex.def Info: gradleTest.PNG used on input line 51.
+
+<use gradleTest.PNG>
+Package pdftex.def Info: gradleTest.PNG used on input line 45.
 (pdftex.def)             Requested size: 433.01668pt x 137.9149pt.
 
-Overfull \hbox (21.07678pt too wide) in paragraph at lines 51--53
+Overfull \hbox (21.07678pt too wide) in paragraph at lines 45--47
  [][] 
  []
 
-[94 <./traverseToRootDir.PNG> <./gradleRun.PNG> <./gradleBuild.PNG>]
-<gradlewRun.PNG, id=374, 646.21425pt x 254.75175pt>
+<gradlewRun.PNG, id=354, 646.21425pt x 254.75175pt>
 File: gradlewRun.PNG Graphic file (type png)
  <use gradlewRun.PNG>
-Package pdftex.def Info: gradlewRun.PNG used on input line 60.
+Package pdftex.def Info: gradlewRun.PNG used on input line 54.
 (pdftex.def)             Requested size: 411.9399pt x 162.39917pt.
 
-<downloadingLibraries.PNG, id=375, 401.70074pt x 148.1535pt>
+[89 <./gradleBuild.PNG> <./gradleTest.PNG>]
+<downloadingLibraries.PNG, id=360, 401.70074pt x 148.1535pt>
 File: downloadingLibraries.PNG Graphic file (type png)
 
 <use downloadingLibraries.PNG>
-Package pdftex.def Info: downloadingLibraries.PNG used on input line 67.
+Package pdftex.def Info: downloadingLibraries.PNG used on input line 61.
 (pdftex.def)             Requested size: 401.69975pt x 148.15314pt.
 
-<gradlewTest.PNG, id=376, 386.6445pt x 159.59625pt>
+<gradlewTest.PNG, id=361, 386.6445pt x 159.59625pt>
 File: gradlewTest.PNG Graphic file (type png)
  <use gradlewTest.PNG>
-Package pdftex.def Info: gradlewTest.PNG used on input line 74.
+Package pdftex.def Info: gradlewTest.PNG used on input line 68.
 (pdftex.def)             Requested size: 386.64355pt x 159.59584pt.
 
-[95 <./gradleTest.PNG> <./gradlewRun.PNG> <./downloadingLibraries.PNG>]
+[90 <./gradlewRun.PNG> <./downloadingLibraries.PNG> <./gradlewTest.PNG>]
+<fileDirectory.PNG, id=368, 452.28975pt x 275.22826pt>
+File: fileDirectory.PNG Graphic file (type png)
+ <use fileDirectory.PNG>
+Package pdftex.def Info: fileDirectory.PNG used on input line 77.
+(pdftex.def)             Requested size: 452.28865pt x 275.22758pt.
 
-LaTeX Warning: Reference `fig:fileDirectory' on page 96 undefined on input line
- 78.
-
-<confirmArticles.PNG, id=383, 298.11375pt x 264.99pt>
-File: confirmArticles.PNG Graphic file (type png)
-
-<use confirmArticles.PNG>
-Package pdftex.def Info: confirmArticles.PNG used on input line 83.
-(pdftex.def)             Requested size: 298.11302pt x 264.98935pt.
- [96 <./gradlewTest.PNG>]
-<loaded.PNG, id=389, 932.283pt x 564.9105pt>
-File: loaded.PNG Graphic file (type png)
- <use loaded.PNG>
-Package pdftex.def Info: loaded.PNG used on input line 90.
-(pdftex.def)             Requested size: 411.9399pt x 249.613pt.
-
-<editEvent.PNG, id=390, 363.759pt x 327.624pt>
-File: editEvent.PNG Graphic file (type png)
- <use editEvent.PNG>
-Package pdftex.def Info: editEvent.PNG used on input line 98.
-(pdftex.def)             Requested size: 363.75812pt x 327.62318pt.
- [97 <./confirmArticles.PNG> <./loaded.PNG>]
-<removeDoc.PNG, id=396, 169.23225pt x 33.726pt>
-File: removeDoc.PNG Graphic file (type png)
- <use removeDoc.PNG>
-Package pdftex.def Info: removeDoc.PNG used on input line 105.
-(pdftex.def)             Requested size: 169.23184pt x 33.7259pt.
-
-<preferences.PNG, id=397, 498.06075pt x 313.17pt>
-File: preferences.PNG Graphic file (type png)
- <use preferences.PNG>
-Package pdftex.def Info: preferences.PNG used on input line 114.
-(pdftex.def)             Requested size: 498.05952pt x 313.16922pt.
-
-Overfull \hbox (86.11963pt too wide) in paragraph at lines 114--116
+Overfull \hbox (40.34875pt too wide) in paragraph at lines 77--79
  [][] 
  []
 
-[98 <./editEvent.PNG> <./removeDoc.PNG>]
-<saveTo.PNG, id=403, 287.8755pt x 88.53075pt>
+<confirmArticles.PNG, id=369, 298.11375pt x 264.99pt>
+File: confirmArticles.PNG Graphic file (type png)
+
+<use confirmArticles.PNG>
+Package pdftex.def Info: confirmArticles.PNG used on input line 84.
+(pdftex.def)             Requested size: 298.11302pt x 264.98935pt.
+ [91 <./fileDirectory.PNG>]
+<loaded.PNG, id=374, 932.283pt x 564.9105pt>
+File: loaded.PNG Graphic file (type png)
+ <use loaded.PNG>
+Package pdftex.def Info: loaded.PNG used on input line 91.
+(pdftex.def)             Requested size: 411.9399pt x 249.613pt.
+
+<editEvent.PNG, id=375, 363.759pt x 327.624pt>
+File: editEvent.PNG Graphic file (type png)
+ <use editEvent.PNG>
+Package pdftex.def Info: editEvent.PNG used on input line 99.
+(pdftex.def)             Requested size: 363.75812pt x 327.62318pt.
+ [92 <./confirmArticles.PNG> <./loaded.PNG>]
+<removeDoc.PNG, id=381, 169.23225pt x 33.726pt>
+File: removeDoc.PNG Graphic file (type png)
+ <use removeDoc.PNG>
+Package pdftex.def Info: removeDoc.PNG used on input line 106.
+(pdftex.def)             Requested size: 169.23184pt x 33.7259pt.
+
+<preferences.PNG, id=382, 498.06075pt x 313.17pt>
+File: preferences.PNG Graphic file (type png)
+ <use preferences.PNG>
+Package pdftex.def Info: preferences.PNG used on input line 115.
+(pdftex.def)             Requested size: 498.05952pt x 313.16922pt.
+
+Overfull \hbox (86.11963pt too wide) in paragraph at lines 115--117
+ [][] 
+ []
+
+[93 <./editEvent.PNG> <./removeDoc.PNG>]
+<saveTo.PNG, id=389, 287.8755pt x 88.53075pt>
 File: saveTo.PNG Graphic file (type png)
  <use saveTo.PNG>
-Package pdftex.def Info: saveTo.PNG used on input line 123.
+Package pdftex.def Info: saveTo.PNG used on input line 124.
 (pdftex.def)             Requested size: 287.87479pt x 88.5305pt.
-) [99 <./preferences.PNG> <./saveTo.PNG>]
+) [94 <./preferences.PNG> <./saveTo.PNG>]
 \openout2 = `Appendices/SourceCode.aux'.
 
  (./Appendices/SourceCode.tex
 Appendix C.
-[100
+[95
 
 
 
@@ -1562,76 +1573,72 @@ Overfull \hbox (7.84349pt too wide) in paragraph at lines 43--44
 the Doc-u-ment Reader
  []
 
-[101]
+[96]
 Overfull \hbox (0.4553pt too wide) in paragraph at lines 66--67
 []\T1/lmr/m/n/10 DocumentReaderObserver.java: in-ter-face for the ob-server of 
 the Doc-u-men-tRead-
  []
 
-[102] [103] [104] [105] [106] [107] [108] [109] [110] [111] [112] [113]
-[114] [115] [116] [117] [118] [119] [120] [121] [122] [123] [124] [125]
-[126] [127] [128] [129] [130] [131] [132] [133] [134] [135] [136] [137]
-[138] [139] [140] [141] [142] [143] [144] [145] [146] [147] [148] [149]
-[150] [151] [152] [153] [154] [155] [156] [157] [158] [159] [160] [161]
-[162] [163] [164] [165] [166] [167] [168] [169] [170] [171] [172] [173]
-[174] [175] [176] [177] [178] [179] [180] [181] [182] [183] [184] [185]
-[186] [187] [188] [189] [190] [191] [192] [193] [194] [195] [196] [197]
-[198] [199] [200] [201] [202] [203] [204] [205] [206] [207] [208] [209]
-[210] [211] [212] [213] [214] [215] [216] [217] [218] [219] [220] [221]
-[222]
-Overfull \hbox (29.05956pt too wide) in paragraph at lines 3923--3924
+[97] [98] [99] [100] [101] [102] [103] [104] [105] [106] [107] [108] [109]
+[110] [111] [112] [113] [114] [115] [116] [117] [118] [119] [120] [121]
+[122] [123] [124] [125] [126] [127] [128] [129] [130] [131] [132] [133]
+[134] [135] [136] [137] [138] [139] [140] [141] [142] [143] [144] [145]
+[146] [147] [148] [149] [150] [151] [152] [153] [154] [155] [156] [157]
+[158] [159] [160] [161] [162] [163] [164] [165] [166] [167] [168] [169]
+[170] [171] [172] [173] [174] [175] [176] [177] [178] [179] [180] [181]
+[182] [183] [184] [185] [186] [187] [188] [189] [190] [191] [192] [193]
+[194] [195] [196] [197] [198] [199] [200] [201] [202] [203] [204] [205]
+[206] [207] [208] [209] [210] [211] [212] [213] [214] [215] [216]
+Overfull \hbox (29.05956pt too wide) in paragraph at lines 3916--3917
 [][][][][][][][][][][][][][][][][][][][][][]  
  []
 
-[223] [224] [225] [226] [227] [228] [229] [230] [231] [232] [233] [234]
-[235]
-Overfull \hbox (14.65977pt too wide) in paragraph at lines 4362--4363
+[217] [218] [219] [220] [221] [222] [223] [224] [225] [226] [227] [228]
+[229] [230]
+Overfull \hbox (14.65977pt too wide) in paragraph at lines 4355--4356
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]  
  []
 
-[236] [237] [238] [239] [240] [241] [242] [243] [244] [245] [246] [247]
-[248]
-Overfull \hbox (3.85912pt too wide) in paragraph at lines 4783--4784
+[231] [232] [233] [234] [235] [236] [237] [238] [239] [240] [241] [242]
+[243]
+Overfull \hbox (3.85912pt too wide) in paragraph at lines 4776--4777
 [][][][][][][][][][][][][][][][][][][] 
  []
 
-[249] [250] [251] [252] [253] [254] [255] [256] [257] [258] [259] [260]
-[261] [262] [263] [264] [265]
-Overfull \hbox (5.65977pt too wide) in paragraph at lines 5323--5324
+[244] [245] [246] [247] [248] [249] [250] [251] [252] [253] [254] [255]
+[256] [257] [258] [259]
+Overfull \hbox (5.65977pt too wide) in paragraph at lines 5316--5317
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]  
  []
 
-[266] [267] [268] [269] [270] [271] [272] [273] [274] [275] [276] [277]
-[278] [279] [280] [281] [282] [283] [284] [285] [286] [287] [288] [289]
-[290] [291] [292] [293] [294] [295] [296] [297] [298] [299] [300] [301]
-[302] <icaddcircleoutline.png, id=1056, 24.09pt x 24.09pt>
+[260] [261] [262] [263] [264] [265] [266] [267] [268] [269] [270] [271]
+[272] [273] [274] [275] [276] [277] [278] [279] [280] [281] [282] [283]
+[284] [285] [286] [287] [288] [289] [290] [291] [292] [293] [294] [295]
+[296] [297] <icaddcircleoutline.png, id=1043, 24.09pt x 24.09pt>
 File: icaddcircleoutline.png Graphic file (type png)
 
 <use icaddcircleoutline.png>
-Package pdftex.def Info: icaddcircleoutline.png used on input line 6542.
+Package pdftex.def Info: icaddcircleoutline.png used on input line 6535.
 (pdftex.def)             Requested size: 24.08992pt x 24.08992pt.
- <iccloseblack.png, id=1057, 14.454pt x 14.454pt>
+ <iccloseblack.png, id=1044, 14.454pt x 14.454pt>
 File: iccloseblack.png Graphic file (type png)
 
 <use iccloseblack.png>
-Package pdftex.def Info: iccloseblack.png used on input line 6548.
+Package pdftex.def Info: iccloseblack.png used on input line 6541.
 (pdftex.def)             Requested size: 14.45393pt x 14.45393pt.
- [303 <./icaddcircleoutline.png>] [304 <./iccloseblack.png>] [305] [306] [307] 
-[308] [309] [310] [311] [312] [313] [314] [315] [316]
-[317] [318] [319] [320] [321] [322] [323] [324] [325] [326] [327] [328]
-[329] [330] [331] [332] [333] [334] [335] [336] [337] [338] [339] [340]
-[341] [342] [343] [344] [345] [346] [347] [348] [349] [350] [351] [352]
-[353] [354] [355] [356] [357] [358]
+ [298 <./icaddcircleoutline.png> <./iccloseblack.png>]
+[299] [300] [301] [302] [303] [304] [305] [306] [307] [308] [309] [310]
+[311] [312] [313] [314] [315] [316] [317] [318] [319] [320] [321] [322]
+[323] [324] [325] [326] [327] [328] [329] [330] [331] [332] [333] [334]
+[335] [336] [337] [338] [339] [340] [341] [342] [343] [344] [345] [346]
+[347] [348] [349] [350] [351] [352] [353]
 Missing character: There is no œ in font t1-zi4r-0!
- [359]) [360] (./report.aux
+ [354]) [355] (./report.aux
 (./Chapters/Background.aux) (./Chapters/RequirementsSpecification.aux)
 (./Chapters/Design.aux) (./Chapters/Implementation.aux)
 (./Chapters/ProfessionalIssues.aux) (./Chapters/Evaluation.aux)
 (./Chapters/Conclusion.aux) (./Appendices/appendix.aux)
 (./Appendices/UserGuide.aux) (./Appendices/SourceCode.aux))
-
-LaTeX Warning: There were undefined references.
-
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
@@ -1641,10 +1648,10 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 ### simple group (level 1) entered at line 1061 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 23767 strings out of 493013
- 431745 string characters out of 6136993
- 639961 words of memory out of 5000000
- 26800 multiletter control sequences out of 15000+600000
+ 23805 strings out of 493013
+ 432629 string characters out of 6136993
+ 640436 words of memory out of 5000000
+ 26837 multiletter control sequences out of 15000+600000
  81966 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,18n,94p,1983b,14675s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1664,10 +1671,10 @@ e/2016/texmf-dist/fonts/type1/public/lm/lmr9.pfb><d:/texlive/2016/texmf-dist/fo
 nts/type1/public/lm/lmri10.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/m
 athabx-type1/matha10.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/stmaryr
 d/stmary10.pfb>
-Output written on report.pdf (364 pages, 2028787 bytes).
+Output written on report.pdf (359 pages, 2003985 bytes).
 PDF statistics:
- 1314 PDF objects out of 1440 (max. 8388607)
- 861 compressed objects within 9 object streams
+ 1299 PDF objects out of 1440 (max. 8388607)
+ 849 compressed objects within 9 object streams
  0 named destinations out of 1000 (max. 500000)
- 173 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 178 words of extra memory for PDF output out of 10000 (max. 10000000)
 

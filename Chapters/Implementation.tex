@@ -1,7 +1,6 @@
 \chapter{Implementation}
--How implemented
 \section{Approach}
-\par The development approach focused on the business-logic, or back-end, of the system. From the two main development methodologies, Waterfall and Agile, the latter was used. In Waterfall, the development process is sequential. Development is a sequence of phases that are completed one after the other. When a stage is completed it is not returned to, as like with a Waterfall, it is not possible to go up to the previous stage (cite). Agile development focuses on adaptive planning, evolutionary development, and continuous improvement. The advantage of using an Agile approach over a Waterfall approach is that unpredicted features and issues are dealt with when they arise. This does make Agile difficult to manage, as there is no clear indication of when the project will be completed.
+\par The development approach focused on the business-logic, or back-end, of the system. From the two main development methodologies, Waterfall and Agile, the latter was used. In Waterfall, the development process is sequential. Development is a sequence of phases that are completed one after the other. When a stage is completed it is not returned to, as like with a Waterfall, it is not possible to go up to the previous stage until the other stages have been completed	. Agile development focuses on adaptive planning, evolutionary development, and continuous improvement. The advantage of using an Agile approach over a Waterfall approach is that unpredicted features and issues are dealt with when they arise. This does make Agile difficult to manage, as there is no clear indication of when the project will be completed.
  
 \par Scrum is an Agile approach that uses Sprint cycles, which are short development periods. In the development cycles, a set of features must be implemented and tested. Testing allows to ensure that when new features are developed, the older features continue to work as expected. At the end of each cycle, meetings are held discussing what are the next steps, and what issues arose during the previous cycle. For this project, the meetings were with the supervisor.
  
@@ -10,10 +9,6 @@
 \par Note that the Agile methodology is used in software development teams. However,	 it can be applied to individual developments, since the structure of the project allows for sprint cycles and review meetings with the supervisor, as well the possibility of new requirements.
 
 \section{Tools \& Software Libraries}
--development environment
--why used that environment
--software libraries (include an example use)
--why
 \par The development environment of the project includes a 64-bit Windows 10 machine, with an Intel Core i7-6700HQ CPU at 2.60GHz and 16.0GB of Random Access Memory (RAM). It includes a Java Intelligent Development Environment (IDE), with Git for version-control, and Gradle for dependency management. 
 
 \par The use of version-control allows development of features to be separated from the current working version of the code through the usage of branches. New features are added to the working version of the code, only if the required tests pass. Note this follows a Git flow development. In Git flow, a develop branch is made with the newest working features of the system, and new features are developed on separate branches. A master branch will only contain the latest fully implemented working version of the product. Using branches allows for bugs and development mistakes to be pin-pointed to the development of a specific feature, and allows the rollback to a previous, bug-free, state.
@@ -24,7 +19,7 @@ Where gradlew is a wrapper for Gradle, such that the user does not even have to 
 
 \par As mentioned in the Background chapter, multiple libraries exist to aid the task of NLP. These are especially needed for the Named Entity Recognition(NER) and Text Summary tasks. An NER annotator will tag certain words, or collection of words into predefined categories such as People, Companies, Locations, and Money. These tools also aid in tagging words using the POS Treebank, which is a requirement to use the Hedge-Trimmer algorithm \cite{dorrzajicschwartz2003} to produce summaries. Using an NLP library speeds up the production of the system, as manually building an annotator requires multiple developers and years of work. As can be seen from the release history of the Stanford CoreNLP tool, development began in 2010 and the latest release was in 2016\footnote{\url{http://stanfordnlp.github.io/CoreNLP/history.html}}. The main two NLP tools available are Apache's OpenNLP\footnote{\url{https://opennlp.apache.org/}} and Stanford's CoreNLP\footnote{\url{http://stanfordnlp.github.io/CoreNLP/index.html}}. For this project, the Stanford's tool was used in the implementation, as it provides an extensive documentation and examples, along with specific sections describing their annotators in detail.
 
-\par The Stanford tool is the main library used throughout the project, as the project is reliant on its NER and POS annotators (cite the stanford annotators). It comes with models, that are loaded during the initialisation of the system. These models are used in the statistical calculations in the annotators to determine whether certain words fall in predefined categories, or which POS tag should be given to them.
+\par The Stanford tool is the main library used throughout the project, as the project is reliant on its NER \cite{finkelgrenagermanning2005} and POS \cite{toutanovakleinmanningsinger2003} annotators. It comes with models, that are loaded during the initialisation of the system. These models are used in the statistical calculations in the annotators to determine whether certain words fall in predefined categories, or which POS tag should be given to them.
 
 \par Due to the two main NLP libraries available being Java implementations, the decision was made to build the system in that language. It would be problematic to build the system in a different language to its libraries, as it would require making the two programming languages communicate with each other, which can cause unpredictable problems in the development and execution of the system.
 
@@ -136,12 +131,10 @@ return toReturn\;
 \par An issue discovered, was that sentences that are separated by a period, but are not followed by a space, are treated as a single sentence. Thereby, it may be possible that only half the events are detected, if every two sentences are only separated by a period (and not a space). In addition, the summary would be applied to second sentence, as the rule of the algorithm details that the lowest-leftmost "S" subtree (i.e. sub-sentence) is picked. The start and end date, would therefore be the lowest date of the two events, and the highest date of the two events, due to how the dates of events are encapsulated in a TimelineDate object (that parses Normalized NER Dates, and updates the start and end dates it holds if a new minimum or maximum is found).
 
 \par This issue cannot be prevented, as it would require manipulation of the input documents, and it can be the case that the user does not want the system to manipulate the input, but rather process it. Hence, it is advised to users to ensure the documents are in grammatically correct English, for the best results possible. Since the system will be used by law professionals, that are handling formal documents, it can be assumed that these documents would follow this format.
--ner dates (explain, then present how to solve it through examples of code)
--new timeline view (present how to solve it through examples of code)
--minor issue of incorrect text
+
 
 \section{Testing}
-\par Unit Tests were the testing focus in this project. A Unit Test is when individual units (or pairs) of source code of a system are tested to determine whether they are working correctly (cite). As the system was implemented in Java, the library used to aid this is JUnit\footnote{\url{http://junit.org/junit4/}}. Unit tests are primarily done on the back-end of a system, as the focus is on correctness in the logic, not in the UI. Automated tests carried out on the UI are called Instrumentation Tests. They involve emulating users' interaction with the system, i.e. pressing a button or filling in a text field. Both Unit and Instrumentation tests are automated, such that they are carried out one after the other without the involvement of the developer.
+\par Unit Tests were the testing focus in this project. A Unit Test is when individual units (or pairs) of source code of a system are tested to determine whether they are working correctly \cite{agilealliance2017}. As the system was implemented in Java, the library used to aid this is JUnit\footnote{\url{http://junit.org/junit4/}}. Unit tests are primarily done on the back-end of a system, as the focus is on correctness in the logic, not in the UI. Automated tests carried out on the UI are called Instrumentation Tests. They involve emulating users' interaction with the system, i.e. pressing a button or filling in a text field. Both Unit and Instrumentation tests are automated, such that they are carried out one after the other without the involvement of the developer.
 
 \par The reason as to why only Unit Tests were used, is that the systems primary focus is its processing of documents, and not its graphical representation. The representation is used to display the results; however, the system could also be used to process texts. Thus, the resulting intermediate JSON would be used in a third-party visual representation. Therefore, Instrumentation tests were not carried out.
 
@@ -154,7 +147,6 @@ return toReturn\;
 In the build command, Gradle will not only run the test cases, but also produce the executable JAR which can be used to distribute the system as an executable to its non-developer users.
 
 \section{UI}
-//implementation ofthe UI.
 \par From the wireframes presented in the Design Chapter, the actual User Interfaces(UI) was developed. The screenshots of the different windows are presented in the Figures below (see Figures \ref{fig:startUpImplemented}, \ref{fig:traditionalView}, \ref{fig:rangeView}, \ref{fig:editDialogImplemented}, and \ref{fig:viewDocImplemented}). Note that the interfaces provide the requested functionality through buttons and menus. Colour is missing as the focus was on functionality, visibility, and simplicity, instead of the UI being aesthetically pleasing. The system is aimed to be used for task completion, not enjoyment. The UI was, thus, developed to accomplish these tasks.
 
 \begin{figure}[h]
@@ -183,7 +175,6 @@ In the build command, Gradle will not only run the test cases, but also produce 
 \par An advantage of the Traditional View over the Range view, is memory efficiency. Since the Range view has the function of being zoomable, due to programming language constraints, it cannot be implemented through a ListView. A ListView is a layout data structure where objects of a list are placed row by row. The ListView is memory efficient. It only produces the layout for a row when it needs to be shown. For example, for a list of 10000 items, it is very expensive to hold in memory the individual layouts of 10000 rows, especially if only 5 are being shown. Instead, only the 5 that are being shown are held in memory, and the rest are generated when needed. This is not the case with the Range View, due to it having the zoom function, and thus not being a ListView. As the memory capacity of personal computing systems (where the tool is intended to be used, but is not limited to) is large, this would not be an issue for the processing of tens or hundreds of events, however for larger sets this would cause memory issues. For large sets of events, the traditional view is recommended.
 
 \section{Important Algorithms}
-//highlight algorithm implementation: processing of files through semaphores, adding to ranges, pdf save and json save
 \par This section presents note-worthy algorithms, in specific their implementation.
 \subsection{Processing Files}
 \par The pseudo-code of processing files was presented in the Design Chapter. The use of semaphores was also mentioned. Semaphores enforce that only $n$ processes can acquire their lock, with the $n+1$ process having to wait until another process releases its lock. However, the implementation is not trivial.
@@ -326,4 +317,3 @@ public JsonElement serialize(Result src, Type typeOfSrc, JsonSerializationContex
 \label{fig:adapterGsonImplemented}
 \end{figure}
 
--main algorithms: for building events, building ranges, pdf save, json save, processing files

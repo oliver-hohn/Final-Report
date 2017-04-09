@@ -1,18 +1,11 @@
 \chapter{Evaluation}
--present how did analysis, why?, other options (relate to work)
--results of analysis
--conclusion
 \par As presented in the Design chapter, the objectives of the system are: visibility, efficiency, and effectiveness. To evaluate each of these, the chapter is split into three sections. Each addressing an objective.
 
 %\section{Software Testing}
 \section{Visibility}
--explain expert heuristic
--knowledge of expert
--that this is the least important of the three as the ui can be built by third party and only processing is used.
-
 \par To evaluate the visibility of the system, an expert heuristic using the Nielsen Usability Heuristic \cite{nielsen1995} set was used. This involves an expert evaluating the UI of the system with a set of principles, which have been tested, and then discussing the system for each principle. The evaluation can be formal or informal. The former was chosen, as it was carried out at the end of the development. Informal evaluations are done when analysis needs to be done during the iterations of design, since it provides feedback quicker and allows designers to discuss the problems when producing the next design. Formal evaluation is done, usually, at the end of the development cycle when the system is being evaluated. In this case, the focus is on evaluating visibility. Heuristics do not only focus on visibility, since some of the principles focus on error prevention. However, these are also important for a system that is to be simple to use.
 
-\par Other heuristic sets exist; however, the Nielsen set is the most known set\footnote{\url{https://www.usability.gov/how-to-and-tools/methods/heuristic-evaluation.html}}. Another prominent design evaluation is cognitive walkthroughs. They consist of giving experts, scenarios to go through, and during their progression of the scenarios, they  answer three questions related to design issues (cite).
+\par Other heuristic sets exist; however, the Nielsen set is the most known set\footnote{\url{https://www.usability.gov/how-to-and-tools/methods/heuristic-evaluation.html}}. Another prominent design evaluation is cognitive walkthroughs. They consist of giving experts, scenarios to go through, and during their progression of the scenarios, they answer three questions related to design issues \cite{whartonriemanlewispolson1994}.
 
 \par Due to time constraint, only one in-depth expert heuristic could be carried out. Normally, there would be multiple experts, each carrying out their own evaluation, and then they would discuss between themselves to produce a single document detailing the usability problems. In this case, the expert has experience in applying the principles from previous projects. Note that they do have technical knowledge in Computer Science, hence they are not considering the system from a novice users perspective, but rather in identifying where the system satisfies the principles. Experts may be biased in how they believe a design should be, however this is expected as designs are a subjective matter.
 
@@ -31,9 +24,9 @@
 \section{Efficiency}
 \par Efficiency relates to the time it takes for the system to produce an answer. A system is efficient if it produces a result in an appropriate amount of time based on its input.
 
-\par A way to evaluate this is to run the system on different inputs and record the time taken to produce a timeline. However, the time recorded is specific not only to the machine that the system is being run on, but also how the CPU scheduled the work at that point in time (i.e. how much other work was being carried out on the machine). If the system is running with other tasks running in the background and the CPU gives the application less priority, i.e. other tasks run before this one, then the system will require more time to produce a result. Note that depending on the hardware used when running the system, results may be produced quicker or slower (cite). In addition, not all input sizes can be tested, as the document set size can be infinite. The solution to this is to consider the time complexity of the main algorithms used in the system. 
+\par A way to evaluate this is to run the system on different inputs and record the time taken to produce a timeline. However, the time recorded is specific not only to the machine that the system is being run on, but also how the CPU scheduled the work at that point in time (i.e. how much other work was being carried out on the machine). If the system is running with other tasks running in the background and the CPU gives the application less priority, i.e. other tasks run before this one, then the system will require more time to produce a result. Note that depending on the hardware's computation-power, when running the system, results may be produced quicker or slower. In addition, not all input sizes can be tested, as the document set size can be infinite. The solution to this is to consider the time complexity of the main algorithms used in the system. 
 
-\par The time complexity of an algorithm is, the number of operations, and time required to produce an output for an input of a given size (cite). This allows to determine how well the system scales with larger inputs, by only considering how many operations are performed as a function of the input.
+\par The time complexity of an algorithm is, the number of operations, and time required to produce an output for an input of a given size \cite{sipser2012}. This allows to determine how well the system scales with larger inputs, by only considering how many operations are performed as a function of the input.
 
 \par Time complexity focuses on the worst-case scenario, and does not consider low-order operations. For example, if for an input $n$ an algorithm performs $3n+2$ operations, the low-order term $2$ and the co-efficient $3$ are omitted. This would result in a time complexity $O(n)$ (where $O$ is called big-Oh). In general, the highest order-term is taken, and all the rest are omitted. For example, $4n^2+10n+2$ would have time complexity $O(n^2)$.  Low-order terms are omitted since with a very large input, or as ${n\to\infty}$ ($n$ tends to infinity), the time required for the low-order operations becomes irrelevant. The co-efficient of the high-order term is omitted, as a machine can be 4 times faster, or 4 times slower, so it does not affect, in general, the number of operations performed.
 
@@ -100,14 +93,10 @@ Traditional Timeline View & $n$ - number of Results & $O(n)$\\
 \subsubsection{Timeline UI}
 \par The creation of the timeline view is trivial. For a list of $n$ results, the layout for each row of the ListView is produced. Hence, $n$ rows are produced. This leads to a time complexity of $O(n)$.
 
-\par Note that the ListView used in the system does not hold all rows in memory at once. The layout of a row is only produced if it needs to be shown, i.e. that part of the ListView is visible to the user (cite). Hence, the time complexity to produce the timeline view is less than $O(n)$, as the system does not show all the Results. Only when the size of the ListView is smaller than the amount of allocated screen space it is given, will it have to produce $n$ rows as all rows can be shown, and thus will have a time complexity of $O(n)$.
+\par Note that the ListView used in the system does not hold all rows in memory at once. The layout of a row is only produced if it needs to be shown, i.e. that part of the ListView is visible to the user. Hence, the time complexity to produce the timeline view is less than $O(n)$, as the system does not show all the Results. Only when the size of the ListView is smaller than the amount of allocated screen space it is given, will it have to produce $n$ rows as all rows can be shown, and thus will have a time complexity of $O(n)$.
 
 \section{Effectiveness}
--how did you test?
--participants data?
--safeguard participants
--data set
--why test this way
+
 \par Effectiveness of a system is how correct it is at producing results, in this case timelines. To determine whether a timeline is correct, experimental testing was done. This allows to determine whether the produced timeline is similar to the ones produced by people.
 
 \subsection{Testing Preparations}
@@ -221,34 +210,6 @@ Unknown Dates of Manual Timelines From... & 1 & 0 & 1\\
 \par No statistical analysis could be performed to determine with certainty how accurate the system is, as there is not enough data. However, it can be concluded, that from the data gathered, that the system identifies more than 75\% of the events in the documents, if the manual timelines identify all events.  Events with completely unknown dates (i.e. there are no explicit temporal expressions) are not identified. The summary generation is not optimal, as just above 65\% of the automated timelines capture the meaning of the manual timelines. Thus, showing the weakness of the decision-based summary algorithms, and reasons as to why the domain-dependent statistic models are more prominent. An effective point of the system was the production of exact dates from temporal expressions. For the automated inference of dates, most inferred dates match the dates determined by the test participants.
 
 \par Therefore, the system does not produce perfect summaries that convey the same meaning as the original sentence. However, the system is effective in the production of exact dates from temporal expressions, and does perform well in identifying events.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

@@ -1,15 +1,20 @@
-\begin{thebibliography}{9}
+\begin{thebibliography}{20}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
-\bibitem[gra()]{grammar}
-Sentence subjects.
-\newblock \url{http://grammar.ccc.commnet.edu/GRAMMAr/subjects.htm}.
-\newblock URL \url{http://grammar.ccc.commnet.edu/GRAMMAr/subjects.htm}.
-\newblock Accessed 4 Dec. 2016.
+\bibitem[Alliance()]{agilealliance2017}
+Agile Alliance.
+\newblock Unit testing.
+\newblock \url{https://www.agilealliance.org/glossary/unit-test/}.
+
+\bibitem[Burke()]{oracleagent}
+Dave Burke.
+\newblock Use case actors - primary versus secondary.
+\newblock
+  \url{https://blogs.oracle.com/oum/entry/use_case_actors_primary_versus}.
 
 \bibitem[Chopra et~al.(2016)Chopra, Auli, and Rush]{chopraaulirush2016}
 S.~Chopra, M.~Auli, and A.~Rush.
@@ -31,6 +36,28 @@ B.~Dorr, D.~Zajic, and R.~Schwartz.
 \newblock In \emph{Proceedings of the HLT-NAACL 03 on Text summarization
   Workshop-Volume 5 (ACL)}, pages 1--8, 2003.
 
+\bibitem[Finkel et~al.(2005)Finkel, Grenager, and
+  Manning]{finkelgrenagermanning2005}
+J.~Finkel, T.~Grenager, and C.~Manning.
+\newblock Incorporating non-local information into information extraction
+  systems by gibbs sampling.
+\newblock In \emph{Proceedings of the 43nd Annual Meeting of the Association
+  for Computational Linguistics (ACL 2005)}, pages 363--370, 2005.
+\newblock URL \url{https://nlp.stanford.edu/~manning/papers/gibbscrf3.pdf}.
+
+\bibitem[Foundation()]{grammar}
+Capital Community~College Foundation.
+\newblock Sentence subjects.
+\newblock \url{http://grammar.ccc.commnet.edu/GRAMMAr/subjects.htm}.
+
+\bibitem[Iwanska and Zadrozny(1997)]{iwanskazadrozny1997}
+L.~Iwanska and W.~Zadrozny.
+\newblock Introduction to the special issue on context in natural language
+  processing.
+\newblock \emph{COMPUTATIONAL INTELLIGENCE}, 13\penalty0 (3):\penalty0
+  301--308, 1997.
+\newblock \doi{10.1111/0824-7935.00041}.
+
 \bibitem[Knight and Marcu(2000)]{knightmarcu2000}
 K.~Knight and D.~Marcu.
 \newblock Statistics-based summarization – step one: Sentence compression.
@@ -38,6 +65,11 @@ K.~Knight and D.~Marcu.
   Artificial Intelligence and Twelfth Conference on Innovative Applications of
   Artificial Intelligence}, pages 703--710, 2000.
 \newblock URL \url{http://www.aaai.org/Papers/AAAI/2000/AAAI00-108.pdf}.
+
+\bibitem[Manning et~al.(2009)Manning, Raghavan, and Sch\"utze]{tokenize}
+Christopher~D. Manning, Prabhakar Raghavan, and Hinrich Sch\"utze.
+\newblock \emph{Introduction to Information Retrieval}.
+\newblock Cambridge University Press, Reading, Massachusetts, 2009.
 
 \bibitem[McClosky and Manning(2012)]{mccloskymanning2012}
 D.~McClosky and C.~Manning.
@@ -66,5 +98,41 @@ A.~Rush, S.~Chopra, and J.~Weston.
 \newblock In \emph{Proceedings of the 2015 Conference on Empirical Methods in
   Natural Language Processing}, pages 379--389, 2015.
 \newblock URL \url{http://www.aclweb.org/anthology/D15-1044}.
+
+\bibitem[Sipser(2012)]{sipser2012}
+Michael Sipser.
+\newblock \emph{Introduction to the Theory of Computation}.
+\newblock Cengage Learning, 2012.
+
+\bibitem[Toutanova et~al.(2003)Toutanova, Klein, Manning, and
+  Singer]{toutanovakleinmanningsinger2003}
+Kristina Toutanova, Dan Klein, Christopher Manning, and Yoram Singer.
+\newblock Feature-rich part-of-speech tagging with a cyclic dependency network.
+\newblock In \emph{Proceedings of HLT-NAACL}, pages 252--259, 2003.
+\newblock URL \url{https://nlp.stanford.edu/~manning/papers/tagging.pdf}.
+
+\bibitem[Wharton et~al.(1994)Wharton, Rieman, Lewis, and
+  Polson]{whartonriemanlewispolson1994}
+C.~Wharton, J.~Rieman, C.~Lewis, and P.~Polson.
+\newblock The cognitive walkthrough: A practitioner’s guide.
+\newblock \emph{Usability inspections methods}, pages 105--140, 1994.
+\newblock
+  \doi{http://www.colorado.edu/ics/sites/default/files/attached-files/93-07.pdf}.
+
+\bibitem[Wikipedia({\natexlab{a}})]{cloud}
+Wikipedia.
+\newblock Cloud computing.
+\newblock \url{https://en.wikipedia.org/wiki/Cloud_computing}, {\natexlab{a}}.
+
+\bibitem[Wikipedia({\natexlab{b}})]{machinelearning}
+Wikipedia.
+\newblock Machine learning.
+\newblock \url{https://en.wikipedia.org/wiki/Machine_learning}, {\natexlab{b}}.
+
+\bibitem[Wikipedia({\natexlab{c}})]{nlp}
+Wikipedia.
+\newblock Natural language processing.
+\newblock \url{https://en.wikipedia.org/wiki/Natural_language_processing},
+  {\natexlab{c}}.
 
 \end{thebibliography}

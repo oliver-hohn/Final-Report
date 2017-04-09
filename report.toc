@@ -1,153 +1,150 @@
 \contentsline {chapter}{\numberline {1}Introduction}{3}
 \contentsline {section}{\numberline {1.1}Project Scope}{3}
-\contentsline {section}{\numberline {1.2}Objectives}{4}
+\contentsline {section}{\numberline {1.2}Objectives}{3}
 \contentsline {section}{\numberline {1.3}Report Structure}{4}
 \contentsline {chapter}{\numberline {2}Background}{5}
 \contentsline {section}{\numberline {2.1}Natural Language Processing}{5}
 \contentsline {subsection}{\numberline {2.1.1}Automatic Summarization}{6}
 \contentsline {section}{\numberline {2.2}Data Processing and Representation}{9}
 \contentsline {section}{\numberline {2.3}Normalizing Dates}{13}
-\contentsline {chapter}{\numberline {3}Requirements \& Specification}{15}
-\contentsline {section}{\numberline {3.1}Brief}{15}
-\contentsline {section}{\numberline {3.2}Requirements}{15}
-\contentsline {subsection}{\numberline {3.2.1}Functional Requirements}{15}
-\contentsline {subsection}{\numberline {3.2.2}Non-Functional Requirements}{16}
-\contentsline {section}{\numberline {3.3}Limitations}{17}
-\contentsline {section}{\numberline {3.4}Additional Aims}{18}
-\contentsline {chapter}{\numberline {4}Design}{19}
-\contentsline {section}{\numberline {4.1}Objectives}{19}
-\contentsline {section}{\numberline {4.2}Use Cases}{20}
-\contentsline {section}{\numberline {4.3}Architecture}{23}
-\contentsline {subsection}{\numberline {4.3.1}Process Package}{24}
-\contentsline {subsection}{\numberline {4.3.2}System Package}{26}
-\contentsline {subsection}{\numberline {4.3.3}Ranges Package}{27}
-\contentsline {subsection}{\numberline {4.3.4}Helpers Package}{30}
-\contentsline {section}{\numberline {4.4}Design Patterns}{31}
-\contentsline {section}{\numberline {4.5}UI}{32}
-\contentsline {chapter}{\numberline {5}Implementation}{36}
-\contentsline {section}{\numberline {5.1}Approach}{36}
-\contentsline {section}{\numberline {5.2}Tools \& Software Libraries}{37}
-\contentsline {section}{\numberline {5.3}Issues}{39}
-\contentsline {subsection}{\numberline {5.3.1}Named Entity Recognition (NER) of Dates}{39}
-\contentsline {subsection}{\numberline {5.3.2}Encapsulated Timeline View}{42}
-\contentsline {subsection}{\numberline {5.3.3}Incorrect Input Documents}{45}
-\contentsline {section}{\numberline {5.4}Testing}{46}
-\contentsline {section}{\numberline {5.5}UI}{47}
-\contentsline {section}{\numberline {5.6}Important Algorithms}{49}
-\contentsline {subsection}{\numberline {5.6.1}Processing Files}{49}
-\contentsline {subsection}{\numberline {5.6.2}Building Ranges}{51}
-\contentsline {subsection}{\numberline {5.6.3}Saving Results}{52}
-\contentsline {chapter}{\numberline {6}Professional and Ethical Issues}{57}
-\contentsline {chapter}{\numberline {7}Evaluation}{59}
-\contentsline {section}{\numberline {7.1}Visibility}{59}
-\contentsline {section}{\numberline {7.2}Efficiency}{61}
-\contentsline {subsection}{\numberline {7.2.1}Back-End}{62}
-\contentsline {subsubsection}{Processing Documents}{62}
-\contentsline {subsubsection}{Range Production}{64}
-\contentsline {subsection}{\numberline {7.2.2}Front-End}{65}
-\contentsline {subsubsection}{Range View}{65}
-\contentsline {subsubsection}{Timeline UI}{66}
-\contentsline {section}{\numberline {7.3}Effectiveness}{66}
-\contentsline {subsection}{\numberline {7.3.1}Testing Preparations}{66}
-\contentsline {subsection}{\numberline {7.3.2}Testing}{67}
-\contentsline {subsection}{\numberline {7.3.3}Analysis}{67}
-\contentsline {chapter}{\numberline {8}Conclusion and Future Work}{70}
-\contentsline {section}{\numberline {8.1}Conclusion of Project}{70}
-\contentsline {section}{\numberline {8.2}Future Work}{71}
-\contentsline {section}{Bibliography}{74}
-\contentsline {chapter}{\numberline {A}Extra Information}{75}
-\contentsline {section}{\numberline {A.1}Tables, proofs, graphs, test cases, ...}{75}
-\contentsline {section}{\numberline {A.2}Timelines}{75}
-\contentsline {subsection}{\numberline {A.2.1}BBC: US elections 2016 results: Donald Trump's life story. Published on the 20th of January 2017}{76}
-\contentsline {subsection}{\numberline {A.2.2}The Guardian: British toddler abducted, police believe. Published on the 5th May 2007}{81}
-\contentsline {subsection}{\numberline {A.2.3}The Guardian: Madeleine McCann detectives arrive in Portugal to question 11 suspects. Published on the 9th December 2014}{83}
-\contentsline {section}{\numberline {A.3}Data Sets}{85}
-\contentsline {section}{\numberline {A.4}Expert Heuristic}{90}
-\contentsline {chapter}{\numberline {B}User Guide}{92}
-\contentsline {section}{\numberline {B.1}Instructions}{92}
-\contentsline {chapter}{\numberline {C}Source Code}{100}
-\contentsline {section}{\numberline {C.1}Information}{100}
-\contentsline {section}{\numberline {C.2}Table of Contents}{100}
-\contentsline {section}{\numberline {C.3}Instructions}{104}
-\contentsline {section}{\numberline {C.4}src/main/java/backend}{105}
-\contentsline {subsection}{\numberline {C.4.1}Helpers}{105}
-\contentsline {subsubsection}{Sort.java}{105}
-\contentsline {subsubsection}{ToJSON.java}{106}
-\contentsline {subsubsection}{ToPDF.java}{108}
-\contentsline {subsection}{\numberline {C.4.2}Process}{115}
-\contentsline {subsubsection}{CallbackResults.java}{115}
-\contentsline {subsubsection}{Engine.java}{116}
-\contentsline {subsubsection}{FileData.java}{130}
-\contentsline {subsubsection}{ProcessFileCallback.java}{136}
-\contentsline {subsubsection}{ProcessFiles.java}{137}
-\contentsline {subsubsection}{Result.java}{146}
-\contentsline {subsubsection}{TimelineDate.java}{154}
-\contentsline {subsection}{\numberline {C.4.3}Ranges}{173}
-\contentsline {subsubsection}{ProduceRanges.java}{173}
-\contentsline {subsubsection}{Range.java}{176}
-\contentsline {subsection}{\numberline {C.4.4}System}{188}
-\contentsline {subsubsection}{BackEndSystem.java}{188}
-\contentsline {subsubsection}{Settings.java}{191}
-\contentsline {subsubsection}{SystemState.java}{200}
-\contentsline {section}{\numberline {C.5}src/main/java/frontend}{200}
-\contentsline {subsection}{\numberline {C.5.1}Controllers}{200}
-\contentsline {subsubsection}{CustomResultRowController.java}{200}
-\contentsline {subsubsection}{CustomTimelineRow.java}{205}
-\contentsline {subsubsection}{DocumentLoadedRowController.java}{209}
-\contentsline {subsubsection}{DocumentReaderController.java}{211}
-\contentsline {subsubsection}{EditEventController.java}{218}
-\contentsline {subsubsection}{ListViewController.java}{230}
-\contentsline {subsubsection}{MenuBarControllerInter.java}{246}
-\contentsline {subsubsection}{RangeDataController.java}{247}
-\contentsline {subsubsection}{StartUpController.java}{250}
-\contentsline {subsubsection}{TimelineRowController.java}{254}
-\contentsline {subsection}{\numberline {C.5.2}Dialogs}{258}
-\contentsline {subsubsection}{AboutDialog.java}{258}
-\contentsline {subsubsection}{EditEventDialog.java}{259}
-\contentsline {subsubsection}{FileConfirmationDialog.java}{264}
-\contentsline {subsubsection}{LoadingDialog.java}{268}
-\contentsline {subsubsection}{RemoveConfirmationDialog.java}{271}
-\contentsline {subsubsection}{SettingsDialog.java}{272}
-\contentsline {subsection}{\numberline {C.5.3}Helpers}{278}
-\contentsline {subsubsection}{TextFieldState.java}{278}
-\contentsline {subsection}{\numberline {C.5.4}Observers}{278}
-\contentsline {subsubsection}{DocumentReaderObserver.java}{278}
-\contentsline {subsubsection}{DocumentsLoadedObserver.java}{279}
-\contentsline {subsubsection}{EditEventDialogObserver.java}{279}
-\contentsline {subsubsection}{MenuBarObserver.java}{280}
-\contentsline {subsubsection}{StartUpObserver.java}{281}
-\contentsline {subsubsection}{TimelineObserver.java}{281}
-\contentsline {subsubsection}{TimelineRowObserver.java}{282}
-\contentsline {subsection}{\numberline {C.5.5}Main.java}{283}
-\contentsline {section}{\numberline {C.6}src/main/resources/frontend}{295}
-\contentsline {subsection}{\numberline {C.6.1}controllers}{295}
-\contentsline {subsubsection}{customErrorFields.css}{295}
-\contentsline {subsubsection}{customResultRow.fxml}{295}
-\contentsline {subsubsection}{documentLoadedRow.fxml}{298}
-\contentsline {subsubsection}{documentReader.fxml}{299}
-\contentsline {subsubsection}{editEventDialog.fxml}{300}
-\contentsline {subsubsection}{icaddcircleoutline.png}{303}
-\contentsline {subsubsection}{iccloseblack.png}{303}
-\contentsline {subsubsection}{listViewTheme.css}{303}
-\contentsline {subsubsection}{listViewThemeTimeline.css}{304}
-\contentsline {subsubsection}{rangeDataLayout.fxml}{305}
-\contentsline {subsubsection}{timelineRowEven.fxml}{305}
-\contentsline {subsubsection}{timelineRowOdd.fxml}{308}
-\contentsline {subsection}{\numberline {C.6.2}dialogs}{310}
-\contentsline {subsubsection}{customErrorFields.css}{310}
-\contentsline {subsubsection}{loadingDialog.css}{311}
-\contentsline {subsection}{\numberline {C.6.3}documentListViewTheme.css}{311}
-\contentsline {subsection}{\numberline {C.6.4}listView.fxml}{311}
-\contentsline {subsection}{\numberline {C.6.5}startup.fxml}{315}
-\contentsline {section}{\numberline {C.7}src/test/backend}{317}
-\contentsline {subsubsection}{EngineTest.java}{317}
-\contentsline {subsubsection}{ProcessFileTest.java}{321}
-\contentsline {subsubsection}{ProduceRangesTest.java}{329}
-\contentsline {subsubsection}{SystemStateTest.java}{338}
-\contentsline {subsubsection}{TimelineDateTest.java}{340}
-\contentsline {subsubsection}{ToJSONTest.java}{352}
-\contentsline {section}{\numberline {C.8}src/test/resources/backend}{358}
-\contentsline {subsection}{\numberline {C.8.1}testfile1.txt, testfile2.txt, and testfile3.txt}{358}
-\contentsline {subsection}{\numberline {C.8.2}testfile4.docx}{358}
-\contentsline {subsection}{\numberline {C.8.3}testfile5.pdf}{358}
-\contentsline {section}{\numberline {C.9}build.gradle}{359}
+\contentsline {chapter}{\numberline {3}Requirements \& Specification}{14}
+\contentsline {section}{\numberline {3.1}Brief}{14}
+\contentsline {section}{\numberline {3.2}Requirements}{14}
+\contentsline {subsection}{\numberline {3.2.1}Functional Requirements}{14}
+\contentsline {subsection}{\numberline {3.2.2}Non-Functional Requirements}{15}
+\contentsline {section}{\numberline {3.3}Limitations}{16}
+\contentsline {section}{\numberline {3.4}Additional Aims}{17}
+\contentsline {chapter}{\numberline {4}Design}{18}
+\contentsline {section}{\numberline {4.1}Objectives}{18}
+\contentsline {section}{\numberline {4.2}Use Cases}{19}
+\contentsline {section}{\numberline {4.3}Architecture}{22}
+\contentsline {subsection}{\numberline {4.3.1}Process Package}{22}
+\contentsline {subsection}{\numberline {4.3.2}System Package}{24}
+\contentsline {subsection}{\numberline {4.3.3}Ranges Package}{26}
+\contentsline {subsection}{\numberline {4.3.4}Helpers Package}{27}
+\contentsline {section}{\numberline {4.4}Design Patterns}{29}
+\contentsline {section}{\numberline {4.5}UI}{30}
+\contentsline {chapter}{\numberline {5}Implementation}{34}
+\contentsline {section}{\numberline {5.1}Approach}{34}
+\contentsline {section}{\numberline {5.2}Tools \& Software Libraries}{35}
+\contentsline {section}{\numberline {5.3}Issues}{37}
+\contentsline {subsection}{\numberline {5.3.1}Named Entity Recognition (NER) of Dates}{37}
+\contentsline {subsection}{\numberline {5.3.2}Encapsulated Timeline View}{40}
+\contentsline {subsection}{\numberline {5.3.3}Incorrect Input Documents}{43}
+\contentsline {section}{\numberline {5.4}Testing}{44}
+\contentsline {section}{\numberline {5.5}UI}{45}
+\contentsline {section}{\numberline {5.6}Important Algorithms}{46}
+\contentsline {subsection}{\numberline {5.6.1}Processing Files}{47}
+\contentsline {subsection}{\numberline {5.6.2}Building Ranges}{49}
+\contentsline {subsection}{\numberline {5.6.3}Saving Results}{50}
+\contentsline {chapter}{\numberline {6}Professional and Ethical Issues}{54}
+\contentsline {chapter}{\numberline {7}Evaluation}{55}
+\contentsline {section}{\numberline {7.1}Visibility}{55}
+\contentsline {section}{\numberline {7.2}Efficiency}{57}
+\contentsline {subsection}{\numberline {7.2.1}Back-End}{58}
+\contentsline {subsubsection}{Processing Documents}{58}
+\contentsline {subsubsection}{Range Production}{60}
+\contentsline {subsection}{\numberline {7.2.2}Front-End}{61}
+\contentsline {subsubsection}{Range View}{61}
+\contentsline {subsubsection}{Timeline UI}{61}
+\contentsline {section}{\numberline {7.3}Effectiveness}{62}
+\contentsline {subsection}{\numberline {7.3.1}Testing Preparations}{62}
+\contentsline {subsection}{\numberline {7.3.2}Testing}{63}
+\contentsline {subsection}{\numberline {7.3.3}Analysis}{63}
+\contentsline {chapter}{\numberline {8}Conclusion and Future Work}{66}
+\contentsline {section}{\numberline {8.1}Conclusion of Project}{66}
+\contentsline {section}{\numberline {8.2}Future Work}{67}
+\contentsline {section}{Bibliography}{70}
+\contentsline {chapter}{\numberline {A}Extra Information}{71}
+\contentsline {section}{\numberline {A.1}Timelines}{71}
+\contentsline {subsection}{\numberline {A.1.1}BBC: US elections 2016 results: Donald Trump's life story. Published on the 20th of January 2017}{71}
+\contentsline {subsection}{\numberline {A.1.2}The Guardian: British toddler abducted, police believe. Published on the 5th May 2007}{76}
+\contentsline {subsection}{\numberline {A.1.3}The Guardian: Madeleine McCann detectives arrive in Portugal to question 11 suspects. Published on the 9th December 2014}{78}
+\contentsline {section}{\numberline {A.2}Data Sets}{80}
+\contentsline {section}{\numberline {A.3}Expert Heuristic}{85}
+\contentsline {chapter}{\numberline {B}User Guide}{87}
+\contentsline {chapter}{\numberline {C}Source Code}{95}
+\contentsline {section}{\numberline {C.1}Information}{95}
+\contentsline {section}{\numberline {C.2}Table of Contents}{95}
+\contentsline {section}{\numberline {C.3}src/main/java/backend}{99}
+\contentsline {subsection}{\numberline {C.3.1}Helpers}{99}
+\contentsline {subsubsection}{Sort.java}{99}
+\contentsline {subsubsection}{ToJSON.java}{100}
+\contentsline {subsubsection}{ToPDF.java}{103}
+\contentsline {subsection}{\numberline {C.3.2}Process}{110}
+\contentsline {subsubsection}{CallbackResults.java}{110}
+\contentsline {subsubsection}{Engine.java}{110}
+\contentsline {subsubsection}{FileData.java}{125}
+\contentsline {subsubsection}{ProcessFileCallback.java}{131}
+\contentsline {subsubsection}{ProcessFiles.java}{131}
+\contentsline {subsubsection}{Result.java}{141}
+\contentsline {subsubsection}{TimelineDate.java}{148}
+\contentsline {subsection}{\numberline {C.3.3}Ranges}{168}
+\contentsline {subsubsection}{ProduceRanges.java}{168}
+\contentsline {subsubsection}{Range.java}{171}
+\contentsline {subsection}{\numberline {C.3.4}System}{183}
+\contentsline {subsubsection}{BackEndSystem.java}{183}
+\contentsline {subsubsection}{Settings.java}{185}
+\contentsline {subsubsection}{SystemState.java}{194}
+\contentsline {section}{\numberline {C.4}src/main/java/frontend}{195}
+\contentsline {subsection}{\numberline {C.4.1}Controllers}{195}
+\contentsline {subsubsection}{CustomResultRowController.java}{195}
+\contentsline {subsubsection}{CustomTimelineRow.java}{199}
+\contentsline {subsubsection}{DocumentLoadedRowController.java}{204}
+\contentsline {subsubsection}{DocumentReaderController.java}{206}
+\contentsline {subsubsection}{EditEventController.java}{212}
+\contentsline {subsubsection}{ListViewController.java}{224}
+\contentsline {subsubsection}{MenuBarControllerInter.java}{241}
+\contentsline {subsubsection}{RangeDataController.java}{241}
+\contentsline {subsubsection}{StartUpController.java}{245}
+\contentsline {subsubsection}{TimelineRowController.java}{248}
+\contentsline {subsection}{\numberline {C.4.2}Dialogs}{253}
+\contentsline {subsubsection}{AboutDialog.java}{253}
+\contentsline {subsubsection}{EditEventDialog.java}{254}
+\contentsline {subsubsection}{FileConfirmationDialog.java}{258}
+\contentsline {subsubsection}{LoadingDialog.java}{263}
+\contentsline {subsubsection}{RemoveConfirmationDialog.java}{266}
+\contentsline {subsubsection}{SettingsDialog.java}{267}
+\contentsline {subsection}{\numberline {C.4.3}Helpers}{273}
+\contentsline {subsubsection}{TextFieldState.java}{273}
+\contentsline {subsection}{\numberline {C.4.4}Observers}{273}
+\contentsline {subsubsection}{DocumentReaderObserver.java}{273}
+\contentsline {subsubsection}{DocumentsLoadedObserver.java}{273}
+\contentsline {subsubsection}{EditEventDialogObserver.java}{274}
+\contentsline {subsubsection}{MenuBarObserver.java}{274}
+\contentsline {subsubsection}{StartUpObserver.java}{275}
+\contentsline {subsubsection}{TimelineObserver.java}{276}
+\contentsline {subsubsection}{TimelineRowObserver.java}{276}
+\contentsline {subsection}{\numberline {C.4.5}Main.java}{278}
+\contentsline {section}{\numberline {C.5}src/main/resources/frontend}{290}
+\contentsline {subsection}{\numberline {C.5.1}controllers}{290}
+\contentsline {subsubsection}{customErrorFields.css}{290}
+\contentsline {subsubsection}{customResultRow.fxml}{290}
+\contentsline {subsubsection}{documentLoadedRow.fxml}{292}
+\contentsline {subsubsection}{documentReader.fxml}{294}
+\contentsline {subsubsection}{editEventDialog.fxml}{295}
+\contentsline {subsubsection}{icaddcircleoutline.png}{298}
+\contentsline {subsubsection}{iccloseblack.png}{298}
+\contentsline {subsubsection}{listViewTheme.css}{298}
+\contentsline {subsubsection}{listViewThemeTimeline.css}{299}
+\contentsline {subsubsection}{rangeDataLayout.fxml}{299}
+\contentsline {subsubsection}{timelineRowEven.fxml}{300}
+\contentsline {subsubsection}{timelineRowOdd.fxml}{302}
+\contentsline {subsection}{\numberline {C.5.2}dialogs}{305}
+\contentsline {subsubsection}{customErrorFields.css}{305}
+\contentsline {subsubsection}{loadingDialog.css}{305}
+\contentsline {subsection}{\numberline {C.5.3}documentListViewTheme.css}{306}
+\contentsline {subsection}{\numberline {C.5.4}listView.fxml}{306}
+\contentsline {subsection}{\numberline {C.5.5}startup.fxml}{310}
+\contentsline {section}{\numberline {C.6}src/test/backend}{312}
+\contentsline {subsubsection}{EngineTest.java}{312}
+\contentsline {subsubsection}{ProcessFileTest.java}{316}
+\contentsline {subsubsection}{ProduceRangesTest.java}{323}
+\contentsline {subsubsection}{SystemStateTest.java}{332}
+\contentsline {subsubsection}{TimelineDateTest.java}{335}
+\contentsline {subsubsection}{ToJSONTest.java}{347}
+\contentsline {section}{\numberline {C.7}src/test/resources/backend}{352}
+\contentsline {subsection}{\numberline {C.7.1}testfile1.txt, testfile2.txt, and testfile3.txt}{352}
+\contentsline {subsection}{\numberline {C.7.2}testfile4.docx}{352}
+\contentsline {subsection}{\numberline {C.7.3}testfile5.pdf}{353}
+\contentsline {section}{\numberline {C.8}build.gradle}{353}

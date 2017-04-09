@@ -13,48 +13,82 @@ A level-1 auxiliary file: Appendices/appendix.aux
 A level-1 auxiliary file: Appendices/UserGuide.aux
 A level-1 auxiliary file: Appendices/SourceCode.aux
 Database file #1: references.bib
-Warning--to sort, need author or key in grammar
+You're missing a field name---line 141 of file references.bib
+ :   
+ :   %url = "http://grammar.ccc.commnet.edu/GRAMMAr/subjects.htm",
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 155 of file references.bib
+ :   
+ :   %url = "https://en.wikipedia.org/wiki/Natural_language_processing",
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 207 of file references.bib
+ :   
+ :   %url = "https://blogs.oracle.com/oum/entry/use_case_actors_primary_versus",
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 257 of file references.bib
+ :   
+ :   %url = "https://www.agilealliance.org/glossary/unit-test/",
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 301 of file references.bib
+ :   
+ :   %url = "https://en.wikipedia.org/wiki/Cloud_computing",
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 315 of file references.bib
+ :   
+ :   %url = "https://en.wikipedia.org/wiki/Machine_learning",
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Warning--empty year in agilealliance2017
+Warning--empty year in oracleagent
 Warning--empty year in grammar
 Warning--empty journal in nielsen1995
-You've used 9 entries,
+Warning--empty year in cloud
+Warning--empty year in machinelearning
+Warning--empty year in nlp
+You've used 20 entries,
             2773 wiz_defined-function locations,
-            664 strings with 7411 characters,
-and the built_in function-call counts, 4725 in all, are:
-= -- 448
-> -- 202
-< -- 10
-+ -- 69
-- -- 60
-* -- 329
-:= -- 647
-add.period$ -- 35
-call.type$ -- 9
-change.case$ -- 47
-chr.to.int$ -- 9
-cite$ -- 22
-duplicate$ -- 251
-empty$ -- 425
-format.name$ -- 74
-if$ -- 1062
-int.to.chr$ -- 1
+            724 strings with 9316 characters,
+and the built_in function-call counts, 9397 in all, are:
+= -- 862
+> -- 431
+< -- 21
++ -- 151
+- -- 129
+* -- 644
+:= -- 1351
+add.period$ -- 71
+call.type$ -- 20
+change.case$ -- 101
+chr.to.int$ -- 18
+cite$ -- 47
+duplicate$ -- 483
+empty$ -- 841
+format.name$ -- 157
+if$ -- 2065
+int.to.chr$ -- 3
 int.to.str$ -- 1
-missing$ -- 8
-newline$ -- 61
-num.names$ -- 32
-pop$ -- 122
+missing$ -- 16
+newline$ -- 119
+num.names$ -- 80
+pop$ -- 263
 preamble$ -- 1
-purify$ -- 38
+purify$ -- 83
 quote$ -- 0
-skip$ -- 207
+skip$ -- 393
 stack$ -- 0
-substring$ -- 203
-swap$ -- 67
-text.length$ -- 6
+substring$ -- 345
+swap$ -- 110
+text.length$ -- 9
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 99
-warning$ -- 3
-while$ -- 42
+type$ -- 210
+warning$ -- 7
+while$ -- 89
 width$ -- 0
-write$ -- 135
-(There were 3 warnings)
+write$ -- 276
+(There were 6 error messages)

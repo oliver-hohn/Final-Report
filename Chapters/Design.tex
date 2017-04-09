@@ -1,9 +1,4 @@
 \chapter{Design}
--objectives
--use cases (actors)
--architecture of backend
--design patterns
--gui (with screenshots)
 \par For the design, a clear set of objectives, use cases and architecture have been developed to aid the implementation.
 \section{Objectives}
 \par The Objectives of the system are for it to be visible, efficient, and effective.
@@ -16,7 +11,7 @@
 \section{Use Cases}
 \par A use case is a task an actor in the system performs. An actor is any type of user of the system. In this case, the user can be a law professional that uses the system to have a general understanding of a set of documents. Therefore, it can be assumed that the user does not necessarily have experience with NLP. It should be transparent to the user how the documents are being parsed, and only if they are interested would they require looking at the available source-code. The technical skill of the user does not need to be of an expert, as the tasks required are to provide documents, and view and interact with the produced timeline. In some cases, the user may produce their own graphical representation of a timeline and just use the produced JSON of the system. This would be the case if they have developed their own system to interact with this system.
 \par The requirements give the use cases of the system, and they are presented below. 
-//use case stick figure diagram
+
 \begin{enumerate}
   \item Load Documents
   \begin{enumerate}
@@ -71,8 +66,8 @@
 	\end{enumerate}
     \end{enumerate}
 \end{enumerate}
-//note load documents use case includes adding to an existing timeline, user is the person using the system, edit event incl delete, checks for invalid data, file not available
-\par The main sequence are the steps of the interaction in the use case to reach the goal. An error can occur during the interaction, it should be the systems responsibility to deal with the error appropriately, and not end the execution of the program. The primary actor, is the agent or entity that initiates the use case (cite or footnote).
+
+\par The main sequence are the steps of the interaction in the use case to reach the goal. An error can occur during the interaction, it should be the systems responsibility to deal with the error appropriately, and not end the execution of the program. The primary actor, is the agent or entity that initiates the use case most of the time \cite{oracleagent}.
 \par Note that loading documents includes both when it is the first set of documents to be loaded, i.e. the timeline is empty, and when there is already a populated timeline. In the latter case, it would be beneficial to discard duplicated events. A duplicated event is one where it is produced from the same file, using the same reference date, and the data is equal. This is done to not clutter the timeline with events that are repeated, as the timeline should be efficient in the data it provides, i.e. describe the events in the document with as little as possible of additional data. It can occur that two documents produce the same event, these should not count as duplicated, as the event may have a different context depending on what file they originate from. Reference dates are included in the check of duplicate events as it may be the case that different events are produced for the same document when different reference points are used, and the user is interested in investigating this. 
 
 \par When an event is being edited, the user should have the option to delete it, as it may be that the system produced an erroneous event or the event is not relevant to the user. Events may not be relevant to the user if the same event occurs in two separate documents. This can occur when the events described in the documents overlap. The duplicate check would not identify them as duplicates as they originate from different files. To ensure the date entered by the user is correct, it is validated. The validation checks are carried out before the changes are saved. An example of invalid data is when the date of an event is modified but instead of a new date being set, other text data is entered. In the case of the event occurring during a range of dates, i.e. it has a start date and end date, a validation check should be that the second date does not occur before the first. The checks should be carried out before the data is saved. in the case the validation fails, the changes should not be changed, instead the user should be prompted to correct their input.
@@ -114,7 +109,6 @@ return list of Results\;
 \par When a file is processed, its text is extracted, which is then parsed through the Engine. The Engine is responsible for producing the Results for a file. It identifies sentences with dates, and for those extracts subjects such as people, locations, money, etc. As well as using the Hedge-Trimmer algorithm, discussed in the Background Chapter, to produce a summary.
 
 \subsection{System Package}
-//talk about system to be shared throughout the system (same data shared)
 \par The system package holds the system and settings components (see Figure \ref{fig:system}). It is responsible for providing global settings, such as the maximum number of threads to be ran in parallel, the threshold value used in the summary algorithm, and graphical settings. The SystemState attribute is used to identify at which stage the system is in when it is processing files. This allows for the logic of the system to be decoupled from the graphical representation, as it can use the system state to determine which actions are available, when a loading bar needs to be shown, and when the timeline is ready to be displayed. The component is shared throughout the system, as it contains data required in different components (both logical and graphical components).
 \begin{figure}[H]
 \caption{UML of the System Package}
@@ -124,7 +118,6 @@ return list of Results\;
 \end{figure}
 
 \subsection{Ranges Package}
-//trees of ranges with results, algorithm, example, running time
 \par The ranges package was the last package developed (see Figure \ref{fig:ranges}). It focuses on placing Results into ranges (see the Algorithm \ref{alg:produceRanges}), hence the name. A start and end date define a Range. A Result is placed within this Range if it has the exact same start and end date, if this is not the case then it is attempted to place the Result in one of the children of this Range. If this is not possible, then another Range root is checked. Since Ranges are similar to Trees (as they recursively include other Ranges), there may be a forest of Ranges in the system. The roots are Ranges with the largest range of dates that encapsulates its child Ranges (and their Results). Thereby allowing to group related events together, and encapsulating them by their dates.  
 \begin{figure}[H]
 \caption{UML of the Ranges Package}
@@ -222,7 +215,7 @@ Result & Start Date & End Date \\
 \par \textbf{Observer} - This design pattern allows a subject to notify its list of observers (or dependents). The subject can be a model, and the observers its view. This is used to separate the logic of the system from its user interface. It allows for the back-end of the system to be developed completely independently from the front-end. In this system, the front-end will be notified by the back-end. This is then strengthened further through the system states available. As the back-end begins processing documents, its state changes. The front-end should then change appropriately in such case, by retrieving the relevant data and showing the relevant for that state. If the system were to be developed further, with other graphical interfaces used or added to the pre-existing UI, then these could be added effortlessly as the logic of the system is independent of its view.
 \par \textbf{Model-View Controller} - It is mentioned as a main design pattern of the system, because it is like the Observer design pattern, in that it separates the view from the data (which is a model) through a controller. The controller manipulates the data, and applies the appropriate changes in the view. It separates the logic of the system with its view, like an Observer pattern. This design pattern is enforced by many Graphical User Interface (GUI) frameworks, including the one used in this project (JavaFX\footnote{\url{http://docs.oracle.com/javase/8/javase-clienttechnologies.htm}}). 
 \par Other design patterns are available; however, these are the most relevant ones for this project. While the solution to ensure safe multi-threading is not a design pattern, it is worth mentioning as it allows for safe independent processing of documents using semaphores (mentioned previously). 
-//singleton, model-view-controller, describe, explain why, and what other options were available
+
 
 \section{UI}
 \par The system is intended to be used by law professionals. However, it can be used by anyone that requires its services of producing timelines, as it will be open-source.  These considerations are considered during the development of the User-Interface. For example, as the main data representation of the system is the timeline of events, it should occupy much of the screen. Options that are not relevant to the current state of the system should not be available, while options that are most likely to be used should be highlighted. The aim is to build a UI that is visible and easy to use for the user.
@@ -254,7 +247,7 @@ Result & Start Date & End Date \\
 \centering
 \end{figure}
 \par In the Document Viewer (see Figure \ref{fig:viewDoc}), note that the relevant sentence that produced the event, which the user interacted with to view this, is highlighted. This allows the user to see in context the event, as they can read the text surrounding it, giving them a better understanding of what occurred. This also allows the user to swap between the system and the documents. In addition, it allows the user to view how each event has been produced and judge for themselves how effective the system is. The user can also jump through the document using the timeline by selecting the view function from an event. Therefore, the user is no longer required to read the entire document or scroll through it if they are only interested in certain areas of it. This is extremely beneficial for large documents which are cumbersome to read, as the user can focus on specific areas of the document (i.e. the text surrounding the sentence that produced the event) instead of having to re-read the chapter, or even the whole document. Note the tool should not replace the reading of highly sensitive and critical law documents (or any other kind of documents), as the user may require the full context of the document, but it can serve as a time-effective tool to skip through the document event-by-event, focusing on certain aspects of the documents being revisited.
-//wireframes, reason for this, why no color, why no other layout?, update to new system
+
 
 
 

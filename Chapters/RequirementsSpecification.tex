@@ -1,7 +1,5 @@
 \chapter{Requirements \& Specification}
 \section{Brief}
--purpose of project
--how established requirements
 \par The system should take as input a set of documents, process them autonomously (i.e. without the user's involvement), and produce a graphical representation of events in the documents. This requires the identification of sentences in the text that contain dates, providing an exact date (to compare to other events), identifying subjects and providing a summary of the sentence. Requirements are generated from this.
 
 \section {Requirements}
@@ -35,9 +33,8 @@
 \section{Limitations}
 \par The greatest limitation of the project is time, both in its development and in the execution of the system. As the project time is limited, compromises must be made. For example, a noisy-channel neural-network summary system would produce different plausible summaries for a given text, of which one should be a reasonable summary. However, as mentioned previously, noisy-channel models require a large amount of annotated data (and thus are domain-dependent). Thereby, providing this set of data would require more development time, which would not allow for the completion of the project. In addition, loading large models of data to summarize one sentence, would have a substantial impact in the running time of the system. From the users point of view, if the system is not significantly faster than producing timelines manually, then they would prefer to do them manually as they are more accurate.
 
-\par A limitation in all NLP projects is the technology. Modelling context in systems is extremely difficult and non-trivial (cite). For this project, it is a clear issue, that for some inputs, poor timelines will be produced as the context of the text was not fully modelled, and thus understood by the system. The issue can be applied to ambiguous temporal expressions, where the exact date referenced in the sentence cannot be determined. Solutions to these problems proposed by NLP researchers include looking at sentences related to each other (instead of independently) and thereby linking references. However, this still does not mimic the context understood by humans during read or spoken interactions.
+\par A limitation in all NLP projects is the technology. Modelling context in systems is extremely difficult and non-trivial \cite{iwanskazadrozny1997}. For this project, it is a clear issue, that for some inputs, poor timelines will be produced as the context of the text was not fully modelled, and thus understood by the system. The issue can be applied to ambiguous temporal expressions, where the exact date referenced in the sentence cannot be determined. Solutions to these problems proposed by NLP researchers include looking at sentences related to each other (instead of independently) and thereby linking references. However, this still does not mimic the context understood by humans during read or spoken interactions.
 
 \section{Additional Aims} 
--open source (with documentation), to be used in 3rd parties and allow the project to be further developed
 \par An aim of the project is to make it open-source by providing it on GitHub along with a license. The license would allow anyone to use the system. This is beneficial as the system can be integrated in other programs (directly, as a library, or indirectly, through JSON). All the libraries used allow for the system to be open-source.
 
