@@ -16,7 +16,7 @@
 
 \par The trimming based models do not tend to produce as good of summaries as the statistic based model, due to them producing, usually, only one summary while the statistic based models produce a selection to choose from. However, as can be seen from the works of Knight and Marcu \cite{knightmarcu2000}, the trimming based models can produce better summaries than the statistic models in some occasions. For example, statistic based models are domain dependent as their data set is for a specific domain. Thereby placing statistic models in another domain will cause them to perform poorly compared to the decision models that are domain-independent. 
 \par The main advantage of the trimming model is their speed, and not requiring a large corpus of data (like the statistic models) by relying on the grammar to build the summary. In newer works of text summarization, neural network models are used. These fall under the statistical based models. They produce extremely accurate results, but as most statistical models they require a large corpus of data. Requiring a large data set causes algorithms to be processor-heavy because the annotated data needs to be read, and the statistical computations need to be carried out. This is not an issue when it is done for a large set of texts, but if it is done for every sentence identified with a temporal expression, then the computation-work is much larger than the input. Thereby, more work is being done for the computation than required.
-\par Due to the time-constraints, it was decided to use the trimming approach, in specific the algorithm provided by Dorr, Zajic, and Schwartz \cite{dorrzajicschwartz2003} (Figures \ref{alg:trim} and \ref{alg:last}). Where the given input text is turned into a tree based on its grammatical structure, with the words in the text as the leaves, and the inner nodes being the identifiers (given by the POS Treebank\footnote{\url{https://www.ling.upenn.edu/courses/Fall_2003/ling001/penn_treebank_pos.html}}), which is then trimmed. Note that removing a parent node, includes removing its children in the tree.
+\par Due to the time-constraints, it was decided to use the trimming approach, in specific the algorithm provided by Dorr, Zajic, and Schwartz \cite{dorrzajicschwartz2003} (see Algorithms \ref{alg:trim} and \ref{alg:last}). Where the given input text is turned into a tree based on its grammatical structure, with the words in the text as the leaves, and the inner nodes being the identifiers (given by the POS Treebank\footnote{\url{https://www.ling.upenn.edu/courses/Fall_2003/ling001/penn_treebank_pos.html}}), which is then trimmed. Note that removing a parent node, includes removing its children in the tree. \par
 
 \begin{algorithm}[H]
 \SetKwInOut{Input}{Input}
@@ -27,12 +27,15 @@
 	get the leftmost-lower subtree with root S\;
 	remove time expressions\;
 	remove determiners (e.g. 'a', 'the')\;
+	 \tcc{Applying XP-Over-XP Rule}
 	\While{the number of leaves in tree $>$ threshold and there are subtrees to remove with this rule}{
 		remove all the children except the first, where the rightmost-lowest subtree with root XP and its first child also being an identifier XP (where XP can be NP, VP, or S)\;
 	}
+	 \tcc{Applying XP-Before-NP Rule}
 	\While{the number of leaves in tree $>$ threshold and there are subtrees to remove with this rule}{
 		remove any XP (where XP can be NP, VP, PP) before the first NP found\;
 	}
+	 \tcc{iterative shortening rule}
 	get Tree T' from lastRule\;
 	from T' create a sentence S by reading of the leaves in pre-order\;
 	return S\;
@@ -69,7 +72,7 @@ return T\;
 \section{Data Processing and Representation}
 \par In the grammatical tree formed, the inner leaf identifiers are given by the P.O.S Treebank\footnote{\url{http://www.ling.upenn.edu/courses/Fall_2003/ling001/penn_treebank_pos.html}}. Each word or set of words are given a part of speech tag identifying them. An example can be found below (see Figure \ref{tree:origString}).
 \par On the grammatical tree shown in the figure, the algorithm proposed by Dorr, Zajic, and Schwartz \cite{dorrzajicschwartz2003} will be applied and the process will be graphically shown in the following figures (see Figures \ref{tree:removeTime}, \ref{tree:removeDeterminers}, \ref{tree:removeDeterminers}, \ref{tree:xpOverXpFirst} and \ref{tree:xpOverXpSecond}). Note that the value of the threshold does not force the summary to be below it, but it is a length of the summary to which the algorithm is working towards. For the sentence: "On Friday the Washington Post came out with the latest from its long-running investigation into Trump's charitable donations.", the following grammatical tree is produced \ref{tree:origString}.
-\begin{figure}[h]
+\begin{figure}[H]
 \resizebox{\linewidth}{!}{
 \Tree
 [.ROOT
@@ -126,8 +129,8 @@ return T\;
 \caption{P.O.S/Grammatical Tree of: "On Friday the Washington Post came out with the latest from its long-running investigation into Trump's charitable donations."}
 \label{tree:origString}
 \end{figure}
-\par The inner nodes in the tree are identifiers given by the P.O.S Treebank, and the leaves are the words in the sentence. A parent identifier can be a broader identifier of a collection of sub-identifiers or direct identifiers of a word. Using the Hedge-Trimmer algorithm \cite{dorrzajicschwartz2003}, the tree is processed as follows.  First, the lowest-leftmost S must be identified, as can be seen from the figure \ref{tree:origString} there is only one subtree with root S. This subtree is  extracted, and the algorithm is continued. The next step is to remove time expressions, of which there is only one, "Friday". However, when removing it, the "NP" parent must be removed, else there is a grammatically incorrect summary (given by the Hedge-Trimmer algorithm  \cite{dorrzajicschwartz2003}). The result is graphically shown in the Figure \ref{tree:removeTime}.
-\begin{figure}[h]
+\par The inner nodes in the tree are identifiers given by the P.O.S Treebank, and the leaves are the words in the sentence. A parent identifier can be a broader identifier of a collection of sub-identifiers or direct identifiers of a word. Using the Hedge-Trimmer algorithm \cite{dorrzajicschwartz2003}, the tree is processed as follows.  First, the lowest-leftmost S must be identified, as can be seen from the Figure \ref{tree:origString} there is only one subtree with root S. This subtree is  extracted, and the algorithm is continued. The next step is to remove time expressions, of which there is only one, "Friday". However, when removing it, the "NP" parent must be removed, else there is a grammatically incorrect summary (given by the Hedge-Trimmer algorithm  \cite{dorrzajicschwartz2003}). The result is graphically shown in the Figure \ref{tree:removeTime}.
+\begin{figure}[H]
 \resizebox{\linewidth}{!}{
 \Tree
 	[.S 
@@ -177,7 +180,7 @@ return T\;
 \label{tree:removeTime}
 \end{figure}
 \par On the resulting tree, the algorithm dictates the removal of determiners. The "DT" parent tag identifies a determiner. However, not all the parent identifiers with this tag are removed, only ones that have a child labelled "the" or "a". The resulting tree after applying this rule is given by Figure \ref{tree:removeDeterminers}.
-\begin{figure}[h]
+\begin{figure}[H]
 \resizebox{\linewidth}{!}{
 \Tree
 	[.S 
@@ -226,8 +229,8 @@ return T\;
 \end{figure}
 \par The threshold value is used in the following rules. For this example, the threshold value is 10. From the two rules left, only one will be applied as the number of leaves in the resulting tree will fall below the threshold value. Thereby, the summary is below the threshold, so the last rule will not be applied. This avoids over-trimming the summary.
 \par The threshold's value importance is of stopping the algorithm from over-trimming or under-trimming. This is done in the sense of there being an optimal summary where the core meaning is kept but if it is further reduced the meaning is lost. When the tree is over-trimmed, there is a possibility that the resulting summary does not have the core meaning of the original sentence, or has no meaning at all. The advantage of under-trimming is that the meaning of the sentence is very likely kept, due to the summary sentence being of greater length than the optimal summary. Thereby, having more words and thus retaining the original meaning, as it is closer to the original sentence. However, the aim is to produce a summary, i.e. a short sentence with the same meaning as the original. Under-trimming can ensure the meaning is kept in the summary, but not that the resulting summary is optimal in size (thereby incrementing the time required by the user to view the entire timeline, thus increasing the time the to understand what occurred, which is what the user aimed to avoid with the tool).
-\par When applying the XP-Over-XP rule, a parent identifier labelled XP (where XP can be NP, VP, or S), has a first child identifier of type XP also, then all other children of the parent are removed. This rule is done iteratively until the resulting tree is below the threshold, or the rule cannot be applied further due to there not being anymore parent XP-first child XP pairs. The first iteration of the rule is shown in Figure \ref{tree:xpOverXpFirst}, and the second and final iteration in Figure \ref{tree:xpOverXpSecond}.
-\begin{figure}[h]
+\par When applying the XP-Over-XP rule, if a parent identifier labelled XP (where XP can be NP, VP, or S) has a first child identifier of type XP, then all other children (except the first) of the parent are removed. This rule is done iteratively until the resulting tree is below the threshold, or the rule cannot be applied further due to there not being anymore parent XP-first child XP pairs. The first iteration of the rule is shown in Figure \ref{tree:xpOverXpFirst}, and the second and final iteration in Figure \ref{tree:xpOverXpSecond}.
+\begin{figure}[H]
 \resizebox{\linewidth}{!}{
 \Tree
 	[.S 
@@ -272,7 +275,7 @@ return T\;
 \caption{P.O.S/Grammatical Tree after XP-Over-XP first iteration}
 \label{tree:xpOverXpFirst}
 \end{figure}
-\begin{figure}[h]
+\begin{figure}[H]
 \resizebox{\linewidth}{!}{
 \Tree
 	[.S 
@@ -313,7 +316,7 @@ return T\;
 \par The result of applying this algorithm (Hedge Trimmer  \cite{dorrzajicschwartz2003}) on the input text: "On Friday the Washington Post came out with the latest from its long-running investigation into Trump's charitable donations.", produces a summary: "Washington Post came out with latest into Trump's". The original meaning of the sentence, which is that the Washington Post released a new article on Trump, is kept. However, the resulting summary is not grammatically correct as "Trump's" should be "Trump". Even though the summary is not grammatically correct the summary is significantly shorter than the input text, and does convey the meaning of the original sentence. This is a headline of the input, indicating what the input text was about, and thereby giving a general description of what occurred.
 
 \section{Normalizing Dates}
-\par An issue when processing documents, and identifying events, is that sentences will not always include the exact date of when an event occurred. These temporal expressions are ambiguous. For example, "Yesterday" or "Last week" have different meanings depending on the context in which they are in. To produce a timeline, exact dates are required to sort the events by their date. This is valuable to the user, as events that occur within the same time era will be grouped and separated from events of other time eras. To determine the exact date of an ambiguous temporal expression, a reference point can be used. For example, if the text was written on the 11th of March 2017, then "Yesterday" in this context refers to the 10th of March 2017, but if the document was written on the 1th of February 1689, then it refers to the 31st of January 1689. Thereby, it is important to be able to infer reliably and accurately the date to which ambiguous time expressions refer. 
+\par An issue when processing documents, and identifying events, is that sentences will not always include the exact date of when an event occurred. These temporal expressions are ambiguous. For example, "Yesterday" or "Last week" have different meanings depending on the context in which they are in. To produce a timeline, exact dates are required to sort the events by their date. This is valuable to the user, as events that occur within the same time era will be grouped and separated from events of other time eras. To determine the exact date of an ambiguous temporal expression, a reference point can be used. For example, if the text was written on the 11th of March 2017, then "Yesterday" in this context refers to the 10th of March 2017, but if the document was written on the 1st of February 1689, then it refers to the 31st of January 1689. Thereby, it is important to be able to infer reliably and accurately the date to which ambiguous time expressions refer. 
 
 \par The reference point (or base date) acts as a context of when an event occurred. Reference points, and similar techniques have been used in other timeline works \cite{mccloskymanning2012}. The reference point should be the context in which the document was written in, or was aimed to be written in. This can be the publishing date of an article, or the creation date of a document, or any date which allows the exact date of an ambiguous temporal expression to be determined. For exact dates that are described in text, such as "On the 12th of December 1996...", the reference point has no value, as it can be determined without it that this text refers to an event that occurred on 12-12-1996. Therefore, the reference only helps the task of producing exact dates.
 

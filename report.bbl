@@ -30,6 +30,18 @@ H.~Daum\'e~III and D.~Marcu.
   for Computational Linguistics (ACL)}, pages 449--456, 2002.
 \newblock URL \url{http://www.aclweb.org/anthology/P02-1057}.
 
+\bibitem[Dictionary({\natexlab{a}})]{cloud}
+Oxford~English Dictionary.
+\newblock Cloud computing.
+\newblock \url{https://en.oxforddictionaries.com/definition/cloud_computing},
+  {\natexlab{a}}.
+
+\bibitem[Dictionary({\natexlab{b}})]{machinelearning}
+Oxford~English Dictionary.
+\newblock Machine learning.
+\newblock \url{https://en.oxforddictionaries.com/definition/machine_learning},
+  {\natexlab{b}}.
+
 \bibitem[Dorr et~al.(2003)Dorr, Zajic, and Schwartz]{dorrzajicschwartz2003}
 B.~Dorr, D.~Zajic, and R.~Schwartz.
 \newblock Hedge trimmer: A parse-and-trim approach to headline generation.
@@ -119,20 +131,9 @@ C.~Wharton, J.~Rieman, C.~Lewis, and P.~Polson.
 \newblock
   \doi{http://www.colorado.edu/ics/sites/default/files/attached-files/93-07.pdf}.
 
-\bibitem[Wikipedia({\natexlab{a}})]{cloud}
-Wikipedia.
-\newblock Cloud computing.
-\newblock \url{https://en.wikipedia.org/wiki/Cloud_computing}, {\natexlab{a}}.
-
-\bibitem[Wikipedia({\natexlab{b}})]{machinelearning}
-Wikipedia.
-\newblock Machine learning.
-\newblock \url{https://en.wikipedia.org/wiki/Machine_learning}, {\natexlab{b}}.
-
-\bibitem[Wikipedia({\natexlab{c}})]{nlp}
+\bibitem[Wikipedia()]{nlp}
 Wikipedia.
 \newblock Natural language processing.
-\newblock \url{https://en.wikipedia.org/wiki/Natural_language_processing},
-  {\natexlab{c}}.
+\newblock \url{https://en.wikipedia.org/wiki/Natural_language_processing}.
 
 \end{thebibliography}

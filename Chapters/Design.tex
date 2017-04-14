@@ -6,7 +6,7 @@
 
 \par \textbf{Efficient} - The time spent to perform tasks should be reasonable in the context of its input. This can be further expressed in the mathematical notation of Big-Oh. If an algorithm takes an input of size $n$, and roughly performs $n$ operations to produce a result, then the algorithm is said to have a runtime of Big-Oh of $n$ (visually shown as $O(n)$). This allows the efficiency to be compared between algorithms, as the focus is on how well they scale with larger inputs. The objective is to not have an algorithm that processes the files with an exponential time complexity. With an exponential time complexity, a small $n$ would lead to a large running time, therefore a larger $n$ would result in an infeasible running time. Threads can be used to aid this task. A Thread is a lightweight processor computation unit. Using more than one thread allows for tasks to be carried out in parallel. Therefore, if the input is $n$ documents, and there are $n$ threads, then the running time of the system would be the greatest running time of all the documents being carried out. Since all documents are being processed in parallel, completely independently of each other, then the time of the document that takes the longest time to process would result in the time it takes to process the entire set of documents.
 
-\par \textbf{Effective} - The system should meet its purpose. Which is to require as input documents and process them to produce a timeline. The system should allow the user to perform these tasks through menu options, buttons, and, in addition, produce appropriate responses. When an error occurs, the system should not attempt to process the documents indefinitely, and instead produce a timeline with the available events. Effectiveness also involves how correct are the timelines produced by the system. Whether they provide the user the correct information, and if the events are being identified in the documents. 
+\par \textbf{Effective} - The system should meet its purpose. Which is to require as input, documents, and process them to produce a timeline. The system should allow the user to perform these tasks through menu options, buttons, and, in addition, produce appropriate responses. When an error occurs, the system should not attempt to process the documents indefinitely, and instead produce a timeline with the available events. Effectiveness also involves how correct are the timelines produced by the system. Whether they provide the user the correct information, and if the events are being identified in the documents. 
 
 \section{Use Cases}
 \par A use case is a task an actor in the system performs. An actor is any type of user of the system. In this case, the user can be a law professional that uses the system to have a general understanding of a set of documents. Therefore, it can be assumed that the user does not necessarily have experience with NLP. It should be transparent to the user how the documents are being parsed, and only if they are interested would they require looking at the available source-code. The technical skill of the user does not need to be of an expert, as the tasks required are to provide documents, and view and interact with the produced timeline. In some cases, the user may produce their own graphical representation of a timeline and just use the produced JSON of the system. This would be the case if they have developed their own system to interact with this system.
@@ -89,7 +89,7 @@
 \includegraphics[width=\linewidth]{process.png}
 \centering
 \end{figure}
-\begin{algorithm}
+\begin{algorithm}[H]
 \SetKwInOut{Input}{Input}
 \SetKwInOut{Output}{Output}
 \Input{A list of Files to Process}
@@ -105,15 +105,15 @@ return list of Results\;
 \end{algorithm}
 \par For this system, an event is described as a Result that contains date information (represented by TimelineDate), a set of subjects (or key words), and the summary of the sentence that produced the event.
 \par The TimelineDate component processes temporal expressions identified by the Engine, these are parsed and an exact date is produced which is then used to compare and sort the Results(events).
-\par In this system, the Stanford CoreNLP suite \footnote{\url{http://stanfordnlp.github.io/CoreNLP/}} is used. It is a well-known and tested tool for NLP. Other tools exist, such as ApacheNLP, however Stanford's tool has a larger set of documentation and support, as well as being thread-safe and efficient. Thread-safe refers to the ability to share this tool between separate processes without having to worry about concurrency issues. 
-\par When a file is processed, its text is extracted, which is then parsed through the Engine. The Engine is responsible for producing the Results for a file. It identifies sentences with dates, and for those extracts subjects such as people, locations, money, etc. As well as using the Hedge-Trimmer algorithm, discussed in the Background Chapter, to produce a summary.
+\par In this system, the Stanford CoreNLP suite\footnote{\url{http://stanfordnlp.github.io/CoreNLP/}} is used. It is a well-known and tested tool for NLP. Other tools exist, such as ApacheNLP, however Stanford's tool has a larger set of documentation and support, as well as being thread-safe and efficient. Thread-safe refers to the ability to share this tool between separate processes without having to worry about concurrency issues. 
+\par When a file is processed, its text is extracted, which is then parsed through the Engine. The Engine is responsible for producing the Results for a file. It identifies sentences with dates, and for those extracts subjects such as people, locations, money, etc. It uses the Hedge-Trimmer algorithm, discussed in the Background Chapter, to produce a summary.
 
 \subsection{System Package}
 \par The system package holds the system and settings components (see Figure \ref{fig:system}). It is responsible for providing global settings, such as the maximum number of threads to be ran in parallel, the threshold value used in the summary algorithm, and graphical settings. The SystemState attribute is used to identify at which stage the system is in when it is processing files. This allows for the logic of the system to be decoupled from the graphical representation, as it can use the system state to determine which actions are available, when a loading bar needs to be shown, and when the timeline is ready to be displayed. The component is shared throughout the system, as it contains data required in different components (both logical and graphical components).
 \begin{figure}[H]
 \caption{UML of the System Package}
 \label{fig:system}
-\includegraphics[width=\linewidth]{system.png}
+\includegraphics[scale=0.55]{system.png}
 \centering
 \end{figure}
 
@@ -125,7 +125,7 @@ return list of Results\;
 \includegraphics[width=\linewidth]{ranges.png}
 \centering
 \end{figure}
-\begin{algorithm}
+\begin{algorithm}[H]
 \SetKwInOut{Input}{Input}
 \SetKwInOut{Output}{Output}
 \Input{A list of Results}
@@ -146,7 +146,7 @@ return list of Range roots\;
 
 \par To demonstrate the algorithm an example will be presented with the two Results presented in the table \ref{fig:resultsTable} and the pre-existing tree in Figure \ref{fig:rangeTreePre}. First, the Results would be sorted by their range, such that the second result is the first to be added. This produces the tree in Figure \ref{fig:rangeTree1}. Then the next Result in the table is added, producing the tree in Figure \ref{fig:rangeTree2}. For the resulting tree, it was determined that the Result  being added overlapped an existing Range, thereby a new Range was formed that would encapsulate the previous Range and the result being added. This is done by extending the start and end dates appropriately. To place the Result in the tree after the Range was expanded, a new Range was created to hold it, and the previous Range that was partially being overlapped is now a child of the expanded Range.
 \par As can be seen from the tree produced, the largest start-end date pair encapsulates the smaller start-end date pair, this can be done recursively. This allows for a graphical representation where the events are encapsulated by their dates, providing an alternative view to the traditional top-down timeline.
-\begin{figure}[h]
+\begin{figure}[H]
 \begin{center}
 \begin{tabular}{ |c|c|c| } 
  \hline
@@ -161,7 +161,7 @@ Result & Start Date & End Date \\
 \caption{Example Results Start and End Date}
 \label{fig:resultsTable}
 \end{figure}
-\begin{figure}[h]
+\begin{figure}[H]
 \resizebox{\linewidth}{!}{
 \Tree
  [.{01-01-1980  $\shortrightarrow$ 31-12-2016}
@@ -172,7 +172,7 @@ Result & Start Date & End Date \\
 \caption{Pre-existing Range Tree}
 \label{fig:rangeTreePre}
 \end{figure}
-\begin{figure}[h]
+\begin{figure}[H]
 \resizebox{\linewidth}{!}{
 \Tree
  [.{01-01-1980 $\shortrightarrow$ 31-12-2016}
@@ -184,7 +184,7 @@ Result & Start Date & End Date \\
 \caption{Resulting Range Tree after adding the Result: 13-12-2016  $\shortrightarrow$ 20-12-2016}
 \label{fig:rangeTree1}
 \end{figure}
-\begin{figure}
+\begin{figure}[H]
 \resizebox{\linewidth}{!}{
 \Tree
  [.{01-01-1980 $\shortrightarrow$ 31-12-2016}
@@ -201,7 +201,7 @@ Result & Start Date & End Date \\
 \end{figure}
 
 \subsection{Helpers Package}
-\par The helper package  utility components required throughout the system (see Figure \ref{fig:helpers}). For example, it provides sorting functions (sorting by the start date or by the range of days in between the start and end date) and saving the timeline in PDF or JSON format. It is a refactored package of reused logic in the system. Refactoring is done to remove repeated components and operations. Thereby having them in one place only instead of being duplicated around the system. The main advantage is that when a change needs to be made, it is made in one place, but if the operations are duplicated throughout the system then that change needs to be carried out at each duplicated occurrence.
+\par The helper package holds utility components required throughout the system (see Figure \ref{fig:helpers}). For example, it provides sorting functions (sorting by the start date or by the range of days in between the start and end date) and saving the timeline in PDF or JSON format. It is a refactored package of reused logic in the system. Refactoring is done to remove repeated components and operations. Thereby having them in one place only instead of being duplicated around the system. The main advantage is that when a change needs to be made, it is made in one place, but if the operations are duplicated throughout the system then that change needs to be carried out at each duplicated occurrence.
 \begin{figure}[H]
 \caption{UML of the Helpers Package}
 \label{fig:helpers}
@@ -211,44 +211,44 @@ Result & Start Date & End Date \\
 
 \section{Design Patterns}
 \par Design Patters are general solutions to common problems in software development\footnote{\url{https://sourcemaking.com/design_patterns}}. The solutions usually include a system architecture to follow. For this project, the main design patterns are Singleton and Observer.
-\par \textbf{Singleton} - This design pattern ensures that only a certain number of instances of a component are available\footnote{\url{http://www.journaldev.com/1377/java-singleton-design-pattern-best-practices-examples}}. In most cases the number of components is restricted to one. The advantage of this pattern is to provide a universal access for global data throughout the system. For example, in the System component the NLP processing tool is held, along with the system state. These are both used throughout the system, hence it would reasonable to use a Singleton pattern to ensure their availability, and not reload them into memory each time.
-\par \textbf{Observer} - This design pattern allows a subject to notify its list of observers (or dependents). The subject can be a model, and the observers its view. This is used to separate the logic of the system from its user interface. It allows for the back-end of the system to be developed completely independently from the front-end. In this system, the front-end will be notified by the back-end. This is then strengthened further through the system states available. As the back-end begins processing documents, its state changes. The front-end should then change appropriately in such case, by retrieving the relevant data and showing the relevant for that state. If the system were to be developed further, with other graphical interfaces used or added to the pre-existing UI, then these could be added effortlessly as the logic of the system is independent of its view.
-\par \textbf{Model-View Controller} - It is mentioned as a main design pattern of the system, because it is like the Observer design pattern, in that it separates the view from the data (which is a model) through a controller. The controller manipulates the data, and applies the appropriate changes in the view. It separates the logic of the system with its view, like an Observer pattern. This design pattern is enforced by many Graphical User Interface (GUI) frameworks, including the one used in this project (JavaFX\footnote{\url{http://docs.oracle.com/javase/8/javase-clienttechnologies.htm}}). 
+\par \textbf{Singleton} - This design pattern ensures that only a certain number of instances of a component are available\footnote{\url{http://www.journaldev.com/1377/java-singleton-design-pattern-best-practices-examples}}. In most cases the number of components is restricted to one. The advantage of this pattern is to provide, a universal access for global data throughout the system. For example, in the System component the NLP processing tool is held, along with the system state. These are both used throughout the system, hence it would reasonable to use a Singleton pattern to ensure their availability, and not reload them into memory each time.
+\par \textbf{Observer} - This design pattern allows a subject to notify its list of observers (or dependents). The subject can be a model, and the observers its view. This is used to separate the logic of the system from its user interface. It allows for the back-end of the system to be developed completely independently from the front-end. In this system, the front-end will be notified by the back-end. This is then strengthened further through the system states available. As the back-end begins processing documents, its state changes. The front-end should then change appropriately in such case, by retrieving the relevant data and showing it for that state. If the system were to be developed further, with other graphical interfaces used or added to the pre-existing UI, then these could be added effortlessly as the logic of the system is independent of its view.
+\par \textbf{Model-View Controller} - It is mentioned as a main design pattern of the system, because it is like the Observer design pattern, in that it separates the view from the data (which is a model) through a controller. The controller manipulates the data, and applies the appropriate changes to the view. It separates the logic of the system with its view, like an Observer pattern. This design pattern is enforced by many Graphical User Interface (GUI) frameworks, including the one used in this project (JavaFX\footnote{\url{http://docs.oracle.com/javase/8/javase-clienttechnologies.htm}}). 
 \par Other design patterns are available; however, these are the most relevant ones for this project. While the solution to ensure safe multi-threading is not a design pattern, it is worth mentioning as it allows for safe independent processing of documents using semaphores (mentioned previously). 
 
 
 \section{UI}
 \par The system is intended to be used by law professionals. However, it can be used by anyone that requires its services of producing timelines, as it will be open-source.  These considerations are considered during the development of the User-Interface. For example, as the main data representation of the system is the timeline of events, it should occupy much of the screen. Options that are not relevant to the current state of the system should not be available, while options that are most likely to be used should be highlighted. The aim is to build a UI that is visible and easy to use for the user.
-\par Actions that are made unavailable ensure that the user is not overloaded with buttons and menu options that do not make sense within the current state of processing the system is in. For example, when the system is initially launched, no timeline can be presented as no documents are available to be processed. Instead the user is invited to load documents, as can be seen by the Wireframe in Figure \ref{fig:startup}. Wireframes are colourless screenshots of what the UI of a system should aim to look like, used by the front-end designers.
-\begin{figure}[h]
+\par Actions that are made unavailable ensure that the user is not overloaded with buttons and menu options that do not make sense within the current state of processing the system is in. For example, when the system is initially launched, no timeline can be presented as no documents are available to be processed. Instead the user is invited to load documents, as can be seen by the Wireframe in Figure \ref{fig:startup}. Wireframes are colourless screenshots of what the UI of a system should aim to look like.
+\begin{figure}[H]
 \caption{Wireframe of System at Start-up}
 \label{fig:startup}
 \includegraphics[width=\linewidth]{startup.png}
 \centering
 \end{figure}
-\par From the start up screen, the user can load documents and the reference points used for the documents through a dialog displayed after the files have been selected. As this is being done, the system can load any resources it requires (such as models) before the files are to be processed. After the documents have been processed, the timeline is displayed (see Figure\ref{fig:timeline}).
-\begin{figure}[h]
+\par From the start up screen, the user can load documents and set the reference points used for the documents through a dialog displayed after the files have been selected. As this is being done, the system can load any resources it requires (such as models) before the files are to be processed. After the documents have been processed, the timeline is displayed (see Figure\ref{fig:timeline}).
+\begin{figure}[H]
 \caption{Timeline of System}
 \label{fig:timeline}
 \includegraphics[width=\linewidth]{timeline.png}
 \centering
 \end{figure}
-\par For each event produced by the system, a timeline row will be produced. With each event, options to edit (which will open a dialog that allows also for the deletion of events, as seen in Figure \ref{fig:editDialog}), and view the sentence that produced the event in its own context (see Figure \ref{fig:viewDoc}). The user is also provided with additional information of which documents have been loaded, along with the ability to load more or remove some of the documents, and save the timeline. Note that the timeline menu item is unavailable when there is no timeline displayed (see Figure \ref{fig:startup}), but when one is displayed its available (see Figure \ref{fig:timeline}).
-\begin{figure}[h]
+\par For each event produced by the system, a timeline row will be produced. With each event, options to edit (which will open a dialog that allows also for the deletion of events, as seen in Figure \ref{fig:editDialog}), and view the sentence that produced the event in its own context (see Figure \ref{fig:viewDoc}). The user is also provided with additional information of which documents have been loaded, along with the ability to load more or remove some of the documents, and save the timeline. Note that the timeline menu item is unavailable when there is no timeline displayed (see Figure \ref{fig:startup}), but when one is displayed it is available (see Figure \ref{fig:timeline}).
+\begin{figure}[H]
 \caption{Edit Event Dialog of System}
 \label{fig:editDialog}
 \includegraphics[scale=0.6]{editDialog.png}
 \centering
 \end{figure}
-\begin{figure}[h]
+
+\par In the Document Viewer (see Figure \ref{fig:viewDoc}), note that the relevant sentence that produced the event, which the user interacted with to view this, is highlighted. This allows the user to see in context the event, as they can read the text surrounding it, giving them a better understanding of what occurred. This also allows the user to swap between the system and the documents. In addition, it allows the user to view how each event has been produced and judge for themselves how effective the system is. The user can also jump through the document using the timeline by selecting the view function from an event. Therefore, the user is no longer required to read the entire document or scroll through it if they are only interested in certain areas of it. This is extremely beneficial for large documents which are cumbersome to read, as the user can focus on specific areas of the document (i.e. the text surrounding the sentence that produced the event) instead of having to re-read the chapter, or even the whole document. Note the tool should not replace the reading of highly sensitive and critical law documents (or any other kind of documents), as the user may require the full context of the document, but it can serve as a time-effective tool to skip through the document event-by-event, focusing on certain aspects of the documents being revisited.
+
+\begin{figure}[H]
 \caption{Document Viewer of System}
 \label{fig:viewDoc}
 \includegraphics[scale=0.75]{viewDoc.png}
 \centering
 \end{figure}
-\par In the Document Viewer (see Figure \ref{fig:viewDoc}), note that the relevant sentence that produced the event, which the user interacted with to view this, is highlighted. This allows the user to see in context the event, as they can read the text surrounding it, giving them a better understanding of what occurred. This also allows the user to swap between the system and the documents. In addition, it allows the user to view how each event has been produced and judge for themselves how effective the system is. The user can also jump through the document using the timeline by selecting the view function from an event. Therefore, the user is no longer required to read the entire document or scroll through it if they are only interested in certain areas of it. This is extremely beneficial for large documents which are cumbersome to read, as the user can focus on specific areas of the document (i.e. the text surrounding the sentence that produced the event) instead of having to re-read the chapter, or even the whole document. Note the tool should not replace the reading of highly sensitive and critical law documents (or any other kind of documents), as the user may require the full context of the document, but it can serve as a time-effective tool to skip through the document event-by-event, focusing on certain aspects of the documents being revisited.
-
-
 
 
 
