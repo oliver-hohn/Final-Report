@@ -105,7 +105,7 @@ return list of Results\;
 \end{algorithm}
 \par For this system, an event is described as a Result that contains date information (represented by TimelineDate), a set of subjects (or key words), and the summary of the sentence that produced the event.
 \par The TimelineDate component processes temporal expressions identified by the Engine, these are parsed and an exact date is produced which is then used to compare and sort the Results (events).
-\par In this system, the Stanford CoreNLP suite\footnote{\url{http://stanfordnlp.github.io/CoreNLP/}} is used. It is a well-known and tested tool for NLP. Other tools exist, such as ApacheNLP, however Stanford's tool has a larger set of documentation and support, as well as being thread-safe and efficient. Thread-safe refers to the ability to share this tool between separate processes without having to worry about concurrency issues. 
+\par In this system, the Stanford CoreNLP suite\footnote{\url{http://stanfordnlp.github.io/CoreNLP/}} is used. It is a well-known and tested tool for NLP. Other tools exist, such as Apache OpenNLP, however Stanford's tool has a larger set of documentation and support, as well as being thread-safe and efficient. Thread-safe refers to the ability to share this tool between separate processes without having to worry about concurrency issues. 
 \par When a file is processed, its text is extracted, which is then parsed through the Engine. The Engine is responsible for producing the Results for a file. It identifies sentences with dates, and for those extracts subjects such as people, locations, money, etc. It uses the Hedge-Trimmer algorithm, discussed in the Background Chapter, to produce a summary.
 
 \subsection{System Package}
