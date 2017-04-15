@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2017.1.17)  14 APR 2017 15:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2017.1.17)  15 APR 2017 19:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -846,8 +846,7 @@ File: lstlang1.sty 2015/06/04 1.6 listings language file
 (./Chapters/Background.aux) (./Chapters/RequirementsSpecification.aux)
 (./Chapters/Design.aux) (./Chapters/Implementation.aux)
 (./Chapters/ProfessionalIssues.aux) (./Chapters/Evaluation.aux)
-(./Chapters/Conclusion.aux) (./Appendices/appendix.aux)
-(./Appendices/UserGuide.aux) (./Appendices/SourceCode.aux))
+(./Chapters/Conclusion.aux))
 \openout1 = `report.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 56.
@@ -1127,7 +1126,7 @@ File: ranges.png Graphic file (type png)
  <use ranges.png>
 Package pdftex.def Info: ranges.png used on input line 125.
 (pdftex.def)             Requested size: 411.9399pt x 194.97314pt.
- [25 <./system.png>] [26 <./ranges.png>] [27] <helpers.png, id=125, 472.76625pt
+ [25 <./system.png>] [26 <./ranges.png>] [27] <helpers.png, id=126, 472.76625pt
  x 361.35pt>
 File: helpers.png Graphic file (type png)
 
@@ -1328,285 +1327,11 @@ Chapter 8.
 ] [67]) [68] (./report.bbl [69
 
 
-] [70]) [71]
-\openout2 = `Appendices/appendix.aux'.
-
- (./Appendices/appendix.tex
-Appendix A.
-[72
-
-
-] [73] [74] [75] [76] [77]
-Underfull \hbox (badness 1297) in paragraph at lines 282--283
-[]\T1/lmr/m/n/10 (British, Madeleine Mc-Cann, Por-tuguese):
- []
-
-[78]
-Underfull \hbox (badness 1082) in paragraph at lines 326--327
-\T1/lmr/m/n/10 ar-eas of land in Al-garve, close to where
- []
-
-
-Underfull \hbox (badness 1478) in paragraph at lines 334--335
-[]\T1/lmr/m/n/10 Detectives will spend three days work-ing
- []
-
-[79]
-Underfull \hbox (badness 10000) in paragraph at lines 358--359
-[]\T1/lmr/m/n/10 Detectives in-ves-ti-gated 11 peo-ple on
- []
-
-
-Underfull \hbox (badness 1009) in paragraph at lines 376--377
-[]\T1/lmr/m/n/10 (Portuguese, Met) Por-tuguese po-lice close
- []
-
-[80] [81] [82] [83] [84]
-Underfull \hbox (badness 2538) in paragraph at lines 462--462
-[]\T1/lmr/m/n/10 Listing A.3: |Madeleine Mc-Cann de-tec-tives ar-rive in Por-tu
--gal to ques-tion 11 sus-
- []
-
-
-Underfull \hbox (badness 1565) in paragraph at lines 462--462
-\T1/lmr/m/n/10 pects. Pub-lished: 9th of De-cem-ber 2014. URL: https://www.theg
-uardian.com/uk-
- []
-
-[85]
-Missing character: There is no œ in font t1-zi4r-0!
-
-Underfull \hbox (badness 1038) in paragraph at lines 494--494
-[]\T1/lmr/bx/n/10 Error Pre-ven-tion\T1/lmr/m/n/10 : Pre-vent er-rors
- []
-
-
-Underfull \hbox (badness 1226) in paragraph at lines 500--500
-[]\T1/lmr/bx/n/10 Aesthetic and Min-i-mal-is-tic De-
- []
-
-
-Overfull \hbox (10.39867pt too wide) in paragraph at lines 481--507
-[][] 
- []
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-) [86] [87]
-\openout2 = `Appendices/UserGuide.aux'.
-
- (./Appendices/UserGuide.tex
-Appendix B.
-<gradleVersion.PNG, id=341, 433.01775pt x 166.82326pt>
-File: gradleVersion.PNG Graphic file (type png)
- <use gradleVersion.PNG>
-Package pdftex.def Info: gradleVersion.PNG used on input line 7.
-(pdftex.def)             Requested size: 433.01668pt x 166.82285pt.
-
-Overfull \hbox (21.07678pt too wide) in paragraph at lines 7--9
- [][] 
- []
-
-<folderDirectory.PNG, id=342, 470.9595pt x 174.6525pt>
-File: folderDirectory.PNG Graphic file (type png)
-
-<use folderDirectory.PNG>
-Package pdftex.def Info: folderDirectory.PNG used on input line 17.
-(pdftex.def)             Requested size: 470.95834pt x 174.65207pt.
-
-Overfull \hbox (59.01845pt too wide) in paragraph at lines 17--19
- [][] 
- []
-
-[88
-
-
-
- <./gradleVersion.PNG>]
-<traverseToRootDir.PNG, id=347, 349.90726pt x 75.8835pt>
-File: traverseToRootDir.PNG Graphic file (type png)
-
-<use traverseToRootDir.PNG>
-Package pdftex.def Info: traverseToRootDir.PNG used on input line 24.
-(pdftex.def)             Requested size: 349.90639pt x 75.8833pt.
- <gradleRun.PNG, id=348, 655.248pt x 181.27725pt>
-File: gradleRun.PNG Graphic file (type png)
-
-<use gradleRun.PNG>
-Package pdftex.def Info: gradleRun.PNG used on input line 31.
-(pdftex.def)             Requested size: 411.9399pt x 113.96739pt.
- <gradleBuild.PNG, id=349, 492.6405pt x 225.84375pt>
-File: gradleBuild.PNG Graphic file (type png)
-
-<use gradleBuild.PNG>
-Package pdftex.def Info: gradleBuild.PNG used on input line 38.
-(pdftex.def)             Requested size: 411.9399pt x 188.85281pt.
- [89 <./folderDirectory.PNG> <./traverseToRootDir.PNG> <./gradleRun.PNG>] <grad
-leTest.PNG, id=356, 433.01775pt x 137.91525pt>
-File: gradleTest.PNG Graphic file (type png)
-
-<use gradleTest.PNG>
-Package pdftex.def Info: gradleTest.PNG used on input line 45.
-(pdftex.def)             Requested size: 433.01668pt x 137.9149pt.
-
-Overfull \hbox (21.07678pt too wide) in paragraph at lines 45--47
- [][] 
- []
-
-<gradlewRun.PNG, id=357, 646.21425pt x 254.75175pt>
-File: gradlewRun.PNG Graphic file (type png)
- <use gradlewRun.PNG>
-Package pdftex.def Info: gradlewRun.PNG used on input line 54.
-(pdftex.def)             Requested size: 411.9399pt x 162.39917pt.
-
-[90 <./gradleBuild.PNG> <./gradleTest.PNG>]
-<downloadingLibraries.PNG, id=363, 401.70074pt x 148.1535pt>
-File: downloadingLibraries.PNG Graphic file (type png)
-
-<use downloadingLibraries.PNG>
-Package pdftex.def Info: downloadingLibraries.PNG used on input line 61.
-(pdftex.def)             Requested size: 401.69975pt x 148.15314pt.
-
-<gradlewTest.PNG, id=364, 386.6445pt x 159.59625pt>
-File: gradlewTest.PNG Graphic file (type png)
- <use gradlewTest.PNG>
-Package pdftex.def Info: gradlewTest.PNG used on input line 68.
-(pdftex.def)             Requested size: 386.64355pt x 159.59584pt.
-
-[91 <./gradlewRun.PNG> <./downloadingLibraries.PNG> <./gradlewTest.PNG>]
-<fileDirectory.PNG, id=371, 452.28975pt x 275.22826pt>
-File: fileDirectory.PNG Graphic file (type png)
- <use fileDirectory.PNG>
-Package pdftex.def Info: fileDirectory.PNG used on input line 77.
-(pdftex.def)             Requested size: 452.28865pt x 275.22758pt.
-
-Overfull \hbox (40.34875pt too wide) in paragraph at lines 77--79
- [][] 
- []
-
-<confirmArticles.PNG, id=372, 298.11375pt x 264.99pt>
-File: confirmArticles.PNG Graphic file (type png)
-
-<use confirmArticles.PNG>
-Package pdftex.def Info: confirmArticles.PNG used on input line 84.
-(pdftex.def)             Requested size: 298.11302pt x 264.98935pt.
- [92 <./fileDirectory.PNG>]
-<loaded.PNG, id=377, 932.283pt x 564.9105pt>
-File: loaded.PNG Graphic file (type png)
- <use loaded.PNG>
-Package pdftex.def Info: loaded.PNG used on input line 91.
-(pdftex.def)             Requested size: 411.9399pt x 249.613pt.
-
-<editEvent.PNG, id=378, 363.759pt x 327.624pt>
-File: editEvent.PNG Graphic file (type png)
- <use editEvent.PNG>
-Package pdftex.def Info: editEvent.PNG used on input line 99.
-(pdftex.def)             Requested size: 363.75812pt x 327.62318pt.
- [93 <./confirmArticles.PNG> <./loaded.PNG>]
-<removeDoc.PNG, id=385, 169.23225pt x 33.726pt>
-File: removeDoc.PNG Graphic file (type png)
- <use removeDoc.PNG>
-Package pdftex.def Info: removeDoc.PNG used on input line 106.
-(pdftex.def)             Requested size: 169.23184pt x 33.7259pt.
-
-<preferences.PNG, id=386, 498.06075pt x 313.17pt>
-File: preferences.PNG Graphic file (type png)
- <use preferences.PNG>
-Package pdftex.def Info: preferences.PNG used on input line 115.
-(pdftex.def)             Requested size: 498.05952pt x 313.16922pt.
-
-Overfull \hbox (86.11963pt too wide) in paragraph at lines 115--117
- [][] 
- []
-
-[94 <./editEvent.PNG> <./removeDoc.PNG>]
-<saveTo.PNG, id=392, 287.8755pt x 88.53075pt>
-File: saveTo.PNG Graphic file (type png)
- <use saveTo.PNG>
-Package pdftex.def Info: saveTo.PNG used on input line 124.
-(pdftex.def)             Requested size: 287.87479pt x 88.5305pt.
-) [95 <./preferences.PNG> <./saveTo.PNG>]
-\openout2 = `Appendices/SourceCode.aux'.
-
- (./Appendices/SourceCode.tex
-Appendix C.
-[96
-
-
-
-]
-Overfull \hbox (7.84349pt too wide) in paragraph at lines 43--44
-[]\T1/lmr/m/n/10 DocumentReaderController.java: con-troller for the lay-out of 
-the Doc-u-ment Reader
- []
-
-[97]
-Overfull \hbox (0.4553pt too wide) in paragraph at lines 66--67
-[]\T1/lmr/m/n/10 DocumentReaderObserver.java: in-ter-face for the ob-server of 
-the Doc-u-men-tRead-
- []
-
-[98] [99] [100] [101] [102] [103] [104] [105] [106] [107] [108] [109] [110]
-[111] [112] [113] [114] [115] [116] [117] [118] [119] [120] [121] [122]
-[123] [124] [125] [126] [127] [128] [129] [130] [131] [132] [133] [134]
-[135] [136] [137] [138] [139] [140] [141] [142] [143] [144] [145] [146]
-[147] [148] [149] [150] [151] [152] [153] [154] [155] [156] [157] [158]
-[159] [160] [161] [162] [163] [164] [165] [166] [167] [168] [169] [170]
-[171] [172] [173] [174] [175] [176] [177] [178] [179] [180] [181] [182]
-[183] [184] [185] [186] [187] [188] [189] [190] [191] [192] [193] [194]
-[195] [196] [197] [198] [199] [200] [201] [202] [203] [204] [205] [206]
-[207] [208] [209] [210] [211] [212] [213] [214] [215] [216] [217]
-Overfull \hbox (29.05956pt too wide) in paragraph at lines 3916--3917
-[][][][][][][][][][][][][][][][][][][][][][]  
- []
-
-[218] [219] [220] [221] [222] [223] [224] [225] [226] [227] [228] [229]
-[230] [231]
-Overfull \hbox (14.65977pt too wide) in paragraph at lines 4355--4356
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]  
- []
-
-[232] [233] [234] [235] [236] [237] [238] [239] [240] [241] [242] [243]
-[244]
-Overfull \hbox (3.85912pt too wide) in paragraph at lines 4776--4777
-[][][][][][][][][][][][][][][][][][][] 
- []
-
-[245] [246] [247] [248] [249] [250] [251] [252] [253] [254] [255] [256]
-[257] [258] [259] [260]
-Overfull \hbox (5.65977pt too wide) in paragraph at lines 5316--5317
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]  
- []
-
-[261] [262] [263] [264] [265] [266] [267] [268] [269] [270] [271] [272]
-[273] [274] [275] [276] [277] [278] [279] [280] [281] [282] [283] [284]
-[285] [286] [287] [288] [289] [290] [291] [292] [293] [294] [295] [296]
-[297] [298] <icaddcircleoutline.png, id=1046, 24.09pt x 24.09pt>
-File: icaddcircleoutline.png Graphic file (type png)
-
-<use icaddcircleoutline.png>
-Package pdftex.def Info: icaddcircleoutline.png used on input line 6535.
-(pdftex.def)             Requested size: 24.08992pt x 24.08992pt.
- <iccloseblack.png, id=1047, 14.454pt x 14.454pt>
-File: iccloseblack.png Graphic file (type png)
-
-<use iccloseblack.png>
-Package pdftex.def Info: iccloseblack.png used on input line 6541.
-(pdftex.def)             Requested size: 14.45393pt x 14.45393pt.
- [299 <./icaddcircleoutline.png> <./iccloseblack.png>]
-[300] [301] [302] [303] [304] [305] [306] [307] [308] [309] [310] [311]
-[312] [313] [314] [315] [316] [317] [318] [319] [320] [321] [322] [323]
-[324] [325] [326] [327] [328] [329] [330] [331] [332] [333] [334] [335]
-[336] [337] [338] [339] [340] [341] [342] [343] [344] [345] [346] [347]
-[348] [349] [350] [351] [352] [353] [354]
-Missing character: There is no œ in font t1-zi4r-0!
- [355]) [356] (./report.aux
+] [70]) [71] (./report.aux
 (./Chapters/Background.aux) (./Chapters/RequirementsSpecification.aux)
 (./Chapters/Design.aux) (./Chapters/Implementation.aux)
 (./Chapters/ProfessionalIssues.aux) (./Chapters/Evaluation.aux)
-(./Chapters/Conclusion.aux) (./Appendices/appendix.aux)
-(./Appendices/UserGuide.aux) (./Appendices/SourceCode.aux))
+(./Chapters/Conclusion.aux))
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
@@ -1616,13 +1341,13 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 ### simple group (level 1) entered at line 1061 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 23804 strings out of 493013
- 432611 string characters out of 6136993
- 640450 words of memory out of 5000000
- 26836 multiletter control sequences out of 15000+600000
- 81966 words of font info for 71 fonts, out of 8000000 for 9000
+ 21831 strings out of 493013
+ 403701 string characters out of 6136993
+ 573893 words of memory out of 5000000
+ 24904 multiletter control sequences out of 15000+600000
+ 78985 words of font info for 70 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,18n,94p,1981b,14675s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 62i,18n,94p,1978b,14242s stack positions out of 5000i,500n,10000p,200000b,80000s
 {d:/texlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{d:/te
 xlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{d:/texlive/2016/texmf-dist/
 fonts/enc/dvips/lm/lm-mathit.enc}{d:/texlive/2016/texmf-dist/fonts/enc/dvips/in
@@ -1632,17 +1357,16 @@ a/Inconsolata-zi4r.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/lm/lmbx10
 016/texmf-dist/fonts/type1/public/lm/lmbx7.pfb><d:/texlive/2016/texmf-dist/font
 s/type1/public/lm/lmmi10.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/lm/
 lmr10.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/lm/lmr12.pfb><d:/texli
-ve/2016/texmf-dist/fonts/type1/public/lm/lmr5.pfb><d:/texlive/2016/texmf-dist/f
-onts/type1/public/lm/lmr6.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/lm
-/lmr7.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/lm/lmr8.pfb><d:/texliv
-e/2016/texmf-dist/fonts/type1/public/lm/lmr9.pfb><d:/texlive/2016/texmf-dist/fo
-nts/type1/public/lm/lmri10.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/m
-athabx-type1/matha10.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/stmaryr
-d/stmary10.pfb>
-Output written on report.pdf (360 pages, 1951521 bytes).
+ve/2016/texmf-dist/fonts/type1/public/lm/lmr6.pfb><d:/texlive/2016/texmf-dist/f
+onts/type1/public/lm/lmr7.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/lm
+/lmr8.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/lm/lmr9.pfb><d:/texliv
+e/2016/texmf-dist/fonts/type1/public/lm/lmri10.pfb><d:/texlive/2016/texmf-dist/
+fonts/type1/public/mathabx-type1/matha10.pfb><d:/texlive/2016/texmf-dist/fonts/
+type1/public/stmaryrd/stmary10.pfb>
+Output written on report.pdf (75 pages, 1128087 bytes).
 PDF statistics:
- 1302 PDF objects out of 1440 (max. 8388607)
- 851 compressed objects within 9 object streams
+ 345 PDF objects out of 1000 (max. 8388607)
+ 222 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
- 178 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 88 words of extra memory for PDF output out of 10000 (max. 10000000)
 

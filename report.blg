@@ -9,86 +9,54 @@ A level-1 auxiliary file: Chapters/ProfessionalIssues.aux
 A level-1 auxiliary file: Chapters/Evaluation.aux
 A level-1 auxiliary file: Chapters/Conclusion.aux
 The style file: plainnat.bst
-A level-1 auxiliary file: Appendices/appendix.aux
-A level-1 auxiliary file: Appendices/UserGuide.aux
-A level-1 auxiliary file: Appendices/SourceCode.aux
 Database file #1: references.bib
-You're missing a field name---line 141 of file references.bib
- :   
- :   %url = "http://grammar.ccc.commnet.edu/GRAMMAr/subjects.htm",
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-You're missing a field name---line 155 of file references.bib
- :   
- :   %url = "https://en.wikipedia.org/wiki/Natural_language_processing",
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-You're missing a field name---line 207 of file references.bib
- :   
- :   %url = "https://blogs.oracle.com/oum/entry/use_case_actors_primary_versus",
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-You're missing a field name---line 257 of file references.bib
- :   
- :   %url = "https://www.agilealliance.org/glossary/unit-test/",
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-You're missing a field name---line 301 of file references.bib
- :   
- :   %url = "https://en.wikipedia.org/wiki/Cloud_computing",
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-You're missing a field name---line 315 of file references.bib
- :   
- :   %url = "https://en.wikipedia.org/wiki/Machine_learning",
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
 Warning--empty year in agilealliance2017
 Warning--empty year in oracleagent
 Warning--empty year in cloud
 Warning--empty year in machinelearning
 Warning--empty year in grammar
 Warning--empty journal in nielsen1995
+Warning--empty booktitle in sipser2012
 Warning--empty year in nlp
 You've used 20 entries,
             2773 wiz_defined-function locations,
-            725 strings with 9371 characters,
-and the built_in function-call counts, 9391 in all, are:
-= -- 861
+            725 strings with 9340 characters,
+and the built_in function-call counts, 9680 in all, are:
+= -- 905
 > -- 431
-< -- 21
+< -- 23
 + -- 150
 - -- 129
-* -- 641
-:= -- 1351
-add.period$ -- 71
+* -- 657
+:= -- 1383
+add.period$ -- 78
 call.type$ -- 20
-change.case$ -- 101
+change.case$ -- 102
 chr.to.int$ -- 19
-cite$ -- 47
-duplicate$ -- 483
-empty$ -- 841
+cite$ -- 48
+duplicate$ -- 496
+empty$ -- 862
 format.name$ -- 157
-if$ -- 2064
+if$ -- 2139
 int.to.chr$ -- 2
 int.to.str$ -- 1
-missing$ -- 16
-newline$ -- 119
+missing$ -- 15
+newline$ -- 125
 num.names$ -- 80
-pop$ -- 264
+pop$ -- 277
 preamble$ -- 1
 purify$ -- 83
 quote$ -- 0
-skip$ -- 394
+skip$ -- 388
 stack$ -- 0
-substring$ -- 345
-swap$ -- 109
-text.length$ -- 9
+substring$ -- 377
+swap$ -- 118
+text.length$ -- 11
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 210
-warning$ -- 7
-while$ -- 89
+type$ -- 215
+warning$ -- 8
+while$ -- 92
 width$ -- 0
-write$ -- 275
-(There were 6 error messages)
+write$ -- 288
+(There were 8 warnings)

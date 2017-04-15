@@ -9,12 +9,14 @@
 Agile Alliance.
 \newblock Unit testing.
 \newblock \url{https://www.agilealliance.org/glossary/unit-test/}.
+\newblock Accessed 9 April 2017.
 
 \bibitem[Burke()]{oracleagent}
 Dave Burke.
 \newblock Use case actors - primary versus secondary.
 \newblock
   \url{https://blogs.oracle.com/oum/entry/use_case_actors_primary_versus}.
+\newblock Accessed 9 April 2017.
 
 \bibitem[Chopra et~al.(2016)Chopra, Auli, and Rush]{chopraaulirush2016}
 S.~Chopra, M.~Auli, and A.~Rush.
@@ -35,12 +37,14 @@ Oxford~English Dictionary.
 \newblock Cloud computing.
 \newblock \url{https://en.oxforddictionaries.com/definition/cloud_computing},
   {\natexlab{a}}.
+\newblock Accessed 9 April 2017.
 
 \bibitem[Dictionary({\natexlab{b}})]{machinelearning}
 Oxford~English Dictionary.
 \newblock Machine learning.
 \newblock \url{https://en.oxforddictionaries.com/definition/machine_learning},
   {\natexlab{b}}.
+\newblock Accessed 9 April 2017.
 
 \bibitem[Dorr et~al.(2003)Dorr, Zajic, and Schwartz]{dorrzajicschwartz2003}
 B.~Dorr, D.~Zajic, and R.~Schwartz.
@@ -61,6 +65,7 @@ J.~Finkel, T.~Grenager, and C.~Manning.
 Capital Community~College Foundation.
 \newblock Sentence subjects.
 \newblock \url{http://grammar.ccc.commnet.edu/GRAMMAr/subjects.htm}.
+\newblock Accessed 4 Dec. 2016.
 
 \bibitem[Iwanska and Zadrozny(1997)]{iwanskazadrozny1997}
 L.~Iwanska and W.~Zadrozny.
@@ -72,7 +77,7 @@ L.~Iwanska and W.~Zadrozny.
 
 \bibitem[Knight and Marcu(2000)]{knightmarcu2000}
 K.~Knight and D.~Marcu.
-\newblock Statistics-based summarization – step one: Sentence compression.
+\newblock Statistics-based summarization - step one: Sentence compression.
 \newblock In \emph{Proceedings of the Seventeenth National Conference on
   Artificial Intelligence and Twelfth Conference on Innovative Applications of
   Artificial Intelligence}, pages 703--710, 2000.
@@ -113,8 +118,8 @@ A.~Rush, S.~Chopra, and J.~Weston.
 
 \bibitem[Sipser(2012)]{sipser2012}
 Michael Sipser.
-\newblock \emph{Introduction to the Theory of Computation}.
-\newblock Cengage Learning, 2012.
+\newblock Introduction to the theory of computation.
+\newblock chapter~10, pages 275--276. Cengage Learning, 2012.
 
 \bibitem[Toutanova et~al.(2003)Toutanova, Klein, Manning, and
   Singer]{toutanovakleinmanningsinger2003}
@@ -135,5 +140,6 @@ C.~Wharton, J.~Rieman, C.~Lewis, and P.~Polson.
 Wikipedia.
 \newblock Natural language processing.
 \newblock \url{https://en.wikipedia.org/wiki/Natural_language_processing}.
+\newblock Accessed 9 April 2017.
 
 \end{thebibliography}
